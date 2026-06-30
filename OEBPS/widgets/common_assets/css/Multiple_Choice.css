@@ -1,0 +1,60 @@
+.MultipleChoiceQuestions {
+  background: #406194;
+    color: white!important;
+    margin: -8px -23px 15px;
+    padding: 16px 16px 16px 60px;
+    position: relative;
+    z-index: 1;
+    font-family: "Source Sans Pro", Verdana, Helvetica, sans;
+    font-weight: 500;
+    font-size: 1.1em;
+    line-height: normal;
+    width: 85%;
+    overflow: hidden;   
+}
+
+.MultipleChoiceQuestions:after {
+   content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 50px;
+    background:#406194 url(../images/icon.svg) 37% 50% no-repeat;
+    background-size: 40% auto;
+    
+}
+.MultipleChoiceQuestions a{
+    color: white !important;
+}
+
+.link-inline{
+  color: white;
+  text-decoration: none;
+  
+}
+
+.link-inline:after {
+  background: url(../images/icon-assessment-white.svg) 20% 10% no-repeat;
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 58%;
+    margin-top: -21px;
+    z-index: 1;
+    background-size: 87% auto;
+    width: 36px;
+    height: 50px;
+}
+
+
+  h1 {
+
+    color: #001837;
+
+}
+h3{
+  color: #002F6E
+}
+

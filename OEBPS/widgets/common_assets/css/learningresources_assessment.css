@@ -1,0 +1,164 @@
+/* learning Resources css*/
+
+.learnresources1 {
+  background: #002F6E;
+    color: white;
+    margin: -8px -15px 15px;
+    padding: 14px 30px 12px -1px;
+    position: relative;
+    z-index: 1;
+    font-family: "Source Sans Pro", Verdana, Helvetica, sans;
+    font-weight: 500;
+    font-size: 1.3em;
+    line-height: normal;
+    width: 97%; 
+    overflow: hidden;    
+}
+
+.learnresources1:after {
+   content: "";
+    display: block;
+    position: absolute;
+    top: 6px;
+    bottom: -45px;
+    right: 20px;
+    width: 24px;
+    background: url(../images/icon-arrow-right-white.svg) 20% 10% no-repeat;
+    background-size: 75% auto; 
+
+}
+
+.learnresources2 {
+ background: #bfcbdb;
+    color: #002F6E !important;
+    padding: 19px 30px 26px 6px;
+    display: block;
+    clear: both;
+    /* padding-top: 0px; */
+     
+    width: 94% !important;
+    /*padding: 8px 30px 8px 15px;*/
+    margin-top: -15px;
+    margin-left: -15px;
+    width: 100%;
+    font: 500 1.4em/1.15 "Source Sans Pro", Verdana, Helvetica, sans;
+
+}
+
+.learnresources2 a {
+    color: #002F6E;
+
+}
+
+    table, td {
+      border: 1px solid #33598b;
+    color: black;
+     border-collapse: collapse;
+        background: #E3F1D0;
+      padding: 6px;
+      
+}
+
+
+
+table{
+    width: 100%;
+}
+
+h2{
+    color:#002F6E
+    
+}
+.neut{
+    position: relative;
+    margin-left: 50px;
+}
+.lym{
+    position: relative;
+    margin-left: 50px;
+}
+.mono{
+    position: relative;
+    margin-left: 50px;
+}
+
+
+
+  h1 {
+
+    color: #001837;
+
+}
+h3 {
+  color: #002F6E
+}
+
+.ii {
+
+    margin-left: 106px !important;
+    /* height: 23%; */
+    height: 336px !important;
+}
+.blood{
+    padding-bottom: 116px;
+}
+.normal{
+    color: #666;
+}
+
+
+
+/* Assessments Css*/
+
+.assessmentsone {
+  background: #da4c5d;
+    color: white!important;
+    margin: -8px -23px 15px;
+    padding: 16px 16px 16px 60px;
+    position: relative;
+    z-index: 1;
+    font-family: "Source Sans Pro", Verdana, Helvetica, sans;
+    font-weight: 500;
+    font-size: 1.1em;
+    line-height: normal;
+    width: 95%;
+    overflow: hidden;
+
+       
+}
+.assessmentsone:after {
+   content: "";
+    display: block;
+    /*position: absolute;*/
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 50px;
+    /*background:#cb0018 url(../widgets/Show_Hide/images/aaa.svg) 37% 50% no-repeat;*/
+    background-size: 40% auto;
+
+    
+}
+
+.link-inline11{
+  color: white;
+  text-decoration: none;
+  
+}
+
+.link-inline11:after{
+  /*background: url(../widgets/Show_Hide/images/icon-assessment-white.svg) 20% 10% no-repeat;*/
+    content: "";
+   /* position: absolute;*/
+    left: 15px;
+    top: 58%;
+    margin-top: -21px;
+    z-index: 1;
+    background-size: 87% auto;
+    width: 36px;
+    height: 50px;
+}
+
+
+
+ 
