@@ -1565,6 +1565,9 @@ strong {
   font-weight: bold;
   font-size: 14px;
 }
+.defaultImg{
+  width: auto;
+}
 
 .options {
   cursor: default;
