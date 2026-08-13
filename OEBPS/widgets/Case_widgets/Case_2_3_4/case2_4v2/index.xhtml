@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 <html lang="EN" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
 <head>
@@ -36,13 +36,13 @@
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Conspicuous Consumption</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ol class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">• Describe the causes, nature of the response, and tissue changes seen in chronic inflammation. </li>
@@ -76,7 +76,7 @@
                                     <div class='numbering'>1</div>
                                     <div class='texting'>What is the most likely cause of fever and cough in this patient?</div>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAb8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -119,7 +119,7 @@
                                     <div class='numbering'>2</div>
                                     <div class='texting'>Which tests are useful to diagnose tuberculosis infection?  </div>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -222,7 +222,7 @@
                                         <div class='numbering'>3</div>
                                         <div class='texting'>Which type of inflammation would be expected on histologic examination?</div>
                                     </div>
-                                    <div class="AnswerDiv" data-imageBoxHolderid="2">Show answer</div>
+                                    <div class="AnswerDiv" data-imageBoxHolderid="2">Show Answer</div>
                                     <div class="textArea" id="textA4">
                                         <div class="wrapper AnswerDiv_para wrap1">
                                             <div class="contentHolder Cont_Ans">
@@ -282,7 +282,7 @@
                                    <div class='numbering'>4</div>
                                    <div class='texting'>How does this type of inflammation differ from acute inflammation?</div>
                                </div>
-                               <div class="AnswerDiv">Show answer</div>
+                               <div class="AnswerDiv">Show Answer</div>
                                <div class="textArea" id="textA5">
                                    <div class="wrapper AnswerDiv_para wrap1">
                                        <div class="contentHolder Cont_Ans">
@@ -305,7 +305,7 @@
                                     <div class='numbering'>5</div>
                                     <div class='texting'>What is the difference between granulation tissue and granulomas? </div>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -328,7 +328,7 @@
                                     <div class='numbering'>6</div>
                                     <div class='texting'>What is the mechanism for granuloma formation? Which type of macrophage activation is seen in this process?</div>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA7">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -365,7 +365,7 @@
                                     <div class='numbering'>7</div>
                                     <div class='texting'>Which clinical settings favor granulomatous inflammation? </div>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show Answer</div>
                                 <div class="textArea" id="textAa8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -482,7 +482,7 @@
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -500,7 +500,7 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
                 <div class="tableTitle tabindex">Normal Reference Range Table</div>
                 <span class="tabindex">Select:</span>
@@ -544,6 +544,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>

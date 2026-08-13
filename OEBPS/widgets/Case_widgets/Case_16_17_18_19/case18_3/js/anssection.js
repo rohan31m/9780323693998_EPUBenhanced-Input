@@ -19,8 +19,18 @@
         });
 
         $(".AnswerDiv").attr("role","button");
-        $(".AnswerDiv").attr("aria-pressed","false");
+        $(".AnswerDiv").attr("aria-expanded","false");
+        $(".AnswerDiv").removeAttr("aria-pressed");
         $(".AnswerDiv").attr("tabindex","0");
+        $(".AnswerDiv").each(function()
+        {
+            var answerPanel = $(this).next(".textArea");
+            if (answerPanel.length && answerPanel.attr("id"))
+            {
+                $(this).attr("aria-controls", answerPanel.attr("id"));
+                answerPanel.attr("aria-hidden", "true");
+            }
+        });
         $(".AnswerDiv").bind("click keyup", AnswerDivFun);
 
         $(document).bind("keydown mousedown", enable_scorm);
@@ -59,8 +69,9 @@
             $(this).parent().find('.textArea').slideUp("fast", function() {
                 ActivityMain.setHabitatContainerSize();
             });
-            $(this).text("Show answer");
-            $(this).attr("aria-pressed","false");
+            $(this).text("Show Answer");
+            $(this).attr("aria-expanded","false");
+            $(this).parent().find(".textArea").attr("aria-hidden", "true");
             $('.imageBoxHolder').hide();
             $('.imageThumbHolder.imageThumbHolder2').hide();
             var mainDiv = $(this).closest(".midDiv");
@@ -79,8 +90,9 @@
         }
         else
         {
-            $(this).text("Hide answer");
-            $(this).attr("aria-pressed","true");
+            $(this).text("Hide Answer");
+            $(this).attr("aria-expanded","true");
+            $(this).parent().find(".textArea").attr("aria-hidden", "false");
             $(this).parent().find('.textArea').slideDown("fast", function() {
                 $('.imageBoxHolder').hide();
                 $(this).parent().find(".wrapper").show();

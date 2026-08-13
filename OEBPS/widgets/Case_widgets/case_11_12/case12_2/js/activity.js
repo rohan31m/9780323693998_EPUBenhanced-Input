@@ -133,6 +133,20 @@
 
     var currScreenVisible = null;
 
+
+    function setReferenceExpanded(isExpanded)
+    {
+        $('#tableBtn').attr('aria-expanded', isExpanded ? 'true' : 'false');
+        $('#referencePanel').attr('aria-hidden', isExpanded ? 'false' : 'true');
+        $('#widgetStatus').text(isExpanded ? 'Reference expanded' : 'Reference collapsed');
+    }
+
+    function setMenuExpanded(isExpanded)
+    {
+        $('#menuBtn').attr('aria-expanded', isExpanded ? 'true' : 'false');
+        $('#menuPanel').attr('aria-hidden', isExpanded ? 'false' : 'true');
+        $('#widgetStatus').text(isExpanded ? 'Menu expanded' : 'Menu collapsed');
+    }
     function menuBtnFn(ev, nSlideCounter)
     {
         if (ev.type == "keyup" && ev.keyCode != 13)
@@ -149,10 +163,12 @@
         {
             resetScrrenObjectsVisibility();
             $('.tablepatch').hide();
+            setReferenceExpanded(false);
         }
         $('#tableBtn').removeClass('tableBtnSelected');
         if ($('.menupatch').css('display') == 'block')
         {
+            setMenuExpanded(false);
             $('.menupatch').slideUp();
             $('#menuBtn').removeClass('menuBtnSelected');
             //$('#menuBtn').focus();
@@ -178,6 +194,7 @@
             var currScreenNum = $(currScreenVisible).attr('id').match(/\d+/)[0];
             $('#menu' + currScreenNum).addClass("selectedMenu");
             //currScreenVisible = $('.midDiv:visible');
+            setMenuExpanded(true);
             $('.menupatch').css("z-index", "13");
             $('#menuBtn').addClass('menuBtnSelected');
             $('#tableBtn').removeAttr('tabindex');
@@ -221,11 +238,13 @@
         {
             resetScrrenObjectsVisibility();
             $('.menupatch').hide();
+            setMenuExpanded(false);
             $('#menuBtn').removeClass('menuBtnSelected');
         }
         $('#tableBtn').removeClass('tableBtnSelected');
         if ($('.tablepatch').css('display') != 'none')
         {
+            setReferenceExpanded(false);
             $('.tablepatch').slideUp();
             $('#tableBtn').removeClass('tableBtnSelected');
             if (currScreenVisible1 != null)
@@ -247,6 +266,7 @@
             });
             var currScreenNum = $(currScreenVisible1).attr('id').match(/\d+/)[0];
             $('#menu' + currScreenNum).addClass("selectedMenu");
+            setReferenceExpanded(true);
             $('.tablepatch').css("z-index", "13");
             $('#tableBtn').addClass('tableBtnSelected');
             $('.tablepatch').slideDown(
@@ -262,6 +282,7 @@
         }
         if ($('.menupatch').css('display') == 'block')
         {
+            setMenuExpanded(false);
             $('#menuBtn').removeClass('menuBtnSelected');
         }
         var data_id = 0;
@@ -447,9 +468,10 @@
         $(mainDiv.find(".dropdownList li")[0]).addClass("selected");
         mainDiv.find(".dropdownList").find('.current').text($(mainDiv.find(".dropdownList li")[0]).text());   
 
-        $('.AnswerDiv').text('Show answer');
-        $('.AnswerDiv').attr('aria-pressed','false');
-        $('.textArea').hide();
+        $('.AnswerDiv').text('Show Answer');
+        $('.AnswerDiv').attr('aria-expanded','false');
+        $('.AnswerDiv').removeAttr('aria-pressed');
+        $('.textArea').attr('aria-hidden', 'true').hide();
         if (nSlideCounter < 0)
         {
             $(".topContent").hide();

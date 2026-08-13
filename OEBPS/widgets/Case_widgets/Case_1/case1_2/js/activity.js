@@ -32,8 +32,24 @@
         $(".navigation").bind("click keyup", fnHandelNavigationEvents);
         $("#naviLeft").bind("click keyup", fnBack);
         $("#naviRight").bind("click keyup", fnNext);
-        $("#menuBtn").bind("click keyup", menuBtnFn);
-        $("#tableBtn").bind("click keyup", tableBtnFn);
+        $("#menuBtn").bind("click", menuBtnFn);
+        $("#menuBtn").bind("keydown", function(ev)
+        {
+            if (ev.keyCode === 13 || ev.keyCode === 32)
+            {
+                ev.preventDefault();
+                menuBtnFn(ev);
+            }
+        });
+        $("#tableBtn").bind("click", tableBtnFn);
+        $("#tableBtn").bind("keydown", function(ev)
+        {
+            if (ev.keyCode === 13 || ev.keyCode === 32)
+            {
+                ev.preventDefault();
+                tableBtnFn(ev);
+            }
+        });
         $('.item').bind("click keyup", fnClickRadioBox);
         // working
         // $('.rb').bind("click keyup",fnClickRadioBox);
@@ -133,13 +149,32 @@
 
     var currScreenVisible = null;
 
+    function announceWidgetStatus(message)
+    {
+        var $status = $('#widgetStatus');
+        $status.text('');
+        window.setTimeout(function()
+        {
+            $status.text(message);
+        }, 50);
+    }
+
+    function setReferenceExpanded(isExpanded)
+    {
+        $('#tableBtn').attr('aria-expanded', isExpanded ? 'true' : 'false');
+        $('#referencePanel').attr('aria-hidden', isExpanded ? 'false' : 'true');
+        announceWidgetStatus(isExpanded ? 'Reference expanded' : 'Reference collapsed');
+    }
+
+    function setMenuExpanded(isExpanded)
+    {
+        $('#menuBtn').attr('aria-expanded', isExpanded ? 'true' : 'false');
+        $('#menuPanel').attr('aria-hidden', isExpanded ? 'false' : 'true');
+        announceWidgetStatus(isExpanded ? 'Menu expanded' : 'Menu collapsed');
+    }
+
     function menuBtnFn(ev, nSlideCounter)
     {
-        if (ev.type == "keyup" && ev.keyCode != 13)
-        {
-            navigateMenuItems(ev);
-            return true;
-        }
         resetCheckboxes();
         /* $('.navigation').each(function()
         {
@@ -149,10 +184,12 @@
         {
             resetScrrenObjectsVisibility();
             $('.tablepatch').hide();
+            setReferenceExpanded(false);
         }
         $('#tableBtn').removeClass('tableBtnSelected');
         if ($('.menupatch').css('display') == 'block')
         {
+            setMenuExpanded(false);
             $('.menupatch').slideUp();
             $('#menuBtn').removeClass('menuBtnSelected');
             //$('#menuBtn').focus();
@@ -178,6 +215,8 @@
             var currScreenNum = $(currScreenVisible).attr('id').match(/\d+/)[0];
             $('#menu' + currScreenNum).addClass("selectedMenu");
             //currScreenVisible = $('.midDiv:visible');
+            setMenuExpanded(true);
+            $('#menuBtn').focus();
             $('.menupatch').css("z-index", "13");
             $('#menuBtn').addClass('menuBtnSelected');
             $('#tableBtn').removeAttr('tabindex');
@@ -189,7 +228,10 @@
                     $("#naviList").hide();
                     $("#naviLeft").hide();
                     $("#naviRight").hide();
-                    $('#menu0').focus();
+                    window.setTimeout(function()
+                    {
+                        $('#menu0').focus();
+                    }, 300);
                 }
             });
         }
@@ -209,10 +251,6 @@
 
     function tableBtnFn(ev)
     {
-        if (ev.type == "keyup" && ev.keyCode != 13)
-        {
-            return true;
-        }
         $('.navigation').each(function()
         {
             $(this).removeClass('currentSlide');
@@ -221,11 +259,13 @@
         {
             resetScrrenObjectsVisibility();
             $('.menupatch').hide();
+            setMenuExpanded(false);
             $('#menuBtn').removeClass('menuBtnSelected');
         }
         $('#tableBtn').removeClass('tableBtnSelected');
         if ($('.tablepatch').css('display') != 'none')
         {
+            setReferenceExpanded(false);
             $('.tablepatch').slideUp();
             $('#tableBtn').removeClass('tableBtnSelected');
             if (currScreenVisible1 != null)
@@ -247,6 +287,7 @@
             });
             var currScreenNum = $(currScreenVisible1).attr('id').match(/\d+/)[0];
             $('#menu' + currScreenNum).addClass("selectedMenu");
+            setReferenceExpanded(true);
             $('.tablepatch').css("z-index", "13");
             $('#tableBtn').addClass('tableBtnSelected');
             $('.tablepatch').slideDown(
@@ -262,6 +303,7 @@
         }
         if ($('.menupatch').css('display') == 'block')
         {
+            setMenuExpanded(false);
             $('#menuBtn').removeClass('menuBtnSelected');
         }
         var data_id = 0;
@@ -406,6 +448,8 @@
                 $(this).bind("click tap", onListSelect);
             });
             $(this).attr("tabindex", "0");
+            $(this).attr("aria-expanded", "false");
+            $(this).attr("aria-haspopup", "true");
             $(this).removeClass("dropdownListBox").addClass("dropdownList dropdown");
         });
     }
@@ -447,9 +491,10 @@
         $(mainDiv.find(".dropdownList li")[0]).addClass("selected");
         mainDiv.find(".dropdownList").find('.current').text($(mainDiv.find(".dropdownList li")[0]).text());   
 
-        $('.AnswerDiv').text('Show answer');
-        $('.AnswerDiv').attr('aria-pressed','false');
-        $('.textArea').hide();
+        $('.AnswerDiv').text('Show Answer');
+        $('.AnswerDiv').attr('aria-expanded','false');
+        $('.AnswerDiv').removeAttr('aria-pressed');
+        $('.textArea').attr('aria-hidden', 'true').hide();
         if (nSlideCounter < 0)
         {
             $(".topContent").hide();
