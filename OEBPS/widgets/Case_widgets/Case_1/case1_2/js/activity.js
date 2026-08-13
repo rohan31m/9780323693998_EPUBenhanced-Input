@@ -41,6 +41,7 @@
                 menuBtnFn(ev);
             }
         });
+        $(document).on("keydown", handleHamburgerMenuKeys);
         $("#tableBtn").bind("click", tableBtnFn);
         $("#tableBtn").bind("keydown", function(ev)
         {
@@ -173,6 +174,86 @@
         announceWidgetStatus(isExpanded ? 'Menu expanded' : 'Menu collapsed');
     }
 
+    function isHamburgerMenuOpen()
+    {
+        return $('.menupatch').css('display') == 'block';
+    }
+
+    function getHamburgerFocusables()
+    {
+        return $('#menuBtn, #menuPanel .menuList li[tabindex]').filter(function()
+        {
+            return $(this).is(':visible') && $(this).attr('tabindex') !== '-1';
+        });
+    }
+
+    function closeHamburgerMenu(restoreFocus)
+    {
+        if (!isHamburgerMenuOpen())
+        {
+            return;
+        }
+        setMenuExpanded(false);
+        $('.menupatch').slideUp();
+        $('#menuBtn').removeClass('menuBtnSelected');
+        $('#tableBtn').attr('tabindex', '0');
+        if (currScreenVisible != null)
+        {
+            $(currScreenVisible).show();
+        }
+        currScreenVisible = null;
+        $("#naviList").show();
+        $("#naviLeft").show();
+        $("#naviRight").show();
+        if (restoreFocus)
+        {
+            window.setTimeout(function()
+            {
+                $('#menuBtn').focus();
+            }, 0);
+        }
+    }
+
+    function handleHamburgerMenuKeys(ev)
+    {
+        if (!isHamburgerMenuOpen())
+        {
+            return;
+        }
+        var isEscape = ev.key === 'Escape' || ev.key === 'Esc' || ev.keyCode === 27;
+        if (isEscape)
+        {
+            ev.preventDefault();
+            ev.stopPropagation();
+            closeHamburgerMenu(true);
+            return;
+        }
+        if (ev.key === 'Tab' || ev.keyCode === 9)
+        {
+            var $focusable = getHamburgerFocusables();
+            if (!$focusable.length)
+            {
+                return;
+            }
+            var first = $focusable.get(0);
+            var last = $focusable.get($focusable.length - 1);
+            var active = document.activeElement;
+            if (ev.shiftKey)
+            {
+                if (active === first || $focusable.index(active) === -1)
+                {
+                    ev.preventDefault();
+                    last.focus();
+                }
+            }
+            else if (active === last || $focusable.index(active) === -1)
+            {
+                ev.preventDefault();
+                first.focus();
+            }
+        }
+    }
+
     function menuBtnFn(ev, nSlideCounter)
     {
         resetCheckboxes();
@@ -187,20 +268,9 @@
             setReferenceExpanded(false);
         }
         $('#tableBtn').removeClass('tableBtnSelected');
-        if ($('.menupatch').css('display') == 'block')
+        if (isHamburgerMenuOpen())
         {
-            setMenuExpanded(false);
-            $('.menupatch').slideUp();
-            $('#menuBtn').removeClass('menuBtnSelected');
-            //$('#menuBtn').focus();
-            $('#tableBtn').attr('tabindex','0');
-
-            if (currScreenVisible != null)
-                $(currScreenVisible).show();
-            currScreenVisible = null;
-            $("#naviList").show();
-            $("#naviLeft").show();
-            $("#naviRight").show();
+            closeHamburgerMenu(false);
         }
         else
         {
@@ -630,18 +700,19 @@
     }
 
     function navigateMenuItems(event){
-        focused_option = $($(".menuList li:focus")[0] || $(".menuList .selectedMenu")[0]);
+        var $items = $('.menuList li');
+        var $focused = $($(".menuList li:focus")[0] || $(".menuList .selectedMenu")[0]);
+        var index = $items.index($focused);
 
         if (event.keyCode == 40)
         {
-          // Down
-            focused_option.next().focus();
+            event.preventDefault();
+            $items.eq((index + 1) % $items.length).focus();
         }
         else if (event.keyCode == 38)
         {
-          // Up
-            // var focused_option = $($(this).find('.list .option:focus')[0] || $(this).find('.list .option.selected')[0]);
-            focused_option.prev().focus();
+            event.preventDefault();
+            $items.eq((index - 1 + $items.length) % $items.length).focus();
         }
     }
 
