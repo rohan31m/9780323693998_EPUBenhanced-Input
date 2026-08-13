@@ -1641,3 +1641,64 @@ strong {
 #midConatiner #naviList li:focus {
   box-shadow: 0 0 0 2px #ffa500;
 }
+
+/* Visible tooltips for icon-only buttons: hover and keyboard focus */
+#midConatiner #menuBtn:hover,
+#midConatiner #menuBtn:focus,
+#midConatiner #tableBtn:hover,
+#midConatiner #tableBtn:focus,
+#midConatiner #naviLeft:hover,
+#midConatiner #naviLeft:focus,
+#midConatiner #naviRight:hover,
+#midConatiner #naviRight:focus {
+  z-index: 20;
+}
+
+#midConatiner #menuBtn:hover::after,
+#midConatiner #menuBtn:focus::after,
+#midConatiner #tableBtn:hover::after,
+#midConatiner #tableBtn:focus::after,
+#midConatiner #naviLeft:hover::after,
+#midConatiner #naviLeft:focus::after,
+#midConatiner #naviRight:hover::after,
+#midConatiner #naviRight:focus::after {
+  content: attr(aria-label);
+  position: absolute;
+  z-index: 21;
+  padding: 4px 8px;
+  background: #1a1a1a;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  white-space: nowrap;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+#midConatiner #menuBtn:hover::after,
+#midConatiner #menuBtn:focus::after {
+  top: calc(100% + 6px);
+  left: 0;
+}
+
+#midConatiner #tableBtn:hover::after,
+#midConatiner #tableBtn:focus::after {
+  top: calc(100% + 6px);
+  right: 0;
+  left: auto;
+}
+
+#midConatiner #naviLeft:hover::after,
+#midConatiner #naviLeft:focus::after {
+  bottom: calc(100% + 6px);
+  left: 0;
+}
+
+#midConatiner #naviRight:hover::after,
+#midConatiner #naviRight:focus::after {
+  bottom: calc(100% + 6px);
+  right: 0;
+  left: auto;
+}

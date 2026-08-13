@@ -162,6 +162,35 @@
         });
     }
 
+    function focusSlideContent(slideIndex)
+    {
+        var $slide = $("#midDiv" + slideIndex);
+        var $target = $('#menuBtn');
+        if ($slide.length)
+        {
+            var $heading = $slide.find('h1, h2, h3, h4, h5, h6').first();
+            $target = $heading.length ? $heading : $slide;
+            if ($target.attr('tabindex') == null)
+            {
+                $target.attr('tabindex', '-1');
+            }
+        }
+        var moveFocus = function()
+        {
+            if ($target && $target.length)
+            {
+                $target.focus();
+            }
+            if (!$target.length || document.activeElement !== $target.get(0))
+            {
+                $('#menuBtn').focus();
+            }
+        };
+        moveFocus();
+        window.setTimeout(moveFocus, 0);
+        window.setTimeout(moveFocus, 350);
+    }
+
     function closeHamburgerMenu(restoreFocus)
     {
         if (!isHamburgerMenuOpen())
@@ -769,6 +798,7 @@
         });
         $(this).addClass('selectedMenu');
         currScreenVisible = null;
+        focusSlideContent(nSlideCounter);
         menuBtnFn(ev, nSlideCounter);
 
         fnCheckNextBack(nSlideCounter);
