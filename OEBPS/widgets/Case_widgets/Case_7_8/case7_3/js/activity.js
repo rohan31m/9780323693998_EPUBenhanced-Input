@@ -688,8 +688,7 @@
     }
     
     function callback() {
-        // $('.midDiv').focus();
-        // console.log("$('.midDiv').focus();");
+        focusSlideContent(nSlideCounter);
         ActivityMain.setHabitatContainerSize();
     };
     function fnAddScrollMain()
