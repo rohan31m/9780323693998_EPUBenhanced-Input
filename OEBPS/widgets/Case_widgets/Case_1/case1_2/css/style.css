@@ -1160,12 +1160,61 @@ li.jp-unmute,
   width: 530px;
 }
 
+.testsList caption {
+  caption-side: top;
+  text-align: left;
+  font-family: "SourceSansPro-Bold";
+  font-size: 16px;
+  font-weight: bold;
+  color: #015453;
+  background: #CEE4E4 none repeat scroll 0 0;
+  padding: 6px 10px;
+}
+
+.testsList thead th {
+  text-align: left;
+  font-family: "SourceSansPro-Bold";
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 8px 6px 10px;
+  border-bottom: 1pt solid #027977;
+  background: #f3f8f8;
+  color: #015453;
+}
+
+.testsList tbody th,
+.testsList tbody td {
+  text-align: left;
+  vertical-align: top;
+  padding: 4px 8px 4px 10px;
+  font-weight: normal;
+}
+
+.testsList tbody tr.sectionHead th {
+  font-family: "SourceSansPro-Bold";
+  font-weight: bold;
+  background: #f3f8f8;
+  color: #015453;
+  border-top: 1pt solid #027977;
+}
+
 .testsList tr {
   height: 22px;
 }
 
 .emptyLine {
   border-top: 1pt solid #027977;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .testContainer {
@@ -1181,7 +1230,8 @@ li.jp-unmute,
   height: 30px !important;
 }
 
-tr > td:first-child {
+tr > td:first-child,
+tr > th:first-child {
   padding-left: 10px !important;
 }
 
@@ -1481,7 +1531,8 @@ top: 2px;
 
 }
 
-.tableHeader > span{
+.tableHeader > span,
+.tableHeader > label {
     font-size: 14px;
     left: -8px;
     position: relative;

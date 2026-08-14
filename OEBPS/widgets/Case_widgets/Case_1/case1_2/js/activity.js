@@ -15,6 +15,7 @@
             $('.loadDiv').delay(800).fadeOut(300);
         });
         init();
+        setReferencePanelTabStops(false);
         //$(".topContent").hide();
         $(".footer").hide();
         $(".beginBtn").bind("click", fnBegin);
@@ -215,10 +216,35 @@
         $dots.eq(targetIndex).focus();
     }
 
+    function setReferencePanelTabStops(isOpen)
+    {
+        var $panel = $('#referencePanel');
+        if (!$panel.length)
+        {
+            return;
+        }
+        if (isOpen)
+        {
+            $panel.removeAttr('inert');
+            $panel.find('.dropdown').attr('tabindex', '0');
+        }
+        else
+        {
+            $panel.attr('inert', 'inert');
+            $panel.find('select, .dropdown, .nano-content').attr('tabindex', '-1');
+            $panel.find('.dropdown .option').removeAttr('tabindex');
+            if (document.activeElement && ($panel.is(document.activeElement) || $.contains($panel.get(0), document.activeElement)))
+            {
+                document.activeElement.blur();
+            }
+        }
+    }
+
     function setReferenceExpanded(isExpanded)
     {
         $('#tableBtn').attr('aria-expanded', isExpanded ? 'true' : 'false');
         $('#referencePanel').attr('aria-hidden', isExpanded ? 'false' : 'true');
+        setReferencePanelTabStops(isExpanded);
         announceWidgetStatus(isExpanded ? 'Reference expanded' : 'Reference collapsed');
     }
 
