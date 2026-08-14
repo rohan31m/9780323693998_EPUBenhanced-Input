@@ -29,7 +29,8 @@
         $('#pageContainer').removeAttr("aria-live");
         $('#naviLeft').attr("aria-label","Previous");
         $('#naviRight').attr("aria-label","Next");
-        $(".navigation").bind("click keyup", fnHandelNavigationEvents);
+        $(".navigation").bind("click", fnHandelNavigationEvents);
+        $("#naviList").on("keydown", ".navigation", handleSlideControlKeys);
         $("#naviLeft").bind("click keyup", fnBack);
         $("#naviRight").bind("click keyup", fnNext);
         $("#menuBtn").bind("click", menuBtnFn);
@@ -160,6 +161,60 @@
         }, 50);
     }
 
+    function updateSlideControls(activeIndex)
+    {
+        activeIndex = Number(activeIndex);
+        $('.navigation').each(function()
+        {
+            var idNum = Number(String($(this).attr('id') || '').replace('navigate', ''));
+            var isActive = idNum === activeIndex;
+            $(this).toggleClass('currentSlide', isActive);
+            $(this).attr('aria-current', isActive ? 'true' : 'false');
+            $(this).attr('tabindex', isActive ? '0' : '-1');
+        });
+    }
+
+    var keepSlideControlFocus = false;
+
+    function handleSlideControlKeys(ev)
+    {
+        var key = ev.keyCode || ev.which;
+        var $dots = $('.navigation');
+        var index = $dots.index(this);
+        var targetIndex = -1;
+        if (key === 37 || key === 38)
+        {
+            targetIndex = index <= 0 ? $dots.length - 1 : index - 1;
+        }
+        else if (key === 39 || key === 40)
+        {
+            targetIndex = index >= $dots.length - 1 ? 0 : index + 1;
+        }
+        else if (key === 36)
+        {
+            targetIndex = 0;
+        }
+        else if (key === 35)
+        {
+            targetIndex = $dots.length - 1;
+        }
+        else if (key === 13 || key === 32)
+        {
+            ev.preventDefault();
+            keepSlideControlFocus = false;
+            fnHandelNavigationEvents.call(this, { type: 'click' });
+            return;
+        }
+        else
+        {
+            return;
+        }
+        ev.preventDefault();
+        keepSlideControlFocus = true;
+        fnHandelNavigationEvents.call($dots.eq(targetIndex)[0], { type: 'click' });
+        $dots.eq(targetIndex).focus();
+    }
+
     function setReferenceExpanded(isExpanded)
     {
         $('#tableBtn').attr('aria-expanded', isExpanded ? 'true' : 'false');
@@ -234,6 +289,7 @@
         $("#naviList").show();
         $("#naviLeft").show();
         $("#naviRight").show();
+        updateSlideControls(nSlideCounter);
         if (restoreFocus)
         {
             window.setTimeout(function()
@@ -345,6 +401,7 @@
         $("#naviList").show();
         $("#naviLeft").show();
         $("#naviRight").show();
+        updateSlideControls(nSlideCounter);
     }
     var currScreenVisible1 = null;
 
@@ -373,6 +430,7 @@
             $("#naviList").show();
             $("#naviLeft").show();
             $("#naviRight").show();
+            updateSlideControls(nSlideCounter);
         }
         else
         {
@@ -432,7 +490,8 @@
         footerLi += '<ul>';
         for (var i = 0; i < nCount; i++)
         {
-            footerLi += '<li aria-label="slide '+(i+1)+' clickable"><span id="navigate' + i + '" class="navigation"></span></li>';
+            var isFirst = (i === 0);
+            footerLi += '<li><span id="navigate' + i + '" class="navigation" role="button" tabindex="' + (isFirst ? '0' : '-1') + '" aria-label="Slide ' + (i + 1) + ' of ' + nCount + '" aria-current="' + (isFirst ? 'true' : 'false') + '"></span></li>';
         }
         footerLi += '</ul>';
         $("#naviList").append(footerLi);
@@ -440,7 +499,7 @@
         {
             //background: "#015453 no-repeat"
         });
-        $("#navigate0").addClass("currentSlide");
+        updateSlideControls(0);
         aSlidesArray[nSlideCounter].css(
         {
             'display': 'block',
@@ -572,7 +631,7 @@
         $('.menuList li').removeClass('selectedMenu');
         /* $('.midDiv').focus();
         console.log("$('.midDiv').focus();"); */
-        $('#navigate' + nSlideCounter).addClass('currentSlide');
+        updateSlideControls(nSlideCounter);
         // hide answer div
         $('.imageBoxHolder').hide();
         $('.imageThumbHolder').hide();
@@ -711,7 +770,15 @@
     }
     
     function callback() {
-        focusSlideContent(nSlideCounter);
+        if (keepSlideControlFocus)
+        {
+            keepSlideControlFocus = false;
+            $('#navigate' + nSlideCounter).focus();
+        }
+        else
+        {
+            focusSlideContent(nSlideCounter);
+        }
         ActivityMain.setHabitatContainerSize();
     };
     function fnAddScrollMain()
@@ -762,7 +829,7 @@
         var navigateId = $(this).attr("id");
         var navIdNo = navigateId.match(/\d+/)[0];
         //$('#navigate' + navIdNo).css('background', '#015453');
-        $('#navigate' + navIdNo).addClass('currentSlide');;
+        updateSlideControls(navIdNo);
         $("#midDiv" + navIdNo).css("visibility", "visible");
         nSlideCounter = navIdNo;
         $(".midDiv").hide();

@@ -385,6 +385,7 @@ img {
   position: relative;
   width: 85%;
   z-index: 1;
+  list-style: none;
 }
 
 #naviList ul li {
