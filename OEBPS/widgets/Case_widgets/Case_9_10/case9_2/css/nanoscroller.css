@@ -15,8 +15,26 @@
   left          : 0;
 }
 .nano > .nano-content:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* Keep the ring inside the clipped widget, in a padding gutter so it does not cover table text. */
+.nano.is-scrollable:focus-within {
   outline: 2px solid #ffffff;
-  outline-offset: -6px;
+  outline-offset: -10px;
+  box-shadow: inset 0 0 0 8px #000000;
+}
+.nano.is-scrollable > .nano-content {
+  padding: 16px 16px 18px;
+  box-sizing: border-box;
+}
+.nano.is-not-scrollable > .nano-content {
+  padding: 16px 16px;
+  box-sizing: border-box;
+}
+.nano.is-not-scrollable > .nano-content:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: -10px;
   box-shadow: inset 0 0 0 8px #000000;
 }
 .nano > .nano-content::-webkit-scrollbar {
