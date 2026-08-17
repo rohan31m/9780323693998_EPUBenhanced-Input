@@ -118,7 +118,7 @@ $(document).ready(function()
     $("#addTable8").append(tableRows9);
     // $("#addTable2").append(tableRows);
     create_custom_dropdowns();
-    $('#dropdown_1').hide();
+    $('#dropdown_1').attr({'aria-hidden': 'true', 'tabindex': '-1'}).hide();
     var rowIndex = 0;
     $('.tablepatch .list li').each(function()
     {

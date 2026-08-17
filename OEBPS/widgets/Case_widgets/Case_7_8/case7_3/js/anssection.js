@@ -78,13 +78,13 @@
             // console.log(!mainDiv.find(".imageBoxHolder").hasClass("imageBoxHolder2"))
             if(!mainDiv.find(".imageBoxHolder").hasClass("imageBoxHolder2")){
                 mainDiv.find('.containerImg').hide();
-                mainDiv.find(".dropdownList li").removeClass("selected");
+                mainDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");
                 mainDiv.find('.imageThumbHolder .thumbnail').removeClass("thumbnail_active");       
                 $(mainDiv.find('.imageThumbHolder .thumbnail')[0]).addClass("thumbnail_active");
                 var mainHsDiv = mainDiv.find('.hs_set1');
                 mainHsDiv.css("display","flex");
                 mainHsDiv.find('.imageShow0').show();
-                $(mainHsDiv.find(".dropdownList li")[0]).addClass("selected");
+                $(mainHsDiv.find(".dropdownList li")[0]).addClass("selected").attr("aria-selected", "true");
                 mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[0]).text()); 
             }             
         }
@@ -98,14 +98,14 @@
                 $(this).parent().find(".wrapper").show();
                 var mainDiv = $(this).closest(".midDiv");
                 mainDiv.find('.containerImg').hide();
-                mainDiv.find(".dropdownList li").removeClass("selected");
+                mainDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");
                 $('.imageThumbHolder').show();
                 mainDiv.find('.imageThumbHolder .thumbnail').removeClass("thumbnail_active");       
                 $(mainDiv.find('.imageThumbHolder .thumbnail')[0]).addClass("thumbnail_active");
                 var mainHsDiv = mainDiv.find('.hs_set1');
                 mainHsDiv.show();
                 mainHsDiv.find('.imageShow0').show();
-                $(mainHsDiv.find(".dropdownList li")[0]).addClass("selected");
+                $(mainHsDiv.find(".dropdownList li")[0]).addClass("selected").attr("aria-selected", "true");
                 mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[0]).text());              
                 // $('.Cont_Ans').focus();
                 ActivityMain.setHabitatContainerSize();

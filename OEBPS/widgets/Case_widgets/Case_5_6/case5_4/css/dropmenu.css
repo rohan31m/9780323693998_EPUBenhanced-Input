@@ -175,7 +175,7 @@ select {
   white-space: nowrap;
   overflow: hidden;
 }
-      .dropdown .option:hover, .dropdown .option:focus {
+      .dropdown .option:hover, .dropdown .option:focus, .dropdown .option.active {
         background-color: #CEE4E4 !important;
       }
       
@@ -185,7 +185,7 @@ select {
         color: #fff;
       }
       
-      .dropdown .option.selected:focus {
+      .dropdown .option.selected:focus, .dropdown .option.selected.active {
         background: #015453;
          background-color: #015453 !important;
          /*outline: 1px solid;*/

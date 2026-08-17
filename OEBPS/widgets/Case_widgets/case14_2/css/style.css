@@ -1480,7 +1480,8 @@ top: 2px;
 
 }
 
-.tableHeader > span{
+.tableHeader > span,
+.tableHeader > label{
     font-size: 14px;
     left: -8px;
     position: relative;

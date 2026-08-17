@@ -90,9 +90,9 @@
                 $(mainDiv.find('.imageThumbHolder' + imageBoxHolderId + ' .thumbnail')[0]).addClass("thumbnail_active");
                 mainHsDiv.show();
                 mainHsDiv.find('.containerImg').hide();
-                mainHsDiv.find(".dropdownList li").removeClass("selected");
+                mainHsDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");
                 mainHsDiv.find('.imageShow0').show();
-                $(mainHsDiv.find(".dropdownList li")[0]).addClass("selected");
+                $(mainHsDiv.find(".dropdownList li")[0]).addClass("selected").attr("aria-selected", "true");
                 mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[0]).text());   
                 // $('.Cont_Ans').focus();           
                 ActivityMain.setHabitatContainerSize();

@@ -526,7 +526,7 @@
         addPolite();
         var mainDiv = $(e.currentTarget).closest(".midDiv");
         mainDiv.find('.containerImg').hide();
-        mainDiv.find(".dropdownList li").removeClass("selected");        
+        mainDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");        
         var listItemId = $(e.currentTarget).attr("data-id");
         var dropDownId = $(e.currentTarget).attr("data-dropdownid");
         mainDiv.find('.imageBoxHolder').hide();
@@ -535,7 +535,7 @@
         var mainHsDiv = mainDiv.find('.hs_set' + dropDownId);
         mainHsDiv.css("display","flex");
         mainHsDiv.find('.imageShow' + listItemId).show();
-        $(mainHsDiv.find(".dropdownList li")[listItemId]).addClass("selected");
+        $(mainHsDiv.find(".dropdownList li")[listItemId]).addClass("selected").attr("aria-selected", "true");
         mainHsDiv.find(".dropdownList").find('.current').html($(mainHsDiv.find(".dropdownList li")[listItemId]).html());      
         setTimeout(function(){
             ActivityMain.setHabitatContainerSize();
@@ -551,7 +551,7 @@
         addPolite();
         var mainDiv = $(e.currentTarget).closest(".midDiv");
         mainDiv.find('.containerImg').hide();
-        mainDiv.find(".dropdownList li").removeClass("selected");        
+        mainDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");        
         var listItemId = $(e.currentTarget).attr("data-id");
         var dropDownId = $(e.currentTarget).attr("data-dropdownid");
         mainDiv.find('.imageBoxHolder').hide();
@@ -560,33 +560,48 @@
         var mainHsDiv = mainDiv.find('.hs_set' + dropDownId);
         mainHsDiv.css("display","flex");
         mainHsDiv.find('.imageShow' + listItemId).show();
-        $(mainHsDiv.find(".dropdownList li")[listItemId]).addClass("selected");
+        $(mainHsDiv.find(".dropdownList li")[listItemId]).addClass("selected").attr("aria-selected", "true");
         mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[listItemId]).text());      
         setTimeout(function(){
             ActivityMain.setHabitatContainerSize();
         },500);  
     }
 
-    function createDropDownLists()
+        function createDropDownLists()
     {
         $(".dropdownListBox").each(function(index)
         {
-            $(this).append('<span class="current">' + $($(this).find("li")[0]).text() + '</span>');
-            $(this).append('<div class="list"><ul role="listbox" class="hidden"></ul></div>');
-            $($(this).find("li")[0]).addClass("selected");
-            $(this).find("li").each(function(liIndex)
+            var $box = $(this);
+            var listboxId = "image-listbox-" + index;
+            $box.append('<span class="current">' + $($box.find("li")[0]).text() + '</span>');
+            $box.append('<div class="list"><ul id="' + listboxId + '" role="listbox" class="hidden"></ul></div>');
+            $($box.find("li")[0]).addClass("selected");
+            $box.find("li").each(function(liIndex)
             {
                 $(this).addClass("option");
                 $(this).attr("data-value", $(this).text());
                 $(this).attr("data-id", liIndex);
                 $(this).attr("role", "option");
-                $(this).appendTo($(this).parent().find(".list ul"));
+                $(this).attr("id", "image-option-" + index + "-" + liIndex);
+                $(this).attr("aria-selected", liIndex === 0 ? "true" : "false");
+                $(this).removeAttr("tabindex");
+                $(this).appendTo($box.find(".list ul"));
                 $(this).bind("click tap", onListSelect);
             });
-            $(this).attr("tabindex", "0");
-            $(this).removeClass("dropdownListBox").addClass("dropdownList dropdown");
+            $box.attr({
+                "tabindex": "0",
+                "role": "combobox",
+                "aria-autocomplete": "none",
+                "aria-expanded": "false",
+                "aria-haspopup": "listbox",
+                "aria-controls": listboxId,
+                "aria-label": "Select image view"
+            });
+            $box.removeClass("dropdownListBox").addClass("dropdownList dropdown");
         });
     }
+
+
 
     function onListSelect(e)
     {
@@ -621,8 +636,8 @@
         }  
         mainDiv.find(".imageThumbHolder .thumbnail").removeClass("thumbnail_active");       
         $(mainDiv.find(".imageThumbHolder .thumbnail")[0]).addClass("thumbnail_active");      
-        mainDiv.find(".dropdownList li").removeClass("selected");       
-        $(mainDiv.find(".dropdownList li")[0]).addClass("selected");
+        mainDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");       
+        $(mainDiv.find(".dropdownList li")[0]).addClass("selected").attr("aria-selected", "true");
         mainDiv.find(".dropdownList").find('.current').text($(mainDiv.find(".dropdownList li")[0]).text());   
 
         $('.AnswerDiv').text('Show Answer');
@@ -839,8 +854,8 @@
 
         fnCheckNextBack(nSlideCounter);
         /* var mainDiv = $("#midDiv"+ nSlideCounter);
-        mainDiv.find(".dropdownList li").removeClass("selected");       
-        $(mainDiv.find(".dropdownList li")[0]).addClass("selected");
+        mainDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");       
+        $(mainDiv.find(".dropdownList li")[0]).addClass("selected").attr("aria-selected", "true");
         mainDiv.find(".dropdownList").find('.current').text($(mainDiv.find(".dropdownList li")[0]).text()); */
         ActivityMain.setHabitatContainerSize();
     }
