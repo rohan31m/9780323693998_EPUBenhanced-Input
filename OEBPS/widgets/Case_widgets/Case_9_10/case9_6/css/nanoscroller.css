@@ -60,3 +60,17 @@
   visibility : visible\9; /* Target only IE7 and IE8 with this hack */
   opacity    : 0.99;
 }
+
+.nano.is-not-scrollable,
+.testContainer.is-not-scrollable {
+  overflow: visible;
+}
+.nano.is-not-scrollable > .nano-content {
+  position: static !important;
+  overflow: visible !important;
+  height: auto;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+}

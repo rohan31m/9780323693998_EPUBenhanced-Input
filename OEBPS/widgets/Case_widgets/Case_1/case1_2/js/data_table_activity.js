@@ -14,17 +14,19 @@ function clearReferenceTableScrollTabStops()
 {
     $('.tablepatch .nano-content').each(function()
     {
-        $(this).removeAttr('tabindex').removeAttr('role').removeAttr('aria-label');
+        $(this).removeAttr('tabindex').removeAttr('role').removeAttr('aria-label').removeAttr('aria-labelledby');
     });
+    $('.tablepatch .nano').removeClass('is-scrollable is-not-scrollable');
     $('.tablepatch .nano-pane').hide();
 }
 
 function focusReferenceTableHeading(dataId)
 {
+    var $content = $('#addTable' + dataId);
     var $heading = $('#referenceTableHeading' + dataId);
     if (!$heading.length)
     {
-        $heading = $('#addTable' + dataId + ' tr.titleTest').children('td, th').first();
+        $heading = $content.find('tr.titleTest').children('td, th').first();
         if ($heading.length)
         {
             $heading.attr('id', 'referenceTableHeading' + dataId);
@@ -33,6 +35,15 @@ function focusReferenceTableHeading(dataId)
     if ($heading.length)
     {
         $heading.attr('tabindex', '-1');
+    }
+    if ($content.closest('.nano').hasClass('is-not-scrollable'))
+    {
+        $content.attr('tabindex', '-1');
+        $content.focus();
+        return;
+    }
+    if ($heading.length)
+    {
         $heading.focus();
     }
 }
@@ -55,15 +66,26 @@ function syncReferenceTableScrollAccess(dataId, moveFocus)
 
     var tableHeight = $table.length ? $table.outerHeight() : 0;
     var needsScroll = $container.is(':visible') && $container.height() > 0 && tableHeight > $container.height();
+    var headingText = $.trim($('#referenceTableHeading' + dataId).text()) || 'Reference table';
+    var headingId = 'referenceTableHeading' + dataId;
     if (needsScroll)
     {
+        $container.addClass('is-scrollable');
         $container.nanoScroller({ tabIndex: -1 });
         $container.children('.nano-pane').show();
-        var headingText = $.trim($('#referenceTableHeading' + dataId).text()) || 'Reference table';
         $content.attr({
             'tabindex': '0',
             'role': 'region',
             'aria-label': headingText + ', scrollable'
+        });
+    }
+    else
+    {
+        $container.addClass('is-not-scrollable');
+        $content.attr({
+            'tabindex': '-1',
+            'role': 'region',
+            'aria-labelledby': $('#' + headingId).length ? headingId : 'referenceTableTitle'
         });
     }
 
