@@ -1625,6 +1625,17 @@ strong {
   box-shadow: 0 0 0 4px #000000;
 }
 
+#midConatiner .nano-content:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: -6px;
+  box-shadow: inset 0 0 0 8px #000000;
+}
+
+#midConatiner .testsList [id^="referenceTableHeading"]:focus {
+  outline: 2px solid #ffffff;
+  box-shadow: 0 0 0 4px #000000;
+}
+
 #midConatiner #menuBtn:focus,
 #midConatiner #tableBtn:focus,
 #midConatiner #naviLeft:focus,
