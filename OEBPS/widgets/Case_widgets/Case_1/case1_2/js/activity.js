@@ -231,7 +231,15 @@
         else
         {
             $panel.attr('inert', 'inert');
-            $panel.find('select, .dropdown, .nano-content').attr('tabindex', '-1');
+            $panel.find('select, .dropdown').attr('tabindex', '-1');
+            if (typeof clearReferenceTableScrollTabStops === 'function')
+            {
+                clearReferenceTableScrollTabStops();
+            }
+            else
+            {
+                $panel.find('.nano-content').attr('tabindex', '-1');
+            }
             $panel.find('.dropdown .option').removeAttr('tabindex');
             if (document.activeElement && ($panel.is(document.activeElement) || $.contains($panel.get(0), document.activeElement)))
             {
@@ -481,6 +489,10 @@
                     $("#naviList").hide();
                     $("#naviLeft").hide();
                     $("#naviRight").hide();
+                    if (typeof syncReferenceTableScrollAccess === 'function')
+                    {
+                        syncReferenceTableScrollAccess(null, true);
+                    }
                 }
             });
         }
@@ -488,16 +500,6 @@
         {
             setMenuExpanded(false);
             $('#menuBtn').removeClass('menuBtnSelected');
-        }
-        var data_id = 0;
-        if ($('#testListId' + data_id).height() < $('#addTable' + data_id + ' table').height())
-        {
-            $(".nano").nanoScroller();
-            $(".nano-pane").show();
-        }
-        else
-        {
-            $(".nano-pane").hide();
         }
     }
 
@@ -858,8 +860,16 @@
         }
         setTimeout(function()
         {
-            $(".nano").nanoScroller();
+            $(".nano").nanoScroller({ tabIndex: -1 });
             $(".nano-pane").show();
+            if ($('#tableBtn').attr('aria-expanded') === 'true' && typeof syncReferenceTableScrollAccess === 'function')
+            {
+                syncReferenceTableScrollAccess(null, false);
+            }
+            else if (typeof clearReferenceTableScrollTabStops === 'function')
+            {
+                clearReferenceTableScrollTabStops();
+            }
         }, 100);
 
         $('.navigation').removeClass('currentSlide');

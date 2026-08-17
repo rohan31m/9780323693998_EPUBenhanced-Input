@@ -141,6 +141,10 @@
         $('#tableBtn').attr('aria-expanded', isExpanded ? 'true' : 'false');
         $('#referencePanel').attr('aria-hidden', isExpanded ? 'false' : 'true');
         $('#widgetStatus').text(isExpanded ? 'Reference expanded' : 'Reference collapsed');
+        if (!isExpanded && typeof clearReferenceTableScrollTabStops === 'function')
+        {
+            clearReferenceTableScrollTabStops();
+        }
     }
 
     function setMenuExpanded(isExpanded)
@@ -433,6 +437,10 @@
                     $("#naviList").hide();
                     $("#naviLeft").hide();
                     $("#naviRight").hide();
+                    if (typeof syncReferenceTableScrollAccess === 'function')
+                    {
+                        syncReferenceTableScrollAccess(null, true);
+                    }
                 }
             });
         }
@@ -440,16 +448,6 @@
         {
             setMenuExpanded(false);
             $('#menuBtn').removeClass('menuBtnSelected');
-        }
-        var data_id = 0;
-        if ($('#testListId' + data_id).height() < $('#addTable' + data_id + ' table').height())
-        {
-            $(".nano").nanoScroller();
-            $(".nano-pane").show();
-        }
-        else
-        {
-            $(".nano-pane").hide();
         }
     }
 
@@ -810,8 +808,16 @@
         }
         setTimeout(function()
         {
-            $(".nano").nanoScroller();
+            $(".nano").nanoScroller({ tabIndex: -1 });
             $(".nano-pane").show();
+            if ($('#tableBtn').attr('aria-expanded') === 'true' && typeof syncReferenceTableScrollAccess === 'function')
+            {
+                syncReferenceTableScrollAccess(null, false);
+            }
+            else if (typeof clearReferenceTableScrollTabStops === 'function')
+            {
+                clearReferenceTableScrollTabStops();
+            }
         }, 100);
 
         $('.navigation').removeClass('currentSlide');
