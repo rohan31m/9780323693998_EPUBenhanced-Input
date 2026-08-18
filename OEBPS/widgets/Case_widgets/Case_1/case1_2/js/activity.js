@@ -594,7 +594,8 @@
         mainHsDiv.css("display","flex");
         mainHsDiv.find('.imageShow' + listItemId).show();
         $(mainHsDiv.find(".dropdownList li")[listItemId]).addClass("selected").attr("aria-selected", "true");
-        mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[listItemId]).text());      
+        mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[listItemId]).text());
+        announceImageView($(mainHsDiv.find(".dropdownList li")[listItemId]).text());      
         setTimeout(function(){
             ActivityMain.setHabitatContainerSize();
         },500);
@@ -618,43 +619,59 @@
         mainHsDiv.css("display","flex");
         mainHsDiv.find('.imageShow' + listItemId).show();
         $(mainHsDiv.find(".dropdownList li")[listItemId]).addClass("selected").attr("aria-selected", "true");
-        mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[listItemId]).text());      
+        mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[listItemId]).text());
+        announceImageView($(mainHsDiv.find(".dropdownList li")[listItemId]).text());      
         setTimeout(function(){
             ActivityMain.setHabitatContainerSize();
         },500);  
     }
 
-    function createDropDownLists()
+        function announceImageView(label)
+    {
+        var name = $.trim(label || "");
+        if (!name)
+        {
+            return;
+        }
+        var $live = $("#widgetStatus");
+        $live.text("");
+        window.setTimeout(function()
+        {
+            $live.text(name + " image displayed");
+        }, 50);
+    }
+function createDropDownLists()
     {
         $(".dropdownListBox").each(function(index)
         {
             var $box = $(this);
-            var listboxId = "image-listbox-" + index;
-            $box.append('<span class="current">' + $($box.find("li")[0]).text() + '</span>');
-            $box.append('<div class="list"><ul id="' + listboxId + '" role="listbox" class="hidden"></ul></div>');
-            $($box.find("li")[0]).addClass("selected");
-            $box.find("li").each(function(liIndex)
+            var $items = $box.find("li");
+            if (!$items.length)
             {
-                $(this).addClass("option");
-                $(this).attr("data-value", $(this).text());
-                $(this).attr("data-id", liIndex);
-                $(this).attr("role", "option");
-                $(this).attr("id", "image-option-" + index + "-" + liIndex);
-                $(this).attr("aria-selected", liIndex === 0 ? "true" : "false");
-                $(this).removeAttr("tabindex");
-                $(this).appendTo($box.find(".list ul"));
-                $(this).bind("click tap", onListSelect);
+                return;
+            }
+            var listboxId = "image-listbox-" + index;
+            var comboboxId = "image-combobox-" + index;
+            var valueId = comboboxId + "-value";
+            var labelId = comboboxId + "-label";
+            var optionsHtml = "";
+            $items.each(function(liIndex)
+            {
+                var text = $.trim($(this).text());
+                optionsHtml += '<li id="image-option-' + index + '-' + liIndex + '" class="option' + (liIndex === 0 ? ' selected' : '') + '" role="option" aria-selected="' + (liIndex === 0 ? 'true' : 'false') + '" data-value="' + text + '" data-id="' + liIndex + '">' + text + '</li>';
             });
-            $box.attr({
-                "tabindex": "0",
-                "role": "combobox",
-                "aria-autocomplete": "none",
-                "aria-expanded": "false",
-                "aria-haspopup": "listbox",
-                "aria-controls": listboxId,
-                "aria-label": "Select image view"
-            });
-            $box.removeClass("dropdownListBox").addClass("dropdownList dropdown");
+            var firstText = $.trim($items.first().text());
+            var $combo = $(
+                '<div class="dropdownList dropdown pageDropdownList">' +
+                    '<span id="' + labelId + '" class="combo-label">Select image view</span>' +
+                    '<button type="button" id="' + comboboxId + '" class="combo-button" role="combobox" aria-autocomplete="none" aria-expanded="false" aria-haspopup="listbox" aria-controls="' + listboxId + '" aria-labelledby="' + labelId + ' ' + valueId + '">' +
+                        '<span class="current" id="' + valueId + '">' + firstText + '</span>' +
+                    '</button>' +
+                    '<div class="list" aria-hidden="true"><ul id="' + listboxId + '" role="listbox" aria-label="Image views">' + optionsHtml + '</ul></div>' +
+                '</div>'
+            );
+            $box.replaceWith($combo);
+            $combo.find(".option").bind("click tap", onListSelect);
         });
     }
 
@@ -665,6 +682,7 @@
         mainDiv.find('.containerImg').hide();
         listItemId = $(e.target).attr("data-id");
         mainDiv.find('.imageShow' + listItemId).show();
+        announceImageView($(e.currentTarget).text() || $(e.target).text());
         setTimeout(function(){            
             ActivityMain.setHabitatContainerSize();
         },500);        

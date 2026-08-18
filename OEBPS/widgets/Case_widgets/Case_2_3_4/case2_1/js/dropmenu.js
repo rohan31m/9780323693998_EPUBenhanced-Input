@@ -133,7 +133,10 @@ $(document).on('click', '.dropdown .option', function(event)
     $dropdown.find('.current').text(text);
     $dropdown.prev('select').val($(this).data('value')).trigger('change');
     closeDropdown($dropdown);
-    getCombobox($dropdown).focus();
+    if ($dropdown.closest('.tablepatch').length === 0)
+    {
+        getCombobox($dropdown).focus();
+    }
 });
 $(document).on('keydown', '[role="combobox"]', function(event)
 {

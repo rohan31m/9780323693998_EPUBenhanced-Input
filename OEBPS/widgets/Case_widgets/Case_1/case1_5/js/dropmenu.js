@@ -1,10 +1,23 @@
+function getDropdown($el)
+{
+    var $node = $($el);
+    return $node.hasClass('dropdown') ? $node : $node.closest('.dropdown');
+}
+
+function getCombobox($dropdown)
+{
+    var $combo = $dropdown.find('[role="combobox"]').first();
+    return $combo.length ? $combo : $dropdown;
+}
+
 function setActiveOption($dropdown, $option)
 {
+    var $combo = getCombobox($dropdown);
     $dropdown.find('.option.active').removeClass('active');
     if ($option && $option.length)
     {
         $option.addClass('active');
-        $dropdown.attr('aria-activedescendant', $option.attr('id'));
+        $combo.attr('aria-activedescendant', $option.attr('id'));
         var list = $dropdown.find('.list')[0];
         if (list && $option[0] && typeof $option[0].scrollIntoView === 'function')
         {
@@ -13,7 +26,7 @@ function setActiveOption($dropdown, $option)
     }
     else
     {
-        $dropdown.removeAttr('aria-activedescendant');
+        $combo.removeAttr('aria-activedescendant');
     }
 }
 
@@ -24,7 +37,8 @@ function openDropdown($dropdown)
         closeDropdown($(this));
     });
     $dropdown.addClass('open');
-    $dropdown.attr('aria-expanded', 'true');
+    getCombobox($dropdown).attr('aria-expanded', 'true');
+    $dropdown.find('.list').attr('aria-hidden', 'false');
     var $active = $dropdown.find('.option.selected').first();
     if (!$active.length)
     {
@@ -36,9 +50,11 @@ function openDropdown($dropdown)
 function closeDropdown($dropdown)
 {
     $dropdown.removeClass('open');
-    $dropdown.attr('aria-expanded', 'false');
+    var $combo = getCombobox($dropdown);
+    $combo.attr('aria-expanded', 'false');
+    $combo.removeAttr('aria-activedescendant');
+    $dropdown.find('.list').attr('aria-hidden', 'true');
     $dropdown.find('.option.active').removeClass('active');
-    $dropdown.removeAttr('aria-activedescendant');
 }
 
 function create_custom_dropdowns()
@@ -49,9 +65,17 @@ function create_custom_dropdowns()
         {
             var listboxId = 'dropdown-listbox-' + i;
             var comboboxId = 'dropdown-combobox-' + i;
+            var valueId = comboboxId + '-value';
             var labelledBy = $('#referenceSelectLabel').attr('id');
-            var labelledByAttr = labelledBy ? ' aria-labelledby="' + labelledBy + '"' : '';
-            $(this).after('<div id="' + comboboxId + '" class="dropdown ' + ($(this).attr('class') || '') + '" tabindex="0" role="combobox" aria-autocomplete="none" aria-expanded="false" aria-haspopup="listbox" aria-controls="' + listboxId + '"' + labelledByAttr + '><span class="current"></span><div class="list"><ul id="' + listboxId + '" role="listbox"></ul></div></div>');
+            var labelledByIds = labelledBy ? (labelledBy + ' ' + valueId) : valueId;
+            $(this).after(
+                '<div class="dropdown ' + ($(this).attr('class') || '') + '">' +
+                    '<button type="button" id="' + comboboxId + '" class="combo-button" role="combobox" aria-autocomplete="none" aria-expanded="false" aria-haspopup="listbox" aria-controls="' + listboxId + '" aria-labelledby="' + labelledByIds + '">' +
+                        '<span class="current" id="' + valueId + '"></span>' +
+                    '</button>' +
+                    '<div class="list" aria-hidden="true"><ul id="' + listboxId + '" role="listbox"></ul></div>' +
+                '</div>'
+            );
 
             var dropdown = $(this).next();
             var options = $(select).find('option');
@@ -71,24 +95,23 @@ function create_custom_dropdowns()
     });
 }
 // Event listeners
-// Open/close
 $(document).on('click', '.dropdown', function(event)
 {
     if ($(event.target).closest('.option').length)
     {
         return;
     }
-    if ($(this).hasClass('open'))
+    var $dropdown = $(this);
+    if ($dropdown.hasClass('open'))
     {
-        closeDropdown($(this));
+        closeDropdown($dropdown);
     }
     else
     {
-        openDropdown($(this));
+        openDropdown($dropdown);
     }
-    $(this).focus();
+    getCombobox($dropdown).focus();
 });
-// Close when clicking outside
 $(document).on('click', function(event)
 {
     if ($(event.target).closest('.dropdown').length === 0)
@@ -100,7 +123,6 @@ $(document).on('click', function(event)
     }
     event.stopPropagation();
 });
-// Option click
 $(document).on('click', '.dropdown .option', function(event)
 {
     event.stopPropagation();
@@ -111,13 +133,15 @@ $(document).on('click', '.dropdown .option', function(event)
     $dropdown.find('.current').text(text);
     $dropdown.prev('select').val($(this).data('value')).trigger('change');
     closeDropdown($dropdown);
-    $dropdown.focus();
+    if ($dropdown.closest('.tablepatch').length === 0)
+    {
+        getCombobox($dropdown).focus();
+    }
 });
-// Keyboard events
-$(document).on('keydown', '.dropdown', function(event)
+$(document).on('keydown', '[role="combobox"]', function(event)
 {
-    var $dropdown = $(this);
-    var $options = $dropdown.find('.list [role="listbox"] > .option');
+    var $dropdown = getDropdown($(this));
+    var $options = $dropdown.find('[role="listbox"] > .option');
     if (!$options.length)
     {
         $options = $dropdown.find('.option');
@@ -203,7 +227,7 @@ $(document).on('keydown', '.dropdown', function(event)
     {
         event.preventDefault();
         closeDropdown($dropdown);
-        $dropdown.focus();
+        getCombobox($dropdown).focus();
         return false;
     }
     else if (key == 9 && isOpen)

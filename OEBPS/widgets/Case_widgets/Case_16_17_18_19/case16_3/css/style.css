@@ -1623,6 +1623,7 @@ strong {
 #midConatiner #naviList li:focus,
 #midConatiner .menuList li:focus,
 #midConatiner .dropdown:focus,
+#midConatiner .dropdown:focus-within,
 #midConatiner .AnswerDiv:focus,
 #midConatiner .hs:focus,
 #midConatiner .options.tabindex:focus,
