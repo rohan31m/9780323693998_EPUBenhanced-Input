@@ -492,10 +492,20 @@
         });
     }
 
+    function setThumbnailActive($thumbs, $active)
+    {
+        $thumbs.removeClass("thumbnail_active").attr("aria-pressed", "false");
+        if ($active && $active.length)
+        {
+            $active.addClass("thumbnail_active").attr("aria-pressed", "true");
+        }
+    }
+
     function createThumbnails()
     {
         $(".imageThumbHolder .thumbnail").each(function(index)
         {
+            $(this).attr("aria-pressed", $(this).hasClass("thumbnail_active") ? "true" : "false");
             $(this).bind("click keyup", onThumbnailSelect);
         });
     }
@@ -528,8 +538,7 @@
         var listItemId = $(e.target).attr("data-id");
         var dropDownId = $(e.target).attr("data-dropdownid");
         mainDiv.find('.imageBoxHolder').hide();
-        mainDiv.find('.imageThumbHolder .thumbnail').removeClass("thumbnail_active");       
-        $(mainDiv.find('.imageThumbHolder .thumbnail')[dropDownId-1]).addClass("thumbnail_active");
+        setThumbnailActive(mainDiv.find('.imageThumbHolder .thumbnail'), $(mainDiv.find('.imageThumbHolder .thumbnail')[dropDownId-1]));
         var mainHsDiv = mainDiv.find('.hs_set' + dropDownId);
         mainHsDiv.css("display","flex");
         mainHsDiv.find('.imageShow' + listItemId).show();
@@ -553,8 +562,7 @@
         var listItemId = $(e.currentTarget).attr("data-id");
         var dropDownId = $(e.currentTarget).attr("data-dropdownid");
         mainDiv.find('.imageBoxHolder').hide();
-        mainDiv.find('.imageThumbHolder .thumbnail').removeClass("thumbnail_active");       
-        $(e.currentTarget).addClass("thumbnail_active");
+        setThumbnailActive(mainDiv.find('.imageThumbHolder .thumbnail'), $(e.currentTarget));
         var mainHsDiv = mainDiv.find('.hs_set' + dropDownId);
         mainHsDiv.css("display","flex");
         mainHsDiv.find('.imageShow' + listItemId).show();
@@ -632,8 +640,7 @@
             mainDiv.find(".imageThumbHolder").css("display","flex");
            
         }  
-        mainDiv.find(".imageThumbHolder .thumbnail").removeClass("thumbnail_active");       
-        $(mainDiv.find(".imageThumbHolder .thumbnail")[0]).addClass("thumbnail_active");      
+        setThumbnailActive(mainDiv.find(".imageThumbHolder .thumbnail"), $(mainDiv.find(".imageThumbHolder .thumbnail")[0]));      
         mainDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");       
         $(mainDiv.find(".dropdownList li")[0]).addClass("selected").attr("aria-selected", "true");
         mainDiv.find(".dropdownList").find('.current').text($(mainDiv.find(".dropdownList li")[0]).text());   

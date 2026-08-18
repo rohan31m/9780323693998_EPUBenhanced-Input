@@ -79,8 +79,8 @@
             if(!mainDiv.find(".imageBoxHolder").hasClass("imageBoxHolder2")){
                 mainDiv.find('.containerImg').hide();
                 mainDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");
-                mainDiv.find('.imageThumbHolder .thumbnail').removeClass("thumbnail_active");       
-                $(mainDiv.find('.imageThumbHolder .thumbnail')[0]).addClass("thumbnail_active");
+                mainDiv.find('.imageThumbHolder .thumbnail').removeClass("thumbnail_active").attr("aria-pressed", "false");
+                $(mainDiv.find('.imageThumbHolder .thumbnail')[0]).addClass("thumbnail_active").attr("aria-pressed", "true");
                 var mainHsDiv = mainDiv.find('.hs_set1');
                 mainHsDiv.css("display","flex");
                 mainHsDiv.find('.imageShow0').show();
@@ -100,8 +100,8 @@
                 mainDiv.find('.containerImg').hide();
                 mainDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");
                 $('.imageThumbHolder').show();
-                mainDiv.find('.imageThumbHolder .thumbnail').removeClass("thumbnail_active");       
-                $(mainDiv.find('.imageThumbHolder .thumbnail')[0]).addClass("thumbnail_active");
+                mainDiv.find('.imageThumbHolder .thumbnail').removeClass("thumbnail_active").attr("aria-pressed", "false");
+                $(mainDiv.find('.imageThumbHolder .thumbnail')[0]).addClass("thumbnail_active").attr("aria-pressed", "true");
                 var mainHsDiv = mainDiv.find('.hs_set1');
                 mainHsDiv.show();
                 mainHsDiv.find('.imageShow0').show();
