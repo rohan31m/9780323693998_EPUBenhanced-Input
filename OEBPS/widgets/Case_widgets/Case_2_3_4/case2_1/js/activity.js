@@ -488,8 +488,44 @@
     {
         $(".hs").each(function(index)
         {
+            $(this).removeAttr("aria-current");
             $(this).bind("click keyup tap", onHsSelect);
         });
+    }
+
+    function setActiveHotspotLink($scope, dropDownId, listItemId)
+    {
+        var $links = $scope.find(".hs");
+        $links.removeAttr("aria-current");
+        if (dropDownId == null || listItemId == null)
+        {
+            return;
+        }
+        $links.filter(function()
+        {
+            return String($(this).attr("data-dropdownid")) === String(dropDownId) &&
+                String($(this).attr("data-id")) === String(listItemId);
+        }).first().attr("aria-current", "true");
+    }
+
+    function focusUpdatedImageView($container)
+    {
+        var $target = $container.find('[role="combobox"]').first();
+        if (!$target.length)
+        {
+            $target = $container.find("img:visible").first();
+            if ($target.length && $target.attr("tabindex") == null)
+            {
+                $target.attr("tabindex", "-1");
+            }
+        }
+        if ($target.length)
+        {
+            window.setTimeout(function()
+            {
+                $target.focus();
+            }, 450);
+        }
     }
 
     function setThumbnailActive($thumbs, $active)
@@ -532,11 +568,12 @@
             }
 
         addPolite();
-        var mainDiv = $(e.target).closest(".midDiv");
+        var $link = $(e.currentTarget);
+        var mainDiv = $link.closest(".midDiv");
         mainDiv.find('.containerImg').hide();
         mainDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");        
-        var listItemId = $(e.target).attr("data-id");
-        var dropDownId = $(e.target).attr("data-dropdownid");
+        var listItemId = $link.attr("data-id");
+        var dropDownId = $link.attr("data-dropdownid");
         mainDiv.find('.imageBoxHolder').hide();
         setThumbnailActive(mainDiv.find('.imageThumbHolder .thumbnail'), $(mainDiv.find('.imageThumbHolder .thumbnail')[dropDownId-1]));
         var mainHsDiv = mainDiv.find('.hs_set' + dropDownId);
@@ -544,7 +581,9 @@
         mainHsDiv.find('.imageShow' + listItemId).show();
         $(mainHsDiv.find(".dropdownList li")[listItemId]).addClass("selected").attr("aria-selected", "true");
         mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[listItemId]).text());
-        announceImageView($(mainHsDiv.find(".dropdownList li")[listItemId]).text());
+        setActiveHotspotLink(mainDiv, dropDownId, listItemId);
+        announceImageView($(mainHsDiv.find(".dropdownList li")[listItemId]).text(), $link.text());
+        focusUpdatedImageView(mainHsDiv);
         setTimeout(function(){
             ActivityMain.setHabitatContainerSize();
         },500);
@@ -569,13 +608,14 @@
         mainHsDiv.find('.imageShow' + listItemId).show();
         $(mainHsDiv.find(".dropdownList li")[listItemId]).addClass("selected").attr("aria-selected", "true");
         mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[listItemId]).text());
+        setActiveHotspotLink(mainDiv, dropDownId, listItemId);
         announceImageView($(mainHsDiv.find(".dropdownList li")[listItemId]).text()); 
         setTimeout(function(){
             ActivityMain.setHabitatContainerSize();
         },500);  
     }
 
-    function announceImageView(label)
+    function announceImageView(label, selectedLink)
     {
         var name = $.trim(label || "");
         if (!name)
@@ -583,10 +623,16 @@
             return;
         }
         var $live = $("#widgetStatus");
+        var message = name + " displayed";
+        var linkName = $.trim(selectedLink || "");
+        if (linkName)
+        {
+            message = linkName + " selected. " + message;
+        }
         $live.text("");
         window.setTimeout(function()
         {
-            $live.text(name + " image displayed");
+            $live.text(message);
         }, 50);
     }
 
@@ -635,6 +681,8 @@
         mainDiv.find('.containerImg').hide();
         listItemId = $option.attr("data-id");
         mainDiv.find('.imageShow' + listItemId).show();
+        var hsMatch = (mainDiv.closest(".imageBoxHolder").attr("class") || "").match(/hs_set(\d+)/);
+        setActiveHotspotLink(mainDiv.closest(".midDiv"), hsMatch ? hsMatch[1] : null, listItemId);
         announceImageView($option.text());
         setTimeout(function(){            
             ActivityMain.setHabitatContainerSize();
@@ -663,7 +711,8 @@
         setThumbnailActive(mainDiv.find(".imageThumbHolder .thumbnail"), $(mainDiv.find(".imageThumbHolder .thumbnail")[0]));      
         mainDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");       
         $(mainDiv.find(".dropdownList li")[0]).addClass("selected").attr("aria-selected", "true");
-        mainDiv.find(".dropdownList").find('.current').text($(mainDiv.find(".dropdownList li")[0]).text());   
+        mainDiv.find(".dropdownList").find('.current').text($(mainDiv.find(".dropdownList li")[0]).text());
+        mainDiv.find(".hs").removeAttr("aria-current");
 
         $('.AnswerDiv').text('Show Answer');
         $('.AnswerDiv').attr('aria-expanded','false');

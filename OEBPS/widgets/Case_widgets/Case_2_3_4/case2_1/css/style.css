@@ -445,6 +445,12 @@ span.hs:visited, span.al:visited {
   text-decoration:underline;
 }
 
+span.hs[aria-current="true"] {
+  font-weight: bold;
+  color: #0000EE;
+  text-decoration: underline;
+}
+
 
 
 /*--------------------------------------------------------*/
