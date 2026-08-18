@@ -85,7 +85,8 @@
                 mainHsDiv.css("display","flex");
                 mainHsDiv.find('.imageShow0').show();
                 $(mainHsDiv.find(".dropdownList li")[0]).addClass("selected").attr("aria-selected", "true");
-                mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[0]).text()); 
+                mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[0]).text());
+                mainDiv.find(".hs").removeAttr("aria-current"); 
             }             
         }
         else
@@ -106,7 +107,8 @@
                 mainHsDiv.show();
                 mainHsDiv.find('.imageShow0').show();
                 $(mainHsDiv.find(".dropdownList li")[0]).addClass("selected").attr("aria-selected", "true");
-                mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[0]).text());              
+                mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[0]).text());
+                mainDiv.find(".hs").removeAttr("aria-current");              
                 // $('.Cont_Ans').focus();
                 ActivityMain.setHabitatContainerSize();
             });
