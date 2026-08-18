@@ -86,8 +86,8 @@
                 var mainDiv = $(this).closest(".midDiv");                
                 var mainHsDiv = mainDiv.find('.imageBoxHolder' + imageBoxHolderId + '.hs_set1');
                 $('.imageThumbHolder' + imageBoxHolderId).show();
-                mainDiv.find('.imageThumbHolder' + imageBoxHolderId + ' .thumbnail').removeClass("thumbnail_active");       
-                $(mainDiv.find('.imageThumbHolder' + imageBoxHolderId + ' .thumbnail')[0]).addClass("thumbnail_active");
+                mainDiv.find('.imageThumbHolder' + imageBoxHolderId + ' .thumbnail').removeClass("thumbnail_active").attr("aria-pressed", "false");       
+                $(mainDiv.find('.imageThumbHolder' + imageBoxHolderId + ' .thumbnail')[0]).addClass("thumbnail_active").attr("aria-pressed", "true");
                 mainHsDiv.show();
                 mainHsDiv.find('.containerImg').hide();
                 mainHsDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");

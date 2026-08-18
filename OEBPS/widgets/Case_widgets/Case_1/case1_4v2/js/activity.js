@@ -492,6 +492,14 @@
         });
     }
 
+    function setThumbnailActive($thumbs, $active)
+    {
+        $thumbs.removeClass("thumbnail_active").attr("aria-pressed", "false");
+        if ($active && $active.length)
+        {
+            $active.addClass("thumbnail_active").attr("aria-pressed", "true");
+        }
+    }
     function createThumbnails()
     {
         /* var dropDownID = 1;   
@@ -528,6 +536,7 @@
 
         $(".imageThumbHolder .thumbnail").each(function(index)
         {
+            $(this).attr("aria-pressed", $(this).hasClass("thumbnail_active") ? "true" : "false");
             $(this).bind("click keyup", onThumbnailSelect);
         });
     }
@@ -558,8 +567,7 @@
         var listItemId = $(e.target).attr("data-id");
         var dropDownId = $(e.target).attr("data-dropdownid");   
         mainDiv.find('.imageBoxHolder' + imageBoxHolderId).hide();  
-        mainDiv.find('.imageThumbHolder' + imageBoxHolderId + ' .thumbnail').removeClass("thumbnail_active");       
-        $(mainDiv.find('.imageThumbHolder' + imageBoxHolderId + ' .thumbnail')[dropDownId-1]).addClass("thumbnail_active");   
+        setThumbnailActive(mainDiv.find('.imageThumbHolder' + imageBoxHolderId + ' .thumbnail'), $(mainDiv.find('.imageThumbHolder' + imageBoxHolderId + ' .thumbnail')[dropDownId-1]));   
         var mainHsDiv = mainDiv.find('.imageBoxHolder' + imageBoxHolderId + '.hs_set' + dropDownId);
         mainHsDiv.find('.containerImg').hide();
         mainHsDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");
@@ -584,8 +592,7 @@
         var listItemId = $(e.currentTarget).attr("data-id");
         var dropDownId = $(e.currentTarget).attr("data-dropdownid");   
         console.log("onThumbnailSelect  ", $(e.currentTarget))
-        mainDiv.find('.imageThumbHolder' + imageBoxHolderId + ' .thumbnail').removeClass("thumbnail_active"); 
-        $(e.currentTarget).addClass("thumbnail_active");
+        setThumbnailActive(mainDiv.find('.imageThumbHolder' + imageBoxHolderId + ' .thumbnail'), $(e.currentTarget));
         mainDiv.find('.imageBoxHolder' + imageBoxHolderId).hide();     
         var mainHsDiv = mainDiv.find('.imageBoxHolder' + imageBoxHolderId + '.hs_set' + dropDownId);
         mainHsDiv.find('.containerImg').hide();
@@ -656,8 +663,7 @@
         
         var mainDiv = $("#midDiv"+ nSlideCounter);  
         mainDiv.find(".imageThumbHolder").css("display","flex");
-        mainDiv.find(".imageThumbHolder .thumbnail").removeClass("thumbnail_active");       
-        $(mainDiv.find(".imageThumbHolder .thumbnail")[0]).addClass("thumbnail_active");
+        setThumbnailActive(mainDiv.find(".imageThumbHolder .thumbnail"), $(mainDiv.find(".imageThumbHolder .thumbnail")[0]));
         mainDiv.find(".hs_set1").css("display","flex");
         mainDiv.find(".hs_set1 .dropdownList li").removeClass("selected").attr("aria-selected", "false");       
         $(mainDiv.find(".hs_set1 .dropdownList li")[0]).addClass("selected").attr("aria-selected", "true");
