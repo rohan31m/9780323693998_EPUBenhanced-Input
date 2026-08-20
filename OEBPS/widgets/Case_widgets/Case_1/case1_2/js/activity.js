@@ -9,10 +9,52 @@
     // var audioElement = document.createElement('audio');
     $(document).ready(function()
     {
+                var $loadStatus = $('#widgetStatus');
+        var loadStatusAnnounced = false;
+        if ($loadStatus.length)
+        {
+            $loadStatus.attr({
+                'role': 'status',
+                'aria-live': 'polite',
+                'aria-atomic': 'true'
+            });
+            $loadStatus.text('');
+            window.setTimeout(function()
+            {
+                $loadStatus.text('Loading');
+            }, 50);
+        }
         $(window).load(function()
         {
             $(".loader").delay(800).fadeOut("slow");
-            $('.loadDiv').delay(800).fadeOut(300);
+            $('.loadDiv').delay(800).fadeOut(300, function()
+            {
+                if (loadStatusAnnounced)
+                {
+                    return;
+                }
+                loadStatusAnnounced = true;
+                $('.loadDiv').attr({
+                    'aria-busy': 'false',
+                    'aria-hidden': 'true'
+                });
+                if ($loadStatus.length)
+                {
+                    $loadStatus.text('');
+                    window.setTimeout(function()
+                    {
+                        $loadStatus.text('Content loaded');
+                    }, 50);
+                }
+                try
+                {
+                    if (window.parent && window.parent !== window)
+                    {
+                        window.parent.postMessage({ type: 'caseWidgetLoaded' }, '*');
+                    }
+                }
+                catch (ignore) {}
+            });
         });
         init();
         setReferencePanelTabStops(false);

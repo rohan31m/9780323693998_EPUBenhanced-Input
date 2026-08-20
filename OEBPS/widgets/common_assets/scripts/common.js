@@ -130,6 +130,83 @@ var allvideoelemts = document.querySelectorAll("video.hls-video");
         }
       });
 
+/*** Announce iframe loading / loaded status to screen readers ***/
+(function () {
+	var hiddenStatusStyle = "position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;";
+
+	function getOrCreateStatus(holder) {
+		var existing = holder.querySelector(".iframe-load-status");
+		if (existing) {
+			return existing;
+		}
+		var status = document.createElement("div");
+		status.className = "iframe-load-status";
+		status.setAttribute("role", "status");
+		status.setAttribute("aria-live", "polite");
+		status.setAttribute("aria-atomic", "true");
+		status.setAttribute("style", hiddenStatusStyle);
+		holder.insertBefore(status, holder.firstChild);
+		return status;
+	}
+
+	function announce(statusEl, message) {
+		statusEl.textContent = "";
+		window.setTimeout(function () {
+			statusEl.textContent = message;
+		}, 50);
+	}
+
+	function markIframeLoaded(iframe) {
+		if (!iframe || iframe.getAttribute("data-load-announced") === "true") {
+			return;
+		}
+		iframe.setAttribute("data-load-announced", "true");
+		iframe.setAttribute("aria-busy", "false");
+		var holder = iframe.parentNode;
+		if (!holder) {
+			return;
+		}
+		announce(getOrCreateStatus(holder), "Content loaded");
+	}
+
+	function setupIframeLoadingStatus() {
+		var iframes = document.querySelectorAll(".case-study-widget iframe, iframe[src*='Case_widgets']");
+		if (!iframes.length) {
+			return;
+		}
+		iframes.forEach(function (iframe) {
+			var holder = iframe.parentNode;
+			if (!holder) {
+				return;
+			}
+			iframe.setAttribute("aria-busy", "true");
+			announce(getOrCreateStatus(holder), "Loading");
+			iframe.addEventListener("load", function () {
+				window.setTimeout(function () {
+					markIframeLoaded(iframe);
+				}, 2500);
+			});
+		});
+	}
+
+	window.addEventListener("message", function (event) {
+		if (!event.data || event.data.type !== "caseWidgetLoaded") {
+			return;
+		}
+		document.querySelectorAll(".case-study-widget iframe, iframe[src*='Case_widgets']").forEach(function (iframe) {
+			if (iframe.contentWindow === event.source) {
+				markIframeLoaded(iframe);
+			}
+		});
+	});
+
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", setupIframeLoadingStatus);
+	} else {
+		setupIframeLoadingStatus();
+	}
+})();
+
 
 
 

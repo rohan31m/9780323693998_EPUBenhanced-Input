@@ -28,10 +28,10 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
@@ -669,7 +669,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
-            <div id="widgetStatus" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>
