@@ -1263,6 +1263,25 @@ color: #015453;
   color: inherit;
 }
 
+.caseOutlineTable caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: bold;
+  padding: 0 0 8px 0;
+  background: none;
+  color: inherit;
+  border: 0;
+}
+
+.caseOutlineTable tbody + tbody th[scope="colgroup"] {
+  border-top-width: 10px;
+}
+
+.caseOutlineTable th.subrow {
+  font-weight: normal;
+  padding-left: 28px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
