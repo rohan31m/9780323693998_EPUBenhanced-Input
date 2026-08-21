@@ -1186,6 +1186,44 @@ li.jp-unmute,
   width: 530px;
 }
 
+.testsList thead th {
+  text-align: left;
+  font-family: "SourceSansPro-Bold";
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 8px 6px 10px;
+  border-bottom: 1pt solid #027977;
+  background: #f3f8f8;
+  color: #015453;
+}
+
+.testsList tbody th,
+.testsList tbody td {
+  text-align: left;
+  vertical-align: top;
+  padding: 4px 8px 4px 10px;
+  font-weight: normal;
+}
+
+.testsList tbody tr.sectionHead th {
+  font-family: "SourceSansPro-Bold";
+  font-weight: bold;
+  background: #f3f8f8;
+  color: #015453;
+  border-top: 1pt solid #027977;
+}
+
+.testsList tbody tr.titleTest th {
+  font-family: "SourceSansPro-Bold";
+  font-weight: bold;
+}
+
+.testsList tbody tr.groupHead th {
+  font-family: "SourceSansPro-Bold";
+  font-weight: bold;
+  font-style: italic;
+}
+
 .testsList tr {
   height: auto;
   min-height: 28px;
@@ -1214,7 +1252,8 @@ li.jp-unmute,
   padding: 10px 12px !important;
 }
 
-tr > td:first-child {
+tr > td:first-child,
+tr > th:first-child {
   padding-left: 10px !important;
 }
 
