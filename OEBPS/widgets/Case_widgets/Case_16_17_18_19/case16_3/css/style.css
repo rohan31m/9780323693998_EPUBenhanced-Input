@@ -1620,10 +1620,6 @@ strong {
   overflow: visible;
 }
 
-#midConatiner #menuBtn:focus,
-#midConatiner #tableBtn:focus,
-#midConatiner #naviLeft:focus,
-#midConatiner #naviRight:focus,
 #midConatiner .navigation:focus,
 #midConatiner #naviList li:focus,
 #midConatiner .menuList li:focus,
@@ -1683,6 +1679,9 @@ strong {
 #midConatiner #naviRight:focus {
   position: relative;
   z-index: 13;
+  outline: 2px solid #ffffff;
+  outline-offset: -3px;
+  box-shadow: inset 0 0 0 5px #000000;
 }
 
 #midConatiner .navigation:focus,
