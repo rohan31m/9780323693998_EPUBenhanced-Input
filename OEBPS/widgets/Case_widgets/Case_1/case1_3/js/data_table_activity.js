@@ -95,6 +95,113 @@ function syncReferenceTableScrollAccess(dataId, moveFocus)
     }
 }
 
+function refText(html)
+{
+    return $.trim($('<div/>').html(html == null ? '' : String(html)).text());
+}
+
+function refEmpty(html)
+{
+    return refText(html) === '';
+}
+
+function refIsSectionRow(row)
+{
+    return !refEmpty(row.col_first) && refEmpty(row.col_second) && refEmpty(row.col_third);
+}
+
+function refValueCells(colSecond, colThird, headersComp, headersRange)
+{
+    var secondEmpty = refEmpty(colSecond);
+    var thirdEmpty = refEmpty(colThird);
+    if (secondEmpty && thirdEmpty)
+    {
+        return '<td colspan="2" headers="' + headersRange + '">&#160;</td>';
+    }
+    if (secondEmpty)
+    {
+        return '<td colspan="2" headers="' + headersRange + '">' + colThird + '</td>';
+    }
+    if (thirdEmpty)
+    {
+        return '<td colspan="2" headers="' + headersRange + '">' + colSecond + '</td>';
+    }
+    return '<td headers="' + headersComp + '">' + colSecond + '</td><td headers="' + headersRange + '">' + colThird + '</td>';
+}
+
+function buildReferenceTable(rows, tableIndex)
+{
+    var prefix = 'ref-t' + tableIndex;
+    var colTest = prefix + '-test';
+    var colComp = prefix + '-comp';
+    var colRange = prefix + '-range';
+    var sectionTitle = rows.length ? refText(rows[0].col_first) : 'Reference values';
+    var html = '<table class="testsList">';
+    html += '<caption class="visually-hidden">Normal Reference Range Table: ' + sectionTitle + '</caption>';
+    html += '<thead><tr>';
+    html += '<th scope="col" id="' + colTest + '">Test</th>';
+    html += '<th scope="col" id="' + colComp + '">Component</th>';
+    html += '<th scope="col" id="' + colRange + '">Reference range</th>';
+    html += '</tr></thead><tbody>';
+
+    var i = 0;
+    var lastTestId = '';
+    var sectionId = prefix + '-sec-0';
+
+    while (i < rows.length)
+    {
+        var row = rows[i];
+
+        if (refIsSectionRow(row))
+        {
+            sectionId = prefix + '-sec-' + i;
+            lastTestId = '';
+            var sectionClass = (i === 0) ? 'titleTest' : 'sectionHead';
+            var headingId = (i === 0) ? ('referenceTableHeading' + tableIndex) : sectionId;
+            html += '<tr class="' + sectionClass + '">';
+            html += '<th colspan="3" scope="colgroup" id="' + headingId + '">' + refText(row.col_first) + '</th>';
+            html += '</tr>';
+            i += 1;
+            continue;
+        }
+
+        if (refEmpty(row.col_first) && !refEmpty(row.col_second) && refEmpty(row.col_third))
+        {
+            html += '<tr class="groupHead">';
+            html += '<th colspan="2" scope="colgroup" headers="' + sectionId + ' ' + lastTestId + '">' + refText(row.col_second) + '</th>';
+            html += '</tr>';
+            i += 1;
+            continue;
+        }
+
+        if (!refEmpty(row.col_first))
+        {
+            var rowspan = 1;
+            var k = i + 1;
+            while (k < rows.length && refEmpty(rows[k].col_first) && !refIsSectionRow(rows[k]))
+            {
+                rowspan += 1;
+                k += 1;
+            }
+            lastTestId = prefix + '-row-' + i;
+            html += '<tr class="emptyLine">';
+            html += '<th scope="row" id="' + lastTestId + '"' + (rowspan > 1 ? ' rowspan="' + rowspan + '"' : '') + ' headers="' + colTest + ' ' + sectionId + '">' + row.col_first + '</th>';
+            html += refValueCells(row.col_second, row.col_third, colComp + ' ' + sectionId + ' ' + lastTestId, colRange + ' ' + sectionId + ' ' + lastTestId);
+            html += '</tr>';
+            i += 1;
+            continue;
+        }
+
+        html += '<tr>';
+        html += refValueCells(row.col_second, row.col_third, colComp + ' ' + sectionId + ' ' + lastTestId, colRange + ' ' + sectionId + ' ' + lastTestId);
+        html += '</tr>';
+        i += 1;
+    }
+
+    html += '</tbody></table>';
+    return html;
+}
+
 $(document).ready(function()
 {
     var tableRows1 = "";
@@ -131,78 +238,15 @@ $(document).ready(function()
     dropdownSelect = dropdownSelect + dropdownOptions;
     dropdownSelect = dropdownSelect + '</select>';
     // add DROPDOWN end-------------------------------------------------------------	
-    // 1st row
-    tableRows1 = tableRows1 + '<table class="testsList">';
-    for (var i = 0; i < tableData1.length; i++)
-    {
-        tableRows1 = tableRows1 + "<tr><td><span>" + tableData1[i].col_first + "</span></td><td><span>" + tableData1[i].col_second + "</span></td><td><span>" + tableData1[i].col_third + "</span></td></tr>";
-    }
-    tableRows1 = tableRows1 + '</table>';
-    tableRows1 = tableRows1 + brLine;
-    // 2st row
-    tableRows2 = tableRows2 + '<table class="testsList">';
-    for (var i = 0; i < tableData2.length; i++)
-    {
-        tableRows2 = tableRows2 + "<tr><td><span>" + tableData2[i].col_first + "</span></td><td><span>" + tableData2[i].col_second + "</span></td><td><span>" + tableData2[i].col_third + "</span></td></tr>";
-    }
-    tableRows2 = tableRows2 + '</table>';
-    tableRows2 = tableRows2 + brLine;
-    // 2st row
-    tableRows3 = tableRows3 + '<table class="testsList">';
-    for (var i = 0; i < tableData3.length; i++)
-    {
-        tableRows3 = tableRows3 + "<tr><td><span>" + tableData3[i].col_first + "</span></td><td><span>" + tableData3[i].col_second + "</span></td><td><span>" + tableData3[i].col_third + "</span></td></tr>";
-    }
-    tableRows3 = tableRows3 + '</table>';
-    tableRows3 = tableRows3 + brLine;
-    // 2st row
-    tableRows4 = tableRows4 + '<table class="testsList">';
-    for (var i = 0; i < tableData4.length; i++)
-    {
-        tableRows4 = tableRows4 + "<tr><td><span>" + tableData4[i].col_first + "</span></td><td><span>" + tableData4[i].col_second + "</span></td><td><span>" + tableData4[i].col_third + "</span></td></tr>";
-    }
-    tableRows4 = tableRows4 + '</table>';
-    tableRows4 = tableRows4 + brLine;
-    // 2st row
-    tableRows5 = tableRows5 + '<table class="testsList">';
-    for (var i = 0; i < tableData5.length; i++)
-    {
-        tableRows5 = tableRows5 + "<tr><td><span>" + tableData5[i].col_first + "</span></td><td><span>" + tableData5[i].col_second + "</span></td><td><span>" + tableData5[i].col_third + "</span></td></tr>";
-    }
-    tableRows5 = tableRows5 + '</table>';
-    tableRows5 = tableRows5 + brLine;
-    // 2st row
-    tableRows6 = tableRows6 + '<table class="testsList">';
-    for (var i = 0; i < tableData6.length; i++)
-    {
-        tableRows6 = tableRows6 + "<tr><td><span>" + tableData6[i].col_first + "</span></td><td><span>" + tableData6[i].col_second + "</span></td><td><span>" + tableData6[i].col_third + "</span></td></tr>";
-    }
-    tableRows6 = tableRows6 + '</table>';
-    tableRows6 = tableRows6 + brLine;
-    // 2st row
-    tableRows7 = tableRows7 + '<table class="testsList">';
-    for (var i = 0; i < tableData7.length; i++)
-    {
-        tableRows7 = tableRows7 + "<tr><td><span>" + tableData7[i].col_first + "</span></td><td><span>" + tableData7[i].col_second + "</span></td><td><span>" + tableData7[i].col_third + "</span></td></tr>";
-    }
-    tableRows7 = tableRows7 + '</table>';
-    tableRows7 = tableRows7 + brLine;
-    // 2st row
-    tableRows8 = tableRows8 + '<table class="testsList">';
-    for (var i = 0; i < tableData8.length; i++)
-    {
-        tableRows8 = tableRows8 + "<tr><td><span>" + tableData8[i].col_first + "</span></td><td><span>" + tableData8[i].col_second + "</span></td><td><span>" + tableData8[i].col_third + "</span></td></tr>";
-    }
-    tableRows8 = tableRows8 + '</table>';
-    tableRows8 = tableRows8 + brLine;
-    // 2st row
-    tableRows9 = tableRows9 + '<table class="testsList">';
-    for (var i = 0; i < tableData9.length; i++)
-    {
-        tableRows9 = tableRows9 + "<tr><td><span>" + tableData9[i].col_first + "</span></td><td><span>" + tableData9[i].col_second + "</span></td><td><span>" + tableData9[i].col_third + "</span></td></tr>";
-    }
-    tableRows9 = tableRows9 + '</table>';
-    tableRows9 = tableRows9 + brLine;
+    tableRows1 = buildReferenceTable(tableData1, 0) + brLine;
+    tableRows2 = buildReferenceTable(tableData2, 1) + brLine;
+    tableRows3 = buildReferenceTable(tableData3, 2) + brLine;
+    tableRows4 = buildReferenceTable(tableData4, 3) + brLine;
+    tableRows5 = buildReferenceTable(tableData5, 4) + brLine;
+    tableRows6 = buildReferenceTable(tableData6, 5) + brLine;
+    tableRows7 = buildReferenceTable(tableData7, 6) + brLine;
+    tableRows8 = buildReferenceTable(tableData8, 7) + brLine;
+    tableRows9 = buildReferenceTable(tableData9, 8) + brLine;
     $('#tableDropdownID').append(dropdownSelect);
     $("#addTable0").append(tableRows1);
     $("#addTable1").append(tableRows2);
@@ -236,28 +280,8 @@ $(document).ready(function()
     });
     $('#addTable5  .nano-pane').css("display", "none !important");
     // $("#addTable2").append(tableRows);
-    for (var i = 0; i <= 9; i++)
+    for (var i = 0; i <= 8; i++)
     {
-        $('#addTable' + i + ' td:first-child').each(function()
-        {
-            if ($(this).text() != '')
-            {
-                $(this).parent().addClass("emptyLine");
-            }
-        });
-        $('#addTable' + i + ' tr:first-child').addClass("titleTest");
-        $('#addTable' + i + ' tr:first-child').removeClass("emptyLine");
-        $('#addTable' + i + ' tr:first-child').children('td, th').first().attr({
-            'id': 'referenceTableHeading' + i,
-            'tabindex': '-1'
-        });
+        $('#referenceTableHeading' + i).attr('tabindex', '-1');
     }
-    $('.testsList span').each(function()
-    {
-        if ($(this).text() != '')
-        {
-            //$(this).addClass('tabindex');
-        }
-    });
-    $('.testsList').attr("role","table");
 });

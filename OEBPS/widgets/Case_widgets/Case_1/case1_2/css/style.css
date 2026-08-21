@@ -1235,6 +1235,17 @@ li.jp-unmute,
   border-top: 1pt solid #027977;
 }
 
+.testsList tbody tr.titleTest th {
+  font-family: "SourceSansPro-Bold";
+  font-weight: bold;
+}
+
+.testsList tbody tr.groupHead th {
+  font-family: "SourceSansPro-Bold";
+  font-weight: bold;
+  font-style: italic;
+}
+
 .testsList tr {
   height: auto;
   min-height: 28px;
