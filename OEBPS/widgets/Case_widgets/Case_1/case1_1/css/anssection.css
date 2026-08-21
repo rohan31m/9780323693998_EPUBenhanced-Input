@@ -68,11 +68,13 @@ body
   position: relative;
 }
 .para_ {
-  float: left;
+  float: none;
+  display: flex;
+  align-items: flex-start;
+  min-width: 0;
   font-family: "SourceSansPro-Regular";
-  left: 10px;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  left: 0;
+  padding: 2px 0;
   position: relative;
   /* width: 400px; */
 }
@@ -83,16 +85,20 @@ body
   background: #027977 none repeat scroll 0 0;
   border-radius: 3px;
   color: #ffffff;
-  float: right;
+  float: none;
   font-family: "SourceSansPro-Bold";
   font-size: 14px;
-  height: 26px;
+  height: auto;
+  min-height: 26px;
   position: relative;
-  right: 15px;
-  top: 11px;
+  right: 0;
+  top: 2px;
   width: 97px;
-  padding: 3px 0px 0px 0px;
+  padding: 3px 4px;
+  box-sizing: border-box;
   text-align: center;
+  justify-self: end;
+  align-self: start;
 }
 
 
@@ -184,13 +190,16 @@ body
 }
 .textArea {
   display: none;
-  float: right;
-  left: -6px;
-  overflow: hidden;
+  float: none;
+  left: 0;
+  overflow: visible;
   padding: 10px;
   position: relative;
-  top: -7px;
-  width: 93%;
+  top: 0;
+  width: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+  grid-column: 1 / -1;
 }
 /*
 

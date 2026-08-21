@@ -3,6 +3,7 @@
 	-moz-box-sizing: border-box;
 	  box-sizing: border-box;
 }
+
 .leftArrowEnable,.rightArrowEnable {
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
@@ -63,7 +64,7 @@ body {
 
 
 .paraIndent{
-  text-indent: 20px;
+  text-indent: 26px;
 }
 
 .popupimage{
@@ -766,7 +767,14 @@ li.jp-unmute,
   border-radius: 4px;
   margin-top: 10px;
   min-height: 50px;
-  overflow: hidden;
+  overflow: visible;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  column-gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 12px;
   /* width: 513px; */
 }
 
@@ -775,22 +783,33 @@ li.jp-unmute,
   border: 2px solid #027977;
   border-radius: 15px;
   color: #ffffff;
-  float: left;
+  float: none;
+  flex: 0 0 auto;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "SourceSansPro-Bold";
   font-size: 14px;
   font-weight: bold;
   height: 20px;
-  line-height: 16px;
+  width: 20px;
+  line-height: 1 !important;
   position: relative;
   text-align: center;
-  top: -1px;
-  width: 20px;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 .texting {
-  float: left;
+  float: none;
+  flex: 1 1 auto;
+  min-width: 0;
   font-family: "SourceSansPro-Bold";
   padding-left: 10px;
-  width: 375px;
+  width: auto;
 }
 
 .menupatch {
