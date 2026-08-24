@@ -131,7 +131,7 @@ $(document).on('click', '.dropdown .option', function(event)
     $(this).addClass('selected').attr('aria-selected', 'true');
     var text = $(this).data('display-text') || $(this).text();
     $dropdown.find('.current').text(text);
-    $dropdown.prev('select').val($(this).data('value')).trigger('change');
+    $dropdown.prev('select').prop('selectedIndex', $(this).index()).trigger('change');
     closeDropdown($dropdown);
     if ($dropdown.closest('.tablepatch').length === 0)
     {

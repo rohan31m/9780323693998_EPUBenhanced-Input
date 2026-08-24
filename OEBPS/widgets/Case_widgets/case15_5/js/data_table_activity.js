@@ -95,6 +95,23 @@ function syncReferenceTableScrollAccess(dataId, moveFocus)
     }
 }
 
+var referenceTableData = [];
+
+function showReferenceTableByIndex(index)
+{
+    index = parseInt(index, 10);
+    if (isNaN(index) || index < 0 || !referenceTableData[index])
+    {
+        return;
+    }
+    var html = buildReferenceTable(referenceTableData[index], 0) + '<br/><br/><br/><div id="scroller"></div>';
+    $('#addTable0').empty().append(html);
+    $('.tablepatch .testContainer').not('#testListId0').hide();
+    $('#testListId0').show();
+    $('#referenceTableHeading0').attr('tabindex', '-1');
+    syncReferenceTableScrollAccess('0', false);
+}
+
 function refText(html)
 {
     return $.trim($('<div/>').html(html == null ? '' : String(html)).text());
@@ -110,23 +127,13 @@ function refIsSectionRow(row)
     return !refEmpty(row.col_first) && refEmpty(row.col_second) && refEmpty(row.col_third);
 }
 
-function refValueCells(colSecond, colThird, headersComp, headersRange)
+function refCellHtml(html)
 {
-    var secondEmpty = refEmpty(colSecond);
-    var thirdEmpty = refEmpty(colThird);
-    if (secondEmpty && thirdEmpty)
+    if (html == null || String(html) === '')
     {
-        return '<td colspan="2" headers="' + headersRange + '">&#160;</td>';
+        return '&#160;';
     }
-    if (secondEmpty)
-    {
-        return '<td colspan="2" headers="' + headersRange + '">' + colThird + '</td>';
-    }
-    if (thirdEmpty)
-    {
-        return '<td colspan="2" headers="' + headersRange + '">' + colSecond + '</td>';
-    }
-    return '<td headers="' + headersComp + '">' + colSecond + '</td><td headers="' + headersRange + '">' + colThird + '</td>';
+    return '<span>' + html + '</span>';
 }
 
 function buildReferenceTable(rows, tableIndex)
@@ -144,13 +151,15 @@ function buildReferenceTable(rows, tableIndex)
     html += '<th scope="col" id="' + colRange + '">Reference range</th>';
     html += '</tr></thead><tbody>';
 
-    var i = 0;
     var lastTestId = '';
     var sectionId = prefix + '-sec-0';
-
-    while (i < rows.length)
+    var i;
+    for (i = 0; i < rows.length; i++)
     {
         var row = rows[i];
+        var first = row.col_first == null ? '' : String(row.col_first);
+        var second = row.col_second == null ? '' : String(row.col_second);
+        var third = row.col_third == null ? '' : String(row.col_third);
 
         if (refIsSectionRow(row))
         {
@@ -159,43 +168,24 @@ function buildReferenceTable(rows, tableIndex)
             var sectionClass = (i === 0) ? 'titleTest' : 'sectionHead';
             var headingId = (i === 0) ? ('referenceTableHeading' + tableIndex) : sectionId;
             html += '<tr class="' + sectionClass + '">';
-            html += '<th colspan="3" scope="colgroup" id="' + headingId + '">' + refText(row.col_first) + '</th>';
+            html += '<th colspan="3" scope="colgroup" id="' + headingId + '">' + first + '</th>';
             html += '</tr>';
-            i += 1;
             continue;
         }
 
-        if (refEmpty(row.col_first) && !refEmpty(row.col_second) && refEmpty(row.col_third))
+        html += '<tr class="emptyLine">';
+        if (!refEmpty(first))
         {
-            html += '<tr class="groupHead">';
-            html += '<th colspan="2" scope="colgroup" headers="' + sectionId + ' ' + lastTestId + '">' + refText(row.col_second) + '</th>';
-            html += '</tr>';
-            i += 1;
-            continue;
-        }
-
-        if (!refEmpty(row.col_first))
-        {
-            var rowspan = 1;
-            var k = i + 1;
-            while (k < rows.length && refEmpty(rows[k].col_first) && !refIsSectionRow(rows[k]))
-            {
-                rowspan += 1;
-                k += 1;
-            }
             lastTestId = prefix + '-row-' + i;
-            html += '<tr class="emptyLine">';
-            html += '<th scope="row" id="' + lastTestId + '"' + (rowspan > 1 ? ' rowspan="' + rowspan + '"' : '') + ' headers="' + colTest + ' ' + sectionId + '">' + row.col_first + '</th>';
-            html += refValueCells(row.col_second, row.col_third, colComp + ' ' + sectionId + ' ' + lastTestId, colRange + ' ' + sectionId + ' ' + lastTestId);
-            html += '</tr>';
-            i += 1;
-            continue;
+            html += '<th scope="row" id="' + lastTestId + '" headers="' + colTest + ' ' + sectionId + '">' + refCellHtml(first) + '</th>';
         }
-
-        html += '<tr>';
-        html += refValueCells(row.col_second, row.col_third, colComp + ' ' + sectionId + ' ' + lastTestId, colRange + ' ' + sectionId + ' ' + lastTestId);
+        else
+        {
+            html += '<td headers="' + colTest + ' ' + sectionId + (lastTestId ? (' ' + lastTestId) : '') + '">' + refCellHtml(first) + '</td>';
+        }
+        html += '<td headers="' + colComp + ' ' + sectionId + (lastTestId ? (' ' + lastTestId) : '') + '">' + refCellHtml(second) + '</td>';
+        html += '<td headers="' + colRange + ' ' + sectionId + (lastTestId ? (' ' + lastTestId) : '') + '">' + refCellHtml(third) + '</td>';
         html += '</tr>';
-        i += 1;
     }
 
     html += '</tbody></table>';
@@ -238,45 +228,27 @@ $(document).ready(function()
     dropdownSelect = dropdownSelect + dropdownOptions;
     dropdownSelect = dropdownSelect + '</select>';
     // add DROPDOWN end-------------------------------------------------------------	
-    tableRows1 = buildReferenceTable(tableData1, 0) + brLine;
-    tableRows2 = buildReferenceTable(tableData2, 1) + brLine;
-    tableRows3 = buildReferenceTable(tableData3, 2) + brLine;
-    tableRows4 = buildReferenceTable(tableData4, 3) + brLine;
-    tableRows5 = buildReferenceTable(tableData5, 4) + brLine;
-    tableRows6 = buildReferenceTable(tableData6, 5) + brLine;
-    tableRows7 = buildReferenceTable(tableData7, 6) + brLine;
-    tableRows8 = buildReferenceTable(tableData8, 7) + brLine;
-    tableRows9 = buildReferenceTable(tableData9, 8) + brLine;
+    referenceTableData = [tableData1, tableData2, tableData3, tableData4, tableData5, tableData6, tableData7, tableData8, tableData9];
     $('#tableDropdownID').append(dropdownSelect);
-    $("#addTable0").append(tableRows1);
-    $("#addTable1").append(tableRows2);
-    $("#addTable2").append(tableRows3);
-    $("#addTable3").append(tableRows4);
-    $("#addTable4").append(tableRows5);
-    $("#addTable5").append(tableRows6);
-    $("#addTable6").append(tableRows7);
-    $("#addTable7").append(tableRows8);
-    $("#addTable8").append(tableRows9);
-    // $("#addTable2").append(tableRows);
+    showReferenceTableByIndex(0);
     create_custom_dropdowns();
     $('#dropdown_1').attr({'aria-hidden': 'true', 'tabindex': '-1'}).hide();
-    var rowIndex = 0;
-    $('.tablepatch .list li').each(function()
+    $('.tablepatch .list li').each(function(index)
     {
-        $(this).attr('data-id', rowIndex);
-        rowIndex++;
+        $(this).attr('data-id', index);
     });
-    // new change
-    $(document).on('click keyup', '.dropdown .option', function(ev)
+    $('#dropdown_1').on('change', function()
     {
-        if (ev.type == "keyup" && ev.keyCode != 13)
-        {
-            return true;
-        }
+        showReferenceTableByIndex(this.selectedIndex);
+    });
+    $(document).on('mousedown', '.tablepatch .dropdown .option', function()
+    {
         var data_id = $(this).attr('data-id');
-        $('.testContainer').hide();
-        $('#testListId' + data_id).show();
-        syncReferenceTableScrollAccess(data_id, true);
+        if (data_id == null || data_id === '')
+        {
+            data_id = $(this).index();
+        }
+        $('#dropdown_1').prop('selectedIndex', data_id).trigger('change');
     });
     $('#addTable5  .nano-pane').css("display", "none !important");
     // $("#addTable2").append(tableRows);
