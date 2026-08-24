@@ -1,17 +1,8 @@
-* {
-  letter-spacing: 0.12em !important;
-  word-spacing: 0.16em !important;
-  line-height: 1.5 !important;
-}
-
-p {
-  margin-bottom: 2em !important;
-}
-/* *{
+*{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	  box-sizing: border-box;
-} */
+}
  
 .leftArrowEnable,.rightArrowEnable {
   -webkit-user-select: none;  /* Chrome all / Safari all */
@@ -1227,17 +1218,13 @@ li.jp-unmute,
   font-weight: normal;
 }
 
+.testsList tbody tr.titleTest th,
 .testsList tbody tr.sectionHead th {
   font-family: "SourceSansPro-Bold";
   font-weight: bold;
   background: #f3f8f8;
   color: #015453;
   border-top: 1pt solid #027977;
-}
-
-.testsList tbody tr.titleTest th {
-  font-family: "SourceSansPro-Bold";
-  font-weight: bold;
 }
 
 .testsList tbody tr.groupHead th {
