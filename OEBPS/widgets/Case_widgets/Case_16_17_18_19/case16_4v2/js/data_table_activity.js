@@ -12,16 +12,20 @@ function getVisibleReferenceTableId()
 
 function clearReferenceTableScrollTabStops()
 {
-    $('.tablepatch .nano-content').each(function()
+    $('.tablepatch table.testsList').each(function()
     {
         $(this).removeAttr('tabindex').removeAttr('role').removeAttr('aria-label').removeAttr('aria-labelledby');
+        this.style.top = '';
+        this.style.position = '';
+        this.removeAttribute('data-y');
     });
     $('.tablepatch .nano').removeClass('is-scrollable is-not-scrollable');
     $('.tablepatch .nano-pane').hide();
 }
 
-function focusReferenceTableHeading(dataId)
+function getReferenceTableHeading(dataId)
 {
+    dataId = (dataId == null || dataId === '') ? '0' : String(dataId);
     var $content = $('#addTable' + dataId);
     var $heading = $('#referenceTableHeading' + dataId);
     if (!$heading.length)
@@ -36,16 +40,93 @@ function focusReferenceTableHeading(dataId)
     {
         $heading.attr('tabindex', '-1');
     }
-    if ($content.closest('.nano').hasClass('is-not-scrollable'))
+    return $heading;
+}
+
+function applyReferenceTableTabStop(dataId)
+{
+    dataId = (dataId == null || dataId === '') ? '0' : String(dataId);
+    var $content = $('#addTable' + dataId);
+    var $table = $content.find('table.testsList').first();
+    var $heading = getReferenceTableHeading(dataId);
+    var headingId = 'referenceTableHeading' + dataId;
+    var labelledBy = $heading.length ? ('referenceTableTitle ' + headingId) : 'referenceTableTitle';
+    $table.removeAttr('tabindex').removeAttr('role').removeAttr('aria-label').removeAttr('aria-labelledby');
+    $content.removeAttr('aria-label');
+    $content.attr({
+        'tabindex': '0',
+        'role': 'region',
+        'aria-labelledby': labelledBy
+    });
+    if ($content[0])
     {
-        $content.attr('tabindex', '-1');
-        $content.focus();
-        return;
+        $content[0].tabIndex = 0;
     }
-    if ($heading.length)
+    return $content;
+}
+
+function focusReferenceTableRegion(dataId)
+{
+    var $target = applyReferenceTableTabStop(dataId);
+    if ($target && $target.length)
     {
-        $heading.focus();
+        $target.focus();
     }
+}
+
+function isReferenceTableKeyTarget(el)
+{
+    if (!el || !el.nodeType)
+    {
+        return false;
+    }
+    var $el = $(el);
+    if ($el.closest('.tablepatch .dropdown').length)
+    {
+        return false;
+    }
+    return !!(el.id === 'addTable0' || $el.closest('#addTable0').length);
+}
+
+function scrollVisibleReferenceTable(delta)
+{
+    var $container = $('#testListId0');
+    var el = document.getElementById('addTable0');
+    if (!el)
+    {
+        return false;
+    }
+    var table = el.getElementsByTagName('table')[0];
+    var nativeMax = el.scrollHeight - el.clientHeight;
+    if (nativeMax > 1)
+    {
+        el.scrollTop = Math.max(0, Math.min(nativeMax, el.scrollTop + delta));
+        if ($container[0] && $container[0].nanoscroller)
+        {
+            $container.nanoScroller();
+        }
+        return true;
+    }
+    if (!table)
+    {
+        return false;
+    }
+    var viewH = $container.height() || el.clientHeight || 342;
+    var max = Math.max(0, table.offsetHeight - viewH + 24);
+    if (max <= 0)
+    {
+        return false;
+    }
+    var current = parseInt(table.getAttribute('data-y') || '0', 10);
+    current = Math.max(0, Math.min(max, current + delta));
+    table.setAttribute('data-y', String(current));
+    table.style.position = 'relative';
+    table.style.top = (-current) + 'px';
+    if ($container[0] && $container[0].nanoscroller)
+    {
+        $container.nanoScroller();
+    }
+    return true;
 }
 
 function syncReferenceTableScrollAccess(dataId, moveFocus)
@@ -58,46 +139,50 @@ function syncReferenceTableScrollAccess(dataId, moveFocus)
 
     var $container = $('#testListId' + dataId);
     var $content = $('#addTable' + dataId);
-    var $table = $content.find('table.testsList').first();
     if (!$container.length || !$content.length)
     {
         return;
     }
 
-    var tableHeight = $table.length ? $table.outerHeight() : 0;
-    var needsScroll = $container.is(':visible') && $container.height() > 0 && tableHeight > $container.height();
-    var headingText = $.trim($('#referenceTableHeading' + dataId).text()) || 'Reference table';
-    var headingId = 'referenceTableHeading' + dataId;
-    if (needsScroll)
+    window.setTimeout(function()
     {
-        $container.addClass('is-scrollable');
-        $container.nanoScroller({ tabIndex: -1 });
-        $container.children('.nano-pane').show();
-        $content.attr({
-            'tabindex': '0',
-            'role': 'region',
-            'aria-label': headingText + ', scrollable'
-        });
-    }
-    else
-    {
-        $container.addClass('is-not-scrollable');
-        $content.attr({
-            'tabindex': '-1',
-            'role': 'region',
-            'aria-labelledby': $('#' + headingId).length ? headingId : 'referenceTableTitle'
-        });
-    }
-
-    if (moveFocus)
-    {
-        focusReferenceTableHeading(dataId);
-    }
+        var $table = $content.find('table.testsList').first();
+        var tableHeight = $table.length ? $table.outerHeight() : 0;
+        var boxHeight = $container.height() || 342;
+        var needsScroll = $container.is(':visible') && tableHeight > (boxHeight - 8);
+        if (needsScroll)
+        {
+            $container.removeClass('is-not-scrollable').addClass('is-scrollable');
+            $content.css({
+                'overflow-y': 'auto',
+                'overflow-x': 'hidden',
+                '-webkit-overflow-scrolling': 'touch'
+            });
+            $content[0].scrollTop = 0;
+            $container.nanoScroller();
+            $container.children('.nano-pane').show();
+        }
+        else
+        {
+            $container.removeClass('is-scrollable').addClass('is-not-scrollable');
+            $content.css({
+                'overflow-y': '',
+                'overflow-x': '',
+                '-webkit-overflow-scrolling': ''
+            });
+            $container.children('.nano-pane').hide();
+        }
+        applyReferenceTableTabStop(dataId);
+        if (moveFocus)
+        {
+            focusReferenceTableRegion(dataId);
+        }
+    }, 150);
 }
 
 var referenceTableData = [];
 
-function showReferenceTableByIndex(index)
+function showReferenceTableByIndex(index, moveFocus)
 {
     index = parseInt(index, 10);
     if (isNaN(index) || index < 0 || !referenceTableData[index])
@@ -109,7 +194,7 @@ function showReferenceTableByIndex(index)
     $('.tablepatch .testContainer').not('#testListId0').hide();
     $('#testListId0').show();
     $('#referenceTableHeading0').attr('tabindex', '-1');
-    syncReferenceTableScrollAccess('0', false);
+    syncReferenceTableScrollAccess('0', !!moveFocus);
 }
 
 function refText(html)
@@ -230,7 +315,7 @@ $(document).ready(function()
     // add DROPDOWN end-------------------------------------------------------------	
     referenceTableData = [tableData1, tableData2, tableData3, tableData4, tableData5, tableData6, tableData7, tableData8, tableData9];
     $('#tableDropdownID').append(dropdownSelect);
-    showReferenceTableByIndex(0);
+    showReferenceTableByIndex(0, false);
     create_custom_dropdowns();
     $('#dropdown_1').attr({'aria-hidden': 'true', 'tabindex': '-1'}).hide();
     $('.tablepatch .list li').each(function(index)
@@ -239,7 +324,7 @@ $(document).ready(function()
     });
     $('#dropdown_1').on('change', function()
     {
-        showReferenceTableByIndex(this.selectedIndex);
+        showReferenceTableByIndex(this.selectedIndex, true);
     });
     $(document).on('mousedown', '.tablepatch .dropdown .option', function()
     {
@@ -250,6 +335,67 @@ $(document).ready(function()
         }
         $('#dropdown_1').prop('selectedIndex', data_id).trigger('change');
     });
+    document.addEventListener('keydown', function(ev)
+    {
+        if (!$('.tablepatch').is(':visible'))
+        {
+            return;
+        }
+        var code = ev.keyCode;
+        var key = ev.key || '';
+        var $active = $(document.activeElement);
+        if ($active.closest('.tablepatch .dropdown').length)
+        {
+            if ((code === 9 || key === 'Tab') && !ev.shiftKey)
+            {
+                var $panel = applyReferenceTableTabStop('0');
+                if ($panel.length)
+                {
+                    ev.preventDefault();
+                    $panel.focus();
+                }
+            }
+            return;
+        }
+        if (!isReferenceTableKeyTarget(document.activeElement))
+        {
+            return;
+        }
+        var $scroller = $('#addTable0');
+        var page = ($scroller[0] && $scroller[0].clientHeight) ? $scroller[0].clientHeight - 24 : 120;
+        if (code === 38 || key === 'ArrowUp')
+        {
+            ev.preventDefault();
+            ev.stopPropagation();
+            scrollVisibleReferenceTable(-40);
+        }
+        else if (code === 40 || key === 'ArrowDown')
+        {
+            ev.preventDefault();
+            ev.stopPropagation();
+            scrollVisibleReferenceTable(40);
+        }
+        else if (code === 33 || key === 'PageUp')
+        {
+            ev.preventDefault();
+            scrollVisibleReferenceTable(-page);
+        }
+        else if (code === 34 || key === 'PageDown')
+        {
+            ev.preventDefault();
+            scrollVisibleReferenceTable(page);
+        }
+        else if (code === 36 || key === 'Home')
+        {
+            ev.preventDefault();
+            scrollVisibleReferenceTable(-99999);
+        }
+        else if (code === 35 || key === 'End')
+        {
+            ev.preventDefault();
+            scrollVisibleReferenceTable(99999);
+        }
+    }, true);
     $('#addTable5  .nano-pane').css("display", "none !important");
     // $("#addTable2").append(tableRows);
     for (var i = 0; i <= 8; i++)
