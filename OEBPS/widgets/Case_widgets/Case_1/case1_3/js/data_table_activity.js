@@ -344,6 +344,27 @@ $(document).ready(function()
         var code = ev.keyCode;
         var key = ev.key || '';
         var $active = $(document.activeElement);
+        if ($active.is('#tableBtn'))
+        {
+            if (code === 40 || key === 'ArrowDown' || code === 39 || key === 'ArrowRight')
+            {
+                var $combo = $('.tablepatch [role="combobox"]').first();
+                ev.preventDefault();
+                if ($combo.length)
+                {
+                    $combo.focus();
+                }
+                else
+                {
+                    var $panel = applyReferenceTableTabStop('0');
+                    if ($panel.length)
+                    {
+                        $panel.focus();
+                    }
+                }
+            }
+            return;
+        }
         if ($active.closest('.tablepatch .dropdown').length)
         {
             if ((code === 9 || key === 'Tab') && !ev.shiftKey)

@@ -455,6 +455,7 @@
             $("#naviLeft").show();
             $("#naviRight").show();
             updateSlideControls(nSlideCounter);
+            $('#tableBtn').focus();
         }
         else
         {
@@ -481,8 +482,9 @@
                     $("#naviRight").hide();
                     if (typeof syncReferenceTableScrollAccess === 'function')
                     {
-                        syncReferenceTableScrollAccess(null, true);
+                        syncReferenceTableScrollAccess(null, false);
                     }
+                    $('#tableBtn').focus();
                 }
             });
         }
