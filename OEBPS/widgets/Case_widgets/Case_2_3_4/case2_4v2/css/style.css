@@ -1811,7 +1811,8 @@ strong {
   bottom: calc(100% + 6px);
   right: 0;
   left: auto;
-}
+}
+
 /* Visible tooltips for carousel slide buttons */
 #midConatiner .footer,
 #midConatiner #naviList,
