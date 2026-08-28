@@ -37,7 +37,7 @@
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
@@ -954,7 +954,7 @@
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
