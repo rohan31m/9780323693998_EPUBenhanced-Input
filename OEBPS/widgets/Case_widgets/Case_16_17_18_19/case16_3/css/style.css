@@ -1820,6 +1820,54 @@ strong {
   bottom: calc(100% + 6px);
   right: 0;
   left: auto;
+}
+/* Visible tooltips for carousel slide buttons */
+#midConatiner .footer,
+#midConatiner #naviList,
+#midConatiner #naviList ul {
+  overflow: visible;
+}
+
+#midConatiner .navigation {
+  position: relative;
+}
+
+#midConatiner .navigation:hover,
+#midConatiner .navigation:focus {
+  z-index: 20;
+}
+
+#midConatiner .navigation:hover::after,
+#midConatiner .navigation:focus::after {
+  content: attr(aria-label);
+  position: absolute;
+  z-index: 21;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  background: #1a1a1a;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  white-space: nowrap;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+#midConatiner #naviList li:first-child .navigation:hover::after,
+#midConatiner #naviList li:first-child .navigation:focus::after {
+  left: 0;
+  transform: none;
+}
+
+#midConatiner #naviList li:last-child .navigation:hover::after,
+#midConatiner #naviList li:last-child .navigation:focus::after {
+  left: auto;
+  right: 0;
+  transform: none;
 }
 .loadDiv .visually-hidden {
   position: absolute;
