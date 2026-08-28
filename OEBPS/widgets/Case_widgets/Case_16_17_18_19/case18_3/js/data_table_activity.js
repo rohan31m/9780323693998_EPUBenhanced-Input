@@ -234,10 +234,10 @@ function buildReferenceTable(rows, tableIndex)
     html += '<th scope="col" id="' + colTest + '">Test</th>';
     html += '<th scope="col" id="' + colComp + '">Component</th>';
     html += '<th scope="col" id="' + colRange + '">Reference range</th>';
-    html += '</tr></thead><tbody>';
+    html += '</tr></thead>';
 
     var lastTestId = '';
-    var sectionId = prefix + '-sec-0';
+    var tbodyOpen = false;
     var i;
     for (i = 0; i < rows.length; i++)
     {
@@ -248,32 +248,47 @@ function buildReferenceTable(rows, tableIndex)
 
         if (refIsSectionRow(row))
         {
-            sectionId = prefix + '-sec-' + i;
+            if (tbodyOpen)
+            {
+                html += '</tbody>';
+            }
+            html += '<tbody>';
+            tbodyOpen = true;
             lastTestId = '';
             var sectionClass = (i === 0) ? 'titleTest' : 'sectionHead';
-            var headingId = (i === 0) ? ('referenceTableHeading' + tableIndex) : sectionId;
+            var headingId = (i === 0) ? ('referenceTableHeading' + tableIndex) : (prefix + '-sec-' + i);
             html += '<tr class="' + sectionClass + '">';
-            html += '<th colspan="3" scope="colgroup" id="' + headingId + '">' + first + '</th>';
+            html += '<th colspan="3" scope="rowgroup" id="' + headingId + '">' + first + '</th>';
             html += '</tr>';
             continue;
+        }
+
+        if (!tbodyOpen)
+        {
+            html += '<tbody>';
+            tbodyOpen = true;
         }
 
         html += '<tr class="emptyLine">';
         if (!refEmpty(first))
         {
             lastTestId = prefix + '-row-' + i;
-            html += '<th scope="row" id="' + lastTestId + '" headers="' + colTest + ' ' + sectionId + '">' + refCellHtml(first) + '</th>';
+            html += '<th scope="row" id="' + lastTestId + '" headers="' + colTest + '">' + refCellHtml(first) + '</th>';
         }
         else
         {
-            html += '<td headers="' + colTest + ' ' + sectionId + (lastTestId ? (' ' + lastTestId) : '') + '">' + refCellHtml(first) + '</td>';
+            html += '<td headers="' + colTest + (lastTestId ? (' ' + lastTestId) : '') + '">' + refCellHtml(first) + '</td>';
         }
-        html += '<td headers="' + colComp + ' ' + sectionId + (lastTestId ? (' ' + lastTestId) : '') + '">' + refCellHtml(second) + '</td>';
-        html += '<td headers="' + colRange + ' ' + sectionId + (lastTestId ? (' ' + lastTestId) : '') + '">' + refCellHtml(third) + '</td>';
+        html += '<td headers="' + colComp + (lastTestId ? (' ' + lastTestId) : '') + '">' + refCellHtml(second) + '</td>';
+        html += '<td headers="' + colRange + (lastTestId ? (' ' + lastTestId) : '') + '">' + refCellHtml(third) + '</td>';
         html += '</tr>';
     }
 
-    html += '</tbody></table>';
+    if (tbodyOpen)
+    {
+        html += '</tbody>';
+    }
+    html += '</table>';
     return html;
 }
 
