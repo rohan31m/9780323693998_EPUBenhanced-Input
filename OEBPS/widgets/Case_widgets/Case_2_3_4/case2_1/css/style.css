@@ -779,6 +779,10 @@ li.jp-unmute,
   padding: 8px 12px;
   /* width: 513px; */
 }
+.myPage:focus {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
 
 .numbering {
   background: #027977 none repeat scroll 0 0;

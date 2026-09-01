@@ -268,11 +268,12 @@
         var $target = $('#menuBtn');
         if ($slide.length)
         {
-            var $question = $slide.find('.texting').first();
+            var $page = $slide.find('.myPage').first();
+            var $intro = $slide.find('.paraIndent').first();
             var isLastSlide = (Number(slideIndex) === (nCount - 1)) || (Number(slideIndex) === (aSlidesArray.length - 1));
-            if (isLastSlide && $question.length)
+            if ($page.length && (isLastSlide || !$intro.length))
             {
-                $target = $question;
+                $target = $page;
             }
             else
             {
