@@ -268,8 +268,32 @@
         var $target = $('#menuBtn');
         if ($slide.length)
         {
-            var $heading = $slide.find('h1, h2, h3, h4, h5, h6').first();
-            $target = $heading.length ? $heading : $slide;
+            var $page = $slide.find('.myPage').first();
+            var hasLeadingContent = false;
+            if ($page.length)
+            {
+                var pageNode = $page.get(0);
+                $slide.find('p, img, .paraIndent, .imageBoxHolder, .imageBoxHolder2, .imageThumbHolder, .leftImageBox, .graphContainer, table').each(function()
+                {
+                    if (pageNode === this || $.contains(pageNode, this))
+                    {
+                        return;
+                    }
+                    if (pageNode.compareDocumentPosition(this) & 2)
+                    {
+                        hasLeadingContent = true;
+                        return false;
+                    }
+                });
+            }
+            if ($page.length && !hasLeadingContent)
+            {
+                $target = $page;
+            }
+            else
+            {
+                $target = $slide;
+            }
             if ($target.attr('tabindex') == null)
             {
                 $target.attr('tabindex', '-1');
@@ -1089,14 +1113,19 @@ function createDropDownLists()
         $('#naviRight').show();
     }
 
-    function DisableRightArrow()
+        function DisableRightArrow()
     {
-        $("#naviRight").removeClass("rightArrowEnable").addClass("rightArrowDisable").css(
+        var $right = $("#naviRight");
+        if (document.activeElement === $right.get(0))
+        {
+            focusSlideContent(nSlideCounter);
+        }
+        $right.removeClass("rightArrowEnable").addClass("rightArrowDisable").css(
         {
             "pointer-event": "none",
             "cursor": "default"
         }).attr('disabled','disabled').attr('tabindex','-1').attr('aria-hidden','true');
-        $('#naviRight').hide();
+        $right.hide();
     }
 
     function fnBegin()

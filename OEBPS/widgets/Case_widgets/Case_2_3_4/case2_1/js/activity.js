@@ -269,9 +269,24 @@
         if ($slide.length)
         {
             var $page = $slide.find('.myPage').first();
-            var $intro = $slide.find('.paraIndent').first();
-            var isLastSlide = (Number(slideIndex) === (nCount - 1)) || (Number(slideIndex) === (aSlidesArray.length - 1));
-            if ($page.length && (isLastSlide || !$intro.length))
+            var hasLeadingContent = false;
+            if ($page.length)
+            {
+                var pageNode = $page.get(0);
+                $slide.find('p, img, .paraIndent, .imageBoxHolder, .imageBoxHolder2, .imageThumbHolder, .leftImageBox, .graphContainer, table').each(function()
+                {
+                    if (pageNode === this || $.contains(pageNode, this))
+                    {
+                        return;
+                    }
+                    if (pageNode.compareDocumentPosition(this) & 2)
+                    {
+                        hasLeadingContent = true;
+                        return false;
+                    }
+                });
+            }
+            if ($page.length && !hasLeadingContent)
             {
                 $target = $page;
             }
