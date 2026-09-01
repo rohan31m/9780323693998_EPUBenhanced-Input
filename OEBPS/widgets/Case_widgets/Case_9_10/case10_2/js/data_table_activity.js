@@ -19,6 +19,7 @@ function clearReferenceTableScrollTabStops()
         this.style.position = '';
         this.removeAttribute('data-y');
     });
+    $('.tablepatch .nano-content').removeAttr('tabindex').removeAttr('role').removeAttr('aria-label').removeAttr('aria-labelledby');
     $('.tablepatch .nano').removeClass('is-scrollable is-not-scrollable');
     $('.tablepatch .nano-pane').hide();
 }
@@ -43,32 +44,38 @@ function getReferenceTableHeading(dataId)
     return $heading;
 }
 
-function applyReferenceTableTabStop(dataId)
+function applyReferenceTableTabStop(dataId, needsScroll)
 {
     dataId = (dataId == null || dataId === '') ? '0' : String(dataId);
     var $content = $('#addTable' + dataId);
     var $table = $content.find('table.testsList').first();
-    var $heading = getReferenceTableHeading(dataId);
-    var headingId = 'referenceTableHeading' + dataId;
-    var labelledBy = $heading.length ? ('referenceTableTitle ' + headingId) : 'referenceTableTitle';
+    getReferenceTableHeading(dataId);
     $table.removeAttr('tabindex').removeAttr('role').removeAttr('aria-label').removeAttr('aria-labelledby');
-    $content.removeAttr('aria-label');
-    $content.attr({
-        'tabindex': '0',
-        'role': 'region',
-        'aria-labelledby': labelledBy
-    });
-    if ($content[0])
+    $content.removeAttr('aria-label').removeAttr('aria-labelledby').removeAttr('role');
+    if (needsScroll)
     {
-        $content[0].tabIndex = 0;
+        $content.attr('tabindex', '0');
+        if ($content[0])
+        {
+            $content[0].tabIndex = 0;
+        }
+    }
+    else
+    {
+        $content.removeAttr('tabindex');
+        if ($content[0])
+        {
+            $content[0].removeAttribute('tabIndex');
+        }
     }
     return $content;
 }
 
 function focusReferenceTableRegion(dataId)
 {
-    var $target = applyReferenceTableTabStop(dataId);
-    if ($target && $target.length)
+    dataId = (dataId == null || dataId === '') ? '0' : String(dataId);
+    var $target = $('#addTable' + dataId);
+    if ($target.length && $target.attr('tabindex') === '0')
     {
         $target.focus();
     }
@@ -172,8 +179,8 @@ function syncReferenceTableScrollAccess(dataId, moveFocus)
             });
             $container.children('.nano-pane').hide();
         }
-        applyReferenceTableTabStop(dataId);
-        if (moveFocus)
+        applyReferenceTableTabStop(dataId, needsScroll);
+        if (moveFocus && needsScroll)
         {
             focusReferenceTableRegion(dataId);
         }
@@ -371,8 +378,8 @@ $(document).ready(function()
                 }
                 else
                 {
-                    var $panel = applyReferenceTableTabStop('0');
-                    if ($panel.length)
+                    var $panel = $('#addTable0');
+                    if ($panel.attr('tabindex') === '0')
                     {
                         $panel.focus();
                     }
@@ -384,8 +391,8 @@ $(document).ready(function()
         {
             if ((code === 9 || key === 'Tab') && !ev.shiftKey)
             {
-                var $panel = applyReferenceTableTabStop('0');
-                if ($panel.length)
+                var $panel = $('#addTable0');
+                if ($panel.attr('tabindex') === '0')
                 {
                     ev.preventDefault();
                     $panel.focus();

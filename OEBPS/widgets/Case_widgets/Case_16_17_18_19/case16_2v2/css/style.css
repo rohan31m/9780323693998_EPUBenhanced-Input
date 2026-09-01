@@ -1730,9 +1730,8 @@ strong {
 }
 
 #midConatiner .nano.is-not-scrollable > .nano-content:focus {
-  outline: 2px solid #ffffff;
-  outline-offset: -10px;
-  box-shadow: inset 0 0 0 2px #000000; /*NM*/
+  outline: none;
+  box-shadow: none;
 }
 
 #midConatiner .testsList {
