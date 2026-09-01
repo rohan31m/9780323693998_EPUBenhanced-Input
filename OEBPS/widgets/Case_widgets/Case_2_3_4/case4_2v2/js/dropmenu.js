@@ -67,7 +67,7 @@ function create_custom_dropdowns()
             var comboboxId = 'dropdown-combobox-' + i;
             var valueId = comboboxId + '-value';
             var labelledBy = $('#referenceSelectLabel').attr('id');
-            var labelledByIds = labelledBy ? (labelledBy + ' ' + valueId) : valueId;
+            var labelledByIds = labelledBy || valueId;
             $(this).after(
                 '<div class="dropdown ' + ($(this).attr('class') || '') + '">' +
                     '<button type="button" id="' + comboboxId + '" class="combo-button" role="combobox" aria-autocomplete="none" aria-expanded="false" aria-haspopup="listbox" aria-controls="' + listboxId + '" aria-labelledby="' + labelledByIds + '">' +

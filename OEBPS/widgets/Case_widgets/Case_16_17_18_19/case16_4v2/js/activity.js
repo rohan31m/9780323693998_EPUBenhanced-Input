@@ -759,7 +759,7 @@ function createDropDownLists()
             var $combo = $(
                 '<div class="dropdownList dropdown pageDropdownList">' +
                     '<span id="' + labelId + '" class="combo-label">Select image view</span>' +
-                    '<button type="button" id="' + comboboxId + '" class="combo-button" role="combobox" aria-autocomplete="none" aria-expanded="false" aria-haspopup="listbox" aria-controls="' + listboxId + '" aria-labelledby="' + labelId + ' ' + valueId + '">' +
+                    '<button type="button" id="' + comboboxId + '" class="combo-button" role="combobox" aria-autocomplete="none" aria-expanded="false" aria-haspopup="listbox" aria-controls="' + listboxId + '" aria-labelledby="' + labelId + '">' +
                         '<span class="current" id="' + valueId + '">' + firstText + '</span>' +
                     '</button>' +
                     '<div class="list" aria-hidden="true"><ul id="' + listboxId + '" role="listbox" aria-label="Image views">' + optionsHtml + '</ul></div>' +
