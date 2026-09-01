@@ -713,7 +713,6 @@ function createDropDownLists()
             }
             var listboxId = "image-listbox-" + index;
             var comboboxId = "image-combobox-" + index;
-            var valueId = comboboxId + "-value";
             var labelId = comboboxId + "-label";
             var optionsHtml = "";
             $items.each(function(liIndex)
@@ -726,12 +725,13 @@ function createDropDownLists()
                 '<div class="dropdownList dropdown pageDropdownList">' +
                     '<span id="' + labelId + '" class="combo-label">Select image view</span>' +
                     '<button type="button" id="' + comboboxId + '" class="combo-button" role="combobox" aria-autocomplete="none" aria-expanded="false" aria-haspopup="listbox" aria-controls="' + listboxId + '" aria-labelledby="' + labelId + '">' +
-                        '<span class="current" id="' + valueId + '">' + firstText + '</span>' +
+                        '<span class="current">' + firstText + '</span>' +
                     '</button>' +
                     '<div class="list" aria-hidden="true"><ul id="' + listboxId + '" role="listbox" aria-label="Image views">' + optionsHtml + '</ul></div>' +
                 '</div>'
             );
             $box.replaceWith($combo);
+            $combo.find('[role="combobox"]').attr('aria-labelledby', labelId);
             $combo.find(".option").bind("click tap", onListSelect);
         });
     }
