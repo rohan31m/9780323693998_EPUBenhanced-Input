@@ -268,8 +268,16 @@
         var $target = $('#menuBtn');
         if ($slide.length)
         {
-            var $heading = $slide.find('h1, h2, h3, h4, h5, h6').first();
-            $target = $heading.length ? $heading : $slide;
+            var $question = $slide.find('.texting').first();
+            var isLastSlide = (Number(slideIndex) === (nCount - 1)) || (Number(slideIndex) === (aSlidesArray.length - 1));
+            if (isLastSlide && $question.length)
+            {
+                $target = $question;
+            }
+            else
+            {
+                $target = $slide;
+            }
             if ($target.attr('tabindex') == null)
             {
                 $target.attr('tabindex', '-1');
@@ -1067,12 +1075,17 @@
 
     function DisableRightArrow()
     {
-        $("#naviRight").removeClass("rightArrowEnable").addClass("rightArrowDisable").css(
+        var $right = $("#naviRight");
+        if (document.activeElement === $right.get(0))
+        {
+            focusSlideContent(nSlideCounter);
+        }
+        $right.removeClass("rightArrowEnable").addClass("rightArrowDisable").css(
         {
             "pointer-event": "none",
             "cursor": "default"
         }).attr('disabled','disabled').attr('tabindex','-1').attr('aria-hidden','true');
-        $('#naviRight').hide();
+        $right.hide();
     }
 
     function fnBegin()
