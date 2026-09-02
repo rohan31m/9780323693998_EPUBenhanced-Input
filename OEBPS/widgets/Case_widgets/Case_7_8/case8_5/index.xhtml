@@ -28,23 +28,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Stroke of Bad Luck</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ol class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">• Describe the etiology, pathology, and natural history of acute rheumatic fever and rheumatic heart disease. </li>
@@ -78,9 +78,9 @@
                             <div class="myPage" id="pageFirstSection_b8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>What are the causes of a diastolic murmur?</div>
+                                    <h2 class='texting'>What are the causes of a diastolic murmur?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAb8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -100,9 +100,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>What is the most likely cause of her mitral stenosis?</div>
+                                    <h2 class='texting'>What is the most likely cause of her mitral stenosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -124,9 +124,9 @@
                             <div class="myPage" id="pageFirstSection_a3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>What was the likely cause of the patient’s migratory polyarthritis, fever, and heart murmur?</div>
+                                    <h2 class='texting'>What was the likely cause of the patient’s migratory polyarthritis, fever, and heart murmur?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAa3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -149,9 +149,9 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>What is the pathogenesis of acute rheumatic fever (ARF)?</div>
+                                    <h2 class='texting'>What is the pathogenesis of acute rheumatic fever (ARF)?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -171,9 +171,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>What would be the histologic findings seen in the heart?</div>
+                                    <h2 class='texting'>What would be the histologic findings seen in the heart?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA5">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -183,24 +183,26 @@
                                 </div>        
                             </div>
 
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Heart, low power" ><img src="images/q5/on008-ca005f001-9780323640251.png" class="thumbImg" alt="Heart, low power" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Heart, low power"  aria-pressed="true"><img src="images/q5/on008-ca005f001-9780323640251.png" class="thumbImg" alt="Heart, low power" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Heart, higher power" ><img src="images/q5/on008-ca005f002-9780323640251.png" class="thumbImg" alt="Heart, higher power" /></span>                                  
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Heart, higher power"  aria-pressed="false"><img src="images/q5/on008-ca005f002-9780323640251.png" class="thumbImg" alt="Heart, higher power" /></span>                                  
                             </div>
 
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Heart, low power</li>
-                                    <li tabindex="0">Aschoff bodies</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Heart, low power</li>
+                                    <li>Aschoff bodies</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q5/on008-ca005f001-9780323640251.png" class="containerImg imageShow0" aria-label="Heart, low power image" alt="Heart, low power" />
+                                      <img src="images/q5/on008-ca005f001-9780323640251.png" class="containerImg imageShow0" alt="Heart, low power" />
 
-                                      <img src="images/q5/on008-ca005f001-9780323640251-a.png" class="containerImg imageShow1" aria-label="Aschoff bodies image" alt="Aschoff bodies" />
+                                      <img src="images/q5/on008-ca005f001-9780323640251-a.png" class="containerImg imageShow1" alt="Aschoff bodies" />
 
                                       
 
@@ -211,22 +213,24 @@
                         
                              <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Heart, higher power</li>
-                                    <li tabindex="0">Aschoff giant cells</li>
-                                    <li tabindex="0">Aschoff/Anitschkow cells</li>
-                                    <li tabindex="0">Aschoff body</li>
-                                    <!-- <li tabindex="0">Normal kidney</li> -->
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Heart, higher power</li>
+                                    <li>Aschoff giant cells</li>
+                                    <li>Aschoff/Anitschkow cells</li>
+                                    <li>Aschoff body</li>
+                                    <!-- <li>Normal kidney</li> -->
                                   </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q5/on008-ca005f002-9780323640251.png" class="containerImg imageShow0" aria-label="Heart, higher power image" alt="Heart, higher power" />
+                                      <img src="images/q5/on008-ca005f002-9780323640251.png" class="containerImg imageShow0" alt="Heart, higher power" />
 
-                                      <img src="images/q5/on008-ca005f002-9780323640251-a.png" class="containerImg imageShow1" aria-label="Aschoff giant cells image" alt="Aschoff giant cells" />
+                                      <img src="images/q5/on008-ca005f002-9780323640251-a.png" class="containerImg imageShow1" alt="Aschoff giant cells" />
 
-                                      <img src="images/q5/on008-ca005f002-9780323640251-b.png" class="containerImg imageShow2" aria-label="Aschoff or Anitschkow cells image" alt="Aschoff or Anitschkow cells" />
-                                      <img src="images/q5/on008-ca005f002-9780323640251-c.png" class="containerImg imageShow3" aria-label="Aschoff bodies" alt="Aschoff bodies" />
+                                      <img src="images/q5/on008-ca005f002-9780323640251-b.png" class="containerImg imageShow2" alt="Aschoff or Anitschkow cells" />
+                                      <img src="images/q5/on008-ca005f002-9780323640251-c.png" class="containerImg imageShow3" alt="Aschoff bodies" />
 
                                    </div>
                                 </div>
@@ -243,9 +247,9 @@
                             <div class="myPage" id="pageFirstSection_6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>What was the cause of the patient’s childhood heart murmur?</div>
+                                    <h2 class='texting'>What was the cause of the patient’s childhood heart murmur?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -254,16 +258,18 @@
                                    <br/>
                                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                                 <div class="optionSelectionBox">
-                                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                                    <li tabindex="0">Valvular tissue</li>
-                                                    <li tabindex="0">Chordae tendineae</li>
+                                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                                    <li>Valvular tissue</li>
+                                                    <li>Chordae tendineae</li>
 </ul>
+                                  </div>
                                                 </div>
                                                 <div class="leftImageBox">
                                                    <div class="graphContainer" aria-live="polite">
-                                                      <img src="images/q6/on008-ca005f003-9780323640251.png" class="containerImg imageShow0" aria-label="Valvular tissue image" alt="Valvular tissue" />
+                                                      <img src="images/q6/on008-ca005f003-9780323640251.png" class="containerImg imageShow0" alt="Valvular tissue" />
 
-                                                      <img src="images/q6/on008-ca005f003-9780323640251-a.png" class="containerImg imageShow1" aria-label="Chordae tendineae image" alt="Chordae tendineae" />
+                                                      <img src="images/q6/on008-ca005f003-9780323640251-a.png" class="containerImg imageShow1" alt="Chordae tendineae" />
 
                                                       
 
@@ -288,9 +294,9 @@
                             <div class="myPage" id="pageFirstSection_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>What is the cause of the patient’s current mitral valve stenosis?</div>
+                                    <h2 class='texting'>What is the cause of the patient’s current mitral valve stenosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA7">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -322,9 +328,9 @@
                             <div class="myPage" id="pageFirstSection_a8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>8</div>
-                                    <div class='texting'>Why is the patient dyspneic?</div>
+                                    <h2 class='texting'>Why is the patient dyspneic?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA8a">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -346,9 +352,9 @@
                             <div class="myPage" id="pageFirstSection_9">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>9</div>
-                                    <div class='texting'>What was the cause of the patient’s temporary unilateral vision loss one month earlier?</div>
+                                    <h2 class='texting'>What was the cause of the patient’s temporary unilateral vision loss one month earlier?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA9">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -370,9 +376,9 @@
                             <div class="myPage" id="pageFirstSection_10">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>10</div>
-                                    <div class='texting'>What is the cause of the patient’s fever and subungual hemorrhages?</div>
+                                    <h2 class='texting'>What is the cause of the patient’s fever and subungual hemorrhages?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA10">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -447,9 +453,9 @@
                             <div class="myPage" id="pageFirstSection_11">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>11</div>
-                                    <div class='texting'>How is infective endocarditis (IE) classified?</div>
+                                    <h2 class='texting'>How is infective endocarditis (IE) classified?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA11">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -472,9 +478,9 @@
                             <div class="myPage" id="pageFirstSection_12">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>12</div>
-                                    <div class='texting'>Which factors increase risk for IE?</div>
+                                    <h2 class='texting'>Which factors increase risk for IE?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA12">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -496,9 +502,9 @@
                             <div class="myPage" id="pageFirstSection_13">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>13</div>
-                                    <div class='texting'>Which factors predispose a patient to tricuspid valve endocarditis?</div>
+                                    <h2 class='texting'>Which factors predispose a patient to tricuspid valve endocarditis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA13">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -513,24 +519,26 @@
                             </div>  
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Heart, endocarditis </li>
-                                    <li tabindex="0">Vegetations</li><!-- 
-                                    <li tabindex="0">Vegetation</li>
-                                    <li tabindex="0">Chordae tendineae</li> -->
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Heart, endocarditis </li>
+                                    <li>Vegetations</li><!-- 
+                                    <li>Vegetation</li>
+                                    <li>Chordae tendineae</li> -->
                                     
                                     
                                     
                                    
                                     
                                   </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q13/on008-ca005f005-9780323640251.png" class="containerImg imageShow0" aria-label="Heart, endocarditis image" alt="Heart, endocarditis" />
-                                      <img src="images/q13/on008-ca005f005-9780323640251-a.png" class="containerImg imageShow1" aria-label="vegetations image" alt="vegetations" /><!-- 
-                                      <img src="" class="containerImg imageShow2" aria-label="vegetation image" alt="vegetation" />
-                                      <img src="" class="containerImg imageShow3" aria-label="chordae tendineae image" alt="chordae tendineae" /> -->
+                                      <img src="images/q13/on008-ca005f005-9780323640251.png" class="containerImg imageShow0" alt="Heart, endocarditis" />
+                                      <img src="images/q13/on008-ca005f005-9780323640251-a.png" class="containerImg imageShow1" alt="vegetations" /><!-- 
+                                      <img src="" class="containerImg imageShow2" alt="vegetation" />
+                                      <img src="" class="containerImg imageShow3" alt="chordae tendineae" /> -->
 
                                       
 
@@ -550,9 +558,9 @@
                             <div class="myPage" id="pageFirstSection_14">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>14</div>
-                                    <div class='texting'>What are the complications associated with infective endocarditis?</div>
+                                    <h2 class='texting'>What are the complications associated with infective endocarditis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA14">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -574,9 +582,9 @@
                             <div class="myPage" id="pageFirstSection_15">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>15</div>
-                                    <div class='texting'>Which organisms are commonly associated with infective endocarditis?</div>
+                                    <h2 class='texting'>Which organisms are commonly associated with infective endocarditis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA15">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -600,9 +608,9 @@
                             <div class="myPage" id="pageFirstSection_16">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>16</div>
-                                    <div class='texting'>What can be done to reduce the risk of infective endocarditis?</div>
+                                    <h2 class='texting'>What can be done to reduce the risk of infective endocarditis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA16">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -628,7 +636,7 @@
                             <div class="imageBoxHolder hs_set1">
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q17/on008-ca005f006-9780323640251_3c.png" class="containerImg imageShow0" aria-label="friable vegetations (arrows) image" alt="friable vegetations (arrows)" />
+                                      <img src="images/q17/on008-ca005f006-9780323640251_3c.png" class="containerImg imageShow0" alt="friable vegetations (arrows)" />
                                    </div>
                                 </div>
                              </div> 
@@ -637,9 +645,9 @@
                             <div class="myPage" id="pageFirstSection_17">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>17</div>
-                                    <div class='texting'>What are the components of a vegetation, and which factors predispose to their formation?</div>
+                                    <h2 class='texting'>What are the components of a vegetation, and which factors predispose to their formation?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA17">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -673,9 +681,9 @@
                             <div class="myPage" id="pageFirstSection_bs19">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>18</div>
-                                    <div class='texting'>What are the four types of valvular vegetations and what are their characteristics?</div>
+                                    <h2 class='texting'>What are the four types of valvular vegetations and what are their characteristics?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAdd18">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -709,9 +717,9 @@
                             <div class="myPage" id="pageFirstSection_as19">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>19</div>
-                                    <div class='texting'>What are some clinical conditions associated with nonbacterial thrombotic endocarditis?</div>
+                                    <h2 class='texting'>What are some clinical conditions associated with nonbacterial thrombotic endocarditis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAbb18">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -727,22 +735,24 @@
                             </div>  
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Heart valve</li>
-                                    <li tabindex="0">Valve leaflet</li>
-                                    <li tabindex="0">Vegetations</li>
-                                    <li tabindex="0">Chordae tendineae</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Heart valve</li>
+                                    <li>Valve leaflet</li>
+                                    <li>Vegetations</li>
+                                    <li>Chordae tendineae</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                    <img src="images/q19/on008-ca005f008-9780323640251.png" class="containerImg imageShow0" aria-label="Heart valve image" alt="Heart valve" />
+                                    <img src="images/q19/on008-ca005f008-9780323640251.png" class="containerImg imageShow0" alt="Heart valve" />
                                       
-                                      <img src="images/q19/on008-ca005f008-9780323640251-a.png" class="containerImg imageShow1" aria-label="Valve leaflet image" alt="vegetations" />
+                                      <img src="images/q19/on008-ca005f008-9780323640251-a.png" class="containerImg imageShow1" alt="vegetations" />
 
-                                      <img src="images/q19/on008-ca005f008-9780323640251-b.png" class="containerImg imageShow2" aria-label="vegetations image" alt="vegetations" />
+                                      <img src="images/q19/on008-ca005f008-9780323640251-b.png" class="containerImg imageShow2" alt="vegetations" />
 
-                                      <img src="images/q19/on008-ca005f008-9780323640251-c.png" class="containerImg imageShow3" aria-label="Chordae tendineae image" alt="Chordae tendineae" />
+                                      <img src="images/q19/on008-ca005f008-9780323640251-c.png" class="containerImg imageShow3" alt="Chordae tendineae" />
 
 
                                    </div>
@@ -767,12 +777,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -803,10 +813,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -847,6 +857,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>

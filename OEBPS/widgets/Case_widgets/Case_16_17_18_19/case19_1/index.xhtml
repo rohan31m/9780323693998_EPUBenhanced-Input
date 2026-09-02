@@ -27,23 +27,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Get The Lead Out</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ul class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">•	Describe the clinical, laboratory and morphologic findings of lead poisoning.</li>
@@ -73,33 +73,33 @@
                             <p class="paraIndent"><em>Laboratory values were as follows:</em></p>
                             <br/>
                             <table class="caseOutlineTable">
-                              
+                              <caption class="visually-hidden">Laboratory values</caption>
                                 <tr>
-                                  <th>TEST</th>
-                                  <th>RESULT</th> 
+                                  <th scope="col">TEST</th>
+                                  <th scope="col">RESULT</th> 
                                </tr>
                                <tr>
-                                  <td>Hemoglobin</td>
+                                  <th scope="row">Hemoglobin</th>
                                   <td>8.2 gm/dL (11–13 gm/dL)</td>
                                </tr>
                                <tr>
-                                <td>Hct</td>
+                                <th scope="row">Hct</th>
                                 <td>24.9% (35%–44%)</td>
                              </tr>
                              <tr>
-                                <td>RDW</td>
+                                <th scope="row">RDW</th>
                                 <td>21.5% (11.6%–14.6%)</td>
                              </tr>
                              <tr>
-                                <td>MCV</td>
+                                <th scope="row">MCV</th>
                                 <td>68 µm<sup>3</sup> (80–100 µm<sup>3</sup>)</td>
                              </tr>
                              <tr>
-                                <td>WBC</td>
+                                <th scope="row">WBC</th>
                                 <td>8,000/mm<sup>3</sup>(4,500–11,000 mm<sup>3</sup>)</td>
                              </tr>
                              <tr>
-                                <td>Platelets</td>
+                                <th scope="row">Platelets</th>
                                 <td>350,000/mm<sup>3</sup> (150,000–400,000/mm<sup>3</sup>)</td>
                              </tr>
                              
@@ -108,9 +108,9 @@
                             <div class="myPage" id="pageFirstSection_1">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>What is the differential diagnosis for this patient’s anemia? Which tests should be ordered?</div>
+                                    <h2 class='texting'>What is the differential diagnosis for this patient’s anemia? Which tests should be ordered?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA1">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -118,21 +118,21 @@
                                             <p>Appropriate tests would include serum iron, total iron binding capacity, transferrin saturation, and ferritin.</p>
                                             <br/>
                             <table class="caseOutlineTable">
-                              
+                              <caption class="visually-hidden">Iron studies</caption>
                                 <tr>
-                                  <td>Serum iron concentration</td>
+                                  <th scope="row">Serum iron concentration</th>
                                   <td>17 mg/dL (28–122 mg/dL)</td> 
                                </tr>
                                <tr>
-                                  <td>Transferrin saturation</td>
+                                  <th scope="row">Transferrin saturation</th>
                                   <td>3 % (6.5%–39%)</td>
                                </tr>
                                <tr>
-                                <td>Serum ferritin</td>
+                                <th scope="row">Serum ferritin</th>
                                 <td>15 ng/mL (22–158 ng/mL)</td>
                              </tr>
                              <tr>
-                                <td>Total iron binding capacity</td>
+                                <th scope="row">Total iron binding capacity</th>
                                 <td>425 g/dL (260–385 g/dL)</td>
                              </tr>
                             
@@ -154,9 +154,9 @@
                             <div class="myPage" id="pageFirstSection_2">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>Which additional blood test is indicated?</div>
+                                    <h2 class='texting'>Which additional blood test is indicated?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA2">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -178,9 +178,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>What is the most likely etiology of this patient’s lead poisoning?</div>
+                                    <h2 class='texting'>What is the most likely etiology of this patient’s lead poisoning?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -202,9 +202,9 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>What are the major tissues and cell types that are affected by lead poisoning?</div>
+                                    <h2 class='texting'>What are the major tissues and cell types that are affected by lead poisoning?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -217,7 +217,7 @@
                                             <br/>
                                             <div class="leftImageBox">
                                                 <div class="graphContainer">             
-                                                    <img src="images/q4/EP2_Fig_19_2.png" class="staticImg" alt="Sugar Sugar" /> 
+                                                    <img src="images/q4/EP2_Fig_19_2.png" class="staticImg" alt="Illustration of the adverse effects of smoking. A man holding a cigarette is labeled with associated diseases: cancers of the oral cavity, larynx, esophagus, lung, pancreas, and bladder; chronic bronchitis and emphysema; myocardial infarction; peptic ulcer; and systemic atherosclerosis. The more common effects are shown in bold." /> 
                                                 </div>
                                             </div>    
                                         </div>
@@ -236,9 +236,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>Where in the body does lead accumulate?</div>
+                                    <h2 class='texting'>Where in the body does lead accumulate?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA5">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -249,13 +249,15 @@
                             </div>
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Plain radiograph</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Plain radiograph</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q5/on019-ca001f002-9780323640251.png" class="containerImg imageShow0" aria-label="Plain radiograph image" alt="Plain radiograph" />
+                                      <img src="images/q5/on019-ca001f002-9780323640251.png" class="containerImg imageShow0" alt="Radiograph of a child's wrist showing dense horizontal lead lines at the distal radius and ulna, marked by two arrows." />
                                   </div>
                                 </div>
                              </div>  
@@ -270,9 +272,9 @@
                             <div class="myPage" id="pageFirstSection_6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>Which treatment is indicated for this patient?</div>
+                                    <h2 class='texting'>Which treatment is indicated for this patient?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -295,9 +297,9 @@
                             <div class="myPage" id="pageFirstSection_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>How does lead act as a poison?</div>
+                                    <h2 class='texting'>How does lead act as a poison?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA7">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -318,9 +320,9 @@
                             <div class="myPage" id="pageFirstSection_8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>8</div>
-                                    <div class='texting'>Which other common toxin also binds sulfhydryl groups?</div>
+                                    <h2 class='texting'>Which other common toxin also binds sulfhydryl groups?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -341,9 +343,9 @@
                             <div class="myPage" id="pageFirstSection_9">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>9</div>
-                                    <div class='texting'>What are the main sources of mercury exposure?</div>
+                                    <h2 class='texting'>What are the main sources of mercury exposure?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA9">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -364,9 +366,9 @@
                             <div class="myPage" id="pageFirstSection_10">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>10</div>
-                                    <div class='texting'>Which organs are most commonly affected by mercury poisoning?</div>
+                                    <h2 class='texting'>Which organs are most commonly affected by mercury poisoning?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA10">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -387,9 +389,9 @@
                             <div class="myPage" id="pageFirstSection_11">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>11</div>
-                                    <div class='texting'>Which antioxidant protects against mercury toxicity?</div>
+                                    <h2 class='texting'>Which antioxidant protects against mercury toxicity?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA11">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -410,9 +412,9 @@
                             <div class="myPage" id="pageFirstSection_12">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>12</div>
-                                    <div class='texting'>Which organ systems are affected by arsenic?</div>
+                                    <h2 class='texting'>Which organ systems are affected by arsenic?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA12">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -433,9 +435,9 @@
                             <div class="myPage" id="pageFirstSection_13">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>13</div>
-                                    <div class='texting'>What is the mechanism of arsenic toxicity?</div>
+                                    <h2 class='texting'>What is the mechanism of arsenic toxicity?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA13">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -456,9 +458,9 @@
                             <div class="myPage" id="pageFirstSection_14">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>14</div>
-                                    <div class='texting'>Which malignancies are associated with arsenic exposure?</div>
+                                    <h2 class='texting'>Which malignancies are associated with arsenic exposure?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA14">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -479,9 +481,9 @@
                             <div class="myPage" id="pageFirstSection_15">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>15</div>
-                                    <div class='texting'>How do arsenic-associated skin carcinomas differ from sun exposure-associated skin carcinomas?</div>
+                                    <h2 class='texting'>How do arsenic-associated skin carcinomas differ from sun exposure-associated skin carcinomas?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA15">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -502,9 +504,9 @@
                             <div class="myPage" id="pageFirstSection_16">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>16</div>
-                                    <div class='texting'>What is the proposed mechanism for carcinogenesis due to arsenic?</div>
+                                    <h2 class='texting'>What is the proposed mechanism for carcinogenesis due to arsenic?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA16">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -525,9 +527,9 @@
                             <div class="myPage" id="pageFirstSection_17">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>17</div>
-                                    <div class='texting'>Which organs are affected by cadmium exposure?</div>
+                                    <h2 class='texting'>Which organs are affected by cadmium exposure?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA17">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -548,9 +550,9 @@
                             <div class="myPage" id="pageFirstSection_18">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>18</div>
-                                    <div class='texting'>What are the primary sources of cadmium exposure?</div>
+                                    <h2 class='texting'>What are the primary sources of cadmium exposure?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA18">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -577,12 +579,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -611,10 +613,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -655,6 +657,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>

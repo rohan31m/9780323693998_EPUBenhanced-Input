@@ -26,23 +26,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Back in the Saddle Again</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ul class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">•	Describe the causes and clinical manifestations of hyper- and hypopituitarism.</li>
@@ -76,9 +76,9 @@
                             <div class="myPage" id="pageFirstSection_1">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>What is the most likely underlying condition responsible for the symptoms in this patient?</div>
+                                    <h2 class='texting'>What is the most likely underlying condition responsible for the symptoms in this patient?</h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show Answer</div>
                                 <div class="textArea" id="textA1">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -90,25 +90,27 @@
                             </div>
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Brain, gross</li>
-                                    <li tabindex="0">Pituitary adenoma</li>
-                                    <li tabindex="0">Basilar artery</li>
-                                    <li tabindex="0">Pons</li>
-                                    <li tabindex="0">Left optic nerve</li>
-                                    <li tabindex="0">Olfactory nerves</li>
-                                    <li tabindex="0">Diaphragma sella</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Brain, gross</li>
+                                    <li>Pituitary adenoma</li>
+                                    <li>Basilar artery</li>
+                                    <li>Pons</li>
+                                    <li>Left optic nerve</li>
+                                    <li>Olfactory nerves</li>
+                                    <li>Diaphragma sella</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q1/on016-ca001f001-9780323640251.png" class="containerImg imageShow0" aria-label="Brain, gross image" alt="Brain, gross" />
-                                      <img src="images/q1/on016-ca001f001-9780323640251-a.png" class="imgBlock containerImg imageShow1" aria-label="Pituitary adenoma image" alt="Pituitary adenoma" />
-                                      <img src="images/q1/on016-ca001f001-9780323640251-b.png" class="imgBlock containerImg imageShow2" aria-label="Basilar artery image" alt="Basilar artery" />
-                                      <img src="images/q1/on016-ca001f001-9780323640251-c.png" class="imgBlock containerImg imageShow3" aria-label="Pons image" alt="Pons" />                                     
-                                      <img src="images/q1/on016-ca001f001-9780323640251-d.png" class="imgBlock containerImg imageShow4" aria-label="Left optic nerve image" alt="Left optic nerve" />                                     
-                                      <img src="images/q1/on016-ca001f001-9780323640251-e.png" class="imgBlock containerImg imageShow5" aria-label="Olfactory nerves image" alt="Olfactory nerves" />                                     
-                                      <img src="images/q1/on016-ca001f001-9780323640251-f.png" class="imgBlock containerImg imageShow6" aria-label="Diaphragma sella image" alt="Diaphragma sella" />                                     
+                                      <img src="images/q1/on016-ca001f001-9780323640251.png" class="containerImg imageShow0" alt="Brain, gross" />
+                                      <img src="images/q1/on016-ca001f001-9780323640251-a.png" class="imgBlock containerImg imageShow1" alt="Pituitary adenoma" />
+                                      <img src="images/q1/on016-ca001f001-9780323640251-b.png" class="imgBlock containerImg imageShow2" alt="Basilar artery" />
+                                      <img src="images/q1/on016-ca001f001-9780323640251-c.png" class="imgBlock containerImg imageShow3" alt="Pons" />                                     
+                                      <img src="images/q1/on016-ca001f001-9780323640251-d.png" class="imgBlock containerImg imageShow4" alt="Left optic nerve" />                                     
+                                      <img src="images/q1/on016-ca001f001-9780323640251-e.png" class="imgBlock containerImg imageShow5" alt="Olfactory nerves" />                                     
+                                      <img src="images/q1/on016-ca001f001-9780323640251-f.png" class="imgBlock containerImg imageShow6" alt="Diaphragma sella" />                                     
                                    </div>
                                 </div>
                              </div>    
@@ -123,39 +125,43 @@
                             <p class="paraIndent"><em>Laboratory evaluation revealed a prolactin level of 230 ng/mL (&#x3e;20 ng/mL), luteinizing hormone (LH) of 4.5 mIU/mL (6–23 mIU/mL), follicle stimulating hormone (FSH) of 3.0 mIU/mL (4–25 mIU/mL) and testosterone of 150 ng/dL (normal 270–1070 ng/dL). The patient was taken to the operating room, where the sellar mass was exposed via frontotemporal craniotomy. The mass obliterated the diaphragma sella and the lateral walls of the sella turcica; it compressed the optic chiasm superiorly and extended bilaterally into the cavernous sinuses. A small biopsy specimen of the mass consisted of soft, almost gelatinous, tan tissue. Histologic examination of the specimen revealed a monomorphous population of cells with uniform, round-to-ovoid nuclei and amphophilic cytoplasm. </em></p>
 
 
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="0" aria-label="Head, MRI" ><img src="images/q2/on016-ca001f002-9780323640251.png" class="thumbImg" alt="Head, MRI" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="0" aria-label="Head, MRI"  aria-pressed="true"><img src="images/q2/on016-ca001f002-9780323640251.png" class="thumbImg" alt="Head, MRI" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="0" aria-label="Biopsy, histology" ><img src="images/q2/on016-ca001f003-9780323640251.png" class="thumbImg" alt="Biopsy, histology" /></span>
+                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="0" aria-label="Biopsy, histology"  aria-pressed="false"><img src="images/q2/on016-ca001f003-9780323640251.png" class="thumbImg" alt="Biopsy, histology" /></span>
                             </div>
 
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Head, MRI</li>
-                                    <li tabindex="0">Sellar mass</li>
-                                    <li tabindex="0">Basal ganglia</li>
-                                    <li tabindex="0">Temporal lobes</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Head, MRI</li>
+                                    <li>Sellar mass</li>
+                                    <li>Basal ganglia</li>
+                                    <li>Temporal lobes</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q2/on016-ca001f002-9780323640251.png" class="containerImg imageShow0" aria-label="Head, MRI image" alt="Head, MRI" />
-                                      <img src="images/q2/on016-ca001f002-9780323640251-a.png" class="imgBlock containerImg imageShow1" aria-label="Sellar mass image" alt="Sellar mass" />
-                                      <img src="images/q2/on016-ca001f002-9780323640251-b.png" class="imgBlock containerImg imageShow2" aria-label="Basal ganglia image" alt="Basal ganglia" />
-                                      <img src="images/q2/on016-ca001f002-9780323640251-c.png" class="imgBlock containerImg imageShow3" aria-label="Temporal lobes image" alt="Temporal lobes" />                                     
+                                      <img src="images/q2/on016-ca001f002-9780323640251.png" class="containerImg imageShow0" alt="Head, MRI" />
+                                      <img src="images/q2/on016-ca001f002-9780323640251-a.png" class="imgBlock containerImg imageShow1" alt="Sellar mass" />
+                                      <img src="images/q2/on016-ca001f002-9780323640251-b.png" class="imgBlock containerImg imageShow2" alt="Basal ganglia" />
+                                      <img src="images/q2/on016-ca001f002-9780323640251-c.png" class="imgBlock containerImg imageShow3" alt="Temporal lobes" />                                     
                                   </div>
                                 </div>
                              </div>    
                              <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Biopsy, histology</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Biopsy, histology</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q2/on016-ca001f003-9780323640251.png" class="containerImg imageShow0" aria-label="Biopsy, histology image" alt="Biopsy, histology" />
+                                      <img src="images/q2/on016-ca001f003-9780323640251.png" class="containerImg imageShow0" alt="Biopsy, histology" />
                                     </div>
                                 </div>
                              </div>  
@@ -163,9 +169,9 @@
                             <div class="myPage" id="pageFirstSection_2">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>How does the morphology in this case differ from that of the normal anterior pituitary? </div>
+                                    <h2 class='texting'>How does the morphology in this case differ from that of the normal anterior pituitary? </h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="3">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="3">Show Answer</div>
                                 <div class="textArea" id="textA2">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -176,41 +182,45 @@
                             </div>   
 
 
-                            <div class="imageThumbHolder imageThumbHolder3">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="3" data-dropdownid="1" data-id="0" aria-label="Normal histology" ><img src="images/q2/on016-ca001f004-9780323640251.png" class="thumbImg" alt="Normal histology" /></span>                                
+                            <div class="imageThumbHolder imageThumbHolder3" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="3" data-dropdownid="1" data-id="0" aria-label="Normal histology"  aria-pressed="true"><img src="images/q2/on016-ca001f004-9780323640251.png" class="thumbImg" alt="Normal histology" /></span>                                
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="3" data-dropdownid="2" data-id="0" aria-label="Prolactin IHC" ><img src="images/q2/on016-ca001f005-9780323640251.png" class="thumbImg" alt="Prolactin IHC" /></span>
+                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="3" data-dropdownid="2" data-id="0" aria-label="Prolactin IHC"  aria-pressed="false"><img src="images/q2/on016-ca001f005-9780323640251.png" class="thumbImg" alt="Prolactin IHC" /></span>
 
 
                             </div>
 
                             <div class="imageBoxHolder imageBoxHolder3 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Normal histology</li>
-                                    <li tabindex="0">Basophils</li>
-                                    <li tabindex="0">Acidophils</li>
-                                    <li tabindex="0">Chromophobes</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Normal histology</li>
+                                    <li>Basophils</li>
+                                    <li>Acidophils</li>
+                                    <li>Chromophobes</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                    <img src="images/q2/on016-ca001f004-9780323640251.png" class="containerImg imageShow0" aria-label="Normal histology image" alt="Normal histology" />
-                                    <img src="images/q2/on016-ca001f004-9780323640251-a.png" class="imgBlock containerImg imageShow1" aria-label="Basophils image" alt="Basophils" />
-                                    <img src="images/q2/on016-ca001f004-9780323640251-b.png" class="imgBlock containerImg imageShow2" aria-label="Acidophils image" alt="Acidophils" />
-                                    <img src="images/q2/on016-ca001f004-9780323640251-c.png" class="imgBlock containerImg imageShow3" aria-label="Chromophobes image" alt="Chromophobes" />
+                                    <img src="images/q2/on016-ca001f004-9780323640251.png" class="containerImg imageShow0" alt="Normal histology" />
+                                    <img src="images/q2/on016-ca001f004-9780323640251-a.png" class="imgBlock containerImg imageShow1" alt="Basophils" />
+                                    <img src="images/q2/on016-ca001f004-9780323640251-b.png" class="imgBlock containerImg imageShow2" alt="Acidophils" />
+                                    <img src="images/q2/on016-ca001f004-9780323640251-c.png" class="imgBlock containerImg imageShow3" alt="Chromophobes" />
                                     </div>
                                 </div>
                              </div> 
                              <div class="imageBoxHolder imageBoxHolder3 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Prolactin IHC</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Prolactin IHC</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q2/on016-ca001f005-9780323640251.png" class="containerImg imageShow0" aria-label="Prolactin IHC image" alt="Prolactin IHC" />
+                                      <img src="images/q2/on016-ca001f005-9780323640251.png" class="containerImg imageShow0" alt="Prolactin IHC" />
                                     </div>
                                 </div>
                              </div>  
@@ -228,9 +238,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>How are pituitary classified?</div>
+                                    <h2 class='texting'>How are pituitary classified?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -322,9 +332,9 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>Why does this patient have decreased libido and erectile dysfunction?</div>
+                                    <h2 class='texting'>Why does this patient have decreased libido and erectile dysfunction?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -345,9 +355,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>Which other endocrine studies might be useful in this patient?</div>
+                                    <h2 class='texting'>Which other endocrine studies might be useful in this patient?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA5">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -367,9 +377,9 @@
                             <div class="myPage" id="pageFirstSection_6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>Why would nonfunctional pituitary  (i.e., that do not secrete an active hormonal product) typically be larger than hormonally active tumors at the time of diagnosis?</div>
+                                    <h2 class='texting'>Why would nonfunctional pituitary  (i.e., that do not secrete an active hormonal product) typically be larger than hormonally active tumors at the time of diagnosis?</h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show Answer</div>
                                 <div class="textArea" id="textA6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -381,25 +391,27 @@
                             </div>     
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Brain, gross</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Brain, gross</li>
                                 
-                                    <li tabindex="0">Internal carotid artery</li>
-                                    <li tabindex="0">Anterior cerebral artery</li>
-                                    <li tabindex="0">Lateral ventricles</li>
-                                    <li tabindex="0">Temporal lobes</li>
-                                    <li tabindex="0">Basal ganglia</li>
+                                    <li>Internal carotid artery</li>
+                                    <li>Anterior cerebral artery</li>
+                                    <li>Lateral ventricles</li>
+                                    <li>Temporal lobes</li>
+                                    <li>Basal ganglia</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q6/on016-ca001f006-9780323640251.png" class="containerImg imageShow0" aria-label="Brain, gross image" alt="Brain, gross" />
-                                      <img src="images/q6/on016-ca001f006-9780323640251-a.png" class="imgBlock containerImg imageShow1" aria-label="Pituitary adenoma image" alt="Pituitary adenoma" />
-                                      <img src="images/q6/on016-ca001f006-9780323640251-b.png" class="imgBlock containerImg imageShow2" aria-label="Internal carotid artery image" alt="Internal carotid artery" />
-                                      <img src="images/q6/on016-ca001f006-9780323640251-c.png" class="imgBlock containerImg imageShow3" aria-label="Anterior cerebral artery image" alt="Anterior cerebral artery" />                                     
-                                      <img src="images/q6/on016-ca001f006-9780323640251-d.png" class="imgBlock containerImg imageShow4" aria-label="Lateral ventricles image" alt="Lateral ventricles" />                                     
-                                      <img src="images/q6/on016-ca001f006-9780323640251-e.png" class="imgBlock containerImg imageShow5" aria-label="Temporal lobes image" alt="Temporal lobes" />                                     
-                                      <img src="images/q6/on016-ca001f006-9780323640251-f.png" class="imgBlock containerImg imageShow6" aria-label="Basal ganglia image" alt="Basal ganglia" />                                     
+                                      <img src="images/q6/on016-ca001f006-9780323640251.png" class="containerImg imageShow0" alt="Brain, gross" />
+                                      <img src="images/q6/on016-ca001f006-9780323640251-a.png" class="imgBlock containerImg imageShow1" alt="Pituitary adenoma" />
+                                      <img src="images/q6/on016-ca001f006-9780323640251-b.png" class="imgBlock containerImg imageShow2" alt="Internal carotid artery" />
+                                      <img src="images/q6/on016-ca001f006-9780323640251-c.png" class="imgBlock containerImg imageShow3" alt="Anterior cerebral artery" />                                     
+                                      <img src="images/q6/on016-ca001f006-9780323640251-d.png" class="imgBlock containerImg imageShow4" alt="Lateral ventricles" />                                     
+                                      <img src="images/q6/on016-ca001f006-9780323640251-e.png" class="imgBlock containerImg imageShow5" alt="Temporal lobes" />                                     
+                                      <img src="images/q6/on016-ca001f006-9780323640251-f.png" class="imgBlock containerImg imageShow6" alt="Basal ganglia" />                                     
                                    </div>
                                 </div>
                              </div>                                         
@@ -415,9 +427,9 @@
                             <div class="myPage" id="pageFirstSection_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>What is the pathogenesis of pituitary?</div>
+                                    <h2 class='texting'>What is the pathogenesis of pituitary?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA7">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -443,12 +455,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -466,10 +478,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -510,6 +522,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>

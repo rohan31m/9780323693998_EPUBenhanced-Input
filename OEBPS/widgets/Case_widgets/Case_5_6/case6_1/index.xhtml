@@ -26,23 +26,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Trouble Lumen</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ol class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">•	Relate the molecular defect in the CFTR protein to the abnormal sweat chloride test and pathologic changes in the lung and other tissues.</li>
@@ -74,9 +74,9 @@
                             <div class="myPage" id="pageFirstSection_1">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>What is the significance of the clinical presentation?</div>
+                                    <h2 class='texting'>What is the significance of the clinical presentation?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA1">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -140,9 +140,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>What is the diagnosis?</div>
+                                    <h2 class='texting'>What is the diagnosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -164,9 +164,9 @@
                             <div class="myPage" id="pageFirstSection_ab3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>Which laboratory findings of this patient are consistent with the diagnosis of cystic fibrosis?</div>
+                                    <h2 class='texting'>Which laboratory findings of this patient are consistent with the diagnosis of cystic fibrosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAac3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -189,9 +189,9 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>What is the pathophysiology of cystic fibrosis?</div>
+                                    <h2 class='texting'>What is the pathophysiology of cystic fibrosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -202,27 +202,29 @@
 
                             </div>
 
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Pancreas, gross" ><img src="images/q4/on006-ca001f001-9780323640251.png" class="thumbImg" alt="Pancreas, gross" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Pancreas, gross"  aria-pressed="true"><img src="images/q4/on006-ca001f001-9780323640251.png" class="thumbImg" alt="Pancreas, gross" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Pancreas, histology" ><img src="images/q4/on006-ca001f002-9780323640251.png" class="thumbImg" alt="Pancreas, histology" /></span>                                  
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Pancreas, histology"  aria-pressed="false"><img src="images/q4/on006-ca001f002-9780323640251.png" class="thumbImg" alt="Pancreas, histology" /></span>                                  
                             </div>
                             
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Pancreas, gross</li>
-                                    <li tabindex="0">Cysts</li>
-                                    <li tabindex="0">Fibrosis</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Pancreas, gross</li>
+                                    <li>Cysts</li>
+                                    <li>Fibrosis</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q4/on006-ca001f001-9780323640251.png" class="containerImg imageShow0" aria-label="Pancreas, gross image" alt="Pancreas, gross" />
+                                      <img src="images/q4/on006-ca001f001-9780323640251.png" class="containerImg imageShow0" alt="Pancreas, gross" />
 
-                                      <img src="images/q4/on006-ca001f001-9780323640251-a.png" class="containerImg imageShow1" aria-label="Cysts image" alt="Cysts" />
+                                      <img src="images/q4/on006-ca001f001-9780323640251-a.png" class="containerImg imageShow1" alt="Cysts" />
 
-                                      <img src="images/q4/on006-ca001f001-9780323640251-b.png" class="containerImg imageShow2" aria-label="Fibrosis image" alt="Fibrosis" />
+                                      <img src="images/q4/on006-ca001f001-9780323640251-b.png" class="containerImg imageShow2" alt="Fibrosis" />
 
                                    </div>
                                 </div>
@@ -231,16 +233,18 @@
                         
                              <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Pancreas, histology</li>
-                                    <li tabindex="0">Duct with secretions</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Pancreas, histology</li>
+                                    <li>Duct with secretions</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q4/on006-ca001f002-9780323640251.png" class="containerImg imageShow0" aria-label="Pancreas, histology image" alt="Pancreas, histology" />
+                                      <img src="images/q4/on006-ca001f002-9780323640251.png" class="containerImg imageShow0" alt="Pancreas, histology" />
 
-                                      <img src="images/q4/on006-ca001f002-9780323640251-a.png" class="containerImg imageShow1" aria-label="Duct with secretions image" alt="Duct with secretions" />
+                                      <img src="images/q4/on006-ca001f002-9780323640251-a.png" class="containerImg imageShow1" alt="Duct with secretions" />
                                    </div>
                                 </div>
                              </div> 
@@ -256,9 +260,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>What is the pattern of inheritance of cystic fibrosis? </div>
+                                    <h2 class='texting'>What is the pattern of inheritance of cystic fibrosis? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA5">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -279,9 +283,9 @@
                             <div class="myPage" id="pageFirstSection_6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>Which population is most frequently affected by cystic fibrosis?</div>
+                                    <h2 class='texting'>Which population is most frequently affected by cystic fibrosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -304,9 +308,9 @@
                             <div class="myPage" id="pageFirstSection_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>What is the significance of the ΔF508 mutation? </div>
+                                    <h2 class='texting'>What is the significance of the ΔF508 mutation? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA7">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -328,9 +332,9 @@
                             <div class="myPage" id="pageFirstSection_8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>8</div>
-                                    <div class='texting'>How does inactivation of CFTR cause increased sweat salinity?</div>
+                                    <h2 class='texting'>How does inactivation of CFTR cause increased sweat salinity?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -357,9 +361,9 @@
                             <div class="myPage" id="pageFirstSection_9">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>9</div>
-                                    <div class='texting'>How does the molecular defect in cystic fibrosis lead to lung disease? </div>
+                                    <h2 class='texting'>How does the molecular defect in cystic fibrosis lead to lung disease? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA9">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -380,16 +384,18 @@
 
                              <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Lung, gross</li>
-                                    <li tabindex="0">Bronchiectatic airways</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Lung, gross</li>
+                                    <li>Bronchiectatic airways</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">                                     
-                                      <img src="images/q9/on006-ca001f003-9780323640251.png" class="containerImg imageShow0" aria-label="Lung, gross image" alt="Lung, gross" />
+                                      <img src="images/q9/on006-ca001f003-9780323640251.png" class="containerImg imageShow0" alt="Lung, gross" />
 
-                                      <img src="images/q9/on006-ca001f003-9780323640251-a.png" class="containerImg imageShow1" aria-label="Bronchiectatic airways image" alt="Bronchiectatic airways" />
+                                      <img src="images/q9/on006-ca001f003-9780323640251-a.png" class="containerImg imageShow1" alt="Bronchiectatic airways" />
                                    </div>
                                 </div>
                              </div>
@@ -406,9 +412,9 @@
                             <div class="myPage" id="pageFirstSection_10">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>10</div>
-                                    <div class='texting'>Which histologic features would be expected in a lung from a cystic fibrosis patient?</div>
+                                    <h2 class='texting'>Which histologic features would be expected in a lung from a cystic fibrosis patient?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA10">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -418,44 +424,48 @@
                                     </div>
                                 </div> 
                             </div>  
-                             <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Cystic fibrosis, low power" ><img src="images/q10/on006-ca001f005-9780323640251.png" class="thumbImg" alt="Cystic fibrosis, low power" /></span>                               
+                             <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Cystic fibrosis, low power"  aria-pressed="true"><img src="images/q10/on006-ca001f005-9780323640251.png" class="thumbImg" alt="Cystic fibrosis, low power" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Bronchiole, cystic fibrosis" ><img src="images/q10/on006-ca001f006-9780323640251.png" class="thumbImg" alt="Bronchiole, cystic fibrosis" /></span>                                  
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Bronchiole, cystic fibrosis"  aria-pressed="false"><img src="images/q10/on006-ca001f006-9780323640251.png" class="thumbImg" alt="Bronchiole, cystic fibrosis" /></span>                                  
                             </div>
                             
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Cystic fibrosis, low power</li>
-                                    <li tabindex="0">Bronchial epithelium</li> 
-                                    <li tabindex="0">Viscid secretions</li> 
-                                    <li tabindex="0">Acute inflammatory cells</li> 
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Cystic fibrosis, low power</li>
+                                    <li>Bronchial epithelium</li> 
+                                    <li>Viscid secretions</li> 
+                                    <li>Acute inflammatory cells</li> 
                                   </ul>
+                                  </div>
                                 </div>
 
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                    <img src="images/q10/on006-ca001f005-9780323640251.png" class="containerImg imageShow0" aria-label="Cystic fibrosis, low power image" alt="Bronchiole, cystic fibrosis" />
-                                    <img src="images/q10/on006-ca001f005-9780323640251-a.png" class="containerImg imageShow1" aria-label="Bronchial epithelium image" alt="Bronchial epithelium" />
-                                    <img src="images/q10/on006-ca001f005-9780323640251-b.png" class="containerImg imageShow2" aria-label="Viscid secretions image" alt="Viscid secretions" />
-                                    <img src="images/q10/on006-ca001f005-9780323640251-c.png" class="containerImg imageShow3" aria-label="Acute inflammatory cells image" alt="Acute inflammatory cells" />
+                                    <img src="images/q10/on006-ca001f005-9780323640251.png" class="containerImg imageShow0" alt="Bronchiole, cystic fibrosis" />
+                                    <img src="images/q10/on006-ca001f005-9780323640251-a.png" class="containerImg imageShow1" alt="Bronchial epithelium" />
+                                    <img src="images/q10/on006-ca001f005-9780323640251-b.png" class="containerImg imageShow2" alt="Viscid secretions" />
+                                    <img src="images/q10/on006-ca001f005-9780323640251-c.png" class="containerImg imageShow3" alt="Acute inflammatory cells" />
 
                                    </div>
                                 </div>
                              </div> 
                              <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Bronchiole, cystic fibrosis</li>
-                                    <li tabindex="0">Fibrosis</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Bronchiole, cystic fibrosis</li>
+                                    <li>Fibrosis</li>
 </ul>
+                                  </div>
                                 </div>
 
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                    <img src="images/q10/on006-ca001f006-9780323640251.png" class="containerImg imageShow0" aria-label="Bronchiole, cystic fibrosis image" alt="Bronchiole, cystic fibrosis" />
-                                    <img src="images/q10/on006-ca001f006-9780323640251-a.png" class="containerImg imageShow1" aria-label="Fibrosis image" alt="Fibrosis" />
+                                    <img src="images/q10/on006-ca001f006-9780323640251.png" class="containerImg imageShow0" alt="Bronchiole, cystic fibrosis" />
+                                    <img src="images/q10/on006-ca001f006-9780323640251-a.png" class="containerImg imageShow1" alt="Fibrosis" />
 
                                    </div>
                                 </div>
@@ -472,9 +482,9 @@
                             <div class="myPage" id="pageFirstSection_11">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>11</div>
-                                    <div class='texting'>Which pathogens are commonly isolated from the infected lungs of patients with cystic fibrosis?</div>
+                                    <h2 class='texting'>Which pathogens are commonly isolated from the infected lungs of patients with cystic fibrosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA11">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -498,9 +508,9 @@
                             <div class="myPage" id="pageFirstSection_12">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>12</div>
-                                    <div class='texting'>Which therapies exist for cystic fibrosis patients? </div>
+                                    <h2 class='texting'>Which therapies exist for cystic fibrosis patients? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA12">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -522,9 +532,9 @@
                             <div class="myPage" id="pageFirstSection_13">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>13</div>
-                                    <div class='texting'>Would two patients with the same <em>CFTR</em> mutations be expected to have a similar disease course? </div>
+                                    <h2 class='texting'>Would two patients with the same <em>CFTR</em> mutations be expected to have a similar disease course? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA13">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -547,9 +557,9 @@
                             <div class="myPage" id="pageFirstSection_14">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>14</div>
-                                    <div class='texting'>What are the long-term sequelae of cystic fibrosis?</div>
+                                    <h2 class='texting'>What are the long-term sequelae of cystic fibrosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA14">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -571,9 +581,9 @@
                             <div class="myPage" id="pageFirstSection_15">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>15</div>
-                                    <div class='texting'>What is the leading cause of death in cystic fibrosis patients?</div>
+                                    <h2 class='texting'>What is the leading cause of death in cystic fibrosis patients?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA15">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -608,12 +618,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -640,10 +650,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -684,6 +694,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>

@@ -29,23 +29,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Overstimulated</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ul class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">•	Describe the normal functions of thyroid hormones, and the clinical manifestations of hyperthyroidism.</li>
@@ -75,7 +75,7 @@
                             
                                 <div class="leftImageBox">
                                     <div class="graphContainer">
-                                    <img src="images/q1/on016-ca002f001-9780323640251.png" class="staticImg" alt="" />
+                                    <img src="images/q1/on016-ca002f001-9780323640251.png" class="staticImg" alt="Clinical photograph of a patient with Graves disease showing bilateral proptosis, lid retraction, and a wide-eyed stare." />
                                     </div>
                                 </div>
 
@@ -87,17 +87,19 @@
                             <p class="paraIndent"><em>A radioiodine scan was performed. In a radioactive iodine scan, radioactive iodine that is injected into patients is concentrated from the blood by thyroid follicular cells. Decay of radioactive iodine is detected as dark spots on the scan. A normal thyroid gland (left) shows diffuse moderate iodine uptake. The patient’s thyroid was characterized by diffusely increased uptake.</em></p>
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Radioiodine scan</li>
-                                    <li tabindex="0">Normal thyroid gland</li>
-                                    <li tabindex="0">Patient's scan</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Radioiodine scan</li>
+                                    <li>Normal thyroid gland</li>
+                                    <li>Patient's scan</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                    <img src="images/q1/on016-ca002f002-9780323640251.png" class="containerImg imageShow0" aria-label="Radioiodine scan image" alt="Radioiodine scan" />
-                                    <img src="images/q1/on016-ca002f002-9780323640251-a.png" class="containerImg imageShow1" aria-label="Normal thyroid gland image" alt="Normal thyroid gland" />
-                                    <img src="images/q1/on016-ca002f002-9780323640251-b.png" class="containerImg imageShow2" aria-label="Patient's scan image" alt="Patient's scan" />
+                                    <img src="images/q1/on016-ca002f002-9780323640251.png" class="containerImg imageShow0" alt="Radioiodine scan" />
+                                    <img src="images/q1/on016-ca002f002-9780323640251-a.png" class="containerImg imageShow1" alt="Normal thyroid gland" />
+                                    <img src="images/q1/on016-ca002f002-9780323640251-b.png" class="containerImg imageShow2" alt="Patient's scan" />
                                     </div>
                                 </div>
                              </div>  
@@ -105,9 +107,9 @@
                             <div class="myPage" id="pageFirstSection_1">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>What is the normal function of thyroid hormone and how does it affect the body? </div>
+                                    <h2 class='texting'>What is the normal function of thyroid hormone and how does it affect the body? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA1">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -129,9 +131,9 @@
                             <div class="myPage" id="pageFirstSection_2">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>What is the most likely diagnosis based on the clinical presentation and laboratory findings? </div>
+                                    <h2 class='texting'>What is the most likely diagnosis based on the clinical presentation and laboratory findings? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA2">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -152,9 +154,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>What is the etiology of the patient’s ocular findings?</div>
+                                    <h2 class='texting'>What is the etiology of the patient’s ocular findings?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -174,21 +176,23 @@
                             <p class="paraIndent"><em>She was treated initially with drugs that suppress thyroid hormone production and beta-adrenergic blockers to control peripheral cardiovascular effects. However, the symptoms persisted and surgical resection of most of the gland was recommended. Histologic examination of the thyroidectomy specimen showed tall columnar follicular epithelium due to cellular hypertrophy and <span class="hs" role="link" tabindex="0" data-imageBoxHolderid="1" data-dropdownid="1" data-id="4">papillary infoldings</span> into the follicular lumens secondary to epithelial proliferation and overcrowding (hyperplasia). <span class="hs" role="link" tabindex="0" data-imageBoxHolderid="1" data-dropdownid="1" data-id="3">Peripheral scalloping</span> of the <span class="hs" role="link" tabindex="0" data-imageBoxHolderid="1" data-dropdownid="1" data-id="2">colloid</span> within follicular lumens was identified and represents active pinocytosis by the hyperfunctioning epithelium.</em></p>
                             <div class="imageBoxHolder imageBoxHolder1 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Thyroid, histology</li>
-                                    <li tabindex="0">Follicle</li>
-                                    <li tabindex="0">Colloid</li>
-                                    <li tabindex="0">Scalloping</li>
-                                    <li tabindex="0">Papillary infolding</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Thyroid, histology</li>
+                                    <li>Follicle</li>
+                                    <li>Colloid</li>
+                                    <li>Scalloping</li>
+                                    <li>Papillary infolding</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                    <img src="images/q4/on016-ca002f003-9780323640251.png" class="containerImg imageShow0" aria-label="Thyroid, histology image" alt="Thyroid, histology" />
-                                    <img src="images/q4/on016-ca002f003-9780323640251-a.png" class="containerImg imageShow1" aria-label="Follicle image" alt="Follicle" />
-                                    <img src="images/q4/on016-ca002f003-9780323640251-b.png" class="containerImg imageShow2" aria-label="Colloid image" alt="Colloid" />
-                                    <img src="images/q4/on016-ca002f003-9780323640251-c.png" class="containerImg imageShow3" aria-label="Scalloping image" alt="Scalloping" />
-                                    <img src="images/q4/on016-ca002f003-9780323640251-d.png" class="containerImg imageShow4" aria-label="Papillary infolding image" alt="Papillary infolding" />
+                                    <img src="images/q4/on016-ca002f003-9780323640251.png" class="containerImg imageShow0" alt="Thyroid, histology" />
+                                    <img src="images/q4/on016-ca002f003-9780323640251-a.png" class="containerImg imageShow1" alt="Follicle" />
+                                    <img src="images/q4/on016-ca002f003-9780323640251-b.png" class="containerImg imageShow2" alt="Colloid" />
+                                    <img src="images/q4/on016-ca002f003-9780323640251-c.png" class="containerImg imageShow3" alt="Scalloping" />
+                                    <img src="images/q4/on016-ca002f003-9780323640251-d.png" class="containerImg imageShow4" alt="Papillary infolding" />
                                       </div>
                                 </div>
                              </div>  
@@ -197,9 +201,9 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>Which autoantibodies are implicated in Graves disease?</div>
+                                    <h2 class='texting'>Which autoantibodies are implicated in Graves disease?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -220,9 +224,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>What is the etiology of thyroid hyperfunction in Graves disease?</div>
+                                    <h2 class='texting'>What is the etiology of thyroid hyperfunction in Graves disease?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA5">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -242,9 +246,9 @@
                             <div class="myPage" id="pageFirstSection_6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>What are the other causes of hyperthyroidism?</div>
+                                    <h2 class='texting'>What are the other causes of hyperthyroidism?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -268,12 +272,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -290,10 +294,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -334,6 +338,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>

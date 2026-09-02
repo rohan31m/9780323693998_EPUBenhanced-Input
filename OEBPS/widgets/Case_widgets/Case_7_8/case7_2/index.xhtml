@@ -28,23 +28,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">My Aching Head</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ol class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">•  Compare and contrast the different forms of vasculitis in terms of the vessels involved, histologic findings, and etiologies. </li>
@@ -83,9 +83,9 @@
                             <div class="myPage" id="pageFirstSection_1">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>Based on the laboratory findings and the clinical presentation, which general category of disease does this patient have?</div>
+                                    <h2 class='texting'>Based on the laboratory findings and the clinical presentation, which general category of disease does this patient have?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA1">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -108,9 +108,9 @@
                             <div class="myPage" id="pageFirstSection_2">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>What is the differential diagnosis based on these findings?</div>
+                                    <h2 class='texting'>What is the differential diagnosis based on these findings?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA2">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -131,9 +131,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>Which other clinical features are helpful in narrowing the differential diagnosis?</div>
+                                    <h2 class='texting'>Which other clinical features are helpful in narrowing the differential diagnosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -154,40 +154,44 @@
                         <div class="contentHolderMain">
                             <p class="paraIndent"><em>Because of the suspicion of giant cell arteritis, the patient underwent a temporal artery biopsy under local anesthesia. A 1.8-cm portion of the right temporal artery was resected, carefully sectioned, and entirely submitted for histologic examination. Sections showed <span class="hs" role="link" tabindex="0" data-dropdownid="1" data-id="1">giant cells</span> within the media near the internal elastic lamina and <span class="hs" role="link" tabindex="0" data-dropdownid="2" data-id="1">intimal thickening</span>. An elastin stain showed the destruction of <span class="hs" role="link" tabindex="0" data-dropdownid="2" data-id="2">elastic fibers</span> in the wall of the artery.</em></p>
 
-                        <div class="imageThumbHolder">
-                            <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Histology" ><img src="images/q4/on007-ca002f001a-9780323640251.png" class="thumbImg" alt="Histology" /></span>                               
+                        <div class="imageThumbHolder" role="group" aria-label="Image views">
+                            <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Histology"  aria-pressed="true"><img src="images/q4/on007-ca002f001a-9780323640251.png" class="thumbImg" alt="Histology" /></span>                               
                             
-                            <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Histology" ><img src="images/q4/on007-ca002f001b-9780323640251.png" class="thumbImg" alt="Histology" /></span>
+                            <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Histology"  aria-pressed="false"><img src="images/q4/on007-ca002f001b-9780323640251.png" class="thumbImg" alt="Histology" /></span>
                         </div>
 
                             <div class="imageBoxHolder hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Histology</li>
-                                    <li tabindex="0">Giant cells</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Histology</li>
+                                    <li>Giant cells</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q4/on007-ca002f001a-9780323640251.png" class="containerImg defaultImg imageShow0" aria-label="Histology image" alt="Histology" />
-                                      <img src="images/q4/on007-ca002f001a-9780323640251-a.png" class="containerImg defaultImg imageShow1" aria-label="Giant cells image" alt="Giant cells" />
+                                      <img src="images/q4/on007-ca002f001a-9780323640251.png" class="containerImg defaultImg imageShow0" alt="Histology" />
+                                      <img src="images/q4/on007-ca002f001a-9780323640251-a.png" class="containerImg defaultImg imageShow1" alt="Giant cells" />
                                   </div>
                                 </div>
                              </div> 
 
                             <div class="imageBoxHolder hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Histology</li>
-                                    <li tabindex="0">Intimal thickening</li>
-                                    <li tabindex="0">Elastic fiber destruction</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Histology</li>
+                                    <li>Intimal thickening</li>
+                                    <li>Elastic fiber destruction</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q4/on007-ca002f001b-9780323640251.png" class="containerImg defaultImg imageShow0" aria-label="Histology image" alt="Histology" />
-                                      <img src="images/q4/on007-ca002f001b-9780323640251-a.png" class="containerImg defaultImg imageShow1" aria-label="Intimal thickening image" alt="Intimal thickening" />
-                                      <img src="images/q4/on007-ca002f001b-9780323640251-b.png" class="containerImg defaultImg imageShow2" aria-label="Elastic fiber destruction image" alt="Elastic fiber destruction" />
+                                      <img src="images/q4/on007-ca002f001b-9780323640251.png" class="containerImg defaultImg imageShow0" alt="Histology" />
+                                      <img src="images/q4/on007-ca002f001b-9780323640251-a.png" class="containerImg defaultImg imageShow1" alt="Intimal thickening" />
+                                      <img src="images/q4/on007-ca002f001b-9780323640251-b.png" class="containerImg defaultImg imageShow2" alt="Elastic fiber destruction" />
                                   </div>
                                 </div>
                              </div> 
@@ -197,9 +201,9 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>What is the diagnosis?</div>
+                                    <h2 class='texting'>What is the diagnosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -222,9 +226,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>Why was such a large (1.5 cm) biopsy taken in this patient?</div>
+                                    <h2 class='texting'>Why was such a large (1.5 cm) biopsy taken in this patient?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA5">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -246,9 +250,9 @@
                             <div class="myPage" id="pageFirstSection_6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>Broadly, what are the pathogenic mechanisms that underlie the two major categories of vasculitis?</div>
+                                    <h2 class='texting'>Broadly, what are the pathogenic mechanisms that underlie the two major categories of vasculitis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -276,9 +280,9 @@
                             <div class="myPage" id="pageFirstSection_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>What are the major types of immune-mediated vasculitides and how are they classified?</div>
+                                    <h2 class='texting'>What are the major types of immune-mediated vasculitides and how are they classified?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA7">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -309,9 +313,9 @@
                             <div class="myPage" id="pageFirstSection_8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>8</div>
-                                    <div class='texting'>What are the different mechanisms of immunologic injury in noninfectious vasculitis? </div>
+                                    <h2 class='texting'>What are the different mechanisms of immunologic injury in noninfectious vasculitis? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -334,9 +338,9 @@
                             <div class="myPage" id="pageFirstSection_9">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>9</div>
-                                    <div class='texting'>In which diseases is immune complex deposition the mechanism of injury? </div>
+                                    <h2 class='texting'>In which diseases is immune complex deposition the mechanism of injury? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA9">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -355,9 +359,9 @@
                             <div class="myPage" id="pageFirstSection_10">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>10</div>
-                                    <div class='texting'>What is the pathogenesis of giant cell arteritis?</div>
+                                    <h2 class='texting'>What is the pathogenesis of giant cell arteritis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA10">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -377,9 +381,9 @@
                             <div class="myPage" id="pageFirstSection_11">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>11</div>
-                                    <div class='texting'>Why is early recognition of giant cell arteritis important? </div>
+                                    <h2 class='texting'>Why is early recognition of giant cell arteritis important? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA11">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -402,9 +406,9 @@
                             <div class="myPage" id="pageFirstSection_12">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>12</div>
-                                    <div class='texting'>What is Takayasu arteritis and how does it compare to giant cell arteritis?</div>
+                                    <h2 class='texting'>What is Takayasu arteritis and how does it compare to giant cell arteritis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA12">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -418,31 +422,33 @@
                             </div>
 
 
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Angiogram" ><img src="images/q12/on007-ca002f003a-9780323640251.png" class="thumbImg" alt="Angiogram" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Angiogram"  aria-pressed="true"><img src="images/q12/on007-ca002f003a-9780323640251.png" class="thumbImg" alt="Angiogram" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Artery, gross" ><img src="images/q12/on007-ca002f003b-9780323640251.png" class="thumbImg" alt="Artery, gross" /></span>
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Artery, gross"  aria-pressed="false"><img src="images/q12/on007-ca002f003b-9780323640251.png" class="thumbImg" alt="Artery, gross" /></span>
 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="3" data-id="0" aria-label="Artery, histology" ><img src="images/q12/on007-ca002f003c-9780323640251.png" class="thumbImg" alt="Artery, histology" /></span>                                  
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="3" data-id="0" aria-label="Artery, histology"  aria-pressed="false"><img src="images/q12/on007-ca002f003c-9780323640251.png" class="thumbImg" alt="Artery, histology" /></span>                                  
                             </div>
 
                                     <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                     <div class="optionSelectionBox">
-                                      <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                        <li tabindex="0">Angiogram</li>
-                                        <li tabindex="0">Subclavian narrowing</li>
-                                        <li tabindex="0">Brachiocephalic narrowing</li>
-                                        <li tabindex="0">Carotid narrowing</li>
+                                      <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                        <li>Angiogram</li>
+                                        <li>Subclavian narrowing</li>
+                                        <li>Brachiocephalic narrowing</li>
+                                        <li>Carotid narrowing</li>
 </ul>
+                                  </div>
                                     </div>
                                     <div class="leftImageBox">
                                        <div class="graphContainer" aria-live="polite">
-                                          <img src="images/q12/on007-ca002f003a-9780323640251.png" class="containerImg imageShow0" aria-label="Angiogram image" alt="Angiogram" />
+                                          <img src="images/q12/on007-ca002f003a-9780323640251.png" class="containerImg imageShow0" alt="Angiogram" />
     
-                                          <img src="images/q12/on007-ca002f003a-9780323640251-a.png" class="containerImg imageShow1" aria-label="Subclavian narrowing image" alt="Subclavian narrowing" />
+                                          <img src="images/q12/on007-ca002f003a-9780323640251-a.png" class="containerImg imageShow1" alt="Subclavian narrowing" />
     
-                                          <img src="images/q12/on007-ca002f003a-9780323640251-b.png" class="containerImg imageShow2" aria-label="Brachiocephalic narrowing image" alt="Brachiocephalic narrowing" />
-                                          <img src="images/q12/on007-ca002f003a-9780323640251-c.png" class="containerImg imageShow3" aria-label="Carotid narrowing image" alt="Carotid narrowing" />
+                                          <img src="images/q12/on007-ca002f003a-9780323640251-b.png" class="containerImg imageShow2" alt="Brachiocephalic narrowing" />
+                                          <img src="images/q12/on007-ca002f003a-9780323640251-c.png" class="containerImg imageShow3" alt="Carotid narrowing" />
                                           
     
                                        </div>
@@ -452,43 +458,47 @@
                             
                                  <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                     <div class="optionSelectionBox">
-                                      <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                        <li tabindex="0">Artery, gross</li>
-                                        <li tabindex="0">Narrowed lumen</li>
-                                        <li tabindex="0">Intimal thickening</li>
+                                      <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                        <li>Artery, gross</li>
+                                        <li>Narrowed lumen</li>
+                                        <li>Intimal thickening</li>
 </ul>
+                                  </div>
                                     </div>
                                     <div class="leftImageBox">
                                        <div class="graphContainer" aria-live="polite">
-                                        <img src="images/q12/on007-ca002f003b-9780323640251.png" class="containerImg imageShow0" aria-label="Artery, gross image" alt="Artery, gross" />
+                                        <img src="images/q12/on007-ca002f003b-9780323640251.png" class="containerImg imageShow0" alt="Artery, gross" />
 
 
-                                          <img src="images/q12/on007-ca002f003b-9780323640251-a.png" class="containerImg imageShow1" aria-label="Narrowed lumen image" alt="Narrowed lumen" />
+                                          <img src="images/q12/on007-ca002f003b-9780323640251-a.png" class="containerImg imageShow1" alt="Narrowed lumen" />
     
-                                          <img src="images/q12/on007-ca002f003b-9780323640251-b.png" class="containerImg imageShow2" aria-label="intimal thickening image" alt="intimal thickening" />
+                                          <img src="images/q12/on007-ca002f003b-9780323640251-b.png" class="containerImg imageShow2" alt="intimal thickening" />
                                        </div>
                                     </div>
                                  </div> 
 
                                  <div class="imageBoxHolder imageBoxHolder2 hs_set3">
                                     <div class="optionSelectionBox">
-                                      <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                        <li tabindex="0">Artery, histology</li>
-                                        <li tabindex="0">Inflammatory giant cells</li>
-                                        <li tabindex="0">Mononuclear infiltrate</li>
-                                        <li tabindex="0">Dense fibrosis</li>
+                                      <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                        <li>Artery, histology</li>
+                                        <li>Inflammatory giant cells</li>
+                                        <li>Mononuclear infiltrate</li>
+                                        <li>Dense fibrosis</li>
 </ul>
+                                  </div>
                                     </div>
                                     <div class="leftImageBox">
                                        <div class="graphContainer" aria-live="polite">
-                                        <img src="images/q12/on007-ca002f003c-9780323640251.png" class="containerImg imageShow0" aria-label="Artery, histology image" alt="Artery, histology" />
+                                        <img src="images/q12/on007-ca002f003c-9780323640251.png" class="containerImg imageShow0" alt="Artery, histology" />
 
 
-                                          <img src="images/q12/on007-ca002f003c-9780323640251-a.png" class="containerImg imageShow1" aria-label="Inflammatory giant cells image" alt="Inflammatory giant cells" />
+                                          <img src="images/q12/on007-ca002f003c-9780323640251-a.png" class="containerImg imageShow1" alt="Inflammatory giant cells" />
     
-                                          <img src="images/q12/on007-ca002f003c-9780323640251-b.png" class="containerImg imageShow2" aria-label="Mononuclear infiltrate image" alt="Mononuclear infiltrate" />
+                                          <img src="images/q12/on007-ca002f003c-9780323640251-b.png" class="containerImg imageShow2" alt="Mononuclear infiltrate" />
 
-                                          <img src="images/q12/on007-ca002f003c-9780323640251-c.png" class="containerImg imageShow3" aria-label="dense fibrosis image" alt="dense fibrosis" />
+                                          <img src="images/q12/on007-ca002f003c-9780323640251-c.png" class="containerImg imageShow3" alt="dense fibrosis" />
     
                                         
    
@@ -506,9 +516,9 @@
                             <div class="myPage" id="pageFirstSection_13">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>13</div>
-                                    <div class='texting'>What is a vasculitis of large- and medium-sized vessels that primarily affects children, and what is its proposed etiology?</div>
+                                    <h2 class='texting'>What is a vasculitis of large- and medium-sized vessels that primarily affects children, and what is its proposed etiology?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA13">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -531,9 +541,9 @@
                             <div class="myPage" id="pageFirstSection_14">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>14</div>
-                                    <div class='texting'>How does polyarteritis nodosa differ from giant cell arteritis?  </div>
+                                    <h2 class='texting'>How does polyarteritis nodosa differ from giant cell arteritis?  </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA14">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -547,19 +557,21 @@
                           
                                     <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                     <div class="optionSelectionBox">
-                                      <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                        <li tabindex="0">Polyarteritis nodosa</li>
-                                        <li tabindex="0">Fibrinoid necrosis</li>
-                                        <li tabindex="0">Uninvolved vessel</li>
+                                      <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                        <li>Polyarteritis nodosa</li>
+                                        <li>Fibrinoid necrosis</li>
+                                        <li>Uninvolved vessel</li>
 </ul>
+                                  </div>
                                     </div>
                                     <div class="leftImageBox">
                                        <div class="graphContainer" aria-live="polite">
-                                          <img src="images/q14/on007-ca002f004-9780323640251.png" class="containerImg imageShow0" aria-label="Polyarteritis nodosa image" alt="Polyarteritis nodosa" />
+                                          <img src="images/q14/on007-ca002f004-9780323640251.png" class="containerImg imageShow0" alt="Polyarteritis nodosa" />
     
-                                          <img src="images/q14/on007-ca002f004-9780323640251-a.png" class="containerImg imageShow1" aria-label="fibrinoid necrosis image" alt="fibrinoid necrosis" />
+                                          <img src="images/q14/on007-ca002f004-9780323640251-a.png" class="containerImg imageShow1" alt="fibrinoid necrosis" />
     
-                                          <img src="images/q14/on007-ca002f004-9780323640251-b.png" class="containerImg imageShow2" aria-label="uninvolved vessel image" alt="uninvolved vessel" />
+                                          <img src="images/q14/on007-ca002f004-9780323640251-b.png" class="containerImg imageShow2" alt="uninvolved vessel" />
                                        </div>
                                     </div>
                                     <div class="para_">
@@ -581,9 +593,9 @@
                             <div class="myPage" id="pageFirstSection_15">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>15</div>
-                                    <div class='texting'>What is the classic presentation of PAN?</div>
+                                    <h2 class='texting'>What is the classic presentation of PAN?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA15">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -604,9 +616,9 @@
                             <div class="myPage" id="pageFirstSection_16">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>16</div>
-                                    <div class='texting'>What are anti-neutrophil cytoplasmic antibodies (ANCAs) and what is their clinical significance?</div>
+                                    <h2 class='texting'>What are anti-neutrophil cytoplasmic antibodies (ANCAs) and what is their clinical significance?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAc15">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -626,9 +638,9 @@
                             <div class="myPage" id="pageFirstSection_17">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>17</div>
-                                    <div class='texting'>Which vasculitides are associated with ANCAs?</div>
+                                    <h2 class='texting'>Which vasculitides are associated with ANCAs?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA17">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -656,9 +668,9 @@
                             <div class="myPage" id="pageFirstSection_ss18">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>18</div>
-                                    <div class='texting'>What is the pathogenesis of granulomatosis with polyangiitis?</div>
+                                    <h2 class='texting'>What is the pathogenesis of granulomatosis with polyangiitis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textddA18">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -683,9 +695,9 @@
                             <div class="myPage" id="pageFirstSection_as18">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>19</div>
-                                    <div class='texting'>What are the three pathologic findings in granulomatosis with polyangiitis?</div>
+                                    <h2 class='texting'>What are the three pathologic findings in granulomatosis with polyangiitis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAaa18">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -701,24 +713,26 @@
                                 </div>
                             </div>
 
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Lung, gross" ><img src="images/q19/on007-ca002f005-9780323640251.png" class="thumbImg" alt="Lung, gross" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Lung, gross"  aria-pressed="true"><img src="images/q19/on007-ca002f005-9780323640251.png" class="thumbImg" alt="Lung, gross" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Lung, histology" ><img src="images/q19/on007-ca002f006-9780323640251.png" class="thumbImg" alt="Lung, histology" /></span>                                  
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Lung, histology"  aria-pressed="false"><img src="images/q19/on007-ca002f006-9780323640251.png" class="thumbImg" alt="Lung, histology" /></span>                                  
                             </div>
                           
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Lung, gross</li>
-                                    <li tabindex="0">Necrotizing granulomas</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Lung, gross</li>
+                                    <li>Necrotizing granulomas</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q19/on007-ca002f005-9780323640251.png" class="containerImg imageShow0" aria-label="Lung, gross image" alt="Lung, gross" />
+                                      <img src="images/q19/on007-ca002f005-9780323640251.png" class="containerImg imageShow0" alt="Lung, gross" />
 
-                                      <img src="images/q19/on007-ca002f005-9780323640251-a.png" class="containerImg imageShow1" aria-label="Necrotizing granulomas image" alt="Necrotizing granulomas" />
+                                      <img src="images/q19/on007-ca002f005-9780323640251-a.png" class="containerImg imageShow1" alt="Necrotizing granulomas" />
                                   </div>
                                   
                                 </div>
@@ -731,18 +745,20 @@
 
                                 <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Lung, histology</li>
-                                    <li tabindex="0">Giant cells</li>
-                                    <li tabindex="0">Vasculitis</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Lung, histology</li>
+                                    <li>Giant cells</li>
+                                    <li>Vasculitis</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q19/on007-ca002f006-9780323640251.png" class="containerImg imageShow0" aria-label="Lung, histology image" alt="Lung, histology" />
+                                      <img src="images/q19/on007-ca002f006-9780323640251.png" class="containerImg imageShow0" alt="Lung, histology" />
 
-                                      <img src="images/q19/on007-ca002f006-9780323640251-a.png" class="containerImg imageShow1" aria-label="Giant cells image" alt="Giant cells" />
-                                      <img src="images/q19/on007-ca002f006-9780323640251-b.png" class="containerImg imageShow2" aria-label="vasculitis image" alt="vasculitis" />
+                                      <img src="images/q19/on007-ca002f006-9780323640251-a.png" class="containerImg imageShow1" alt="Giant cells" />
+                                      <img src="images/q19/on007-ca002f006-9780323640251-b.png" class="containerImg imageShow2" alt="vasculitis" />
                                   </div>
                                 </div>
                              </div> 
@@ -761,9 +777,9 @@
                             <div class="myPage" id="pageFirstSection_ds18">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>20</div>
-                                    <div class='texting'>What are the two major subgroups of small vessel vasculitis, and what are the major entities belonging to these subtypes?</div>
+                                    <h2 class='texting'>What are the two major subgroups of small vessel vasculitis, and what are the major entities belonging to these subtypes?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textbbA18">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -790,9 +806,9 @@
                             <div class="myPage" id="pageFirstSection_ms18">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>21</div>
-                                    <div class='texting'>Which vasculitis is strongly associated with cigarette smoking?</div>
+                                    <h2 class='texting'>Which vasculitis is strongly associated with cigarette smoking?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textccA18">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -808,19 +824,21 @@
                             </div>
                                <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Artery, histology</li>
-                                    <li tabindex="0">Thrombus</li>
-                                    <li tabindex="0">Microabscesses</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Artery, histology</li>
+                                    <li>Thrombus</li>
+                                    <li>Microabscesses</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q21/on007-ca002f007-9780323640251.png" class="containerImg imageShow0" aria-label="Artery, histology image" alt="Artery, histology" />
+                                      <img src="images/q21/on007-ca002f007-9780323640251.png" class="containerImg imageShow0" alt="Artery, histology" />
 
-                                      <img src="images/q21/on007-ca002f007-9780323640251-a.png" class="containerImg imageShow1" aria-label="thrombus image" alt="thrombus " />
+                                      <img src="images/q21/on007-ca002f007-9780323640251-a.png" class="containerImg imageShow1" alt="thrombus " />
 
-                                      <img src="images/q21/on007-ca002f007-9780323640251-c-final.png" class="containerImg imageShow2" aria-label="Microabscesses image" alt="Microabscesses" />
+                                      <img src="images/q21/on007-ca002f007-9780323640251-c-final.png" class="containerImg imageShow2" alt="Microabscesses" />
                                       
                                       
                                 
@@ -855,12 +873,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -893,10 +911,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -940,6 +958,7 @@
             </div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>

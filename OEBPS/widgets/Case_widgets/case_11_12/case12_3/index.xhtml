@@ -27,23 +27,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Guilty Grains</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ol class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">•  Describe the pathogenesis, histopathology, and clinical features of celiac disease.</li>
@@ -74,16 +74,18 @@
                              
                               <div class="imageBoxHolder  hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Clinical presentation</li>
-                                    <li tabindex="0">Maculopapular rash</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Clinical presentation</li>
+                                    <li>Maculopapular rash</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">                                     
-                                      <img src="images/q1/on012-ca003f001-9780323640251.png" class="containerImg imageShow0" aria-label="Clinical presentation image" alt="Clinical presentation" />
+                                      <img src="images/q1/on012-ca003f001-9780323640251.png" class="containerImg imageShow0" alt="Clinical presentation" />
 
-                                      <img src="images/q1/on012-ca003f001-9780323640251-a.png" class="containerImg imageShow1" aria-label="Maculopapular rash image" alt="Maculopapular rash" />
+                                      <img src="images/q1/on012-ca003f001-9780323640251-a.png" class="containerImg imageShow1" alt="Maculopapular rash" />
 
                                    </div>
                                 </div>
@@ -92,9 +94,9 @@
                             <div class="myPage" id="pageFirstSection_2">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>What are the types of diarrheal disease and their causes? </div>
+                                    <h2 class='texting'>What are the types of diarrheal disease and their causes? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA2">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -155,9 +157,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>What does the character of his stool suggest about the etiology of his diarrhea?</div>
+                                    <h2 class='texting'>What does the character of his stool suggest about the etiology of his diarrhea?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -182,9 +184,9 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>Which tests would help in diagnosis? </div>
+                                    <h2 class='texting'>Which tests would help in diagnosis? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -204,56 +206,62 @@
                     <div class="midText ansSection wrapper">
                         <div class="contentHolderMain">
                           <p class="paraIndent"><em>Serum tests for IgA antiendomysial and tissue transglutaminase (IgA-tTG) antibodies were positive. Colonoscopy showed normal mucosa. Biopsy specimens collected during esophagogastroduodenoscopy showed such extensive <span class="hs" role="link" tabindex="0" data-dropdownid="1" data-id="1">mucosa flattening</span> of the duodenal mucosa that the duodenal villi that were essentially absent. Numerous <span class="hs" role="link" tabindex="0" data-dropdownid="2" data-id="1">intraepithelial lymphocytes</span> are seen at higher magnification. By contrast, normal duodenal mucosa shows <span class="hs" role="link" tabindex="0" data-dropdownid="3" data-id="1">well-oriented, tall, and well-formed villi</span>.</em> </p>
-                          <div class="imageThumbHolder imageThumbHolder2">
-                            <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Duodenum, low power" ><img src="images/q4/on012-ca003f002-9780323640251.png" class="thumbImg" alt="Duodenum, low power" /></span>                               
+                          <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                            <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Duodenum, low power"  aria-pressed="true"><img src="images/q4/on012-ca003f002-9780323640251.png" class="thumbImg" alt="Duodenum, low power" /></span>                               
                             
-                            <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Duodenum, high power" ><img src="images/q4/on012-ca003f003-9780323640251.png" class="thumbImg" alt="Duodenum, high power" /></span>                                  
-                            <span class="thumbnail" role="button" tabindex="0" data-dropdownid="3" data-id="0" aria-label="Normal duodenum" ><img src="images/q4/on012-ca003f004-9780323640251.png" class="thumbImg" alt="Normal duodenum" /></span>                                  
+                            <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Duodenum, high power"  aria-pressed="false"><img src="images/q4/on012-ca003f003-9780323640251.png" class="thumbImg" alt="Duodenum, high power" /></span>                                  
+                            <span class="thumbnail" role="button" tabindex="0" data-dropdownid="3" data-id="0" aria-label="Normal duodenum"  aria-pressed="false"><img src="images/q4/on012-ca003f004-9780323640251.png" class="thumbImg" alt="Normal duodenum" /></span>                                  
                         </div>
                           <div class="imageBoxHolder imageThumbHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Duodenum, low power</li>
-                                    <li tabindex="0">Surface flattening</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Duodenum, low power</li>
+                                    <li>Surface flattening</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q4/on012-ca003f002-9780323640251.png" class="containerImg imageShow0" aria-label="Duodenum, low power image" alt="Duodenum, low power" />
+                                      <img src="images/q4/on012-ca003f002-9780323640251.png" class="containerImg imageShow0" alt="Duodenum, low power" />
 
-                                      <img src="images/q4/on012-ca003f002-9780323640251-a.png" class="containerImg imageShow1" aria-label="Surface flattening image" alt="Surface flattening" />
+                                      <img src="images/q4/on012-ca003f002-9780323640251-a.png" class="containerImg imageShow1" alt="Surface flattening" />
 
                                    </div>
                                 </div>
                              </div> 
                              <div class="imageBoxHolder  hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Duodenum, high power</li>
-                                    <li tabindex="0">Intraepithelial lymphocytes</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Duodenum, high power</li>
+                                    <li>Intraepithelial lymphocytes</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q4/on012-ca003f003-9780323640251.png" class="containerImg imageShow0" aria-label="Duodenum, high power image" alt="Duodenum, high power" />
+                                      <img src="images/q4/on012-ca003f003-9780323640251.png" class="containerImg imageShow0" alt="Duodenum, high power" />
 
-                                      <img src="images/q4/on012-ca003f003-9780323640251-a.png" class="containerImg imageShow1" aria-label="Intraepithelial lymphocytes image" alt="Intraepithelial lymphocytes" />
+                                      <img src="images/q4/on012-ca003f003-9780323640251-a.png" class="containerImg imageShow1" alt="Intraepithelial lymphocytes" />
 
                                    </div>
                                 </div>
                              </div> 
                               <div class="imageBoxHolder  hs_set3">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Normal duodenum</li>
-                                    <li tabindex="0">Normal villi</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Normal duodenum</li>
+                                    <li>Normal villi</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q4/on012-ca003f004-9780323640251.png" class="containerImg imageShow0" aria-label="Normal duodenum image" alt="Normal duodenum" />
+                                      <img src="images/q4/on012-ca003f004-9780323640251.png" class="containerImg imageShow0" alt="Normal duodenum" />
 
-                                      <img src="images/q4/on012-ca003f004-9780323640251-a.png" class="containerImg imageShow1" aria-label="Normal villi image" alt="Normal villi" />
+                                      <img src="images/q4/on012-ca003f004-9780323640251-a.png" class="containerImg imageShow1" alt="Normal villi" />
 
                                    </div>
                                 </div>
@@ -263,9 +271,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>What is the diagnosis?  </div>
+                                    <h2 class='texting'>What is the diagnosis?  </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA5">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -288,9 +296,9 @@
                             <div class="myPage" id="pageFirstSection_76">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>What is the pathogenesis of this disease? </div>
+                                    <h2 class='texting'>What is the pathogenesis of this disease? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA06">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -324,9 +332,9 @@
                             <div class="myPage" id="pageFirstSection_06">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>What accounts for the patient’s ecchymoses?</div>
+                                    <h2 class='texting'>What accounts for the patient’s ecchymoses?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA66">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -348,9 +356,9 @@
                             <div class="myPage" id="pageFirstSection_66">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>What is the etiology of anemia in patients with celiac disease?</div>
+                                    <h2 class='texting'>What is the etiology of anemia in patients with celiac disease?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA006">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -372,9 +380,9 @@
                             <div class="myPage" id="pageFirstSection_56">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>8</div>
-                                    <div class='texting'>What is the pathogenesis of the patient’s maculopapular rash?</div>
+                                    <h2 class='texting'>What is the pathogenesis of the patient’s maculopapular rash?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA0006">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -386,42 +394,46 @@
                                     </div>
                                 </div>
                             </div> 
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Skin, histology" ><img src="images/q8/on012-ca003f006-9780323640251.png" class="thumbImg" alt="Skin, histology" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Skin, histology"  aria-pressed="true"><img src="images/q8/on012-ca003f006-9780323640251.png" class="thumbImg" alt="Skin, histology" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Skin, Immunofluorescence" ><img src="images/q8/on012-ca003f007-9780323640251.png" class="thumbImg" alt="Skin, Immunofluorescence" /></span>                                  
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Skin, Immunofluorescence"  aria-pressed="false"><img src="images/q8/on012-ca003f007-9780323640251.png" class="thumbImg" alt="Skin, Immunofluorescence" /></span>                                  
                             </div>
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Skin, histology</li>
-                                    <li tabindex="0">Microabscess</li>
-                                    <li tabindex="0">Dermal papilla</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Skin, histology</li>
+                                    <li>Microabscess</li>
+                                    <li>Dermal papilla</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">                                     
-                                      <img src="images/q8/on012-ca003f006-9780323640251.png" class="containerImg imageShow0" aria-label="Skin, histology image" alt="Skin, histology" />
+                                      <img src="images/q8/on012-ca003f006-9780323640251.png" class="containerImg imageShow0" alt="Skin, histology" />
 
-                                      <img src="images/q8/on012-ca003f006-9780323640251-a.png" class="containerImg imageShow1" aria-label="= Microabscess image" alt="Microabscess" />
+                                      <img src="images/q8/on012-ca003f006-9780323640251-a.png" class="containerImg imageShow1" alt="Microabscess" />
 
-                                      <img src="images/q8/on012-ca003f006-9780323640251-b.png" class="containerImg imageShow2" aria-label="Dermal papilla image" alt="Dermal papilla" />
+                                      <img src="images/q8/on012-ca003f006-9780323640251-b.png" class="containerImg imageShow2" alt="Dermal papilla" />
 
                                    </div>
                                 </div>
                              </div> 
                              <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Skin, Immunofluorescence </li>
-                                    <li tabindex="0">IgA autoantibody</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Skin, Immunofluorescence </li>
+                                    <li>IgA autoantibody</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">                                     
-                                      <img src="images/q8/on012-ca003f007-9780323640251.png" class="containerImg imageShow0" aria-label="Skin, Immunofluorescence  image" alt="Skin, Immunofluorescence " />
+                                      <img src="images/q8/on012-ca003f007-9780323640251.png" class="containerImg imageShow0" alt="Skin, Immunofluorescence " />
 
-                                      <img src="images/q8/on012-ca003f007-9780323640251-a.png" class="containerImg imageShow1" aria-label="= IgA autoantibody image" alt="IgA autoantibody" />
+                                      <img src="images/q8/on012-ca003f007-9780323640251-a.png" class="containerImg imageShow1" alt="IgA autoantibody" />
 
                                    </div>
                                 </div>
@@ -438,9 +450,9 @@
                             <div class="myPage" id="pageFirstSection_96">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>9</div>
-                                    <div class='texting'>Which other diseases are associated with celiac disease?</div>
+                                    <h2 class='texting'>Which other diseases are associated with celiac disease?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA56">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -464,9 +476,9 @@
                             <div class="myPage" id="pageFirstSection_86">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>10</div>
-                                    <div class='texting'>Which etiology should be suspected in a patient who has malabsorption and has has drunk untreated water?</div>
+                                    <h2 class='texting'>Which etiology should be suspected in a patient who has malabsorption and has has drunk untreated water?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -479,16 +491,18 @@
                             </div>  
                              <div class="imageBoxHolder imageBoxHolder2  hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Duodenal biopsy</li>
-                                    <li tabindex="0"><em>Giardia</em> trophozoites</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Duodenal biopsy</li>
+                                    <li><em>Giardia</em> trophozoites</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q10/on012-ca003f008-9780323640251.png" class="containerImg imageShow0" aria-label="Duodenal biopsy image" alt="Duodenal biopsy" />
+                                      <img src="images/q10/on012-ca003f008-9780323640251.png" class="containerImg imageShow0" alt="Duodenal biopsy" />
 
-                                      <img src="images/q10/on012-ca003f008-9780323640251-a.png" class="containerImg imageShow1" aria-label="Giardia trophozoites image" alt="Giardia trophozoites" />
+                                      <img src="images/q10/on012-ca003f008-9780323640251-a.png" class="containerImg imageShow1" alt="Giardia trophozoites" />
 
                                    </div>
                                 </div>
@@ -511,12 +525,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -542,10 +556,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -586,6 +600,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>

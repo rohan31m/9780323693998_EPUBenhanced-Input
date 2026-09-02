@@ -28,23 +28,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Analysis Paralysis</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ol class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">• Compare the pathogenesis and morphology of focal infarcts, global ischemia, and “watershed” infarcts.</li>
@@ -78,9 +78,9 @@
                             <div class="myPage" id="pageFirstSection_8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>Which test should be performed next?</div>
+                                    <h2 class='texting'>Which test should be performed next?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -105,9 +105,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>How are cerebral infarcts classified?</div>
+                                    <h2 class='texting'>How are cerebral infarcts classified?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -130,9 +130,9 @@
                             <div class="myPage" id="pageFirstSection_a3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>What is the likely etiology of the middle cerebral artery thrombus?</div>
+                                    <h2 class='texting'>What is the likely etiology of the middle cerebral artery thrombus?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAaa3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -157,9 +157,9 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>How does this patient’s previous myocardial infarction relate to his current presentation?</div>
+                                    <h2 class='texting'>How does this patient’s previous myocardial infarction relate to his current presentation?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -181,9 +181,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>What is the role of tissue plasminogen activator in the setting of acute ischemic stroke?</div>
+                                    <h2 class='texting'>What is the role of tissue plasminogen activator in the setting of acute ischemic stroke?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA5">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -209,9 +209,9 @@
                             <div class="myPage" id="pageFirstSection_6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>What are the microscopic findings in acute ischemic injury in the brain? </div>
+                                    <h2 class='texting'>What are the microscopic findings in acute ischemic injury in the brain? </h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show Answer</div>
                                 <div class="textArea" id="textA6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -224,20 +224,22 @@
                             </div> 
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Brain, histology</li>
-                                    <li tabindex="0">Pyknotic nuclei</li>
-                                    <li tabindex="0">Eosinophilic cytoplasm</li>
-                                    <li tabindex="0">Edema</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Brain, histology</li>
+                                    <li>Pyknotic nuclei</li>
+                                    <li>Eosinophilic cytoplasm</li>
+                                    <li>Edema</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q6/on017-ca002f001-9780323640251.png" class="containerImg imageShow0" aria-label="Brain, histology image" alt="Brain, histology" />
+                                      <img src="images/q6/on017-ca002f001-9780323640251.png" class="containerImg imageShow0" alt="Brain, histology" />
 
-                                      <img src="images/q6/on017-ca002f001-9780323640251-a.png" class="containerImg imageShow1" aria-label="Pyknotic nuclei image" alt="Pyknotic nuclei" />
-                                      <img src="images/q6/on017-ca002f001-9780323640251-b.png" class="containerImg imageShow2" aria-label="Eosinophilic cytoplasm image" alt="Eosinophilic cytoplasm" />
-                                      <img src="images/q6/on017-ca002f001-9780323640251-c.png" class="containerImg imageShow3" aria-label="Edema image" alt="Edema" />
+                                      <img src="images/q6/on017-ca002f001-9780323640251-a.png" class="containerImg imageShow1" alt="Pyknotic nuclei" />
+                                      <img src="images/q6/on017-ca002f001-9780323640251-b.png" class="containerImg imageShow2" alt="Eosinophilic cytoplasm" />
+                                      <img src="images/q6/on017-ca002f001-9780323640251-c.png" class="containerImg imageShow3" alt="Edema" />
 
                                       
 
@@ -256,9 +258,9 @@
                             <div class="myPage" id="pageFirstSection_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>How can stroke cause increased intracranial pressure?</div>
+                                    <h2 class='texting'>How can stroke cause increased intracranial pressure?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA7">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -285,9 +287,9 @@
                             <div class="myPage" id="pageFirstSection_a8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>8</div>
-                                    <div class='texting'>How does global cerebral ischemia differ from a focal infarct?</div>
+                                    <h2 class='texting'>How does global cerebral ischemia differ from a focal infarct?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAa8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -310,9 +312,9 @@
                             <div class="myPage" id="pageFirstSection_9">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>9</div>
-                                    <div class='texting'>Which areas of the brain are typically affected by Brain, grosss?</div>
+                                    <h2 class='texting'>Which areas of the brain are typically affected by Brain, grosss?</h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show Answer</div>
                                 <div class="textArea" id="textA9">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -326,16 +328,18 @@
                             </div>  
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Brain, gross</li>
-                                    <li tabindex="0">Border-zone infarct</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Brain, gross</li>
+                                    <li>Border-zone infarct</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q9/on017-ca002f003-9780323640251.png" class="containerImg imageShow0" aria-label="Brain, gross image" alt="Brain, gross" />
+                                      <img src="images/q9/on017-ca002f003-9780323640251.png" class="containerImg imageShow0" alt="Brain, gross" />
 
-                                      <img src="images/q9/on017-ca002f003-9780323640251-a.png" class="containerImg imageShow1" aria-label="Border-zone infarct image" alt="Border-zone infarct" />
+                                      <img src="images/q9/on017-ca002f003-9780323640251-a.png" class="containerImg imageShow1" alt="Border-zone infarct" />
                                    </div>
                                 </div>
                              </div> 
@@ -353,9 +357,9 @@
                             <div class="myPage" id="pageFirstSection_10">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>10</div>
-                                    <div class='texting'>If the patient’s brain were biopsied at the site of his infarct, which histologic features would be seen?</div>
+                                    <h2 class='texting'>If the patient’s brain were biopsied at the site of his infarct, which histologic features would be seen?</h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show Answer</div>
                                 <div class="textArea" id="textA10">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -368,20 +372,22 @@
                             </div> 
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Infarct, histology</li>
-                                    <li tabindex="0">Tissue necrosis</li>
-                                    <li tabindex="0">Macrophages</li>
-                                    <li tabindex="0">Reactive gliosis</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Infarct, histology</li>
+                                    <li>Tissue necrosis</li>
+                                    <li>Macrophages</li>
+                                    <li>Reactive gliosis</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q10/on017-ca002f004-9780323640251.png" class="containerImg imageShow0" aria-label="Infarct, histology image" alt="Infarct, histology" />
+                                      <img src="images/q10/on017-ca002f004-9780323640251.png" class="containerImg imageShow0" alt="Infarct, histology" />
 
-                                      <img src="images/q10/on017-ca002f004-9780323640251-a.png" class="containerImg imageShow1" aria-label="Tissue necrosis image" alt="Tissue necrosis" />
-                                      <img src="images/q10/on017-ca002f004-9780323640251-b.png" class="containerImg imageShow2" aria-label="Macrophages image" alt="Macrophages" />
-                                      <img src="images/q10/on017-ca002f004-9780323640251-c.png" class="containerImg imageShow3" aria-label="Reactive gliosis image" alt="Reactive gliosis" />
+                                      <img src="images/q10/on017-ca002f004-9780323640251-a.png" class="containerImg imageShow1" alt="Tissue necrosis" />
+                                      <img src="images/q10/on017-ca002f004-9780323640251-b.png" class="containerImg imageShow2" alt="Macrophages" />
+                                      <img src="images/q10/on017-ca002f004-9780323640251-c.png" class="containerImg imageShow3" alt="Reactive gliosis" />
 
                                       
 
@@ -401,16 +407,18 @@
                             </em></p>
                             <div class="imageBoxHolder imageBoxHolder1 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Brain, gross</li>
-                                    <li tabindex="0">Infarct</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Brain, gross</li>
+                                    <li>Infarct</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q11/on017-ca002f005-9780323640251.png" class="containerImg imageShow0" aria-label="Brain, gross image" alt="Brain, gross" />
+                                      <img src="images/q11/on017-ca002f005-9780323640251.png" class="containerImg imageShow0" alt="Brain, gross" />
 
-                                      <img src="images/q11/on017-ca002f005-9780323640251-a.png" class="containerImg imageShow1" aria-label="Infarct image" alt="Infarct" />
+                                      <img src="images/q11/on017-ca002f005-9780323640251-a.png" class="containerImg imageShow1" alt="Infarct" />
                                    </div>
                                 </div>
                              </div> 
@@ -418,9 +426,9 @@
                             <div class="myPage" id="pageFirstSection_11">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>11</div>
-                                    <div class='texting'>Why is this lesion cystic? </div>
+                                    <h2 class='texting'>Why is this lesion cystic? </h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show Answer</div>
                                 <div class="textArea" id="textA11">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -433,15 +441,17 @@
                             </div>  
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Infarct, histology</li>
-                                    <li tabindex="0">Macrophages</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Infarct, histology</li>
+                                    <li>Macrophages</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q11/on017-ca002f006-9780323640251.png" class="containerImg imageShow0" aria-label="Infarct, histology image" alt="Infarct, histology" />
-                                      <img src="images/q11/on017-ca002f006-9780323640251-a.png" class="containerImg imageShow1" aria-label="Macrophages image" alt="Macrophages" />
+                                      <img src="images/q11/on017-ca002f006-9780323640251.png" class="containerImg imageShow0" alt="Infarct, histology" />
+                                      <img src="images/q11/on017-ca002f006-9780323640251-a.png" class="containerImg imageShow1" alt="Macrophages" />
                                    </div>
                                 </div>
                              </div> 
@@ -456,19 +466,21 @@
                             </em></p>
                             <div class="imageBoxHolder imageBoxHolder1 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Brain, gross</li>
-                                    <li tabindex="0">Basilar artery</li>
-                                    <li tabindex="0">Vertebral arteries</li>
-                                    <li tabindex="0">Atherosclerotic plaques</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Brain, gross</li>
+                                    <li>Basilar artery</li>
+                                    <li>Vertebral arteries</li>
+                                    <li>Atherosclerotic plaques</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q13/on017-ca002f007-9780323640251.png" class="containerImg imageShow0" aria-label="Brain, gross image" alt="Brain, gross" />
-                                      <img src="images/q13/on017-ca002f007-9780323640251-a.png" class="containerImg imageShow1" aria-label="Basilar artery image" alt="Basilar artery" />
-                                      <img src="images/q13/on017-ca002f007-9780323640251-b.png" class="containerImg imageShow2" aria-label="Vertebral arteries image" alt="Vertebral arteries" />
-                                      <img src="images/q13/on017-ca002f007-9780323640251-c.png" class="containerImg imageShow3" aria-label="Atherosclerotic plaques image" alt="Atherosclerotic plaques" />
+                                      <img src="images/q13/on017-ca002f007-9780323640251.png" class="containerImg imageShow0" alt="Brain, gross" />
+                                      <img src="images/q13/on017-ca002f007-9780323640251-a.png" class="containerImg imageShow1" alt="Basilar artery" />
+                                      <img src="images/q13/on017-ca002f007-9780323640251-b.png" class="containerImg imageShow2" alt="Vertebral arteries" />
+                                      <img src="images/q13/on017-ca002f007-9780323640251-c.png" class="containerImg imageShow3" alt="Atherosclerotic plaques" />
                                    </div>
                                 </div>
                              </div> 
@@ -476,9 +488,9 @@
                             <div class="myPage" id="pageFirstSection_12">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>12</div>
-                                    <div class='texting'>What are the major risk factors for the development of cerebral atherosclerosis?</div>
+                                    <h2 class='texting'>What are the major risk factors for the development of cerebral atherosclerosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA12">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -499,9 +511,9 @@
                             <div class="myPage" id="pageFirstSection_13">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>13</div>
-                                    <div class='texting'>Why did the patient have transient episodes of right-sided weakness and speech difficulty during the year before the development of the infarct?</div>
+                                    <h2 class='texting'>Why did the patient have transient episodes of right-sided weakness and speech difficulty during the year before the development of the infarct?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA13">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -528,9 +540,9 @@
                             <div class="myPage" id="pageFirstSection_14">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>14</div>
-                                    <div class='texting'>Which form of stroke is caused by hypertension?</div>
+                                    <h2 class='texting'>Which form of stroke is caused by hypertension?</h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show Answer</div>
                                 <div class="textArea" id="textA14">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -543,45 +555,49 @@
                             </div>
 
 
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="0" aria-label="Brain, gross" ><img src="images/q14/on017-ca002f008-9780323640251.png" class="thumbImg" alt="Brain, gross" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="0" aria-label="Brain, gross"  aria-pressed="true"><img src="images/q14/on017-ca002f008-9780323640251.png" class="thumbImg" alt="Brain, gross" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="0" aria-label="Basal ganglia, gross" ><img src="images/q14/on017-ca002f009-9780323640251.png" class="thumbImg" alt="Basal ganglia, gross" /></span>
+                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="0" aria-label="Basal ganglia, gross"  aria-pressed="false"><img src="images/q14/on017-ca002f009-9780323640251.png" class="thumbImg" alt="Basal ganglia, gross" /></span>
 
                             </div>
 
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Brain, gross</li>
-                                    <li tabindex="0">Hematoma</li>                                    
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Brain, gross</li>
+                                    <li>Hematoma</li>                                    
                                   </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q14/on017-ca002f008-9780323640251.png" class="containerImg imageShow0" aria-label="Brain, gross image" alt="Brain, gross" />
-                                      <img src="images/q14/on017-ca002f008-9780323640251-a.png" class="containerImg imageShow1" aria-label="Hematoma image" alt="Hematoma" />
+                                      <img src="images/q14/on017-ca002f008-9780323640251.png" class="containerImg imageShow0" alt="Brain, gross" />
+                                      <img src="images/q14/on017-ca002f008-9780323640251-a.png" class="containerImg imageShow1" alt="Hematoma" />
                                    </div>
                                 </div>
                              </div> 
                              <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Basal ganglia, gross</li>
-                                    <li tabindex="0">Lacunar infarcts</li>
-                                    <li tabindex="0">Caudate</li>
-                                    <li tabindex="0">Putamen</li>
-                                    <li tabindex="0">Internal capsule</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Basal ganglia, gross</li>
+                                    <li>Lacunar infarcts</li>
+                                    <li>Caudate</li>
+                                    <li>Putamen</li>
+                                    <li>Internal capsule</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q14/on017-ca002f009-9780323640251.png" class="containerImg imageShow0" aria-label="Basal ganglia, gross image" alt="Basal ganglia, gross" />
+                                      <img src="images/q14/on017-ca002f009-9780323640251.png" class="containerImg imageShow0" alt="Basal ganglia, gross" />
 
-                                      <img src="images/q14/on017-ca002f009-9780323640251-a.png" class="containerImg imageShow1" aria-label="Lacunar infarcts image" alt="Lacunar infarcts" />
-                                      <img src="images/q14/on017-ca002f009-9780323640251-b.png" class="containerImg imageShow2" aria-label="Caudate image" alt="Caudate" />
-                                      <img src="images/q14/on017-ca002f009-9780323640251-c.png" class="containerImg imageShow3" aria-label="Putamen image" alt="Putamen" />
-                                      <img src="images/q14/on017-ca002f009-9780323640251-d.png" class="containerImg imageShow4" aria-label="Internal capsule image" alt="Internal capsule" />
+                                      <img src="images/q14/on017-ca002f009-9780323640251-a.png" class="containerImg imageShow1" alt="Lacunar infarcts" />
+                                      <img src="images/q14/on017-ca002f009-9780323640251-b.png" class="containerImg imageShow2" alt="Caudate" />
+                                      <img src="images/q14/on017-ca002f009-9780323640251-c.png" class="containerImg imageShow3" alt="Putamen" />
+                                      <img src="images/q14/on017-ca002f009-9780323640251-d.png" class="containerImg imageShow4" alt="Internal capsule" />
 
                                       
 
@@ -609,12 +625,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -640,10 +656,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -684,6 +700,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>

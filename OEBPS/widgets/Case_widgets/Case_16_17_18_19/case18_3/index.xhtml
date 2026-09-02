@@ -28,23 +28,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Bad to the Bone</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ol class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">•  Compare and contrast the primary malignant tumors of bone.</li>
@@ -76,22 +76,24 @@
 
                               <div class="imageBoxHolder  hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Plain radiograph</li>
-                                    <li tabindex="0">Metaphyseal lesion</li>
-                                    <li tabindex="0">Moth-eaten areas</li>
-                                    <li tabindex="0">Mineralized matrix in soft tissue</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Plain radiograph</li>
+                                    <li>Metaphyseal lesion</li>
+                                    <li>Moth-eaten areas</li>
+                                    <li>Mineralized matrix in soft tissue</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q1/on018-ca003f001-9780323640251.png" class="containerImg containerImg1 imageShow0" aria-label="Plain radiograph image" alt="Plain radiograph" />
+                                      <img src="images/q1/on018-ca003f001-9780323640251.png" class="containerImg containerImg1 imageShow0" alt="Plain radiograph" />
 
-                                      <img src="images/q1/on018-ca003f001-9780323640251-a.png" class="containerImg containerImg1 imageShow1" aria-label="Metaphyseal lesion image" alt="Metaphyseal lesion" />
+                                      <img src="images/q1/on018-ca003f001-9780323640251-a.png" class="containerImg containerImg1 imageShow1" alt="Metaphyseal lesion" />
 
-                                      <img src="images/q1/on018-ca003f001-9780323640251-b.png" class="containerImg containerImg1 imageShow2" aria-label="'Moth-eaten' areas image" alt="'Moth-eaten' areas" />
+                                      <img src="images/q1/on018-ca003f001-9780323640251-b.png" class="containerImg containerImg1 imageShow2" alt="'Moth-eaten' areas" />
 
-                                      <img src="images/q1/on018-ca003f001-9780323640251-c.png" class="containerImg containerImg1 imageShow3" aria-label="Mineralized matrix in soft tissue image" alt="Mineralized matrix in soft tissue" />
+                                      <img src="images/q1/on018-ca003f001-9780323640251-c.png" class="containerImg containerImg1 imageShow3" alt="Mineralized matrix in soft tissue" />
 
                                    </div>
                                 </div>
@@ -101,9 +103,9 @@
                             <div class="myPage" id="pageFirstSection_2">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>Based on the radiologic findings, what is the most likely diagnosis?</div>
+                                    <h2 class='texting'>Based on the radiologic findings, what is the most likely diagnosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA2">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -123,9 +125,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>Which primary tumors of bone should be considered in the differential diagnosis?</div>
+                                    <h2 class='texting'>Which primary tumors of bone should be considered in the differential diagnosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -146,48 +148,52 @@
                         <div class="contentHolderMain">
                           <p class="paraIndent"><em>A biopsy of the bone lesion was performed and revealed sheets of malignant cells that are producing <span class="hs" role="link" tabindex="0" data-dropdownid="1" data-id="1">spicules of bone</span>. <span class="hs" role="link" tabindex="0" data-dropdownid="1" data-id="2">Mitotic figures</span> were present. A staging chest CT scan revealed multiple <span class="hs" role="link" tabindex="0" data-dropdownid="2" data-id="1">mineralized nodules</span>, consistent with metastatic malignancy. A biopsy of one of the pulmonary nodules demonstrated pleomorphic cells embedded in dense bands of <span class="hs" role="link" tabindex="0" data-dropdownid="3" data-id="1">osteoid</span> (unmineralized bone that is always pathologic in adults).</em></p>
 
-                        <div class="imageThumbHolder">
-                            <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Bone biopsy" ><img src="images/q3/on018-ca003f002-9780323640251.png" class="thumbImg" alt="Bone biopsy" /></span>                               
+                        <div class="imageThumbHolder" role="group" aria-label="Image views">
+                            <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Bone biopsy"  aria-pressed="true"><img src="images/q3/on018-ca003f002-9780323640251.png" class="thumbImg" alt="Bone biopsy" /></span>                               
                             
-                            <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Chest CT" ><img src="images/q3/on018-ca003f004-9780323640251.png" class="thumbImg" alt="Chest CT" /></span>
+                            <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Chest CT"  aria-pressed="false"><img src="images/q3/on018-ca003f004-9780323640251.png" class="thumbImg" alt="Chest CT" /></span>
 
-                            <span class="thumbnail" role="button" tabindex="0" data-dropdownid="3" data-id="0" aria-label="Pulmonary nodule, biopsy" ><img src="images/q3/on018-ca003f003-9780323640251.png" class="thumbImg" alt="Pulmonary nodule, biopsy" /></span>
+                            <span class="thumbnail" role="button" tabindex="0" data-dropdownid="3" data-id="0" aria-label="Pulmonary nodule, biopsy"  aria-pressed="false"><img src="images/q3/on018-ca003f003-9780323640251.png" class="thumbImg" alt="Pulmonary nodule, biopsy" /></span>
                             
                         </div>
 
                           <div class="imageBoxHolder  hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Bone biopsy</li>
-                                    <li tabindex="0">Osteoid</li>
-                                    <li tabindex="0">Atypical mitotic figure</li>
-                                    <li tabindex="0">Pleomorphic osteocytes [goes with ‘mineralized nodules’]</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Bone biopsy</li>
+                                    <li>Osteoid</li>
+                                    <li>Atypical mitotic figure</li>
+                                    <li>Pleomorphic osteocytes [goes with ‘mineralized nodules’]</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q3/on018-ca003f002-9780323640251.png" class="containerImg imageShow0" aria-label="Bone biopsy image" alt="Bone biopsy" />
+                                      <img src="images/q3/on018-ca003f002-9780323640251.png" class="containerImg imageShow0" alt="Bone biopsy" />
 
-                                      <img src="images/q3/on018-ca003f002-9780323640251-a.png" class="containerImg imageShow1" aria-label="Osteoid image" alt="Osteoid" />
+                                      <img src="images/q3/on018-ca003f002-9780323640251-a.png" class="containerImg imageShow1" alt="Osteoid" />
 
-                                      <img src="images/q3/on018-ca003f002-9780323640251-b.png" class="containerImg imageShow2" aria-label= "Atypical mitotic figure image" alt="Atypical mitotic figure" />
+                                      <img src="images/q3/on018-ca003f002-9780323640251-b.png" class="containerImg imageShow2" alt="Atypical mitotic figure" />
 
-                                      <img src="images/q3/on018-ca003f002-9780323640251-c.png" class="containerImg imageShow3" aria-label="Pleomorphic osteocytes image" alt="Pleomorphic osteocytes" />
+                                      <img src="images/q3/on018-ca003f002-9780323640251-c.png" class="containerImg imageShow3" alt="Pleomorphic osteocytes" />
                                    </div>
                                 </div>
                              </div> 
                              <div class="imageBoxHolder  hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Chest CT</li>
-                                    <li tabindex="0">Mineralized nodules</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Chest CT</li>
+                                    <li>Mineralized nodules</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q3/on018-ca003f004-9780323640251.png" class="containerImg imageShow0" aria-label="Chest CT image" alt="Chest CT" />
+                                      <img src="images/q3/on018-ca003f004-9780323640251.png" class="containerImg imageShow0" alt="Chest CT" />
 
-                                      <img src="images/q3/on018-ca003f004-9780323640251-a.png" class="containerImg imageShow1" aria-label="Mineralized nodules image" alt="Mineralized nodules" />
+                                      <img src="images/q3/on018-ca003f004-9780323640251-a.png" class="containerImg imageShow1" alt="Mineralized nodules" />
 
                                    </div>
                                 </div>
@@ -195,16 +201,18 @@
                              </div> 
                               <div class="imageBoxHolder  hs_set3">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Pulmonary nodule, biopsy</li>
-                                    <li tabindex="0">Osteoid</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Pulmonary nodule, biopsy</li>
+                                    <li>Osteoid</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q3/on018-ca003f003-9780323640251.png" class="containerImg imageShow0" aria-label="Pulmonary nodule, biopsy image" alt="Pulmonary nodule, biopsy" />
+                                      <img src="images/q3/on018-ca003f003-9780323640251.png" class="containerImg imageShow0" alt="Pulmonary nodule, biopsy" />
 
-                                      <img src="images/q3/on018-ca003f003-9780323640251-a.png" class="containerImg imageShow1" aria-label="Osteoid image" alt="Osteoid" />
+                                      <img src="images/q3/on018-ca003f003-9780323640251-a.png" class="containerImg imageShow1" alt="Osteoid" />
 
                                    </div>
                                 </div>
@@ -215,9 +223,9 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>What is the diagnosis in this case?  </div>
+                                    <h2 class='texting'>What is the diagnosis in this case?  </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -239,9 +247,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>Are the patient’s siblings at increased risk for developing this tumor?</div>
+                                    <h2 class='texting'>Are the patient’s siblings at increased risk for developing this tumor?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA5">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -264,9 +272,9 @@
                             <div class="myPage" id="pageFirstSection_y6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>Why is a chest CT part of the screening protocol? </div>
+                                    <h2 class='texting'>Why is a chest CT part of the screening protocol? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6g">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -287,22 +295,24 @@
                           <p class="paraIndent"><em>In view of the multiple pulmonary metastases seen on the screening CT scan, the patient was started on neoadjuvant chemotherapy. Following appropriate treatment, the lung lesions were stable (i.e., they did not increase in size or number) and the patient underwent limb-salvage surgery. The resected specimen showed <span class="hs" role="link" tabindex="0" data-dropdownid="1" data-id="2">tumor</span> arising in the metaphysis, and extending into the <span class="hs" role="link" tabindex="0" data-dropdownid="1" data-id="3">soft tissue</span>. Where the tumor invaded through the cortex, it raised the periosteum, causing new bone to be laid down, an appearance referred to as the <span class="hs" role="link" tabindex="0" data-dropdownid="1" data-id="1">Codman triangle</span>. This feature was also noted in the patient’s initial plain radiograph.</em></p>
                             <div class="imageBoxHolder  hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Resected specimen</li>
-                                    <li tabindex="0">Codman triangle</li>
-                                    <li tabindex="0">Tumor</li>
-                                    <li tabindex="0">Soft tissue extension</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Resected specimen</li>
+                                    <li>Codman triangle</li>
+                                    <li>Tumor</li>
+                                    <li>Soft tissue extension</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q6/on018-ca003f005-9780323640251.png" class="containerImg containerImg1 imageShow0" aria-label="Resected specimen image" alt="Resected specimen" />
+                                      <img src="images/q6/on018-ca003f005-9780323640251.png" class="containerImg containerImg1 imageShow0" alt="Resected specimen" />
 
-                                      <img src="images/q6/on018-ca003f005-9780323640251-a.png" class="containerImg containerImg1 imageShow1" aria-label="Codman triangle image" alt="Codman triangle" />
+                                      <img src="images/q6/on018-ca003f005-9780323640251-a.png" class="containerImg containerImg1 imageShow1" alt="Codman triangle" />
 
-                                      <img src="images/q6/on018-ca003f005-9780323640251-b.png" class="containerImg containerImg1 imageShow2" aria-label="Tumor image" alt="Tumor" />
+                                      <img src="images/q6/on018-ca003f005-9780323640251-b.png" class="containerImg containerImg1 imageShow2" alt="Tumor" />
 
-                                      <img src="images/q6/on018-ca003f005-9780323640251-c.png" class="containerImg containerImg1 imageShow3" aria-label="Soft tissue extension image" alt="Soft tissue extension" />
+                                      <img src="images/q6/on018-ca003f005-9780323640251-c.png" class="containerImg containerImg1 imageShow3" alt="Soft tissue extension" />
 
 
                                    </div>
@@ -314,9 +324,9 @@
                             <div class="myPage" id="pageFirstSection_q6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>Which genes are commonly mutated in osteosarcoma?</div>
+                                    <h2 class='texting'>Which genes are commonly mutated in osteosarcoma?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAa6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -339,9 +349,9 @@
                             <div class="myPage" id="pageFirstSection_s6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>What is the significance of antecedent trauma in this case?  </div>
+                                    <h2 class='texting'>What is the significance of antecedent trauma in this case?  </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAb6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -364,9 +374,9 @@
                             <div class="myPage" id="pageFirstSection_t6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>8</div>
-                                    <div class='texting'>What would this patient’s X-ray look like if this tumor were an Ewing sarcoma? What would a biopsy of the lesion show? </div>
+                                    <h2 class='texting'>What would this patient’s X-ray look like if this tumor were an Ewing sarcoma? What would a biopsy of the lesion show? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAc6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -376,27 +386,29 @@
                                 </div>
                             </div> 
                             
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Plain radiograph" ><img src="images/q8/on018-ca003f006-9780323640251.png" class="thumbImg" alt="Plain radiograph" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Plain radiograph"  aria-pressed="true"><img src="images/q8/on018-ca003f006-9780323640251.png" class="thumbImg" alt="Plain radiograph" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Ewing sarcoma, histology" ><img src="images/q8/on018-ca003f010-9780323640251.png" class="thumbImg" alt="Ewing sarcoma, histology" /></span>                                  
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Ewing sarcoma, histology"  aria-pressed="false"><img src="images/q8/on018-ca003f010-9780323640251.png" class="thumbImg" alt="Ewing sarcoma, histology" /></span>                                  
                             </div>
 
                             <div class="imageBoxHolder imageBoxHolder2  hs_set1">
                                 <div class="optionSelectionBox">
-                                    <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                        <li tabindex="0">Plain radiograph</li>
-                                        <li tabindex="0">Reactive bone with 'onion-skinning'</li>
-                                        <li tabindex="0">Diaphysis</li>                                    
+                                    <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                        <li>Plain radiograph</li>
+                                        <li>Reactive bone with 'onion-skinning'</li>
+                                        <li>Diaphysis</li>                                    
                                     </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                     <div class="graphContainer" aria-live="polite">
-                                    <img src="images/q8/on018-ca003f006-9780323640251.png" class="containerImg containerImg2 imageShow0" aria-label="Plain radiograph image" alt="Plain radiograph" />
+                                    <img src="images/q8/on018-ca003f006-9780323640251.png" class="containerImg containerImg2 imageShow0" alt="Plain radiograph" />
 
-                                    <img src="images/q8/on018-ca003f006-9780323640251-a.png" class="containerImg containerImg2 imageShow1" aria-label="Reactive bone with 'onion-skinning' image" alt="Reactive bone with 'onion-skinning'" />
+                                    <img src="images/q8/on018-ca003f006-9780323640251-a.png" class="containerImg containerImg2 imageShow1" alt="Reactive bone with 'onion-skinning'" />
 
-                                    <img src="images/q8/on018-ca003f006-9780323640251-b.png" class="containerImg containerImg2 imageShow2" aria-label="Diaphysis image" alt="Diaphysis" />
+                                    <img src="images/q8/on018-ca003f006-9780323640251-b.png" class="containerImg containerImg2 imageShow2" alt="Diaphysis" />
                                     </div>
                                 </div>
                                 <div class="para_"><p>Plain radiograph of Ewing sarcoma of bone. (Dr. Nickolas Reimer, Department of Orthopaedic Surgery, Emory University.)</p></div>
@@ -404,13 +416,15 @@
 
                             <div class="imageBoxHolder imageBoxHolder2  hs_set2">
                                 <div class="optionSelectionBox">
-                                <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Ewing sarcoma, histology</li>
+                                <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Ewing sarcoma, histology</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                     <div class="graphContainer" aria-live="polite">
-                                    <img src="images/q8/on018-ca003f010-9780323640251.png" class="containerImg imageShow0" aria-label="Ewing sarcoma, histology image" alt="Ewing sarcoma, histology" />
+                                    <img src="images/q8/on018-ca003f010-9780323640251.png" class="containerImg imageShow0" alt="Ewing sarcoma, histology" />
                                     </div>
                                 </div>                            
                             </div>                                                  
@@ -426,9 +440,9 @@
                             <div class="myPage" id="pageFirstSection_w6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>9</div>
-                                    <div class='texting'>What is the molecular abnormality that is characteristic of Ewing sarcoma? </div>
+                                    <h2 class='texting'>What is the molecular abnormality that is characteristic of Ewing sarcoma? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6d">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -449,9 +463,9 @@
                             <div class="myPage" id="pageFirstSection_v6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>10</div>
-                                    <div class='texting'>What would the plain radiograph look like if the patient had a giant cell tumor? What would a biopsy of that lesion show?</div>
+                                    <h2 class='texting'>What would the plain radiograph look like if the patient had a giant cell tumor? What would a biopsy of that lesion show?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6e">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -463,43 +477,47 @@
                                 </div>
                             </div> 
 
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Plain radiograph" ><img src="images/q10/on018-ca003f008-9780323640251.png" class="thumbImg" alt="Plain radiograph" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Plain radiograph"  aria-pressed="true"><img src="images/q10/on018-ca003f008-9780323640251.png" class="thumbImg" alt="Plain radiograph" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Giant cell tumor, histology" ><img src="images/q10/on018-ca003f009-9780323640251.png" class="thumbImg" alt="Giant cell tumor, histology" /></span>                                  
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Giant cell tumor, histology"  aria-pressed="false"><img src="images/q10/on018-ca003f009-9780323640251.png" class="thumbImg" alt="Giant cell tumor, histology" /></span>                                  
                             </div>
                             
                             <div class="imageBoxHolder imageBoxHolder2  hs_set1">
                                 <div class="optionSelectionBox">
-                                    <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                        <li tabindex="0">Plain radiograph</li>
-                                        <li tabindex="0">Lytic lesion</li>                                    
+                                    <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                        <li>Plain radiograph</li>
+                                        <li>Lytic lesion</li>                                    
                                     </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                     <div class="graphContainer" aria-live="polite">
-                                        <img src="images/q10/on018-ca003f008-9780323640251.png" class="containerImg imageShow0" aria-label="Plain radiograph image" alt="Plain radiograph" />
+                                        <img src="images/q10/on018-ca003f008-9780323640251.png" class="containerImg imageShow0" alt="Plain radiograph" />
 
-                                        <img src="images/q10/on018-ca003f008-9780323640251-a.png" class="containerImg imageShow1" aria-label="Lytic lesion image" alt="Lytic lesion" />                                    
+                                        <img src="images/q10/on018-ca003f008-9780323640251-a.png" class="containerImg imageShow1" alt="Lytic lesion" />                                    
                                     </div>
                                 </div> 
                             </div> 
                                             
                             <div class="imageBoxHolder imageBoxHolder2  hs_set2">
                                 <div class="optionSelectionBox">
-                                <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Giant cell tumor, histology</li>
-                                    <li tabindex="0">Giant cells</li>
-                                    <li tabindex="0">Mononuclear cells</li>                                    
+                                <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Giant cell tumor, histology</li>
+                                    <li>Giant cells</li>
+                                    <li>Mononuclear cells</li>                                    
                                 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                     <div class="graphContainer" aria-live="polite">
-                                    <img src="images/q10/on018-ca003f009-9780323640251.png" class="containerImg imageShow0" aria-label="Giant cell tumor, histology image" alt="Giant cell tumor, histology" />
+                                    <img src="images/q10/on018-ca003f009-9780323640251.png" class="containerImg imageShow0" alt="Giant cell tumor, histology" />
 
-                                    <img src="images/q10/on018-ca003f009-9780323640251-a.png" class="containerImg imageShow1" aria-label="Giant cells image" alt="Giant cells" />
+                                    <img src="images/q10/on018-ca003f009-9780323640251-a.png" class="containerImg imageShow1" alt="Giant cells" />
 
-                                    <img src="images/q10/on018-ca003f009-9780323640251-b.png" class="containerImg imageShow2" aria-label="uclear cells image" alt="uclear cells" />                                    
+                                    <img src="images/q10/on018-ca003f009-9780323640251-b.png" class="containerImg imageShow2" alt="uclear cells" />                                    
                                     </div>
                                 </div>                                
                             </div> 
@@ -515,9 +533,9 @@
                             <div class="myPage" id="pageFirstSection_x6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>11</div>
-                                    <div class='texting'>What would the radiograph look like if this were a chondrosarcoma? What would the biopsy show?</div>
+                                    <h2 class='texting'>What would the radiograph look like if this were a chondrosarcoma? What would the biopsy show?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6f">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -530,29 +548,31 @@
                                 </div>
                             </div>    
                             
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Plain radiograph" ><img src="images/q11/on018-ca003f010-9780323640251.png" class="thumbImg" alt="Plain radiograph" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Plain radiograph"  aria-pressed="true"><img src="images/q11/on018-ca003f010-9780323640251.png" class="thumbImg" alt="Plain radiograph" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Histology, low power" ><img src="images/q11/on018-ca003f011-9780323640251.png" class="thumbImg" alt="Histology, low power" /></span> 
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Histology, low power"  aria-pressed="false"><img src="images/q11/on018-ca003f011-9780323640251.png" class="thumbImg" alt="Histology, low power" /></span> 
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="3" data-id="0" aria-label="Histology, high power" ><img src="images/q11/on018-ca003f012-9780323640251.png" class="thumbImg" alt="Histology, high power" /></span>
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="3" data-id="0" aria-label="Histology, high power"  aria-pressed="false"><img src="images/q11/on018-ca003f012-9780323640251.png" class="thumbImg" alt="Histology, high power" /></span>
                             </div>
 
                              <div class="imageBoxHolder imageBoxHolder2  hs_set1">
                                               <div class="optionSelectionBox">
-                                                <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                                  <li tabindex="0">Plain radiograph</li>
-                                                  <li tabindex="0">Lytic lesion</li>
-                                                  <li tabindex="0">Cortical remodeling</li>
+                                                <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                                  <li>Plain radiograph</li>
+                                                  <li>Lytic lesion</li>
+                                                  <li>Cortical remodeling</li>
 </ul>
+                                  </div>
                                               </div>
                                               <div class="leftImageBox">
                                                  <div class="graphContainer" aria-live="polite">
-                                                    <img src="images/q11/on018-ca003f010-9780323640251.png" class="containerImg containerImg2 imageShow0" aria-label="Plain radiograph image" alt="Plain radiograph" />
+                                                    <img src="images/q11/on018-ca003f010-9780323640251.png" class="containerImg containerImg2 imageShow0" alt="Plain radiograph" />
 
-                                                  <img src="images/q11/on018-ca003f010-9780323640251-a.png" class="containerImg containerImg2 imageShow1" aria-label="Lytic lesion image" alt="Lytic lesion" />
+                                                  <img src="images/q11/on018-ca003f010-9780323640251-a.png" class="containerImg containerImg2 imageShow1" alt="Lytic lesion" />
 
-                                                   <img src="images/q11/on018-ca003f010-9780323640251-b.png" class="containerImg containerImg2 imageShow2" aria-label="Cortical remodeling image" alt="Cortical remodeling" />
+                                                   <img src="images/q11/on018-ca003f010-9780323640251-b.png" class="containerImg containerImg2 imageShow2" alt="Cortical remodeling" />
 
 
                                                     
@@ -562,13 +582,15 @@
                                 </div>                        
                                 <div class="imageBoxHolder imageBoxHolder2  hs_set2">
                                               <div class="optionSelectionBox">
-                                                <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                                  <li tabindex="0">Histology, low power</li>
+                                                <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                                  <li>Histology, low power</li>
 </ul>
+                                  </div>
                                               </div>
                                               <div class="leftImageBox">
                                                  <div class="graphContainer" aria-live="polite">
-                                                    <img src="images/q11/on018-ca003f011-9780323640251.png" class="containerImg imageShow0" aria-label="Histology, low power image" alt="Histology, low power" />
+                                                    <img src="images/q11/on018-ca003f011-9780323640251.png" class="containerImg imageShow0" alt="Histology, low power" />
 
                                                 
                                                     
@@ -579,16 +601,18 @@
 
                                 <div class="imageBoxHolder imageBoxHolder2  hs_set3">
                                               <div class="optionSelectionBox">
-                                                <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                                  <li tabindex="0">Histology, high power</li>
-                                                  <li tabindex="0">Cytologic atypia</li>
+                                                <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                                  <li>Histology, high power</li>
+                                                  <li>Cytologic atypia</li>
 </ul>
+                                  </div>
                                               </div>
                                               <div class="leftImageBox">
                                                  <div class="graphContainer" aria-live="polite">
-                                                    <img src="images/q11/on018-ca003f012-9780323640251.png" class="containerImg imageShow0" aria-label="Histology, high power image" alt="Histology, high power" />
+                                                    <img src="images/q11/on018-ca003f012-9780323640251.png" class="containerImg imageShow0" alt="Histology, high power" />
 
-                                                  <img src="images/q11/on018-ca003f012-9780323640251-a.png" class="containerImg imageShow1" aria-label="Cytologic atypia image" alt="Cytologic atypia" />
+                                                  <img src="images/q11/on018-ca003f012-9780323640251-a.png" class="containerImg imageShow1" alt="Cytologic atypia" />
 
                                                  
                                                  </div>
@@ -615,12 +639,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -644,10 +668,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -688,6 +712,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>

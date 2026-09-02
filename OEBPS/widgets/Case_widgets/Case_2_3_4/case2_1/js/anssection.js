@@ -19,8 +19,18 @@
         });
 
         $(".AnswerDiv").attr("role","button");
-        $(".AnswerDiv").attr("aria-pressed","false");
+        $(".AnswerDiv").attr("aria-expanded","false");
+        $(".AnswerDiv").removeAttr("aria-pressed");
         $(".AnswerDiv").attr("tabindex","0");
+        $(".AnswerDiv").each(function()
+        {
+            var answerPanel = $(this).next(".textArea");
+            if (answerPanel.length && answerPanel.attr("id"))
+            {
+                $(this).attr("aria-controls", answerPanel.attr("id"));
+                answerPanel.attr("aria-hidden", "true");
+            }
+        });
         $(".AnswerDiv").bind("click keyup", AnswerDivFun);
 
         $(document).bind("keydown mousedown", enable_scorm);
@@ -59,42 +69,46 @@
             $(this).parent().find('.textArea').slideUp("fast", function() {
                 ActivityMain.setHabitatContainerSize();
             });
-            $(this).text("Show answer");
-            $(this).attr("aria-pressed","false");
+            $(this).text("Show Answer");
+            $(this).attr("aria-expanded","false");
+            $(this).parent().find(".textArea").attr("aria-hidden", "true");
             $('.imageBoxHolder').hide();
             $('.imageThumbHolder.imageThumbHolder2').hide();
             var mainDiv = $(this).closest(".midDiv");
             // console.log(!mainDiv.find(".imageBoxHolder").hasClass("imageBoxHolder2"))
             if(!mainDiv.find(".imageBoxHolder").hasClass("imageBoxHolder2")){
                 mainDiv.find('.containerImg').hide();
-                mainDiv.find(".dropdownList li").removeClass("selected");
-                mainDiv.find('.imageThumbHolder .thumbnail').removeClass("thumbnail_active");       
-                $(mainDiv.find('.imageThumbHolder .thumbnail')[0]).addClass("thumbnail_active");
+                mainDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");
+                mainDiv.find('.imageThumbHolder .thumbnail').removeClass("thumbnail_active").attr("aria-pressed", "false");
+                $(mainDiv.find('.imageThumbHolder .thumbnail')[0]).addClass("thumbnail_active").attr("aria-pressed", "true");
                 var mainHsDiv = mainDiv.find('.hs_set1');
                 mainHsDiv.css("display","flex");
                 mainHsDiv.find('.imageShow0').show();
-                $(mainHsDiv.find(".dropdownList li")[0]).addClass("selected");
-                mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[0]).text()); 
+                $(mainHsDiv.find(".dropdownList li")[0]).addClass("selected").attr("aria-selected", "true");
+                mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[0]).text());
+                mainDiv.find(".hs").removeAttr("aria-current");
             }             
         }
         else
         {
-            $(this).text("Hide answer");
-            $(this).attr("aria-pressed","true");
+            $(this).text("Hide Answer");
+            $(this).attr("aria-expanded","true");
+            $(this).parent().find(".textArea").attr("aria-hidden", "false");
             $(this).parent().find('.textArea').slideDown("fast", function() {
                 $('.imageBoxHolder').hide();
                 $(this).parent().find(".wrapper").show();
                 var mainDiv = $(this).closest(".midDiv");
                 mainDiv.find('.containerImg').hide();
-                mainDiv.find(".dropdownList li").removeClass("selected");
+                mainDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");
                 $('.imageThumbHolder').show();
-                mainDiv.find('.imageThumbHolder .thumbnail').removeClass("thumbnail_active");       
-                $(mainDiv.find('.imageThumbHolder .thumbnail')[0]).addClass("thumbnail_active");
+                mainDiv.find('.imageThumbHolder .thumbnail').removeClass("thumbnail_active").attr("aria-pressed", "false");
+                $(mainDiv.find('.imageThumbHolder .thumbnail')[0]).addClass("thumbnail_active").attr("aria-pressed", "true");
                 var mainHsDiv = mainDiv.find('.hs_set1');
                 mainHsDiv.show();
                 mainHsDiv.find('.imageShow0').show();
-                $(mainHsDiv.find(".dropdownList li")[0]).addClass("selected");
-                mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[0]).text());              
+                $(mainHsDiv.find(".dropdownList li")[0]).addClass("selected").attr("aria-selected", "true");
+                mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[0]).text());
+                mainDiv.find(".hs").removeAttr("aria-current");
                 // $('.Cont_Ans').focus();
                 ActivityMain.setHabitatContainerSize();
             });

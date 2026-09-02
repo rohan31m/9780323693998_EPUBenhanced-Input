@@ -28,23 +28,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">For No Good Reason</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ol class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">•  Describe the postulated pathogenesis, morphologic findings, and natural history of idiopathic pulmonary fibrosis.</li>
@@ -80,9 +80,9 @@
                             <div class="myPage" id="pageFirstSection_m4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>Which entities are associated with an interstitial pneumonia pattern on CT?</div>
+                                    <h2 class='texting'>Which entities are associated with an interstitial pneumonia pattern on CT?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -110,9 +110,9 @@
                             <div class="myPage" id="pageFirstSection_2">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>Does this patient have restrictive or obstructive lung disease?</div>
+                                    <h2 class='texting'>Does this patient have restrictive or obstructive lung disease?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA2">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -132,9 +132,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>What are the two major types of restrictive lung disease?</div>
+                                    <h2 class='texting'>What are the two major types of restrictive lung disease?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -154,23 +154,25 @@
                         <div class="contentHolderMain">
                             <p class="paraIndent"><em>An open lung biopsy of the right lower lobe was performed. It showed patchy interstitial <span class="hs" role="link" tabindex="0" data-dropdownid="1" data-id="1">fibrosis</span> that was most prominent in subpleural regions and along the interlobular septa. There were markedly <span class="hs" role="link" tabindex="0" data-dropdownid="2" data-id="2">thickened alveolar septa</span> containing <span class="hs" role="link" tabindex="0" data-dropdownid="2" data-id="1">chronic inflammatory cells</span>. The pulmonary vessels showed sclerotic thickening as a result of hypoxia and subsequent pulmonary hypertension.</em></p>
 
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Lung histology, low power" ><img src="images/q4/on010-ca002f001-9780323640251.png" class="thumbImg" alt="Lung histology, low power" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Lung histology, low power"  aria-pressed="true"><img src="images/q4/on010-ca002f001-9780323640251.png" class="thumbImg" alt="Lung histology, low power" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Lung histology, higher power" ><img src="images/q4/on010-ca002f002-9780323640251.png" class="thumbImg" alt="Lung histology, higher power" /></span>                                  
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Lung histology, higher power"  aria-pressed="false"><img src="images/q4/on010-ca002f002-9780323640251.png" class="thumbImg" alt="Lung histology, higher power" /></span>                                  
                             </div>
                              <div class="imageBoxHolder imageBoxHolder1 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Lung histology, low power</li>
-                                    <li tabindex="0">Fibrosis</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Lung histology, low power</li>
+                                    <li>Fibrosis</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q4/on010-ca002f001-9780323640251.png" class="containerImg imageShow0" aria-label="Lung histology, low power image" alt="Lung histology, low power" />
+                                      <img src="images/q4/on010-ca002f001-9780323640251.png" class="containerImg imageShow0" alt="Lung histology, low power" />
 
-                                      <img src="images/q4/on010-ca002f001-9780323640251-a-new.png" class="containerImg imageShow1" aria-label="Fibrosis image" alt="Fibrosis" />
+                                      <img src="images/q4/on010-ca002f001-9780323640251-a-new.png" class="containerImg imageShow1" alt="Fibrosis" />
 
                                    </div>
                                 </div>
@@ -179,19 +181,21 @@
 
                              <div class="imageBoxHolder imageBoxHolder1 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Lung histology, higher power</li>
-                                    <li tabindex="0">Chronic inflammation</li>
-                                    <li tabindex="0">Thickened septa</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Lung histology, higher power</li>
+                                    <li>Chronic inflammation</li>
+                                    <li>Thickened septa</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q4/on010-ca002f002-9780323640251.png" class="containerImg imageShow0" aria-label="Lung histology, higher power image" alt="Lung histology, higher power" />
+                                      <img src="images/q4/on010-ca002f002-9780323640251.png" class="containerImg imageShow0" alt="Lung histology, higher power" />
 
-                                      <img src="images/q4/on010-ca002f002-9780323640251-a.png" class="containerImg imageShow1" aria-label="Chronic inflammation image" alt="Chronic inflammation" />
+                                      <img src="images/q4/on010-ca002f002-9780323640251-a.png" class="containerImg imageShow1" alt="Chronic inflammation" />
 
-                                      <img src="images/q4/on010-ca002f002-9780323640251-b-new.png" class="containerImg imageShow2" aria-label="Thickened septa image" alt="Thickened septa" />
+                                      <img src="images/q4/on010-ca002f002-9780323640251-b-new.png" class="containerImg imageShow2" alt="Thickened septa" />
 
                                       
                                    </div>
@@ -205,9 +209,9 @@
                             <div class="myPage" id="pageFirstSection_n4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>What is the diagnosis?</div>
+                                    <h2 class='texting'>What is the diagnosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAa4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -228,9 +232,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>How do the pathologic changes in the lung explain the patient's pulmonary function tests?</div>
+                                    <h2 class='texting'>How do the pathologic changes in the lung explain the patient's pulmonary function tests?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA5">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -252,9 +256,9 @@
                             <div class="myPage" id="pageFirstSection_6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>Which pathogenic mechanisms are believed to contribute to fibrosis in IPF?</div>
+                                    <h2 class='texting'>Which pathogenic mechanisms are believed to contribute to fibrosis in IPF?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -276,9 +280,9 @@
                             <div class="myPage" id="pageFirstSection_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>What is the definitive therapy for patients with IPF?</div>
+                                    <h2 class='texting'>What is the definitive therapy for patients with IPF?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA7">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -300,9 +304,9 @@
                             <div class="myPage" id="pageFirstSection_o4a">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>8</div>
-                                    <div class='texting'>What would be the expected gross appearance of his lungs?</div>
+                                    <h2 class='texting'>What would be the expected gross appearance of his lungs?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAb4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -314,19 +318,21 @@
 
                              <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Lung, gross</li>
-                                    <li tabindex="0">Cytsic spaces</li>
-                                    <li tabindex="0">Fibrosis</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Lung, gross</li>
+                                    <li>Cytsic spaces</li>
+                                    <li>Fibrosis</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q6/on010-ca002f003-9780323640251.png" class="containerImg imageShow0" aria-label="Lung, gross" alt="Lung, gross" />
+                                      <img src="images/q6/on010-ca002f003-9780323640251.png" class="containerImg imageShow0" alt="Lung, gross" />
 
-                                      <img src="images/q6/on010-ca002f003-9780323640251-a.png" class="containerImg imageShow1" aria-label="Cytsic spaces" alt="Cytsic spaces" />
+                                      <img src="images/q6/on010-ca002f003-9780323640251-a.png" class="containerImg imageShow1" alt="Cytsic spaces" />
 
-                                      <img src="images/q6/on010-ca002f003-9780323640251-b.png" class="containerImg imageShow2" aria-label="Fibrosis" alt="Fibrosis" />
+                                      <img src="images/q6/on010-ca002f003-9780323640251-b.png" class="containerImg imageShow2" alt="Fibrosis" />
 
                                    </div>
                                 </div>
@@ -346,9 +352,9 @@
                             <div class="myPage" id="pageFirstSection_b4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>9</div>
-                                    <div class='texting'>How does the gross appearance of centriacinar emphysema differ from that of IPF?</div>
+                                    <h2 class='texting'>How does the gross appearance of centriacinar emphysema differ from that of IPF?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAc4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -356,7 +362,7 @@
 
                                             <div class="leftImageBox">
                                                 <div class="graphContainer">
-                                                 <img src="images/q9/on010-ca002f004-9780323640251_3c.png" class="staticImg" />
+                                                 <img src="images/q9/on010-ca002f004-9780323640251_3c.png" class="staticImg" alt="Gross lung specimen of centriacinar emphysema showing a spongy cut surface with enlarged irregular airspaces, marked E, from destruction of alveolar walls." />
                                                 </div>
                                             </div>
 
@@ -375,9 +381,9 @@
                             <div class="myPage" id="pageFirstSection_c4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>10</div>
-                                    <div class='texting'>Both emphysema and idiopathic pulmonary fibrosis (IPF) result from alveolar damage, but emphysema is an obstructive lung disorder, whereas IPF is a restrictive lung disorder. Which pathologic changes explain these functional differences?</div>
+                                    <h2 class='texting'>Both emphysema and idiopathic pulmonary fibrosis (IPF) result from alveolar damage, but emphysema is an obstructive lung disorder, whereas IPF is a restrictive lung disorder. Which pathologic changes explain these functional differences?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAd4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -400,9 +406,9 @@
                             <div class="myPage" id="pageFirstSection_d4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>11</div>
-                                    <div class='texting'>What are the pneumoconioses and how do they mimic IPF?</div>
+                                    <h2 class='texting'>What are the pneumoconioses and how do they mimic IPF?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAe4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -426,9 +432,9 @@
                             <div class="myPage" id="pageFirstSection_e4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>12</div>
-                                    <div class='texting'>How do the morphologic changes of IPF compare with those found in asbestosis?</div>
+                                    <h2 class='texting'>How do the morphologic changes of IPF compare with those found in asbestosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textfA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -437,39 +443,43 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Diaphragm, gross" ><img src="images/q12/on010-ca002f005-9780323640251.png" class="thumbImg" alt="Diaphragm, gross" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Diaphragm, gross"  aria-pressed="true"><img src="images/q12/on010-ca002f005-9780323640251.png" class="thumbImg" alt="Diaphragm, gross" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Lung" ><img src="images/q12/on010-ca002f006-9780323640251.png" class="thumbImg" alt="Lung" /></span>                                  
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Lung"  aria-pressed="false"><img src="images/q12/on010-ca002f006-9780323640251.png" class="thumbImg" alt="Lung" /></span>                                  
                             </div>
                              <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Diaphragm, gross</li>
-                                    <li tabindex="0">Plaques</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Diaphragm, gross</li>
+                                    <li>Plaques</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q12/on010-ca002f005-9780323640251.png" class="containerImg imageShow0" aria-label="Diaphragm, gross" alt="Diaphragm, gross" />
+                                      <img src="images/q12/on010-ca002f005-9780323640251.png" class="containerImg imageShow0" alt="Diaphragm, gross" />
 
-                                      <img src="images/q12/on010-ca002f005-9780323640251-a.png" class="containerImg imageShow1" aria-label="Plaques" alt="Plaques" />
+                                      <img src="images/q12/on010-ca002f005-9780323640251-a.png" class="containerImg imageShow1" alt="Plaques" />
                                    </div>
                                 </div>
                              </div> 
 
                              <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Asbestosis, histology</li>
-                                    <li tabindex="0">Asbestos body</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Asbestosis, histology</li>
+                                    <li>Asbestos body</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q12/on010-ca002f006-9780323640251.png" class="containerImg imageShow0" aria-label="Asbestosis, histology" alt="Asbestosis, histology" />
+                                      <img src="images/q12/on010-ca002f006-9780323640251.png" class="containerImg imageShow0" alt="Asbestosis, histology" />
 
-                                      <img src="images/q12/on010-ca002f006-9780323640251-a.png" class="containerImg imageShow1" aria-label="Asbestos body" alt="Asbestos body" />
+                                      <img src="images/q12/on010-ca002f006-9780323640251-a.png" class="containerImg imageShow1" alt="Asbestos body" />
                                    </div>
                                 </div>
                              </div> 
@@ -490,9 +500,9 @@
                             <div class="myPage" id="pageFirstSection_f4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>13</div>
-                                    <div class='texting'>How do asbestos fibers cause fibrosis?</div>
+                                    <h2 class='texting'>How do asbestos fibers cause fibrosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAg4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -516,9 +526,9 @@
                             <div class="myPage" id="pageFirstSection_g4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>14</div>
-                                    <div class='texting'>Which granulomatous diseases of the lung cause pulmonary fibrosis?</div>
+                                    <h2 class='texting'>Which granulomatous diseases of the lung cause pulmonary fibrosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAh4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -543,9 +553,9 @@
                             <div class="myPage" id="pageFirstSection_h4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>15</div>
-                                    <div class='texting'>Which symptoms occur in patients with sarcoidosis?</div>
+                                    <h2 class='texting'>Which symptoms occur in patients with sarcoidosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAi4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -568,9 +578,9 @@
                             <div class="myPage" id="pageFirstSection_i4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>16</div>
-                                    <div class='texting'>What are the typical morphologic findings in sarcoidosis?</div>
+                                    <h2 class='texting'>What are the typical morphologic findings in sarcoidosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAk4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -582,22 +592,24 @@
 
                              <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Lung, sarcoidosis</li>
-                                    <li tabindex="0">Giant cell</li>
-                                    <li tabindex="0">Epithelioid macrophages</li>
-                                    <li tabindex="0">Granuloma</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Lung, sarcoidosis</li>
+                                    <li>Giant cell</li>
+                                    <li>Epithelioid macrophages</li>
+                                    <li>Granuloma</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q16/on010-ca002f007-9780323640251.png" class="containerImg imageShow0" aria-label="Lung, sarcoidosis" alt="Lung, sarcoidosis" />
+                                      <img src="images/q16/on010-ca002f007-9780323640251.png" class="containerImg imageShow0" alt="Lung, sarcoidosis" />
 
-                                      <img src="images/q16/on010-ca002f007-9780323640251-a.png" class="containerImg imageShow1" aria-label="Giant cell" alt="Giant cell" />
+                                      <img src="images/q16/on010-ca002f007-9780323640251-a.png" class="containerImg imageShow1" alt="Giant cell" />
 
-                                      <img src="images/q16/on010-ca002f007-9780323640251-b-new.png" class="containerImg imageShow2" aria-label="Epithelioid macrophages" alt="Epithelioid macrophages" />
+                                      <img src="images/q16/on010-ca002f007-9780323640251-b-new.png" class="containerImg imageShow2" alt="Epithelioid macrophages" />
 
-                                       <img src="images/q16/on010-ca002f007-9780323640251-c.png" class="containerImg imageShow3" aria-label="Granuloma image" alt="Granuloma" />
+                                       <img src="images/q16/on010-ca002f007-9780323640251-c.png" class="containerImg imageShow3" alt="Granuloma" />
                                    </div>
                                 </div>
                              </div> 
@@ -623,9 +635,9 @@
                             <div class="myPage" id="pageFirstSection_k4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>17</div>
-                                    <div class='texting'>What does the presence of granulomas suggest regarding the possible pathogenesis of sarcoidosis?</div>
+                                    <h2 class='texting'>What does the presence of granulomas suggest regarding the possible pathogenesis of sarcoidosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAl4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -648,9 +660,9 @@
                             <div class="myPage" id="pageFirstSection_l4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>18</div>
-                                    <div class='texting'>Which other organs are commonly involved in sarcoidosis?</div>
+                                    <h2 class='texting'>Which other organs are commonly involved in sarcoidosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAm4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -673,12 +685,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -707,10 +719,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -754,6 +766,7 @@
                 <div id="addTable9" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>

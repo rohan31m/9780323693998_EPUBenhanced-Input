@@ -27,23 +27,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">The Winner Takes It All</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                     <div class="midText ansSection1 wrapper">
                         <div class="contentHolderMain1">
                             <div>
-                                <strong class="titleText">Objectives</strong>
+                                <h2 class="titleText">Objectives</h2>
                             </div>
                             <ol class="nonScrollLearningObjectiveUL">
                                 <li class="options tabindex">•  Describe the pathogenesis and pathophysiology of acute leukemias. </li>
@@ -95,16 +95,18 @@
                           </div>
                           <div class="imageBoxHolder imageBoxHolder1 hs_set1">
                             <div class="optionSelectionBox">
-                              <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                <li tabindex="0">Peripheral smear</li>
-                                <li tabindex="0">Leukocytes</li>
+                              <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                <li>Peripheral smear</li>
+                                <li>Leukocytes</li>
                             </ul>
+                                  </div>
                         </div>
                         <div class="leftImageBox">
                          <div class="graphContainer" aria-live="polite">
-                          <img src="images/q1/on009-ca005f001-9780323640251.png" class="defaultImg containerImg imageShow0" aria-label="Peripheral smear image" alt="Peripheral smear" />
+                          <img src="images/q1/on009-ca005f001-9780323640251.png" class="defaultImg containerImg imageShow0" alt="Peripheral smear" />
 
-                          <img src="images/q1/on009-ca005f001-9780323640251-a.png" class="defaultImg containerImg imageShow1" aria-label="Leukocytes image" alt="Leukocytes" />
+                          <img src="images/q1/on009-ca005f001-9780323640251-a.png" class="defaultImg containerImg imageShow1" alt="Leukocytes" />
 
                           
                       </div>
@@ -115,9 +117,9 @@
               <div class="myPage" id="pageFirstSection_8">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>1</div>
-                    <div class='texting'>Which types of cells are these likely to be? Which tests would be helpful in confirming the diagnosis? </div>
+                    <h2 class='texting'>Which types of cells are these likely to be? Which tests would be helpful in confirming the diagnosis? </h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textbA8">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -139,9 +141,9 @@
             <div class="myPage" id="pageFirstSection_2">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>2</div>
-                    <div class='texting'>What would be the next step in making a diagnosis? </div>
+                    <h2 class='texting'>What would be the next step in making a diagnosis? </h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA2">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -162,9 +164,9 @@
             <div class="myPage" id="pageFirstSection_3">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>3</div>
-                    <div class='texting'>What is flow cytometry and what is its clinical utility?</div>
+                    <h2 class='texting'>What is flow cytometry and what is its clinical utility?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA3">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -189,9 +191,9 @@
             <div class="myPage" id="pageFirstSection_4">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>4</div>
-                    <div class='texting'>What are the two major types of acute lymphoblastic leukemia?</div>
+                    <h2 class='texting'>What are the two major types of acute lymphoblastic leukemia?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA4">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -215,9 +217,9 @@
             <div class="myPage" id="pageFirstSection_5">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>5</div>
-                    <div class='texting'>Which immunophenotypic features are characteristic of lymphoblasts?</div>
+                    <h2 class='texting'>Which immunophenotypic features are characteristic of lymphoblasts?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA5">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -246,9 +248,9 @@
          <div class="myPage" id="pageFirstSection_6">
             <div class="para_  Cont_Que">
                 <div class='numbering'>6</div>
-                <div class='texting'>What is the patient’s diagnosis?</div>
+                <h2 class='texting'>What is the patient’s diagnosis?</h2>
             </div>
-            <div class="AnswerDiv">Show answer</div>
+            <div class="AnswerDiv">Show Answer</div>
             <div class="textArea" id="textA6">
                 <div class="wrapper AnswerDiv_para wrap1">
                     <div class="contentHolder Cont_Ans">
@@ -271,10 +273,10 @@
             <div class="myPage" id="pageFirstSection_7">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>7</div>
-                    <div class='texting'>How does B-cell acute lymphoblastic leukemia (B-ALL) differ clinically from T-cell acute lymphoblastic leukemia (T-ALL)?
-                    </div>
+                    <h2 class='texting'>How does B-cell acute lymphoblastic leukemia (B-ALL) differ clinically from T-cell acute lymphoblastic leukemia (T-ALL)?
+                    </h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA7">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -294,9 +296,9 @@
             <div class="myPage" id="pageFirstSection_ac8">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>8</div>
-                    <div class='texting'>What is the likely basis for the patient’s thrombocytopenia, neutropenia, and anemia? How does this contribute to the clinical features of acute leukemia? </div>
+                    <h2 class='texting'>What is the likely basis for the patient’s thrombocytopenia, neutropenia, and anemia? How does this contribute to the clinical features of acute leukemia? </h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textaA8">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -317,9 +319,9 @@
             <div class="myPage" id="pageFirstSection_9">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>9</div>
-                    <div class='texting'>What is the pathogenesis of ALL?</div>
+                    <h2 class='texting'>What is the pathogenesis of ALL?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA9">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -338,9 +340,9 @@
             <div class="myPage" id="pageFirstSection_10">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>10</div>
-                    <div class='texting'>What is the prognosis for B-ALL? Which features are associated with a worse prognosis?</div>
+                    <h2 class='texting'>What is the prognosis for B-ALL? Which features are associated with a worse prognosis?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA10">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -359,9 +361,9 @@
             <div class="myPage" id="pageFirstSection_11">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>11</div>
-                    <div class='texting'>What are some important cytogenetic abnormalities associated with prognosis in B-ALL?</div>
+                    <h2 class='texting'>What are some important cytogenetic abnormalities associated with prognosis in B-ALL?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA11">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -381,9 +383,9 @@
             <div class="myPage" id="pageFirstSection_dx12">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>12</div>
-                    <div class='texting'>How does diffuse large B-cell lymphoma (DLBCL), a disease of mature cells, differ from B-ALL?</div>
+                    <h2 class='texting'>How does diffuse large B-cell lymphoma (DLBCL), a disease of mature cells, differ from B-ALL?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textddA12">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -402,9 +404,9 @@
             <div class="myPage" id="pageFirstSection_ax12">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>13</div>
-                    <div class='texting'>How is DLBCL distinguished diagnostically from B-ALL?</div>
+                    <h2 class='texting'>How is DLBCL distinguished diagnostically from B-ALL?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textaaA12">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -416,17 +418,19 @@
             </div>
             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                 <div class="optionSelectionBox">
-                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                    <li tabindex="0">Tumor cells</li>
-                    <li tabindex="0">Chromatin clearing</li>
-                    <li tabindex="0">Mitotic figure</li>
+                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                    <li>Tumor cells</li>
+                    <li>Chromatin clearing</li>
+                    <li>Mitotic figure</li>
                 </ul>
+                                  </div>
             </div>
             <div class="leftImageBox">
              <div class="graphContainer" aria-live="polite">
-              <img src="images/q13/on009-ca005f003-9780323640251.png" class="containerImg imageShow0" aria-label="Tumor cells image" alt="Tumor cells" />
-              <img src="images/q13/on009-ca005f003-9780323640251-a.png" class="containerImg imageShow1" aria-label="Chromatin clearing image" alt="Chromatin clearing" />
-              <img src="images/q13/on009-ca005f003-9780323640251-b.png" class="containerImg imageShow2" aria-label="Mitotic figure image" alt="Mitotic figure" />
+              <img src="images/q13/on009-ca005f003-9780323640251.png" class="containerImg imageShow0" alt="Tumor cells" />
+              <img src="images/q13/on009-ca005f003-9780323640251-a.png" class="containerImg imageShow1" alt="Chromatin clearing" />
+              <img src="images/q13/on009-ca005f003-9780323640251-b.png" class="containerImg imageShow2" alt="Mitotic figure" />
               
           </div>
       </div>
@@ -442,9 +446,9 @@
             <div class="myPage" id="pageFirstSection_bx12">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>14</div>
-                    <div class='texting'>What are two of the most important driver mutations in DLBCL? How do they contribute to lymphomagenesis?</div>
+                    <h2 class='texting'>What are two of the most important driver mutations in DLBCL? How do they contribute to lymphomagenesis?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textbbA12">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -464,9 +468,9 @@
             <div class="myPage" id="pageFirstSection_cx12">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>15</div>
-                    <div class='texting'>What is the prognosis of DLBCL?</div>
+                    <h2 class='texting'>What is the prognosis of DLBCL?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textxxA12">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -491,12 +495,12 @@
     <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
         <span>Next button</span>
     </div>
-    <div id="naviList" aria-hidden="true"></div>
+    <div id="naviList" role="group" aria-label="Slide controls"></div>
 </div>
 
 <div class="popupContainer"></div>
 
-<div class="menupatch menupathScroll">
+<div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
     <ul class="menuList" role="menu">
         <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
         <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -524,10 +528,10 @@
     <div class="bottomWhitePatch"></div>
 </div>
 
-<div class="tablepatch">
+<div class="tablepatch" id="referencePanel" aria-hidden="true">
     <div class="tableHeader">
-        <div class="tableTitle tabindex">Normal Reference Range Table</div>
-        <span class="tabindex">Select:</span>
+        <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+        <label id="referenceSelectLabel">Select:</label>
         <div id="tableDropdownID" class="tableDropdownList"></div>
     </div>
 
@@ -568,6 +572,7 @@
         <div id="addTable8" class="test1 nano-content"></div>
     </div>
 </div>
+        <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
 </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>

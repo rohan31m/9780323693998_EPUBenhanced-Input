@@ -27,23 +27,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Sleeping and Waking</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ol class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">•  Describe the pathogenesis and pathologic and clinical features of nodular hyperplasia of the prostate (benign prostatic hyperplasia, BPH).</li>
@@ -75,9 +75,9 @@
                             <div class="myPage" id="pageFirstSection_8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>Is the patient’s elevated PSA indicative of malignancy? Why or why not?</div>
+                                    <h2 class='texting'>Is the patient’s elevated PSA indicative of malignancy? Why or why not?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -97,9 +97,9 @@
                             <div class="myPage" id="pageFirstSection_2">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>What is the likely cause of this patient’s symptoms?</div>
+                                    <h2 class='texting'>What is the likely cause of this patient’s symptoms?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA2">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -121,9 +121,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>Based on the specimen pictured, what is the diagnosis?</div>
+                                    <h2 class='texting'>Based on the specimen pictured, what is the diagnosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -133,27 +133,29 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Prostate, histology" ><img src="images/q3/on014-ca002f001-9780323640251.png" class="thumbImg" alt="Prostate, histology" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Prostate, histology"  aria-pressed="true"><img src="images/q3/on014-ca002f001-9780323640251.png" class="thumbImg" alt="Prostate, histology" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Histology, higher power" ><img src="images/q3/on014-ca002f002-9780323640251.png" class="thumbImg" alt="Histology, higher power" /></span>                                  
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Histology, higher power"  aria-pressed="false"><img src="images/q3/on014-ca002f002-9780323640251.png" class="thumbImg" alt="Histology, higher power" /></span>                                  
                             </div>
 
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Prostate, histology</li>
-                                    <li tabindex="0">Proliferating stroma</li>
-                                    <li tabindex="0">Proliferating glands</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Prostate, histology</li>
+                                    <li>Proliferating stroma</li>
+                                    <li>Proliferating glands</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q3/on014-ca002f001-9780323640251.png" class="containerImg imageShow0" aria-label="Prostate, histology image" alt="Prostate, histology" />
+                                      <img src="images/q3/on014-ca002f001-9780323640251.png" class="containerImg imageShow0" alt="Prostate, histology" />
 
-                                      <img src="images/q3/on014-ca002f001-9780323640251-a.png" class="containerImg imageShow1" aria-label="Proliferating stroma image" alt="Proliferating stroma" />
+                                      <img src="images/q3/on014-ca002f001-9780323640251-a.png" class="containerImg imageShow1" alt="Proliferating stroma" />
 
-                                      <img src="images/q3/on014-ca002f001-9780323640251-b.png" class="containerImg imageShow2" aria-label="Proliferating glands image" alt="Proliferating glands" />
+                                      <img src="images/q3/on014-ca002f001-9780323640251-b.png" class="containerImg imageShow2" alt="Proliferating glands" />
 
                                    </div>
                                 </div>
@@ -161,19 +163,21 @@
 
                              <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Histology, higher power</li>
-                                    <li tabindex="0">Basal cells</li>
-                                    <li tabindex="0">Columnar epithelium</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Histology, higher power</li>
+                                    <li>Basal cells</li>
+                                    <li>Columnar epithelium</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q3/on014-ca002f002-9780323640251.png" class="containerImg imageShow0" aria-label="Histology, higher power image" alt="Histology, higher power" />
+                                      <img src="images/q3/on014-ca002f002-9780323640251.png" class="containerImg imageShow0" alt="Histology, higher power" />
 
-                                      <img src="images/q3/on014-ca002f002-9780323640251-a.png" class="containerImg imageShow1" aria-label="Basal cells image" alt="Basal cells" />
+                                      <img src="images/q3/on014-ca002f002-9780323640251-a.png" class="containerImg imageShow1" alt="Basal cells" />
 
-                                      <img src="images/q3/on014-ca002f002-9780323640251-b.png" class="containerImg imageShow2" aria-label="Columnar epithelium image" alt="Columnar epithelium" />
+                                      <img src="images/q3/on014-ca002f002-9780323640251-b.png" class="containerImg imageShow2" alt="Columnar epithelium" />
 
                                    </div>
                                 </div>
@@ -191,9 +195,9 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>What would be the gross appearance of the prostate in such a case?</div>
+                                    <h2 class='texting'>What would be the gross appearance of the prostate in such a case?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -205,19 +209,21 @@
 
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Prostate gland, nodule</li>
-                                    <li tabindex="0">Hyperplastic nodules</li>
-                                    <li tabindex="0">Urethra</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Prostate gland, nodule</li>
+                                    <li>Hyperplastic nodules</li>
+                                    <li>Urethra</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q4/on014-ca002f003-9780323640251.png" class="containerImg imageShow0" aria-label="Prostate gland, nodule image" alt="Prostate gland, nodule" />
+                                      <img src="images/q4/on014-ca002f003-9780323640251.png" class="containerImg imageShow0" alt="Prostate gland, nodule" />
 
-                                      <img src="images/q4/on014-ca002f003-9780323640251-a.png" class="containerImg imageShow1" aria-label="Hyperplastic nodules image" alt="Hyperplastic nodules" />
+                                      <img src="images/q4/on014-ca002f003-9780323640251-a.png" class="containerImg imageShow1" alt="Hyperplastic nodules" />
 
-                                      <img src="images/q4/on014-ca002f003-9780323640251-b.png" class="containerImg imageShow2" aria-label="Urethra image" alt="Urethra" />
+                                      <img src="images/q4/on014-ca002f003-9780323640251-b.png" class="containerImg imageShow2" alt="Urethra" />
 
                                    </div>
                                 </div>
@@ -233,9 +239,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>What is the etiology of BPH?</div>
+                                    <h2 class='texting'>What is the etiology of BPH?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA5">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -257,9 +263,9 @@
                             <div class="myPage" id="pageFirstSection_6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>Is nodular hyperplasia of the prostate gland a risk factor for prostatic carcinoma? Have precursor lesions for prostate cancer been identified?</div>
+                                    <h2 class='texting'>Is nodular hyperplasia of the prostate gland a risk factor for prostatic carcinoma? Have precursor lesions for prostate cancer been identified?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -282,9 +288,9 @@
                             <div class="myPage" id="pageFirstSection_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>What is the significance of the patient’s laboratory results?</div>
+                                    <h2 class='texting'>What is the significance of the patient’s laboratory results?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA7">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -305,9 +311,9 @@
                             <div class="myPage" id="pageFirstSection_a8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>8</div>
-                                    <div class='texting'>What are the histologic features of prostatic adenocarcinoma?</div>
+                                    <h2 class='texting'>What are the histologic features of prostatic adenocarcinoma?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAa8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -316,27 +322,29 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Histology, low power" ><img src="images/q8/on014-ca002f004-9780323640251.png" class="thumbImg" alt="Histology, low power" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Histology, low power"  aria-pressed="true"><img src="images/q8/on014-ca002f004-9780323640251.png" class="thumbImg" alt="Histology, low power" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Histology, higher power" ><img src="images/q8/on014-ca002f005-9780323640251.png" class="thumbImg" alt="Histology, higher power" /></span>                                  
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Histology, higher power"  aria-pressed="false"><img src="images/q8/on014-ca002f005-9780323640251.png" class="thumbImg" alt="Histology, higher power" /></span>                                  
                             </div>
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Histology, low power</li>
-                                    <li tabindex="0">Crowded glands</li>
-                                    <li tabindex="0">Cribriform glands</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Histology, low power</li>
+                                    <li>Crowded glands</li>
+                                    <li>Cribriform glands</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                      <img src="images/q8/on014-ca002f004-9780323640251.png" class="containerImg defaultImg imageShow0" aria-label="Histology, low power image" alt="Histology, low power" />
+                                      <img src="images/q8/on014-ca002f004-9780323640251.png" class="containerImg defaultImg imageShow0" alt="Histology, low power" />
 
-                                      <img src="images/q8/on014-ca002f004-9780323640251-a.png" class="imgBlock containerImg defaultImg imageShow1" aria-label="Crowded glands image" alt="Crowded glands" />
+                                      <img src="images/q8/on014-ca002f004-9780323640251-a.png" class="imgBlock containerImg defaultImg imageShow1" alt="Crowded glands" />
 
-                                      <img src="images/q8/on014-ca002f004-9780323640251-b.png" class="imgBlock containerImg defaultImg imageShow2" aria-label="Cribriform glands image" alt="Cribriform glands" />
+                                      <img src="images/q8/on014-ca002f004-9780323640251-b.png" class="imgBlock containerImg defaultImg imageShow2" alt="Cribriform glands" />
 
                                    </div>
                                 </div>
@@ -344,22 +352,24 @@
 
                              <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Histology, higher power</li>
-                                    <li tabindex="0">Malignant glands</li>
-                                    <li tabindex="0">Desmoplastic stroma</li>
-                                    <li tabindex="0">Nucleoli</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Histology, higher power</li>
+                                    <li>Malignant glands</li>
+                                    <li>Desmoplastic stroma</li>
+                                    <li>Nucleoli</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                      <img src="images/q8/on014-ca002f005-9780323640251.png" class="containerImg defaultImg imageShow0" aria-label="Histology, higher power image" alt="Histology, higher power" />
+                                      <img src="images/q8/on014-ca002f005-9780323640251.png" class="containerImg defaultImg imageShow0" alt="Histology, higher power" />
 
-                                      <img src="images/q8/on014-ca002f005-9780323640251-a.png" class="imgBlock containerImg defaultImg imageShow1" aria-label="Malignant glands image" alt="Malignant glands" />
+                                      <img src="images/q8/on014-ca002f005-9780323640251-a.png" class="imgBlock containerImg defaultImg imageShow1" alt="Malignant glands" />
 
-                                      <img src="images/q8/on014-ca002f005-9780323640251-b.png" class="imgBlock containerImg defaultImg imageShow2" aria-label="Desmoplastic stroma image" alt="Desmoplastic stroma" />
-                                      <img src="images/q8/on014-ca002f005-9780323640251-c.png" class="imgBlock containerImg defaultImg imageShow3" aria-label="Nucleoli image" alt="Nucleoli" />
+                                      <img src="images/q8/on014-ca002f005-9780323640251-b.png" class="imgBlock containerImg defaultImg imageShow2" alt="Desmoplastic stroma" />
+                                      <img src="images/q8/on014-ca002f005-9780323640251-c.png" class="imgBlock containerImg defaultImg imageShow3" alt="Nucleoli" />
 
                                    </div>
                                 </div>
@@ -376,9 +386,9 @@
                             <div class="myPage" id="pageFirstSection_9">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>9</div>
-                                    <div class='texting'>How is prostate adenocarcinoma graded?</div>
+                                    <h2 class='texting'>How is prostate adenocarcinoma graded?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA9">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -426,9 +436,9 @@
                             <div class="myPage" id="pageFirstSection_10">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>10</div>
-                                    <div class='texting'>Why is a gonadotropin-releasing hormone agonist the appropriate treatment for this patient?</div>
+                                    <h2 class='texting'>Why is a gonadotropin-releasing hormone agonist the appropriate treatment for this patient?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA10">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -449,9 +459,9 @@
                             <div class="myPage" id="pageFirstSection_11">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>11</div>
-                                    <div class='texting'>What is the explanation for the patient’s disease progression?</div>
+                                    <h2 class='texting'>What is the explanation for the patient’s disease progression?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA11">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -469,44 +479,48 @@
                     <div class="midText ansSection wrapper">
                         <div class="contentHolderMain">
                             <p class="paraIndent"><em>The prostate showed both <span class="hs" role="link" tabindex="0" data-dropdownid="1" data-id="1">BPH</span> and <span class="hs" role="link" tabindex="0" data-dropdownid="1" data-id="2">prostatic adenocarcinoma</span>. Sections of the vertebral column showed multiple foci of <span class="hs" role="link" tabindex="0" data-dropdownid="2" data-id="1">metastatic prostatic adenocarcinoma</span>, consistent with the radiodense lesions seen on plain radiograph. Prostatic adenocarcinoma typically causes osteoblastic lesions (as opposed to osteolytic lesions).</em></p>
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Prostate, gross" ><img src="images/q12/on014-ca002f006-9780323640251.png" class="thumbImg" alt="Prostate, gross" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Prostate, gross"  aria-pressed="true"><img src="images/q12/on014-ca002f006-9780323640251.png" class="thumbImg" alt="Prostate, gross" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Vertebrae, gross" ><img src="images/q12/on014-ca002f007-9780323640251.png" class="thumbImg" alt="Vertebrae, gross" /></span>                                  
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Vertebrae, gross"  aria-pressed="false"><img src="images/q12/on014-ca002f007-9780323640251.png" class="thumbImg" alt="Vertebrae, gross" /></span>                                  
                             </div>
                             <div class="imageBoxHolder hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Prostate, gross</li>
-                                    <li tabindex="0">Hyperplastic nodules</li>
-                                    <li tabindex="0">Adenocarcinoma</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Prostate, gross</li>
+                                    <li>Hyperplastic nodules</li>
+                                    <li>Adenocarcinoma</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                      <img src="images/q12/on014-ca002f006-9780323640251.png" class="containerImg imageShow0" aria-label="Prostate, gross image" alt="Prostate, gross" />
+                                      <img src="images/q12/on014-ca002f006-9780323640251.png" class="containerImg imageShow0" alt="Prostate, gross" />
 
-                                      <img src="images/q12/on014-ca002f006-9780323640251-a.png" class="imgBlock containerImg imageShow1" aria-label="Hyperplastic nodules image" alt="Hyperplastic nodules" />
+                                      <img src="images/q12/on014-ca002f006-9780323640251-a.png" class="imgBlock containerImg imageShow1" alt="Hyperplastic nodules" />
 
-                                      <img src="images/q12/on014-ca002f006-9780323640251-c.png" class="imgBlock containerImg imageShow2" aria-label="Adenocarcinoma image" alt="Adenocarcinoma" />
+                                      <img src="images/q12/on014-ca002f006-9780323640251-c.png" class="imgBlock containerImg imageShow2" alt="Adenocarcinoma" />
 
                                    </div>
                                 </div>
                              </div> 
                              <div class="imageBoxHolder hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Vertebrae, gross</li>
-                                    <li tabindex="0">Metastatic carcinoma</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Vertebrae, gross</li>
+                                    <li>Metastatic carcinoma</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                      <img src="images/q12/on014-ca002f007-9780323640251.png" class="containerImg imageShow0" aria-label="Vertebrae, gross image" alt="Vertebrae, gross" />
+                                      <img src="images/q12/on014-ca002f007-9780323640251.png" class="containerImg imageShow0" alt="Vertebrae, gross" />
 
-                                      <img src="images/q12/on014-ca002f007-9780323640251-a.png" class="imgBlock containerImg imageShow1" aria-label="Metastatic carcinoma image" alt="Metastatic carcinoma" />
+                                      <img src="images/q12/on014-ca002f007-9780323640251-a.png" class="imgBlock containerImg imageShow1" alt="Metastatic carcinoma" />
 
 
                                    </div>
@@ -518,9 +532,9 @@
                             <div class="myPage" id="pageFirstSection_12">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>12</div>
-                                    <div class='texting'>What are some common metastatic sites for prostatic adenocarcinoma?</div>
+                                    <h2 class='texting'>What are some common metastatic sites for prostatic adenocarcinoma?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA12">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -546,12 +560,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -574,10 +588,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -618,6 +632,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../common_assets/scripts/common.js"></script>
 </body>

@@ -27,23 +27,23 @@
 <body>
 
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Stuffed Cells</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                     <div class="midText ansSection1 wrapper">
                         <div class="contentHolderMain1">
                             <div>
-                                <strong class="titleText">Objective</strong>
+                                <h2 class="titleText">Objective</h2>
                             </div>
                             <ol class="nonScrollLearningObjectiveUL">
                                 <li class="options tabindex">•	Compare and contrast the different lysosomal storage diseases in terms of pathologic findings, clinical presentation, and natural history.</li>
@@ -73,36 +73,36 @@
 
                             
                             <table class="caseOutlineTable">
-
+                              <caption class="visually-hidden">Laboratory values</caption>
                               <tr>
-                                <td rowspan="1">Hemoglobin</td>
+                                <th scope="row">Hemoglobin</th>
                                 <td>8.2 gm/dL ( 12–16 gm/dL)</td> 
 
                             </tr>
                             <tr>
-                                <td rowspan="1">Hct</td>
+                                <th scope="row">Hct</th>
                                 <td>24% ( 36%–46%)</td>
 
                             </tr>
                             <tr>
-                                <td rowspan="1">Platelets</td>
+                                <th scope="row">Platelets</th>
                                 <td>40,000 /mm<sup>3</sup> (150,000–400,000/mm<sup>3</sup>)</td> 
 
                             </tr>
                             <tr>
-                                <td rowspan="1">White blood cell count (WBC)</td>
+                                <th scope="row">White blood cell count (WBC)</th>
                                 <td>4000/mm<sup>3</sup>(4500–11000 mm<sup>3</sup>)</td> 
 
                             </tr>
 
                             <tr>
-                                <td rowspan="1">PT</td>
+                                <th scope="row">PT</th>
                                 <td>10.2 sec (9.8–11.8 sec)</td> 
 
                             </tr>
 
                             <tr>
-                                <td rowspan="1">aPTT</td>
+                                <th scope="row">aPTT</th>
                                 <td>28.2 sec (23–32.5 sec)</td> 
 
                             </tr>
@@ -113,9 +113,9 @@
                         <div class="myPage" id="pageFirstSection_1">
                             <div class="para_  Cont_Que">
                                 <div class='numbering'>1</div>
-                                <div class='texting'>What is the significance of the clinical history, physical examination, radiologic evaluation, and laboratory values?</div>
+                                <h2 class='texting'>What is the significance of the clinical history, physical examination, radiologic evaluation, and laboratory values?</h2>
                             </div>
-                            <div class="AnswerDiv">Show answer</div>
+                            <div class="AnswerDiv">Show Answer</div>
                             <div class="textArea" id="textA1">
                                 <div class="wrapper AnswerDiv_para wrap1">
                                     <div class="contentHolder Cont_Ans">
@@ -137,31 +137,33 @@
                         <p class="paraIndent"><em>After a transfusion of platelets, the patient was taken to surgery, where a pathologic fracture of her right femoral neck was confirmed and a bone marrow biopsy was performed at the time of right hip replacement. The biopsy showed sheets of <span class="hs" role="link" tabindex="0" data-dropdownid="1" data-id="2">enlarged macrophages</span> and reduced hematopoietic elements. On higher power, the enlarged cells demonstrated <span class="hs" role="link" tabindex="0" data-dropdownid="2" data-id="1">fibrillar cytoplasm</span>.</em></p>
 
 
-                        <div class="imageThumbHolder">
-                            <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Bone marrow biopsy" ><img src="images/q2/on006-ca002f001-9780323640251.png" class="thumbImg" alt="Bone marrow biopsy" /></span>                               
+                        <div class="imageThumbHolder" role="group" aria-label="Image views">
+                            <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Bone marrow biopsy"  aria-pressed="true"><img src="images/q2/on006-ca002f001-9780323640251.png" class="thumbImg" alt="Bone marrow biopsy" /></span>                               
                             
-                            <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Aspirate, high power" ><img src="images/q2/on006-ca002f002-9780323640251.png" class="thumbImg" alt="Aspirate, high power" /></span>
+                            <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Aspirate, high power"  aria-pressed="false"><img src="images/q2/on006-ca002f002-9780323640251.png" class="thumbImg" alt="Aspirate, high power" /></span>
                             
                         </div>
 
                         <div class="imageBoxHolder hs_set1">
                             <div class="optionSelectionBox">
-                              <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                <li tabindex="0">Bone marrow biopsy</li>
-                                <li tabindex="0">Normal marrow cells</li>
-                                <li tabindex="0">Gaucher cells</li>
-                                <li tabindex="0">Normal marrow fat</li>
+                              <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                <li>Bone marrow biopsy</li>
+                                <li>Normal marrow cells</li>
+                                <li>Gaucher cells</li>
+                                <li>Normal marrow fat</li>
 </ul>
+                                  </div>
                         </div>
                         <div class="leftImageBox">
                          <div class="graphContainer" aria-live="polite">
-                          <img src="images/q2/on006-ca002f001-9780323640251.png" class="containerImg imageShow0" aria-label="Bone marrow biopsy image" alt="Bone marrow biopsy" />
+                          <img src="images/q2/on006-ca002f001-9780323640251.png" class="containerImg imageShow0" alt="Bone marrow biopsy" />
 
-                          <img src="images/q2/on006-ca002f001-9780323640251-a.png" class="containerImg imageShow1" aria-label="Normal marrow cells image" alt="Normal marrow cells" />
+                          <img src="images/q2/on006-ca002f001-9780323640251-a.png" class="containerImg imageShow1" alt="Normal marrow cells" />
 
-                          <img src="images/q2/on006-ca002f001-9780323640251-b.png" class="containerImg imageShow2" aria-label="Gaucher cells image" alt="Gaucher cells" />
+                          <img src="images/q2/on006-ca002f001-9780323640251-b.png" class="containerImg imageShow2" alt="Gaucher cells" />
 
-                          <img src="images/q2/on006-ca002f001-9780323640251-c.png" class="containerImg imageShow3" aria-label="Normal marrow fat image" alt="Normal marrow fat" />
+                          <img src="images/q2/on006-ca002f001-9780323640251-c.png" class="containerImg imageShow3" alt="Normal marrow fat" />
 
                       </div>
                   </div>
@@ -170,25 +172,27 @@
 
               <div class="imageBoxHolder hs_set2">
                 <div class="optionSelectionBox">
-                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                    <li tabindex="0">Aspirate, high power</li>
-                    <li tabindex="0">Gaucher cell</li>
-                    <li tabindex="0">Crumpled tissue paper cytoplasm</li>
-                    <li tabindex="0">Nucleus of Gaucher cell</li>
-                    <li tabindex="0">Normal bone marrow cells</li>
+                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                    <li>Aspirate, high power</li>
+                    <li>Gaucher cell</li>
+                    <li>Crumpled tissue paper cytoplasm</li>
+                    <li>Nucleus of Gaucher cell</li>
+                    <li>Normal bone marrow cells</li>
 </ul>
+                                  </div>
             </div>
             <div class="leftImageBox">
              <div class="graphContainer" aria-live="polite">
-              <img src="images/q2/on006-ca002f002-9780323640251.png" class="containerImg imageShow0" aria-label="Aspirate, high power image" alt="Aspirate, high power" />
+              <img src="images/q2/on006-ca002f002-9780323640251.png" class="containerImg imageShow0" alt="Aspirate, high power" />
 
-              <img src="images/q2/on006-ca002f002-9780323640251-a.png" class="containerImg imageShow1" aria-label="Gaucher cell image" alt="Gaucher cell" />
+              <img src="images/q2/on006-ca002f002-9780323640251-a.png" class="containerImg imageShow1" alt="Gaucher cell" />
 
-              <img src="images/q2/on006-ca002f002-9780323640251-b.png" class="containerImg imageShow2" aria-label="Crumpled tissue paper cytoplasm image" alt="Crumpled tissue paper cytoplasm" />
+              <img src="images/q2/on006-ca002f002-9780323640251-b.png" class="containerImg imageShow2" alt="Crumpled tissue paper cytoplasm" />
 
-              <img src="images/q2/on006-ca002f002-9780323640251-c.png" class="containerImg imageShow3" aria-label="Nucleus of Gaucher cell image" alt="Nucleus of Gaucher cell" />
+              <img src="images/q2/on006-ca002f002-9780323640251-c.png" class="containerImg imageShow3" alt="Nucleus of Gaucher cell" />
 
-              <img src="images/q2/on006-ca002f002-9780323640251-d.png" class="containerImg imageShow4" aria-label="Normal bone marrow cells image" alt="Normal bone marrow cells" />
+              <img src="images/q2/on006-ca002f002-9780323640251-d.png" class="containerImg imageShow4" alt="Normal bone marrow cells" />
 
 
 
@@ -202,9 +206,9 @@
   <div class="myPage" id="pageFirstSection_2">
     <div class="para_  Cont_Que">
         <div class='numbering'>2</div>
-        <div class='texting'>What is the diagnosis?</div>
+        <h2 class='texting'>What is the diagnosis?</h2>
     </div>
-    <div class="AnswerDiv">Show answer</div>
+    <div class="AnswerDiv">Show Answer</div>
     <div class="textArea" id="textA2">
         <div class="wrapper AnswerDiv_para wrap1">
             <div class="contentHolder Cont_Ans">
@@ -228,9 +232,9 @@
             <div class="myPage" id="pageFirstSection_3">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>3</div>
-                    <div class='texting'>Which test should be performed to confirm the diagnosis?</div>
+                    <h2 class='texting'>Which test should be performed to confirm the diagnosis?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA3">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -255,9 +259,9 @@
             <div class="myPage" id="pageFirstSection_4">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>4</div>
-                    <div class='texting'>What accounts for the morphologic features of the Gaucher cell?</div>
+                    <h2 class='texting'>What accounts for the morphologic features of the Gaucher cell?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA4">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -280,9 +284,9 @@
             <div class="myPage" id="pageFirstSection_5">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>5</div>
-                    <div class='texting'>How did this disease cause her symptoms?</div>
+                    <h2 class='texting'>How did this disease cause her symptoms?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA5">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -303,9 +307,9 @@
             <div class="myPage" id="pageFirstSection_6">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>6</div>
-                    <div class='texting'>What are the different types of Gaucher disease?</div>
+                    <h2 class='texting'>What are the different types of Gaucher disease?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA6">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -333,9 +337,9 @@
             <div class="myPage" id="pageFirstSection_7">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>7</div>
-                    <div class='texting'>Which type of Gaucher disease does the patient have? </div>
+                    <h2 class='texting'>Which type of Gaucher disease does the patient have? </h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA7">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -355,9 +359,9 @@
             <div class="myPage" id="pageFirstSection_ab7">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>8</div>
-                    <div class='texting'>Are her brother and children likely to have Gaucher disease?</div>
+                    <h2 class='texting'>Are her brother and children likely to have Gaucher disease?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA8">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -379,9 +383,9 @@
             <div class="myPage" id="pageFirstSection_9">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>9</div>
-                    <div class='texting'>What is the source of the glucocerebroside accumulation in these cells?</div>
+                    <h2 class='texting'>What is the source of the glucocerebroside accumulation in these cells?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA9">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -400,111 +404,113 @@
             <div class="myPage" id="pageFirstSection_10">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>10</div>
-                    <div class='texting'>To which category of genetic diseases does Gaucher disease belong?</div>
+                    <h2 class='texting'>To which category of genetic diseases does Gaucher disease belong?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA10">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
                             <p> Gaucher disease is the most common of the lysosomal storage diseases, a diverse group of disorders in which enzyme defects lead to the accumulation of various substrates within lysosomes (Table 6.2.1). Subgroups of lysosomal storage diseases include glycogenoses (e.g., Pompe disease), sphingolipidoses (e.g., Tay-Sachs disease), and mucopolysaccharidoses (e.g., Hurler syndrome). </p><br/>
-                            <p> </p>
-                            <p><b>Table 6.2.1 Lysosomal Storage Diseases</b></p><br/>
                             <table class="caseOutlineTable">
+                              <caption>Table 6.2.1 Lysosomal Storage Diseases</caption>
+                              <thead>
                               <tr>
-                                <th>Disease</th>
-                                <th>Enzyme Deficiency</th>
-                                <th>Major Accumulating Metabolites</th> 
-
-                            </tr>
-                            <tr>
-                                <th colspan="3">Glycogenosis</th>
-
-                            </tr>
-                            <tr>
-                                <td class="noborderright">Type 2—Pompe disease</td>
-                                <td class="noborderright">α-1,4-Glucosidase (lysosomal glucosidase)</td>
-                                <td>Glycogen</td> 
-                            </tr>
-                            <tr><td class="noborderrl" colspan="3"></td></tr>
-                            <tr>
-                                <th colspan="3">Sphingolipidoses</th>
-                            </tr>
-                            <tr>
-                                <td class="noborderright noborderbottom">G<sub>M1</sub> gangliosidosis </td>
-                                <td class="noborderright noborderbottom">G<sub>M1</sub> ganglioside β-galactosidase</td> 
-                                <td class="noborderbottom">G<sub>M1</sub> ganglioside, galactose-containing oligosaccharides </td> 
-
-                            </tr>
-
-                            <tr>
-                                <td class="noborderright noborderbottom"><p class="paraIndent">Type 1—infantile, generalized</p></td>
-                                <td class="noborderright noborderbottom"></td>
-                                <td class="noborderbottom"></td>
-                            </tr>
-                            <tr>
-                                <td class="noborderright"><p class="paraIndent">Type 2—juvenile</p></td>
-                                <td class="noborderright"></td>
-                                <td></td> 
-                            </tr>
-
-                            <tr>
-                                <td class="noborderright noborderbottom">G<sub>M2</sub> gangliosidosis</td>
-                                <td class="noborderright noborderbottom"></td>
-                                <td class="noborderbottom"></td>
-                            </tr>
-                            <tr>
-                                <td class="noborderright noborderbottom"><p class="paraIndent">Tay-Sachs disease</p></td>
-                                <td class="noborderright noborderbottom">Hexosaminidase A</td>
-                                <td class="noborderbottom">G<sub>M2</sub> ganglioside</td>
-                            </tr>
-                            <tr>
-                                <td class="noborderright"><p class="paraIndent">Sandhoff disease</p></td>
-                                <td class="noborderright">Hexosaminidase A and B</td>
-                                <td>G<sub>M2</sub> ganglioside, globoside</td>
-                            </tr>
-                            <tr><td class="noborderrl" colspan="3"></td></tr>
-                            <tr>
-                                <th colspan="3">Sulfatidoses </th></tr>
-                                <tr>
-                                  <td class="noborderright noborderbottom">Metachromatic leukodystrophy</td>
-                                  <td class="noborderright noborderbottom">Arylsulfatase A</td>
-                                  <td class="noborderbottom">Sulfatide</td>
+                                <th scope="col" id="t621-disease">Disease</th>
+                                <th scope="col" id="t621-enzyme">Enzyme Deficiency</th>
+                                <th scope="col" id="t621-metab">Major Accumulating Metabolites</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                <th colspan="3" scope="rowgroup" id="t621-glycogenosis">Glycogenosis</th>
                               </tr>
                               <tr>
-                                  <td class="noborderright noborderbottom">Krabbe disease</td>
-                                  <td class="noborderright noborderbottom">Galactosylceramidase</td>
-                                  <td class="noborderbottom">Galactocerebroside</td>
+                                <th scope="row" id="t621-pompe" headers="t621-disease t621-glycogenosis" class="noborderright">Type 2—Pompe disease</th>
+                                <td headers="t621-enzyme t621-pompe t621-glycogenosis" class="noborderright">α-1,4-Glucosidase (lysosomal glucosidase)</td>
+                                <td headers="t621-metab t621-pompe t621-glycogenosis">Glycogen</td>
+                              </tr>
+                              </tbody>
+                              <tbody>
+                              <tr>
+                                <th colspan="3" scope="rowgroup" id="t621-sphingo">Sphingolipidoses</th>
                               </tr>
                               <tr>
-                                  <td class="noborderright noborderbottom">Fabry disease</td>
-                                  <td class="noborderright noborderbottom">α-Galactosidase A</td>
-                                  <td class="noborderbottom">Ceramide trihexoside</td>
+                                <th scope="row" id="t621-gm1" headers="t621-disease t621-sphingo" class="noborderright noborderbottom">G<sub>M1</sub> gangliosidosis</th>
+                                <td headers="t621-enzyme t621-gm1 t621-sphingo" class="noborderright noborderbottom">G<sub>M1</sub> ganglioside β-galactosidase</td>
+                                <td headers="t621-metab t621-gm1 t621-sphingo" class="noborderbottom">G<sub>M1</sub> ganglioside, galactose-containing oligosaccharides</td>
                               </tr>
                               <tr>
-                                  <td class="noborderright noborderbottom">Gaucher disease</td>
-                                  <td class="noborderright noborderbottom">Glucocerebrosidase</td>
-                                  <td class="noborderbottom">Glucocerebroside</td>
+                                <th scope="row" headers="t621-disease t621-gm1 t621-sphingo" class="subrow noborderright noborderbottom">Type 1—infantile, generalized</th>
+                                <td headers="t621-enzyme t621-gm1 t621-sphingo" class="noborderright noborderbottom"></td>
+                                <td headers="t621-metab t621-gm1 t621-sphingo" class="noborderbottom"></td>
                               </tr>
                               <tr>
-                                  <td class="noborderright">Niemann-Pick disease: types A and B</td>
-                                  <td class="noborderright">Sphingomyelinase</td>
-                                  <td>Sphingomyelin</td>
-                              </tr>
-                              <tr><td class="noborderrl" colspan="3"></td></tr>
-                              <tr>
-                                  <th colspan="3">Mucopolysaccharidoses (MPSs)</th>
+                                <th scope="row" headers="t621-disease t621-gm1 t621-sphingo" class="subrow noborderright">Type 2—juvenile</th>
+                                <td headers="t621-enzyme t621-gm1 t621-sphingo" class="noborderright"></td>
+                                <td headers="t621-metab t621-gm1 t621-sphingo"></td>
                               </tr>
                               <tr>
-                                  <td class="noborderright noborderbottom">MPS I-H (Hurler)</td>
-                                  <td class="noborderright noborderbottom">α-L-Iduronidase</td>
-                                  <td class=" noborderbottom">Dermatan sulfate, heparan sulfate</td>
-                              </tr> 
-                              <tr>
-                                  <td class="noborderright">MPS II (Hunter)</td>
-                                  <td class="noborderright">Iduronate 2-sulphatase</td>
-                                  <td>Dermatan sulfate, heparan sulfate</td>
+                                <th scope="row" id="t621-gm2" headers="t621-disease t621-sphingo" class="noborderright noborderbottom">G<sub>M2</sub> gangliosidosis</th>
+                                <td headers="t621-enzyme t621-gm2 t621-sphingo" class="noborderright noborderbottom"></td>
+                                <td headers="t621-metab t621-gm2 t621-sphingo" class="noborderbottom"></td>
                               </tr>
-                          </table>
+                              <tr>
+                                <th scope="row" id="t621-taysachs" headers="t621-disease t621-gm2 t621-sphingo" class="subrow noborderright noborderbottom">Tay-Sachs disease</th>
+                                <td headers="t621-enzyme t621-taysachs t621-gm2 t621-sphingo" class="noborderright noborderbottom">Hexosaminidase A</td>
+                                <td headers="t621-metab t621-taysachs t621-gm2 t621-sphingo" class="noborderbottom">G<sub>M2</sub> ganglioside</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" id="t621-sandhoff" headers="t621-disease t621-gm2 t621-sphingo" class="subrow noborderright">Sandhoff disease</th>
+                                <td headers="t621-enzyme t621-sandhoff t621-gm2 t621-sphingo" class="noborderright">Hexosaminidase A and B</td>
+                                <td headers="t621-metab t621-sandhoff t621-gm2 t621-sphingo">G<sub>M2</sub> ganglioside, globoside</td>
+                              </tr>
+                              </tbody>
+                              <tbody>
+                              <tr>
+                                <th colspan="3" scope="rowgroup" id="t621-sulfat">Sulfatidoses</th>
+                              </tr>
+                              <tr>
+                                <th scope="row" id="t621-mld" headers="t621-disease t621-sulfat" class="noborderright noborderbottom">Metachromatic leukodystrophy</th>
+                                <td headers="t621-enzyme t621-mld t621-sulfat" class="noborderright noborderbottom">Arylsulfatase A</td>
+                                <td headers="t621-metab t621-mld t621-sulfat" class="noborderbottom">Sulfatide</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" id="t621-krabbe" headers="t621-disease t621-sulfat" class="noborderright noborderbottom">Krabbe disease</th>
+                                <td headers="t621-enzyme t621-krabbe t621-sulfat" class="noborderright noborderbottom">Galactosylceramidase</td>
+                                <td headers="t621-metab t621-krabbe t621-sulfat" class="noborderbottom">Galactocerebroside</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" id="t621-fabry" headers="t621-disease t621-sulfat" class="noborderright noborderbottom">Fabry disease</th>
+                                <td headers="t621-enzyme t621-fabry t621-sulfat" class="noborderright noborderbottom">α-Galactosidase A</td>
+                                <td headers="t621-metab t621-fabry t621-sulfat" class="noborderbottom">Ceramide trihexoside</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" id="t621-gaucher" headers="t621-disease t621-sulfat" class="noborderright noborderbottom">Gaucher disease</th>
+                                <td headers="t621-enzyme t621-gaucher t621-sulfat" class="noborderright noborderbottom">Glucocerebrosidase</td>
+                                <td headers="t621-metab t621-gaucher t621-sulfat" class="noborderbottom">Glucocerebroside</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" id="t621-np" headers="t621-disease t621-sulfat" class="noborderright">Niemann-Pick disease: types A and B</th>
+                                <td headers="t621-enzyme t621-np t621-sulfat" class="noborderright">Sphingomyelinase</td>
+                                <td headers="t621-metab t621-np t621-sulfat">Sphingomyelin</td>
+                              </tr>
+                              </tbody>
+                              <tbody>
+                              <tr>
+                                <th colspan="3" scope="rowgroup" id="t621-mps">Mucopolysaccharidoses (MPSs)</th>
+                              </tr>
+                              <tr>
+                                <th scope="row" id="t621-hurler" headers="t621-disease t621-mps" class="noborderright noborderbottom">MPS I-H (Hurler)</th>
+                                <td headers="t621-enzyme t621-hurler t621-mps" class="noborderright noborderbottom">α-L-Iduronidase</td>
+                                <td headers="t621-metab t621-hurler t621-mps" class="noborderbottom">Dermatan sulfate, heparan sulfate</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" id="t621-hunter" headers="t621-disease t621-mps" class="noborderright">MPS II (Hunter)</th>
+                                <td headers="t621-enzyme t621-hunter t621-mps" class="noborderright">Iduronate 2-sulphatase</td>
+                                <td headers="t621-metab t621-hunter t621-mps">Dermatan sulfate, heparan sulfate</td>
+                              </tr>
+                              </tbody>
+                            </table>
                       </div>
                   </div>
               </div>
@@ -519,9 +525,9 @@
             <div class="myPage" id="pageFirstSection_11">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>11</div>
-                    <div class='texting'>What is the pathogenesis of the lysosomal storage diseases?</div>
+                    <h2 class='texting'>What is the pathogenesis of the lysosomal storage diseases?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA11">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -532,7 +538,7 @@
                         <br/>
                         <div class="leftImageBox">
                             <div class="graphContainer">             
-                                <img src="images/q11/EP2_Fig_6_5.png" class="staticImg" alt="Tumor cells" /> 
+                                <img src="images/q11/EP2_Fig_6_5.png" class="staticImg" alt="Diagram of lysosomal storage disease pathogenesis. Left: normal lysosomal degradation of a complex substrate through steps A, B, and C, releasing small diffusible end products. Right: enzyme deficiency blocks step B, causing primary storage of nonmetabolized products in an enlarged lysosome. Defective autophagosome–lysosome fusion and organelle degradation then produce secondary storage of toxic proteins and aberrant mitochondria, leading to cell damage, free-radical generation, and cell death." /> 
                             </div>
                         </div>
                     </div>
@@ -550,9 +556,9 @@
             <div class="myPage" id="pageFirstSection_12">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>12</div>
-                    <div class='texting'>How are lysosomal storage diseases treated?</div>
+                    <h2 class='texting'>How are lysosomal storage diseases treated?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA12">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -572,9 +578,9 @@
             <div class="myPage" id="pageFirstSection_13">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>13</div>
-                    <div class='texting'>What determines the clinical manifestations of the different lysosomal storage diseases?</div>
+                    <h2 class='texting'>What determines the clinical manifestations of the different lysosomal storage diseases?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA13">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -594,9 +600,9 @@
             <div class="myPage" id="pageFirstSection_14">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>14</div>
-                    <div class='texting'>What is the enzyme deficiency in Tay-Sachs disease?</div>
+                    <h2 class='texting'>What is the enzyme deficiency in Tay-Sachs disease?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA14">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -616,9 +622,9 @@
             <div class="myPage" id="pageFirstSection_15">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>15</div>
-                    <div class='texting'>How does hexosaminidase deficiency affect the body?</div>
+                    <h2 class='texting'>How does hexosaminidase deficiency affect the body?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA15">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -639,16 +645,18 @@
 
          <div class="imageBoxHolder imageBoxHolder2 hs_set1">
             <div class="optionSelectionBox">
-              <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                <li tabindex="0">Tay-Sachs, histology</li>
-                <li tabindex="0">Swollen neuron</li>
+              <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                <li>Tay-Sachs, histology</li>
+                <li>Swollen neuron</li>
 </ul>
+                                  </div>
         </div>
         <div class="leftImageBox">
          <div class="graphContainer" aria-live="polite">
-          <img src="images/q15/on006-ca002f004-9780323640251.png" class="containerImg imageShow0" aria-label="Tay-Sachs, histology image" alt="Tay-Sachs, histology" />
+          <img src="images/q15/on006-ca002f004-9780323640251.png" class="containerImg imageShow0" alt="Tay-Sachs, histology" />
 
-          <img src="images/q15/on006-ca002f004-9780323640251-a.png" class="containerImg imageShow1" aria-label="Swollen neuron image" alt="Swollen neuron" />
+          <img src="images/q15/on006-ca002f004-9780323640251-a.png" class="containerImg imageShow1" alt="Swollen neuron" />
 
 
 
@@ -668,9 +676,9 @@
             <div class="myPage" id="pageFirstSection_16">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>16</div>
-                    <div class='texting'>What are the clinical manifestations of hexosaminidase A deficiency?</div>
+                    <h2 class='texting'>What are the clinical manifestations of hexosaminidase A deficiency?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textAab15">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -690,9 +698,9 @@
             <div class="myPage" id="pageFirstSection_17">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>17</div>
-                    <div class='texting'>Which populations are most commonly affected by this disease?</div>
+                    <h2 class='texting'>Which populations are most commonly affected by this disease?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA17">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -714,9 +722,9 @@
             <div class="myPage" id="pageFirstSection_18">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>18</div>
-                    <div class='texting'>What are the mucopolysaccharidoses (MPSs)?</div>
+                    <h2 class='texting'>What are the mucopolysaccharidoses (MPSs)?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA18">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -737,9 +745,9 @@
             <div class="myPage" id="pageFirstSection_19">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>19</div>
-                    <div class='texting'>What is the inheritance pattern of the MPSs? </div>
+                    <h2 class='texting'>What is the inheritance pattern of the MPSs? </h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textAcd17">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -760,9 +768,9 @@
             <div class="myPage" id="pageFirstSection_20">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>20</div>
-                    <div class='texting'>What is the clinical presentation of the MPSs?</div>
+                    <h2 class='texting'>What is the clinical presentation of the MPSs?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA20">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -782,9 +790,9 @@
             <div class="myPage" id="pageFirstSection_21">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>21</div>
-                    <div class='texting'>What is the effect on the tissues of the enzyme deficiency in the MPSs?</div>
+                    <h2 class='texting'>What is the effect on the tissues of the enzyme deficiency in the MPSs?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textA21">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -805,9 +813,9 @@
             <div class="myPage" id="pageFirstSection_22">
                 <div class="para_  Cont_Que">
                     <div class='numbering'>22</div>
-                    <div class='texting'>How does Hurler syndrome differ from Hunter syndrome?</div>
+                    <h2 class='texting'>How does Hurler syndrome differ from Hunter syndrome?</h2>
                 </div>
-                <div class="AnswerDiv">Show answer</div>
+                <div class="AnswerDiv">Show Answer</div>
                 <div class="textArea" id="textAdf21">
                     <div class="wrapper AnswerDiv_para wrap1">
                         <div class="contentHolder Cont_Ans">
@@ -839,12 +847,12 @@
     <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
         <span>Next button</span>
     </div>
-    <div id="naviList" aria-hidden="true"></div>
+    <div id="naviList" role="group" aria-label="Slide controls"></div>
 </div>
 
 <div class="popupContainer"></div>
 
-<div class="menupatch menupathScroll">
+<div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
     <ul class="menuList" role="menu">
         <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
         <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -880,10 +888,10 @@
     <div class="bottomWhitePatch"></div>
 </div>
 
-<div class="tablepatch">
+<div class="tablepatch" id="referencePanel" aria-hidden="true">
     <div class="tableHeader">
-        <div class="tableTitle tabindex">Normal Reference Range Table</div>
-        <span class="tabindex">Select:</span>
+        <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+        <label id="referenceSelectLabel">Select:</label>
         <div id="tableDropdownID" class="tableDropdownList"></div>
     </div>
 
@@ -924,6 +932,7 @@
         <div id="addTable8" class="test1 nano-content"></div>
     </div>
 </div>
+        <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
 </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>

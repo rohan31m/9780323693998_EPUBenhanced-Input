@@ -28,23 +28,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Feel the Burn </h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ol class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">•  Describe the pathogenesis and complications of reflux esophagitis and Barrett esophagus.</li>
@@ -71,25 +71,27 @@
                     <div class="midText ansSection wrapper">
                         <div class="contentHolderMain">
                             <p><em>A 41-year-old man presented to his primary care physician with a 6-month history of heartburn, regurgitation, and epigastric pain. Endoscopy revealed a large erythematous area in the distal esophagus suggestive of reflux esophagitis. Biopsy specimens were taken. </em></p>
-                            <div class="imageThumbHolder imageThumbHolder1">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="1" data-dropdownid="1" data-id="0" aria-label="Biopsy, high power" ><img src="images/q1/on012-ca001f001-9780323640251.png" class="thumbImg" alt="Biopsy, high power" /></span>                                
+                            <div class="imageThumbHolder imageThumbHolder1" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="1" data-dropdownid="1" data-id="0" aria-label="Biopsy, high power"  aria-pressed="true"><img src="images/q1/on012-ca001f001-9780323640251.png" class="thumbImg" alt="Biopsy, high power" /></span>                                
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="1" data-dropdownid="2" data-id="0" aria-label="Biopsy, low power" ><img src="images/q1/on012-ca001f002-9780323640251.png" class="thumbImg" alt="Biopsy, low power" /></span>
+                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="1" data-dropdownid="2" data-id="0" aria-label="Biopsy, low power"  aria-pressed="false"><img src="images/q1/on012-ca001f002-9780323640251.png" class="thumbImg" alt="Biopsy, low power" /></span>
 
 
                             </div>
                             <div class="imageBoxHolder imageBoxHolder1 hs_set1">
                             <div class="optionSelectionBox">
-                              <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                <li tabindex="0">Biopsy, high power</li>
-                                <li tabindex="0">Eosinophils</li>
+                              <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                <li>Biopsy, high power</li>
+                                <li>Eosinophils</li>
 </ul>
+                                  </div>
                             </div>
                             <div class="leftImageBox">
                                <div class="graphContainer" aria-live="polite">
-                                  <img src="images/q1/on012-ca001f001-9780323640251.png" class="containerImg containerImg1 imageShow0" aria-label="Biopsy, high power image" alt="Biopsy, high power" />
+                                  <img src="images/q1/on012-ca001f001-9780323640251.png" class="containerImg containerImg1 imageShow0" alt="Biopsy, high power" />
 
-                                  <img src="images/q1/on012-ca001f001-9780323640251-a.png" class="containerImg containerImg1 imageShow1" aria-label="Eosinophils image" alt="Eosinophils" />
+                                  <img src="images/q1/on012-ca001f001-9780323640251-a.png" class="containerImg containerImg1 imageShow1" alt="Eosinophils" />
 
                                </div>
                             </div>
@@ -97,19 +99,21 @@
 
                          <div class="imageBoxHolder imageBoxHolder1 hs_set2">
                             <div class="optionSelectionBox">
-                              <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                <li tabindex="0">Biopsy, low power</li>
-                                <li tabindex="0">Basal zone hyperplasia</li>
-                                <li tabindex="0">Elongated papilla</li>
+                              <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                <li>Biopsy, low power</li>
+                                <li>Basal zone hyperplasia</li>
+                                <li>Elongated papilla</li>
 </ul>
+                                  </div>
                             </div>
                             <div class="leftImageBox">
                                <div class="graphContainer" aria-live="polite">                                     
-                                  <img src="images/q1/on012-ca001f002-9780323640251.png" class="containerImg imageShow0" aria-label="Biopsy, low power image" alt="Biopsy, low power" />
+                                  <img src="images/q1/on012-ca001f002-9780323640251.png" class="containerImg imageShow0" alt="Biopsy, low power" />
 
-                                  <img src="images/q1/on012-ca001f002-9780323640251-a.png" class="containerImg imageShow1" aria-label="Basal zone hyperplasia image" alt="Basal zone hyperplasia" />
+                                  <img src="images/q1/on012-ca001f002-9780323640251-a.png" class="containerImg imageShow1" alt="Basal zone hyperplasia" />
 
-                                  <img src="images/q1/on012-ca001f002-9780323640251-b.png" class="containerImg imageShow2" aria-label="Elongated papilla  image" alt="Elongated papilla" />
+                                  <img src="images/q1/on012-ca001f002-9780323640251-b.png" class="containerImg imageShow2" alt="Elongated papilla" />
 
                                </div>
                             </div>
@@ -118,9 +122,9 @@
                             <div class="myPage" id="pageFirstSection_8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>Which histologic features seen in the biopsy specimen would confirm the diagnosis of reflux esophagitis?</div>
+                                    <h2 class='texting'>Which histologic features seen in the biopsy specimen would confirm the diagnosis of reflux esophagitis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -134,7 +138,7 @@
 </ul>
                                             <div class="leftImageBox">
                                                <div class="graphContainer" aria-live="polite">                                     
-                                                  <img src="images/q1/on012-ca002f001-9780323640251.png" class="containerImg imageShow0" aria-label="Feel the Burn  image" alt="Feel the Burn " >  
+                                                  <img src="images/q1/on012-ca002f001-9780323640251.png" class="containerImg imageShow0" alt="Feel the Burn " >  
 
                                                </div>
                                             </div>
@@ -162,9 +166,9 @@
                             <div class="myPage" id="pageFirstSection_2">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>Which histologic features seen in the biopsy specimen would support a diagnosis of reflux esophagitis?</div>
+                                    <h2 class='texting'>Which histologic features seen in the biopsy specimen would support a diagnosis of reflux esophagitis?</h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show Answer</div>
                                 <div class="textArea" id="textA2">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -175,17 +179,19 @@
                             </div>
                              <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Eosinophilic esophagitis</li>
-                                    <li tabindex="0">Microabscesses</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Eosinophilic esophagitis</li>
+                                    <li>Microabscesses</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                      <img src="images/q2/on012-ca001f003-9780323640251.png" class="containerImg containerImg1 imageShow0" aria-label="Eosinophilic esophagitis image" alt="Eosinophilic esophagitis" />
+                                      <img src="images/q2/on012-ca001f003-9780323640251.png" class="containerImg containerImg1 imageShow0" alt="Eosinophilic esophagitis" />
 
-                                      <img src="images/q2/on012-ca001f003-9780323640251-a-new.png" class="imgBlock containerImg containerImg1 imageShow1" aria-label="Microabscesses image" alt="Microabscesses" />
+                                      <img src="images/q2/on012-ca001f003-9780323640251-a-new.png" class="imgBlock containerImg containerImg1 imageShow1" alt="Microabscesses" />
 
                                    </div>
                                 </div>
@@ -201,9 +207,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>What are the major causes of reflux esophagitis? </div>
+                                    <h2 class='texting'>What are the major causes of reflux esophagitis? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -225,9 +231,9 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>What are the major complications of reflux esophagitis?</div>
+                                    <h2 class='texting'>What are the major complications of reflux esophagitis?</h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="1">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="1">Show Answer</div>
                                 <div class="textArea" id="textA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -247,9 +253,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>What is Barrett esophagus and what is its clinical significance?</div>
+                                    <h2 class='texting'>What is Barrett esophagus and what is its clinical significance?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA5">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -269,17 +275,19 @@
                             <p><em>The patient was prescribed proton-pump inhibitors and given a follow-up appointment in one year; however, he did not return for three years. He presented with heartburn and epigastric pain.</em></p>  
                             <div class="imageBoxHolder imageBoxHolder1 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Endoscopic appearance</li>
-                                    <li tabindex="0">Atypical mucosa</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Endoscopic appearance</li>
+                                    <li>Atypical mucosa</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                      <img src="images/q6/on012-ca001f004-9780323640251.png" class="containerImg imageShow0" aria-label="Endoscopic appearance image" alt="Endoscopic appearance" />
+                                      <img src="images/q6/on012-ca001f004-9780323640251.png" class="containerImg imageShow0" alt="Endoscopic appearance" />
 
-                                      <img src="images/q6/on012-ca001f004-9780323640251-a.png" class="imgBlock containerImg imageShow1" aria-label="Atypical mucosa image" alt="Atypical mucosa" />
+                                      <img src="images/q6/on012-ca001f004-9780323640251-a.png" class="imgBlock containerImg imageShow1" alt="Atypical mucosa" />
 
                                    </div>
                                 </div>
@@ -289,9 +297,9 @@
                             <div class="myPage" id="pageFirstSection_6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>Which histologic features would be seen in the biopsy?</div>
+                                    <h2 class='texting'>Which histologic features would be seen in the biopsy?</h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="3">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="3">Show Answer</div>
                                 <div class="textArea" id="textA6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -304,23 +312,25 @@
                             </div>
                              <div class="imageBoxHolder imageBoxHolder3 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Biopsy, histology</li>
-                                    <li tabindex="0">Squamous mucosa</li>
-                                    <li tabindex="0">Goblet cells</li>
-                                    <li tabindex="0">Glandular mucosa</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Biopsy, histology</li>
+                                    <li>Squamous mucosa</li>
+                                    <li>Goblet cells</li>
+                                    <li>Glandular mucosa</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                      <img src="images/q6/on012-ca001f005-9780323640251.png" class="containerImg imageShow0" aria-label="Biopsy, histology image" alt="Biopsy, histology" />
+                                      <img src="images/q6/on012-ca001f005-9780323640251.png" class="containerImg imageShow0" alt="Biopsy, histology" />
 
-                                      <img src="images/q6/on012-ca001f005-9780323640251-a.png" class="imgBlock containerImg imageShow1" aria-label="Squamous mucosa image" alt="Squamous mucosa" />
+                                      <img src="images/q6/on012-ca001f005-9780323640251-a.png" class="imgBlock containerImg imageShow1" alt="Squamous mucosa" />
 
-                                      <img src="images/q6/on012-ca001f005-9780323640251-b.png" class="imgBlock containerImg imageShow2" aria-label="Goblet cells image" alt="Goblet cells" />
+                                      <img src="images/q6/on012-ca001f005-9780323640251-b.png" class="imgBlock containerImg imageShow2" alt="Goblet cells" />
 
-                                      <img src="images/q6/on012-ca001f005-9780323640251-c.png" class="imgBlock containerImg imageShow3" aria-label="Glandular mucosa image" alt="Glandular mucosa" />
+                                      <img src="images/q6/on012-ca001f005-9780323640251-c.png" class="imgBlock containerImg imageShow3" alt="Glandular mucosa" />
 
                                       
 
@@ -339,9 +349,9 @@
                             <div class="myPage" id="pageFirstSectionbc_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>What is the diagnosis, and what is the etiology of this lesion? </div>
+                                    <h2 class='texting'>What is the diagnosis, and what is the etiology of this lesion? </h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="3">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="3">Show Answer</div>
                                 <div class="textArea" id="textA7dd">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -352,22 +362,24 @@
                             </div>
                             <!-- <div class="imageBoxHolder imageBoxHolder3 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Barrett esophagus</li>
-                                    <li tabindex="0">Squamous mucosa</li>
-                                    <li tabindex="0">Goblet cells</li>
-                                    <li tabindex="0">Glandular mucosa</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Barrett esophagus</li>
+                                    <li>Squamous mucosa</li>
+                                    <li>Goblet cells</li>
+                                    <li>Glandular mucosa</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q7/on012-ca001f005-9780323640251.png" class="containerImg imageShow0" aria-label="Barrett esophagus image" alt="Barrett esophagus" />
+                                      <img src="images/q7/on012-ca001f005-9780323640251.png" class="containerImg imageShow0" alt="Barrett esophagus" />
 
-                                      <img src="images/q7/on012-ca001f005-9780323640251-a.png" class="containerImg imageShow1" aria-label="Squamous mucosa image" alt="Squamous mucosa" />
+                                      <img src="images/q7/on012-ca001f005-9780323640251-a.png" class="containerImg imageShow1" alt="Squamous mucosa" />
 
-                                      <img src="images/q7/on012-ca001f005-9780323640251-b.png" class="containerImg imageShow2" aria-label="Goblet cells image" alt="Goblet cells" />
+                                      <img src="images/q7/on012-ca001f005-9780323640251-b.png" class="containerImg imageShow2" alt="Goblet cells" />
 
-                                      <img src="images/q7/on012-ca001f005-9780323640251-c.png" class="containerImg imageShow3" aria-label="Glandular mucosa image" alt="Glandular mucosa" />
+                                      <img src="images/q7/on012-ca001f005-9780323640251-c.png" class="containerImg imageShow3" alt="Glandular mucosa" />
                                    </div>
                                 </div>
                              </div> -->
@@ -381,18 +393,20 @@
                             <p><em>Because of the diagnosis of Barrett esophagus, the patient was enrolled in a surveillance program and yearly endoscopic procedures were recommended. The patient returned annually. Endoscopic evaluation showed extensive Barrett esophagus which was confirmed on biopsy. At year 6, a biopsy was performed and, in addition to <span class="hs" role="link" tabindex="0" data-imageBoxHolderid="3" data-dropdownid="1" data-id="1">metaplastic epithelium</span>, showed <span class="hs" role="link" tabindex="0" data-imageBoxHolderid="3" data-dropdownid="1" data-id="2">dysplastic epithelial cells</span> with enlarged, crowded, and stratified hyperchromatic nuclei.</em></p>
                             <div class="imageBoxHolder imageBoxHolder3 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Esophagus, dysplasia</li>
-                                    <li tabindex="0">Goblet cells</li>
-                                    <li tabindex="0">Dysplastic cells</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Esophagus, dysplasia</li>
+                                    <li>Goblet cells</li>
+                                    <li>Dysplastic cells</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                      <img src="images/q8/on012-ca001f006-9780323640251.png" class="containerImg imageShow0" aria-label="Esophagus, dysplasia  image" alt="Esophagus, dysplasia" />
-                                       <img src="images/q8/on012-ca001f006-9780323640251-a-new.png" class="containerImg imageShow1" aria-label="Goblet cells  image" alt="Goblet cells " />
-                                        <img src="images/q8/on012-ca001f006-9780323640251-b-new.png" class="containerImg imageShow2" aria-label="Dysplastic cells image" alt="Dysplastic cells" />
+                                      <img src="images/q8/on012-ca001f006-9780323640251.png" class="containerImg imageShow0" alt="Esophagus, dysplasia" />
+                                       <img src="images/q8/on012-ca001f006-9780323640251-a-new.png" class="containerImg imageShow1" alt="Goblet cells " />
+                                        <img src="images/q8/on012-ca001f006-9780323640251-b-new.png" class="containerImg imageShow2" alt="Dysplastic cells" />
                                    </div>
                                 </div>
                              </div>   
@@ -400,9 +414,9 @@
                             <div class="myPage" id="pageFirstSectionab_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>8</div>
-                                    <div class='texting'>Which type of malignancy typically develops in Barrett esophagus? </div>
+                                    <h2 class='texting'>Which type of malignancy typically develops in Barrett esophagus? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA7a">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -423,24 +437,26 @@
                            
                             <p class="paraIndent"><em>Histologic examination revealed intralymphatic carcinoma; one lymph node was positive for a microscopic focus of metastatic carcinoma. The patient was scheduled for adjuvant chemoradiotherapy.</em></p><br/>
 
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="0" aria-label="Biopsy specimen" ><img src="images/q9/on012-ca001f007-9780323640251.png" class="thumbImg" alt="Biopsy specimen" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="0" aria-label="Biopsy specimen"  aria-pressed="true"><img src="images/q9/on012-ca001f007-9780323640251.png" class="thumbImg" alt="Biopsy specimen" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="0" aria-label="Gross specimen" ><img src="images/q9/on012-ca001f008-9780323640251.png" class="thumbImg" alt="Gross specimen" /></span>
+                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="0" aria-label="Gross specimen"  aria-pressed="false"><img src="images/q9/on012-ca001f008-9780323640251.png" class="thumbImg" alt="Gross specimen" /></span>
                             </div>
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Biopsy specimen</li>
-                                    <li tabindex="0">Squamous mucosa</li>
-                                    <li tabindex="0">Adenocarcinoma</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Biopsy specimen</li>
+                                    <li>Squamous mucosa</li>
+                                    <li>Adenocarcinoma</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q9/on012-ca001f007-9780323640251.png" class="containerImg imageShow0" aria-label="Biopsy specimen image" alt="Biopsy specimen" />
-                                      <img src="images/q9/on012-ca001f007-9780323640251-a.png" class="imgBlock containerImg imageShow1" aria-label="Squamous mucosa image" alt="Squamous mucosa" />
-                                      <img src="images/q9/on012-ca001f007-9780323640251-b.png" class="imgBlock containerImg imageShow2" aria-label="Adenocarcinoma image" alt="Adenocarcinoma" />                                     
+                                      <img src="images/q9/on012-ca001f007-9780323640251.png" class="containerImg imageShow0" alt="Biopsy specimen" />
+                                      <img src="images/q9/on012-ca001f007-9780323640251-a.png" class="imgBlock containerImg imageShow1" alt="Squamous mucosa" />
+                                      <img src="images/q9/on012-ca001f007-9780323640251-b.png" class="imgBlock containerImg imageShow2" alt="Adenocarcinoma" />                                     
                                    </div>
                                 </div>
                              </div>
@@ -448,19 +464,21 @@
 
                              <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Gross specimen</li>
-                                    <li tabindex="0">Ulcerated tumor</li>
-                                    <li tabindex="0">Squamous mucosa</li>
-                                    <li tabindex="0">Gastroesophageal junction</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Gross specimen</li>
+                                    <li>Ulcerated tumor</li>
+                                    <li>Squamous mucosa</li>
+                                    <li>Gastroesophageal junction</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q9/on012-ca001f008-9780323640251.png" class="containerImg containerImg11 imageShow0" aria-label="Gross specimen image" alt="Gross specimen" />
-                                      <img src="images/q9/on012-ca001f008-9780323640251-a.png" class="imgBlock containerImg containerImg11 imageShow1" aria-label="Ulcerated tumor image" alt="Ulcerated tumor" />
-                                      <img src="images/q9/on012-ca001f008-9780323640251-b.png" class="imgBlock containerImg containerImg11 imageShow2" aria-label="Squamous mucosa image" alt="Squamous mucosa" />
-                                      <img src="images/q9/on012-ca001f008-9780323640251-c.png" class="imgBlock containerImg containerImg11 imageShow3" aria-label="Gastroesophageal junction image" alt="Gastroesophageal junction" />
+                                      <img src="images/q9/on012-ca001f008-9780323640251.png" class="containerImg containerImg11 imageShow0" alt="Gross specimen" />
+                                      <img src="images/q9/on012-ca001f008-9780323640251-a.png" class="imgBlock containerImg containerImg11 imageShow1" alt="Ulcerated tumor" />
+                                      <img src="images/q9/on012-ca001f008-9780323640251-b.png" class="imgBlock containerImg containerImg11 imageShow2" alt="Squamous mucosa" />
+                                      <img src="images/q9/on012-ca001f008-9780323640251-c.png" class="imgBlock containerImg containerImg11 imageShow3" alt="Gastroesophageal junction" />
                                    </div>
                                 </div>
                              </div>
@@ -469,9 +487,9 @@
                             <div class="myPage" id="pageFirstSection_9">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>9</div>
-                                    <div class='texting'>What is the pathogenesis of adenocarcinoma arising in Barrett esophagus?</div>
+                                    <h2 class='texting'>What is the pathogenesis of adenocarcinoma arising in Barrett esophagus?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA9">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -491,9 +509,9 @@
                             <div class="myPage" id="pageFirstSection_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>10</div>
-                                    <div class='texting'>Which is the other major type of carcinoma that arises in the esophagus?</div>
+                                    <h2 class='texting'>Which is the other major type of carcinoma that arises in the esophagus?</h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show Answer</div>
                                 <div class="textArea" id="textA7bb">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -502,38 +520,42 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="0" aria-label="Esophagus, gross" ><img src="images/q11/on012-ca001f009-9780323640251.png" class="thumbImg" alt="Esophagus, gross" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="0" aria-label="Esophagus, gross"  aria-pressed="true"><img src="images/q11/on012-ca001f009-9780323640251.png" class="thumbImg" alt="Esophagus, gross" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="0" aria-label="SCC, histology" ><img src="images/q11/on012-ca001f010-9780323640251.png" class="thumbImg" alt="SCC, histology" /></span>
+                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="0" aria-label="SCC, histology"  aria-pressed="false"><img src="images/q11/on012-ca001f010-9780323640251.png" class="thumbImg" alt="SCC, histology" /></span>
                             </div>
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Esophagus, gross</li>
-                                    <li tabindex="0">Ulcerated lesion</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Esophagus, gross</li>
+                                    <li>Ulcerated lesion</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q11/on012-ca001f009-9780323640251.png" class="containerImg containerImg11 imageShow0" aria-label="Esophagus, gross image" alt="Esophagus, gross" />
+                                      <img src="images/q11/on012-ca001f009-9780323640251.png" class="containerImg containerImg11 imageShow0" alt="Esophagus, gross" />
 
-                                      <img src="images/q11/on012-ca001f009-9780323640251-a.png" class="containerImg containerImg11 imageShow1" aria-label="Ulcerated lesion image" alt="Ulcerated lesion" />
+                                      <img src="images/q11/on012-ca001f009-9780323640251-a.png" class="containerImg containerImg11 imageShow1" alt="Ulcerated lesion" />
                                    </div>
                                 </div>
                              </div> 
                              <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">SCC, histology</li>
-                                    <li tabindex="0">Squamous cell carcinoma</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>SCC, histology</li>
+                                    <li>Squamous cell carcinoma</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q11/on012-ca001f010-9780323640251.png" class="containerImg imageShow0" aria-label="SCC, histology image" alt="SCC, histology" />
+                                      <img src="images/q11/on012-ca001f010-9780323640251.png" class="containerImg imageShow0" alt="SCC, histology" />
 
-                                      <img src="images/q11/on012-ca001f010-9780323640251-a.png" class="containerImg imageShow1" aria-label="Squamous cell carcinoma image" alt="Squamous cell carcinoma" />
+                                      <img src="images/q11/on012-ca001f010-9780323640251-a.png" class="containerImg imageShow1" alt="Squamous cell carcinoma" />
 
                                    </div>
                                 </div>
@@ -549,9 +571,9 @@
                             <div class="myPage" id="pageFirstSectioncd_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>11</div>
-                                    <div class='texting'>What are the risk factors for the development of squamous cell carcinoma of the esophagus?</div>
+                                    <h2 class='texting'>What are the risk factors for the development of squamous cell carcinoma of the esophagus?</h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show Answer</div>
                                 <div class="textArea" id="textA7cc">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -562,10 +584,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="0" aria-label="Squamous cell carcinoma" ><img src="images/q11/on012-ca001f009-9780323640251.png" class="thumbImg" alt="Squamous cell carcinoma" /></span>                               
+                            <!-- <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="0" aria-label="Squamous cell carcinoma"  aria-pressed="true"><img src="images/q11/on012-ca001f009-9780323640251.png" class="thumbImg" alt="Squamous cell carcinoma" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="0" aria-label="Squamous cell carcinoma" ><img src="images/q11/on012-ca001f010-9780323640251.png" class="thumbImg" alt="Squamous cell carcinoma" /></span>
+                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="0" aria-label="Squamous cell carcinoma"  aria-pressed="false"><img src="images/q11/on012-ca001f010-9780323640251.png" class="thumbImg" alt="Squamous cell carcinoma" /></span>
 
                             </div> -->
                            
@@ -589,12 +611,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -616,10 +638,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -660,6 +682,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>

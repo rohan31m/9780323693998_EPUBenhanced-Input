@@ -27,23 +27,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Out of Joint </h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ol class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">•  Describe the pathophysiology and clinical features of rheumatoid arthritis.</li>
@@ -95,9 +95,9 @@
                             <div class="myPage" id="pageFirstSection_2">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>What is the diagnosis in this case? </div>
+                                    <h2 class='texting'>What is the diagnosis in this case? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA2">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -119,9 +119,9 @@
                             <div class="myPage" id="pageFirstSection_a2">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>What is the etiology of RA? </div>
+                                    <h2 class='texting'>What is the etiology of RA? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6d">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -142,9 +142,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>What is the significance of the patient’s HLA-DR4 positivity?</div>
+                                    <h2 class='texting'>What is the significance of the patient’s HLA-DR4 positivity?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -166,9 +166,9 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>Which cytokines are implicated in the pathogenesis of RA, which cells do they affect, and which actions do they mediate? </div>
+                                    <h2 class='texting'>Which cytokines are implicated in the pathogenesis of RA, which cells do they affect, and which actions do they mediate? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textbbA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -192,27 +192,29 @@
                                      
                             
 
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="0" aria-label="Clinical presentation" ><img src="images/q8/on018-ca004f005-9780323640251.png" class="thumbImg" alt="Clinical presentation" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="0" aria-label="Clinical presentation"  aria-pressed="true"><img src="images/q8/on018-ca004f005-9780323640251.png" class="thumbImg" alt="Clinical presentation" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="0" aria-label="Plain radiograph" ><img src="images/q8/on018-ca004f006-9780323640251.png" class="thumbImg" alt="Plain radiograph" /></span>
+                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="0" aria-label="Plain radiograph"  aria-pressed="false"><img src="images/q8/on018-ca004f006-9780323640251.png" class="thumbImg" alt="Plain radiograph" /></span>
                             </div>
 
                             <div class="imageBoxHolder imageBoxHolder2  hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Clinical presentation</li>
-                                    <li tabindex="0">Ulnar deviation</li>
-                                    <li tabindex="0">Rheumatoid nodules</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Clinical presentation</li>
+                                    <li>Ulnar deviation</li>
+                                    <li>Rheumatoid nodules</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q8/on018-ca004f005-9780323640251.png" class="containerImg imageShow0" aria-label="Clinical presentation image" alt="Clinical presentation" />
+                                      <img src="images/q8/on018-ca004f005-9780323640251.png" class="containerImg imageShow0" alt="Clinical presentation" />
 
-                                      <img src="images/q8/on018-ca004f005-9780323640251-a.png" class="containerImg imageShow1" aria-label="Ulnar deviation image" alt="Ulnar deviation" />
+                                      <img src="images/q8/on018-ca004f005-9780323640251-a.png" class="containerImg imageShow1" alt="Ulnar deviation" />
 
-                                      <img src="images/q8/on018-ca004f005-9780323640251-b.png" class="containerImg imageShow2" aria-label="Rheumatoid nodules image" alt="Rheumatoid nodules" />
+                                      <img src="images/q8/on018-ca004f005-9780323640251-b.png" class="containerImg imageShow2" alt="Rheumatoid nodules" />
 
                                    </div>
                                    <p>Clinical images from Dr. Graf
@@ -223,16 +225,18 @@
                             
                              <div class="imageBoxHolder imageBoxHolder2  hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Plain radiograph </li>
-                                    <li tabindex="0">Joint space narrowing</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Plain radiograph </li>
+                                    <li>Joint space narrowing</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q8/on018-ca004f006-9780323640251.png" class="containerImg imageShow0" aria-label="Plain radiograph image" alt="Plain radiograph" />
+                                      <img src="images/q8/on018-ca004f006-9780323640251.png" class="containerImg imageShow0" alt="Plain radiograph" />
 
-                                      <img src="images/q8/on018-ca004f006-9780323640251-a.png" class="containerImg imageShow1" aria-label="Joint space narrowing image" alt="Joint space narrowing" />
+                                      <img src="images/q8/on018-ca004f006-9780323640251-a.png" class="containerImg imageShow1" alt="Joint space narrowing" />
 
                                      
                                    </div>
@@ -242,9 +246,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>Which histologic changes would be seen in this patient’s synovium?  </div>
+                                    <h2 class='texting'>Which histologic changes would be seen in this patient’s synovium?  </h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="3" >Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="3" >Show Answer</div>
                                 <div class="textArea" id="textA6a">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -257,45 +261,49 @@
                                 </div>
                             </div> 
 
-                            <div class="imageThumbHolder imageThumbHolder3">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="3" data-dropdownid="1" data-id="0" aria-label="Synovium, low power" ><img src="images/q8/on018-ca004f007-9780323640251.png" class="thumbImg" alt="Synovium, low power" /></span>                                
+                            <div class="imageThumbHolder imageThumbHolder3" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="3" data-dropdownid="1" data-id="0" aria-label="Synovium, low power"  aria-pressed="true"><img src="images/q8/on018-ca004f007-9780323640251.png" class="thumbImg" alt="Synovium, low power" /></span>                                
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="3" data-dropdownid="2" data-id="0" aria-label="Synovium, high power" ><img src="images/q8/on018-ca004f008-9780323640251.png" class="thumbImg" alt="Synovium, high power" /></span>
+                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="3" data-dropdownid="2" data-id="0" aria-label="Synovium, high power"  aria-pressed="false"><img src="images/q8/on018-ca004f008-9780323640251.png" class="thumbImg" alt="Synovium, high power" /></span>
 
-                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="3" data-dropdownid="3" data-id="0" aria-label="Pannus, histology" ><img src="images/q8/on018-ca004f009-9780323640251.png" class="thumbImg" alt="Pannus, histology" /></span>
+                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="3" data-dropdownid="3" data-id="0" aria-label="Pannus, histology"  aria-pressed="false"><img src="images/q8/on018-ca004f009-9780323640251.png" class="thumbImg" alt="Pannus, histology" /></span>
 
                             </div>
 
                             <div class="imageBoxHolder imageBoxHolder3  hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Synovium, low power</li>
-                                    <li tabindex="0">Papillary architecture</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Synovium, low power</li>
+                                    <li>Papillary architecture</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q8/on018-ca004f007-9780323640251.png" class="containerImg imageShow0" aria-label="Synovium, low power image" alt="Synovium, low power" />
+                                      <img src="images/q8/on018-ca004f007-9780323640251.png" class="containerImg imageShow0" alt="Synovium, low power" />
 
-                                      <img src="images/q8/on018-ca004f007-9780323640251-a.png" class="containerImg imageShow1" aria-label="Papillary architecture image" alt="Papillary architecture" />
+                                      <img src="images/q8/on018-ca004f007-9780323640251-a.png" class="containerImg imageShow1" alt="Papillary architecture" />
                                    </div>
                                 </div>
                              </div>  
                               <div class="imageBoxHolder imageBoxHolder3  hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Synovium, high power</li>
-                                    <li tabindex="0">Hyperplastic synovium</li>
-                                    <li tabindex="0">Lymphoid nodule</li>                                   
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Synovium, high power</li>
+                                    <li>Hyperplastic synovium</li>
+                                    <li>Lymphoid nodule</li>                                   
                                   </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q8/on018-ca004f008-9780323640251.png" class="containerImg imageShow0" aria-label="Synovium, high power image" alt="Synovium, high power" />
+                                      <img src="images/q8/on018-ca004f008-9780323640251.png" class="containerImg imageShow0" alt="Synovium, high power" />
 
-                                      <img src="images/q8/on018-ca004f008-9780323640251-a.png" class="containerImg imageShow1" aria-label="Hyperplastic synovium image" alt="Hyperplastic synovium" />
+                                      <img src="images/q8/on018-ca004f008-9780323640251-a.png" class="containerImg imageShow1" alt="Hyperplastic synovium" />
 
-                                       <img src="images/q8/on018-ca004f008-9780323640251-b.png" class="containerImg imageShow2" aria-label="Lymphoid nodule image" alt="Lymphoid nodule" />
+                                       <img src="images/q8/on018-ca004f008-9780323640251-b.png" class="containerImg imageShow2" alt="Lymphoid nodule" />
 
                                     
 
@@ -305,22 +313,24 @@
 
                              <div class="imageBoxHolder imageBoxHolder3  hs_set3">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Pannus, histology</li>
-                                    <li tabindex="0">Pannus</li>
-                                    <li tabindex="0">Joint space</li>
-                                    <li tabindex="0">Bone</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Pannus, histology</li>
+                                    <li>Pannus</li>
+                                    <li>Joint space</li>
+                                    <li>Bone</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q8/on018-ca004f009-9780323640251.png" class="containerImg imageShow0" aria-label="Pannus, histology image" alt="Pannus, histology" />
+                                      <img src="images/q8/on018-ca004f009-9780323640251.png" class="containerImg imageShow0" alt="Pannus, histology" />
 
-                                      <img src="images/q8/on018-ca004f009-9780323640251-a.png" class="containerImg imageShow1" aria-label="Pannus image" alt="Pannus" />
+                                      <img src="images/q8/on018-ca004f009-9780323640251-a.png" class="containerImg imageShow1" alt="Pannus" />
 
-                                       <img src="images/q8/on018-ca004f009-9780323640251-b.png" class="containerImg imageShow2" aria-label="Joint space image" alt="Joint space" />
+                                       <img src="images/q8/on018-ca004f009-9780323640251-b.png" class="containerImg imageShow2" alt="Joint space" />
 
-                                        <img src="images/q8/on018-ca004f009-9780323640251-c.png" class="containerImg imageShow3" aria-label="Bone image" alt="Bone" />
+                                        <img src="images/q8/on018-ca004f009-9780323640251-c.png" class="containerImg imageShow3" alt="Bone" />
 
                                     
 
@@ -339,9 +349,9 @@
                             <div class="myPage" id="pageFirstSection_6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>What is the proposed mechanism of cartilage damage in RA?  </div>
+                                    <h2 class='texting'>What is the proposed mechanism of cartilage damage in RA?  </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAb6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -362,9 +372,9 @@
                             <div class="myPage" id="pageFirstSection_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>Which histologic features would be seen in a biopsy of one of the soft tissues of the patient’s left arm?</div>
+                                    <h2 class='texting'>Which histologic features would be seen in a biopsy of one of the soft tissues of the patient’s left arm?</h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show Answer</div>
                                 <div class="textArea" id="textA6c">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -380,19 +390,21 @@
                             </div> 
                            <div class="imageBoxHolder imageBoxHolder2  hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Rheumatoid nodule </li>
-                                    <li tabindex="0">Central necrosis</li>
-                                    <li tabindex="0">Palisaded histiocytes</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Rheumatoid nodule </li>
+                                    <li>Central necrosis</li>
+                                    <li>Palisaded histiocytes</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q10/on018-ca004f010-9780323640251.png" class="containerImg imageShow0" aria-label="Rheumatoid nodule image" alt="Rheumatoid nodule" />
+                                      <img src="images/q10/on018-ca004f010-9780323640251.png" class="containerImg imageShow0" alt="Rheumatoid nodule" />
 
-                                      <img src="images/q10/on018-ca004f010-9780323640251-a.png" class="containerImg imageShow1" aria-label="Central necrosis image" alt="Central necrosis" />
+                                      <img src="images/q10/on018-ca004f010-9780323640251-a.png" class="containerImg imageShow1" alt="Central necrosis" />
 
-                                      <img src="images/q10/on018-ca004f010-9780323640251-b.png" class="containerImg imageShow2" aria-label="Palisaded histiocytes image" alt="Palisaded histiocytes" />
+                                      <img src="images/q10/on018-ca004f010-9780323640251-b.png" class="containerImg imageShow2" alt="Palisaded histiocytes" />
 
                                     
 
@@ -415,9 +427,9 @@
                             <div class="myPage" id="pageFirstSection_8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>8</div>
-                                    <div class='texting'>Which clinical and radiologic features distinguish rheumatoid arthritis from osteoarthritis?</div>
+                                    <h2 class='texting'>Which clinical and radiologic features distinguish rheumatoid arthritis from osteoarthritis?</h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show Answer</div>
                                 <div class="textArea" id="textA8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -426,8 +438,8 @@
                                             <br/>
                                             <div class="leftImageBox">
                                          <div class="graphContainer">
-                                        <img src="images/q8/PBD11_Fig_26_37.png" class="staticImg" alt="" />
-                                    </div>
+                                        <img src="images/q8/PBD11_Fig_26_37.png" class="staticImg" alt="Comparison of rheumatoid arthritis and osteoarthritis. Rheumatoid arthritis shows inflammation, pannus, cartilage erosion, and fibrous or bony ankylosis. Osteoarthritis shows osteophytes, thinned fibrillated cartilage, subchondral sclerosis and cysts, without ankylosis." />
+                                        </div>
                                     </div>
                                     
                                         </div>
@@ -439,22 +451,24 @@
 
                             <div class="imageBoxHolder imageBoxHolder2  hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Plain radiograph</li>
-                                    <li tabindex="0">Joint space narrowing</li>
-                                    <li tabindex="0">Subchondral sclerosis</li>
-                                    <li tabindex="0">Subchondral cyst</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Plain radiograph</li>
+                                    <li>Joint space narrowing</li>
+                                    <li>Subchondral sclerosis</li>
+                                    <li>Subchondral cyst</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q2/on018-ca004f001-9780323640251.png" class="containerImg imageShow0" aria-label="Plain radiograph image" alt="Plain radiograph" />
+                                      <img src="images/q2/on018-ca004f001-9780323640251.png" class="containerImg imageShow0" alt="Plain radiograph" />
 
-                                      <img src="images/q2/on018-ca004f001-9780323640251-a.png" class="containerImg imageShow1" aria-label="Joint space narrowing image" alt="Joint space narrowing" />
+                                      <img src="images/q2/on018-ca004f001-9780323640251-a.png" class="containerImg imageShow1" alt="Joint space narrowing" />
 
-                                      <img src="images/q2/on018-ca004f001-9780323640251-b.png" class="containerImg imageShow2" aria-label="Subchondral sclerosis image" alt="Subchondral sclerosis" />
+                                      <img src="images/q2/on018-ca004f001-9780323640251-b.png" class="containerImg imageShow2" alt="Subchondral sclerosis" />
 
-                                      <img src="images/q2/on018-ca004f001-9780323640251-c.png" class="containerImg imageShow3" aria-label="Subchondral cyst image" alt="Subchondral cyst" />
+                                      <img src="images/q2/on018-ca004f001-9780323640251-c.png" class="containerImg imageShow3" alt="Subchondral cyst" />
                                    </div>
                                 </div>
                              </div> 
@@ -473,9 +487,9 @@
                             <div class="myPage" id="pageFirstSection_9">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>9</div>
-                                    <div class='texting'>What is the etiology of osteoarthritis?   </div>
+                                    <h2 class='texting'>What is the etiology of osteoarthritis?   </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textaaA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -496,9 +510,9 @@
                             <div class="myPage" id="pageFirstSection_10">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>10</div>
-                                    <div class='texting'>What are the histologic features of osteoarthritis?</div>
+                                    <h2 class='texting'>What are the histologic features of osteoarthritis?</h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="2">Show Answer</div>
                                 <div class="textArea" id="textA10">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -511,24 +525,26 @@
                             </div>
                             <div class="imageBoxHolder imageBoxHolder2  hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Histology, gross findings</li>
-                                    <li tabindex="0">Fibrillated cartilage</li>
-                                    <li tabindex="0">Eburnated surface</li>
-                                    <li tabindex="0">Subchondral cyst</li>
-                                    <li tabindex="0">Residual cartilage</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Histology, gross findings</li>
+                                    <li>Fibrillated cartilage</li>
+                                    <li>Eburnated surface</li>
+                                    <li>Subchondral cyst</li>
+                                    <li>Residual cartilage</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q4/on018-ca004f002-9780323640251.png" class="containerImg imageShow0" aria-label="Histology, gross findings image" alt="Histology, gross findings" />
-                                      <img src="images/q4/on018-ca004f002-9780323640251-a.png" class="containerImg imageShow1" aria-label="Fibrillated cartilage image" alt="Fibrillated cartilage" />
+                                      <img src="images/q4/on018-ca004f002-9780323640251.png" class="containerImg imageShow0" alt="Histology, gross findings" />
+                                      <img src="images/q4/on018-ca004f002-9780323640251-a.png" class="containerImg imageShow1" alt="Fibrillated cartilage" />
 
-                                      <img src="images/q4/on018-ca004f002-9780323640251-b-new.png" class="containerImg imageShow2" aria-label="Eburnated surface image" alt="Eburnated surface" />
+                                      <img src="images/q4/on018-ca004f002-9780323640251-b-new.png" class="containerImg imageShow2" alt="Eburnated surface" />
 
-                                      <img src="images/q4/on018-ca004f002-9780323640251-c.png" class="containerImg imageShow3" aria-label="Subchondral cyst image" alt="Subchondral cyst" />
+                                      <img src="images/q4/on018-ca004f002-9780323640251-c.png" class="containerImg imageShow3" alt="Subchondral cyst" />
 
-                                      <img src="images/q4/on018-ca004f002-9780323640251-d-new.png" class="containerImg imageShow4" aria-label="Residual cartilage image" alt="Residual cartilage" />
+                                      <img src="images/q4/on018-ca004f002-9780323640251-d-new.png" class="containerImg imageShow4" alt="Residual cartilage" />
                                    </div>
                                 </div>
                              </div>
@@ -555,12 +571,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -584,10 +600,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -628,6 +644,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>

@@ -27,23 +27,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Ready, Willing and Able</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ol class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">•  List the hallmarks of cancer and their molecular basis. </li>
@@ -76,22 +76,24 @@
                             <p class="paraIndent"><em>Examination of the <span class="hs" role="link" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="0">peripheral blood smear</span> revealed leukocytosis (white blood cell [WBC] count of 225,000/mm<sup>3</sup>) consisting mostly of myeloid lineage cells at different stages of maturation, including granulocytes (neutrophils, basophils, and eosinophils), myelocytes, and a few myeloblasts. In the <span class="hs" role="link" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="0">higher power</span> image, the cell with a large nucleus and scant cytoplasm is a myeloblast. The remaining white blood cells are granulocytes at various stages of differentiation.</em></p>
                             <p class="paraIndent"><em>Cytogenetic analysis of spontaneously dividing peripheral blood WBCs revealed the presence of a reciprocal (9;22)(q34;q11) translocation.</em></p>
                           
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="0" aria-label="Peripheral blood smear" ><img src="images/q1/on005-ca002f001-9780323640251.png" class="thumbImg" alt="Peripheral blood smear" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="0" aria-label="Peripheral blood smear"  aria-pressed="true"><img src="images/q1/on005-ca002f001-9780323640251.png" class="thumbImg" alt="Peripheral blood smear" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="0" aria-label="Higher power" ><img src="images/q1/on005-ca002f002-9780323640251.png" class="thumbImg" alt="Higher power" /></span>
+                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="0" aria-label="Higher power"  aria-pressed="false"><img src="images/q1/on005-ca002f002-9780323640251.png" class="thumbImg" alt="Higher power" /></span>
                             </div>
 
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Peripheral blood smear</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Peripheral blood smear</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                      <img src="images/q1/on005-ca002f001-9780323640251.png" class="containerImg imageShow0" aria-label="Peripheral blood smear image" alt="Peripheral blood smear" />
+                                      <img src="images/q1/on005-ca002f001-9780323640251.png" class="containerImg imageShow0" alt="Peripheral blood smear" />
 
 
                                    </div>
@@ -99,17 +101,19 @@
                              </div>
                              <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Higher power</li>
-                                    <li tabindex="0">Myeloblast</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Higher power</li>
+                                    <li>Myeloblast</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                      <img src="images/q1/on005-ca002f002-9780323640251.png" class="containerImg imageShow0" aria-label="Higher power image" alt="Higher power" />
+                                      <img src="images/q1/on005-ca002f002-9780323640251.png" class="containerImg imageShow0" alt="Higher power" />
 
-                                      <img src="images/q1/on005-ca002f002-9780323640251-a.png" class="imgBlock containerImg imageShow1" aria-label="Myeloblast image" alt="Myeloblast" />
+                                      <img src="images/q1/on005-ca002f002-9780323640251-a.png" class="imgBlock containerImg imageShow1" alt="Myeloblast" />
 
 
                                    </div>
@@ -120,9 +124,9 @@
                             <div class="myPage" id="pageFirstSection_1">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>What is the diagnosis?</div>
+                                    <h2 class='texting'>What is the diagnosis?</h2>
                                 </div>
-                                <div class="AnswerDiv" data-imageBoxHolderid="3">Show answer</div>
+                                <div class="AnswerDiv" data-imageBoxHolderid="3">Show Answer</div>
                                 <div class="textArea" id="textA1">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -135,19 +139,21 @@
                             </div>
                             <div class="imageBoxHolder imageBoxHolder3 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Karyotype</li>
-                                    <li tabindex="0">Philadelphia chromosome</li>
-                                    <li tabindex="0">Chr 9 translocation</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Karyotype</li>
+                                    <li>Philadelphia chromosome</li>
+                                    <li>Chr 9 translocation</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">                                     
-                                      <img src="images/q1/on005-ca002f003-9780323640251.png" class="containerImg imageShow0" aria-label="Karyotype image" alt="Karyotype" />
+                                      <img src="images/q1/on005-ca002f003-9780323640251.png" class="containerImg imageShow0" alt="Karyotype" />
 
-                                      <img src="images/q1/on005-ca002f003-9780323640251-a.png" class="imgBlock containerImg imageShow1" aria-label="Philadelphia chromosome image" alt="Philadelphia chromosome" />
+                                      <img src="images/q1/on005-ca002f003-9780323640251-a.png" class="imgBlock containerImg imageShow1" alt="Philadelphia chromosome" />
 
-                                      <img src="images/q1/on005-ca002f003-9780323640251-b.png" class="imgBlock containerImg imageShow2" aria-label="chromosome 9 with translocated portion of chromosome 22 image" alt="chromosome 9 with translocated portion of chromosome 22" />
+                                      <img src="images/q1/on005-ca002f003-9780323640251-b.png" class="imgBlock containerImg imageShow2" alt="chromosome 9 with translocated portion of chromosome 22" />
                                    </div>
                                 </div>
                              </div>      
@@ -164,9 +170,9 @@
                             <div class="myPage" id="pageFirstSection_2">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>What is the key oncogenic driver mutation in chronic myeloid leukemia (CML)?</div>
+                                    <h2 class='texting'>What is the key oncogenic driver mutation in chronic myeloid leukemia (CML)?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA2">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -186,9 +192,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>How does BCR-ABL contribute to the pathogenesis of chronic myeloid leukemia?</div>
+                                    <h2 class='texting'>How does BCR-ABL contribute to the pathogenesis of chronic myeloid leukemia?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -211,9 +217,9 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>How is the <em>BCR-ABL</em> fusion gene detected?</div>
+                                    <h2 class='texting'>How is the <em>BCR-ABL</em> fusion gene detected?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -240,9 +246,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>What are the classes of normal regulatory genes that are frequently mutated in cancer?</div>
+                                    <h2 class='texting'>What are the classes of normal regulatory genes that are frequently mutated in cancer?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA5">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -263,9 +269,9 @@
                             <div class="myPage" id="pageFirstSection_6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>How do mutations in proto-oncogenes cause cancer?</div>
+                                    <h2 class='texting'>How do mutations in proto-oncogenes cause cancer?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -287,9 +293,9 @@
                             <div class="myPage" id="pageFirstSection_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>What are some other malignancies caused by mutations in proto-oncogenes?</div>
+                                    <h2 class='texting'>What are some other malignancies caused by mutations in proto-oncogenes?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA7">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -541,9 +547,9 @@
                             <div class="myPage" id="pageFirstSection_8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>8</div>
-                                    <div class='texting'>How do chromosomal translocations activate proto-oncogenes?</div>
+                                    <h2 class='texting'>How do chromosomal translocations activate proto-oncogenes?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -565,9 +571,9 @@
                             <div class="myPage" id="pageFirstSection_9">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>9</div>
-                                    <div class='texting'>How do mutations in tumor suppressor genes cause cancer?</div>
+                                    <h2 class='texting'>How do mutations in tumor suppressor genes cause cancer?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA9">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -590,9 +596,9 @@
                             <div class="myPage" id="pageFirstSection_10">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>10</div>
-                                    <div class='texting'>What are some examples of tumor suppressor genes?</div>
+                                    <h2 class='texting'>What are some examples of tumor suppressor genes?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA10">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -797,9 +803,9 @@
                             <div class="myPage" id="pageFirstSection_11">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>11</div>
-                                    <div class='texting'>How do mutations in DNA repair genes cause cancer?</div>
+                                    <h2 class='texting'>How do mutations in DNA repair genes cause cancer?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA11">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -822,9 +828,9 @@
                             <div class="myPage" id="pageFirstSection_12">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>12</div>
-                                    <div class='texting'>What are some diseases caused by chromosomal translocations?</div>
+                                    <h2 class='texting'>What are some diseases caused by chromosomal translocations?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA12">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -915,9 +921,9 @@
                             <div class="myPage" id="pageFirstSection_13">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>13</div>
-                                    <div class='texting'>How does <em>BCR-ABL</em> contribute to the pathogenesis of CML?</div>
+                                    <h2 class='texting'>How does <em>BCR-ABL</em> contribute to the pathogenesis of CML?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA13">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -946,9 +952,9 @@
                             <div class="myPage" id="pageFirstSection_14">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>14</div>
-                                    <div class='texting'>What is the role of RAS in normal cells?</div>
+                                    <h2 class='texting'>What is the role of RAS in normal cells?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA14">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -980,9 +986,9 @@
                             <div class="myPage" id="pageFirstSection_15">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>15</div>
-                                    <div class='texting'>What is the role of <em>MYC</em> in normal cells?</div>
+                                    <h2 class='texting'>What is the role of <em>MYC</em> in normal cells?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA15">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -1005,9 +1011,9 @@
                             <div class="myPage" id="pageFirstSection_16">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>16</div>
-                                    <div class='texting'>What is the Warburg effect, and what is its clinical relevance?</div>
+                                    <h2 class='texting'>What is the Warburg effect, and what is its clinical relevance?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA16">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -1029,9 +1035,9 @@
                             <div class="myPage" id="pageFirstSection_17">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>17</div>
-                                    <div class='texting'>What is the role of polymerase chain reaction (PCR) in gauging the response of chronic myeloid leukemia (CML) to therapy?</div>
+                                    <h2 class='texting'>What is the role of polymerase chain reaction (PCR) in gauging the response of chronic myeloid leukemia (CML) to therapy?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA17">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -1057,29 +1063,31 @@
                             <p class="paraIndent"><em>A different drug was prescribed but had intolerable side effects. The patient developed fever and bone pain. Physical examination revealed the reappearance of splenomegaly and mild lymphadenopathy. Cytogenetic analysis showed a predominance of cells morphologically consistent with lymphoblasts with reduplication of the <span class="hs" role="link" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="1">(9;22) translocation</span> consistent with development of lymphoid blast crisis from chronic myeloid leukemia. Other new <span class="hs" role="link" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="2">karyotypic abnormalities</span> were also noted.</em></p>
                             <p class="paraIndent"><em>A peripheral blood smear showed marked leukocytosis. However, in contrast to the patient's blood smear at diagnosis, very few maturing myeloid cells were present; instead, the vast majority of the cells were of intermediate size (larger than neutrophils and mature lymphocytes, but not as large as the myeloblasts seen in acute myeloid leukemia), with dispersed chromatin and distinct nucleoli consistent with <span class="hs" role="link" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="1">lymphoblasts</span>. Flow cytometry confirmed that the cells were positive for the B cell markers CD19 and CD10 and terminal deoxynucleotidyl transferase (TdT) but negative for myeloperoxidase, confirming the diagnosis of lymphoid blast crisis of the patient's chronic myeloid leukemia. Although myeloid blast crisis is more common, in 20%-30% of cases of chronic myeloid leukemia undergoing transformation to acute leukemia the blasts have a lymphoid phenotype indistinguishable from that of de novo B-cell acute lymphoblastic leukemia (ALL).</em></p><br/>
                             
-                             <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="0" aria-label="Cytogenetic analysis" ><img src="images/q18/on005-ca002f008-9780323640251.png" class="thumbImg" alt="Cytogenetic analysis" /></span>                                
+                             <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="1" data-id="0" aria-label="Cytogenetic analysis"  aria-pressed="true"><img src="images/q18/on005-ca002f008-9780323640251.png" class="thumbImg" alt="Cytogenetic analysis" /></span>                                
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="0" aria-label="Peripheral blood smear" ><img src="images/q18/on005-ca002f009-9780323640251.png" class="thumbImg" alt="Peripheral blood smear" /></span>
+                                <span class="thumbnail" role="button" tabindex="0" data-imageBoxHolderid="2" data-dropdownid="2" data-id="0" aria-label="Peripheral blood smear"  aria-pressed="false"><img src="images/q18/on005-ca002f009-9780323640251.png" class="thumbImg" alt="Peripheral blood smear" /></span>
                             </div>
                             
 
                             <div class="imageBoxHolder imageBoxHolder2  hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Cytogenetic analysis</li>
-                                    <li tabindex="0">Ph1(der 22)</li>
-                                    <li tabindex="0">Additional karyotypic abnormalities</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Cytogenetic analysis</li>
+                                    <li>Ph1(der 22)</li>
+                                    <li>Additional karyotypic abnormalities</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                      <img src="images/q18/on005-ca002f008-9780323640251.png" class="containerImg imageShow0" aria-label="Cytogenetic analysis image" alt="Cytogenetic analysis" />
+                                      <img src="images/q18/on005-ca002f008-9780323640251.png" class="containerImg imageShow0" alt="Cytogenetic analysis" />
 
-                                      <img src="images/q18/on005-ca002f008-9780323640251-b.png" class="containerImg imageShow1" aria-label="Ph1(der 22) image" alt="Ph1(der 22)" />
+                                      <img src="images/q18/on005-ca002f008-9780323640251-b.png" class="containerImg imageShow1" alt="Ph1(der 22)" />
 
-                                      <img src="images/q18/on005-ca002f008-9780323640251-c.png" class="containerImg imageShow2" aria-label="Additional karyotypic abnormalities image" alt="Additional karyotypic abnormalities" />
+                                      <img src="images/q18/on005-ca002f008-9780323640251-c.png" class="containerImg imageShow2" alt="Additional karyotypic abnormalities" />
 
 
 
@@ -1090,17 +1098,19 @@
 
                              <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Peripheral blood smear</li>
-                                    <li tabindex="0">Lymphoblasts</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Peripheral blood smear</li>
+                                    <li>Lymphoblasts</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                      <img src="images/q18/on005-ca002f009-9780323640251.png" class=" containerImg imageShow0" aria-label="Peripheral blood smear image" alt="Peripheral blood smear" />
+                                      <img src="images/q18/on005-ca002f009-9780323640251.png" class=" containerImg imageShow0" alt="Peripheral blood smear" />
 
-                                      <img src="images/q18/on005-ca002f009-9780323640251-a.png" class="containerImg imageShow1" aria-label="Lymphoblasts image" alt="Lymphoblasts" />
+                                      <img src="images/q18/on005-ca002f009-9780323640251-a.png" class="containerImg imageShow1" alt="Lymphoblasts" />
 
 
                                    </div>
@@ -1111,9 +1121,9 @@
                             <div class="myPage" id="pageFirstSection_18">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>18</div>
-                                    <div class='texting'>What is the significance of the Philadelphia chromosome in this lymphoid leukemia?</div>
+                                    <h2 class='texting'>What is the significance of the Philadelphia chromosome in this lymphoid leukemia?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA18">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -1135,9 +1145,9 @@
                             <div class="myPage" id="pageFirstSection_19">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>19</div>
-                                    <div class='texting'>What is the significance of the additional chromosomal abnormalities seen in the second presentation?</div>
+                                    <h2 class='texting'>What is the significance of the additional chromosomal abnormalities seen in the second presentation?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA19">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -1164,12 +1174,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -1199,10 +1209,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -1243,6 +1253,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>

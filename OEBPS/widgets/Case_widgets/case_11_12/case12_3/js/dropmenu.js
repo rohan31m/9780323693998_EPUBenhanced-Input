@@ -1,10 +1,81 @@
+function getDropdown($el)
+{
+    var $node = $($el);
+    return $node.hasClass('dropdown') ? $node : $node.closest('.dropdown');
+}
+
+function getCombobox($dropdown)
+{
+    var $combo = $dropdown.find('[role="combobox"]').first();
+    return $combo.length ? $combo : $dropdown;
+}
+
+function setActiveOption($dropdown, $option)
+{
+    var $combo = getCombobox($dropdown);
+    $dropdown.find('.option.active').removeClass('active');
+    if ($option && $option.length)
+    {
+        $option.addClass('active');
+        $combo.attr('aria-activedescendant', $option.attr('id'));
+        var list = $dropdown.find('.list')[0];
+        if (list && $option[0] && typeof $option[0].scrollIntoView === 'function')
+        {
+            $option[0].scrollIntoView(false);
+        }
+    }
+    else
+    {
+        $combo.removeAttr('aria-activedescendant');
+    }
+}
+
+function openDropdown($dropdown)
+{
+    $('.dropdown').not($dropdown).each(function()
+    {
+        closeDropdown($(this));
+    });
+    $dropdown.addClass('open');
+    getCombobox($dropdown).attr('aria-expanded', 'true');
+    $dropdown.find('.list').attr('aria-hidden', 'false');
+    var $active = $dropdown.find('.option.selected').first();
+    if (!$active.length)
+    {
+        $active = $dropdown.find('.option').first();
+    }
+    setActiveOption($dropdown, $active);
+}
+
+function closeDropdown($dropdown)
+{
+    $dropdown.removeClass('open');
+    var $combo = getCombobox($dropdown);
+    $combo.attr('aria-expanded', 'false');
+    $combo.removeAttr('aria-activedescendant');
+    $dropdown.find('.list').attr('aria-hidden', 'true');
+    $dropdown.find('.option.active').removeClass('active');
+}
+
 function create_custom_dropdowns()
 {
     $('select').each(function(i, select)
     {
         if (!$(this).next().hasClass('dropdown'))
         {
-            $(this).after('<div class="dropdown ' + ($(this).attr('class') || '') + '" tabindex="0" aria-expanded="false" aria-haspopup="true"><span class="current"></span><div class="list"><ul role="listbox"></ul></div></div>');
+            var listboxId = 'dropdown-listbox-' + i;
+            var comboboxId = 'dropdown-combobox-' + i;
+            var valueId = comboboxId + '-value';
+            var labelledBy = $('#referenceSelectLabel').attr('id');
+            var labelledByIds = labelledBy || valueId;
+            $(this).after(
+                '<div class="dropdown ' + ($(this).attr('class') || '') + '">' +
+                    '<button type="button" id="' + comboboxId + '" class="combo-button" role="combobox" aria-autocomplete="none" aria-expanded="false" aria-haspopup="listbox" aria-controls="' + listboxId + '" aria-labelledby="' + labelledByIds + '">' +
+                        '<span class="current" id="' + valueId + '"></span>' +
+                    '</button>' +
+                    '<div class="list" aria-hidden="true"><ul id="' + listboxId + '" role="listbox"></ul></div>' +
+                '</div>'
+            );
 
             var dropdown = $(this).next();
             var options = $(select).find('option');
@@ -13,111 +84,154 @@ function create_custom_dropdowns()
             options.each(function(j, o)
             {
                 var display = $(o).data('display-text') || '';
-                dropdown.find('ul').append('<li class="option ' + ($(o).is(':selected') ? 'selected' : '') + '" tabindex="0" role="option" data-value="' + $(o).val() + '" data-display-text="' + display + '">' + $(o).text() + '</li>');
+                var isSelected = $(o).is(':selected');
+                dropdown.find('ul').append('<li id="dropdown-option-' + i + '-' + j + '" class="option' + (isSelected ? ' selected' : '') + '" role="option" aria-selected="' + (isSelected ? 'true' : 'false') + '" data-value="' + $(o).val() + '" data-display-text="' + display + '">' + $(o).text() + '</li>');
             });
+            $(this).attr({
+                'aria-hidden': 'true',
+                'tabindex': '-1'
+            }).hide();
         }
     });
 }
 // Event listeners
-// Open/close
 $(document).on('click', '.dropdown', function(event)
 {
-    $('.dropdown').not($(this)).removeClass('open');
-    
-    $(this).toggleClass('open');
-
-    if ($(this).hasClass('open'))
+    if ($(event.target).closest('.option').length)
     {
-        $(this).attr('aria-expanded', "true");
-        $(this).find('.option').attr('tabindex', "0");
-        $(this).find('.selected').focus();
+        return;
+    }
+    var $dropdown = $(this);
+    if ($dropdown.hasClass('open'))
+    {
+        closeDropdown($dropdown);
     }
     else
     {
-        $(this).find('.option').removeAttr('tabindex');
-        $(this).attr('aria-expanded', "false");
-        $(this).focus();
+        openDropdown($dropdown);
     }
+    getCombobox($dropdown).focus();
 });
-// Close when clicking outside
 $(document).on('click', function(event)
 {
     if ($(event.target).closest('.dropdown').length === 0)
     {
-        $('.dropdown').removeClass('open');
-        $('.dropdown .option').removeAttr('tabindex');
-        $('.dropdown').attr('aria-expanded', "false");
+        $('.dropdown').each(function()
+        {
+            closeDropdown($(this));
+        });
     }
     event.stopPropagation();
 });
-// Option click
 $(document).on('click', '.dropdown .option', function(event)
 {
-    $(this).closest('.list').find('.selected').removeClass('selected');
-    $(this).addClass('selected');
-    var text = $(this).data('display-text') || $(this).html();
-    $(this).closest('.dropdown').find('.current').html(text);
-    $(this).closest('.dropdown').prev('select').val($(this).data('value')).trigger('change');
+    event.stopPropagation();
+    var $dropdown = $(this).closest('.dropdown');
+    $dropdown.find('.option').removeClass('selected').attr('aria-selected', 'false');
+    $(this).addClass('selected').attr('aria-selected', 'true');
+    var text = $(this).data('display-text') || $(this).text();
+    $dropdown.find('.current').text(text);
+    $dropdown.prev('select').prop('selectedIndex', $(this).index()).trigger('change');
+    closeDropdown($dropdown);
+    if ($dropdown.closest('.tablepatch').length === 0)
+    {
+        getCombobox($dropdown).focus();
+    }
 });
-// Keyboard events
-$(document).on('keydown', '.dropdown', function(event)
+$(document).on('keydown', '[role="combobox"]', function(event)
 {
-    var focused_option = $($(this).find('.list .option:focus')[0] || $(this).find('.list .option.selected')[0]);
-    
-    // console.log("focused_option> ", focused_option)
-    if (event.keyCode == 32 || event.keyCode == 13)
+    var $dropdown = getDropdown($(this));
+    var $options = $dropdown.find('[role="listbox"] > .option');
+    if (!$options.length)
     {
-      // Space or Enter
-        if ($(this).hasClass('open'))
+        $options = $dropdown.find('.option');
+    }
+    if (!$options.length)
+    {
+        return;
+    }
+
+    var $active = $dropdown.find('.option.active');
+    if (!$active.length)
+    {
+        $active = $dropdown.find('.option.selected');
+    }
+    if (!$active.length)
+    {
+        $active = $options.first();
+    }
+
+    var key = event.keyCode;
+    var isOpen = $dropdown.hasClass('open');
+
+    if (key == 32 || key == 13)
+    {
+        event.preventDefault();
+        if (isOpen)
         {
-            focused_option.trigger('click');
+            $active.trigger('click');
         }
         else
         {
-            $(this).trigger('click');
+            openDropdown($dropdown);
         }
         return false;
-        
     }
-    else if (event.keyCode == 40)
+    else if (key == 40)
     {
-      // Down
-      // console.log(focused_option)
-        if (!$(this).hasClass('open'))
+        event.preventDefault();
+        if (!isOpen)
         {
-            $(this).trigger('click');
+            openDropdown($dropdown);
         }
         else
         {
-          // console.log("Next >>>",focused_option.next())
-            focused_option.next().focus();
+            var $next = $active.next('.option');
+            if ($next.length)
+            {
+                setActiveOption($dropdown, $next);
+            }
         }
         return false;
-        
     }
-    else if (event.keyCode == 38)
+    else if (key == 38)
     {
-      // Up
-        if (!$(this).hasClass('open'))
+        event.preventDefault();
+        if (!isOpen)
         {
-            $(this).trigger('click');
+            openDropdown($dropdown);
         }
         else
         {
-            var focused_option = $($(this).find('.list .option:focus')[0] || $(this).find('.list .option.selected')[0]);
-            focused_option.prev().focus();
+            var $prev = $active.prev('.option');
+            if ($prev.length)
+            {
+                setActiveOption($dropdown, $prev);
+            }
         }
         return false;
-        
     }
-    else if (event.keyCode == 27)
+    else if (key == 36 && isOpen)
     {
-      // Esc
-        if ($(this).hasClass('open'))
-        {
-            $(this).trigger('click');
-        }
+        event.preventDefault();
+        setActiveOption($dropdown, $options.first());
         return false;
-        
+    }
+    else if (key == 35 && isOpen)
+    {
+        event.preventDefault();
+        setActiveOption($dropdown, $options.last());
+        return false;
+    }
+    else if (key == 27 && isOpen)
+    {
+        event.preventDefault();
+        closeDropdown($dropdown);
+        getCombobox($dropdown).focus();
+        return false;
+    }
+    else if (key == 9 && isOpen)
+    {
+        closeDropdown($dropdown);
     }
 });

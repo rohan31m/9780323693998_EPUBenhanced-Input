@@ -9,10 +9,52 @@
     // var audioElement = document.createElement('audio');
     $(document).ready(function()
     {
+        var $loadStatus = $('#widgetStatus');
+        var loadStatusAnnounced = false;
+        if ($loadStatus.length)
+        {
+            $loadStatus.attr({
+                'role': 'status',
+                'aria-live': 'polite',
+                'aria-atomic': 'true'
+            });
+            $loadStatus.text('');
+            window.setTimeout(function()
+            {
+                $loadStatus.text('Loading');
+            }, 50);
+        }
         $(window).load(function()
         {
             $(".loader").delay(800).fadeOut("slow");
-            $('.loadDiv').delay(800).fadeOut(300);
+            $('.loadDiv').delay(800).fadeOut(300, function()
+            {
+                if (loadStatusAnnounced)
+                {
+                    return;
+                }
+                loadStatusAnnounced = true;
+                $('.loadDiv').attr({
+                    'aria-busy': 'false',
+                    'aria-hidden': 'true'
+                });
+                if ($loadStatus.length)
+                {
+                    $loadStatus.text('');
+                    window.setTimeout(function()
+                    {
+                        $loadStatus.text('Content loaded');
+                    }, 50);
+                }
+                try
+                {
+                    if (window.parent && window.parent !== window)
+                    {
+                        window.parent.postMessage({ type: 'caseWidgetLoaded' }, '*');
+                    }
+                }
+                catch (ignore) {}
+            });
         });
         init();
         //$(".topContent").hide();
@@ -29,10 +71,12 @@
         $('#pageContainer').removeAttr("aria-live");
         $('#naviLeft').attr("aria-label","Previous");
         $('#naviRight').attr("aria-label","Next");
-        $(".navigation").bind("click keyup", fnHandelNavigationEvents);
+        $(".navigation").bind("click", fnHandelNavigationEvents);
+        $("#naviList").on("keydown", ".navigation", handleSlideControlKeys);
         $("#naviLeft").bind("click keyup", fnBack);
         $("#naviRight").bind("click keyup", fnNext);
         $("#menuBtn").bind("click keyup", menuBtnFn);
+        $(document).on("keydown", handleHamburgerMenuKeys);
         $("#tableBtn").bind("click keyup", tableBtnFn);
         $('.item').bind("click keyup", fnClickRadioBox);
         // working
@@ -133,6 +177,211 @@
 
     var currScreenVisible = null;
 
+
+    function setReferenceExpanded(isExpanded)
+    {
+        $('#tableBtn').attr('aria-expanded', isExpanded ? 'true' : 'false');
+        $('#referencePanel').attr('aria-hidden', isExpanded ? 'false' : 'true');
+        $('#widgetStatus').text(isExpanded ? 'Reference expanded' : 'Reference collapsed');
+        if (!isExpanded && typeof clearReferenceTableScrollTabStops === 'function')
+        {
+            clearReferenceTableScrollTabStops();
+        }
+    }
+
+    function setMenuExpanded(isExpanded)
+    {
+        $('#menuBtn').attr('aria-expanded', isExpanded ? 'true' : 'false');
+        $('#menuPanel').attr('aria-hidden', isExpanded ? 'false' : 'true');
+        $('#widgetStatus').text(isExpanded ? 'Menu expanded' : 'Menu collapsed');
+    }
+
+    function isHamburgerMenuOpen()
+    {
+        return $('.menupatch').css('display') == 'block';
+    }
+
+    function getHamburgerFocusables()
+    {
+        return $('#menuBtn, #menuPanel .menuList li[tabindex]').filter(function()
+        {
+            return $(this).is(':visible') && $(this).attr('tabindex') !== '-1';
+        });
+    }
+
+    function updateSlideControls(activeIndex)
+    {
+        activeIndex = Number(activeIndex);
+        $('.navigation').each(function()
+        {
+            var idNum = Number(String($(this).attr('id') || '').replace('navigate', ''));
+            var isActive = idNum === activeIndex;
+            $(this).toggleClass('currentSlide', isActive);
+            $(this).attr('aria-current', isActive ? 'true' : 'false');
+            $(this).attr('tabindex', isActive ? '0' : '-1');
+        });
+    }
+
+    var keepSlideControlFocus = false;
+
+    function handleSlideControlKeys(ev)
+    {
+        var key = ev.keyCode || ev.which;
+        var $dots = $('.navigation');
+        var index = $dots.index(this);
+        var targetIndex = -1;
+        if (key === 37 || key === 38)
+        {
+            targetIndex = index <= 0 ? $dots.length - 1 : index - 1;
+        }
+        else if (key === 39 || key === 40)
+        {
+            targetIndex = index >= $dots.length - 1 ? 0 : index + 1;
+        }
+        else if (key === 36)
+        {
+            targetIndex = 0;
+        }
+        else if (key === 35)
+        {
+            targetIndex = $dots.length - 1;
+        }
+        else if (key === 13 || key === 32)
+        {
+            ev.preventDefault();
+            keepSlideControlFocus = false;
+            fnHandelNavigationEvents.call(this, { type: 'click' });
+            return;
+        }
+        else
+        {
+            return;
+        }
+        ev.preventDefault();
+        keepSlideControlFocus = true;
+        fnHandelNavigationEvents.call($dots.eq(targetIndex)[0], { type: 'click' });
+        $dots.eq(targetIndex).focus();
+    }
+    function focusSlideContent(slideIndex)
+    {
+        var $slide = $("#midDiv" + slideIndex);
+        var $target = $('#menuBtn');
+        if ($slide.length)
+        {
+            var $page = $slide.find('.myPage').first();
+            var hasLeadingContent = false;
+            if ($page.length)
+            {
+                var pageNode = $page.get(0);
+                $slide.find('p, img, .paraIndent, .imageBoxHolder, .imageBoxHolder2, .imageThumbHolder, .leftImageBox, .graphContainer, table').each(function()
+                {
+                    if (pageNode === this || $.contains(pageNode, this))
+                    {
+                        return;
+                    }
+                    if (pageNode.compareDocumentPosition(this) & 2)
+                    {
+                        hasLeadingContent = true;
+                        return false;
+                    }
+                });
+            }
+            if ($page.length && !hasLeadingContent)
+            {
+                $target = $page;
+            }
+            else
+            {
+                $target = $slide;
+            }
+            if ($target.attr('tabindex') == null)
+            {
+                $target.attr('tabindex', '-1');
+            }
+        }
+        var moveFocus = function()
+        {
+            if ($target && $target.length)
+            {
+                $target.focus();
+            }
+            if (!$target.length || document.activeElement !== $target.get(0))
+            {
+                $('#menuBtn').focus();
+            }
+        };
+        moveFocus();
+        window.setTimeout(moveFocus, 0);
+        window.setTimeout(moveFocus, 350);
+    }
+
+    function closeHamburgerMenu(restoreFocus)
+    {
+        if (!isHamburgerMenuOpen())
+        {
+            return;
+        }
+        setMenuExpanded(false);
+        $('.menupatch').slideUp();
+        $('#menuBtn').removeClass('menuBtnSelected');
+        $('#tableBtn').attr('tabindex', '0');
+        if (currScreenVisible != null)
+        {
+            $(currScreenVisible).show();
+        }
+        currScreenVisible = null;
+        $("#naviList").show();
+        $("#naviLeft").show();
+        $("#naviRight").show();
+        updateSlideControls(nSlideCounter);
+        if (restoreFocus)
+        {
+            window.setTimeout(function()
+            {
+                $('#menuBtn').focus();
+            }, 0);
+        }
+    }
+
+    function handleHamburgerMenuKeys(ev)
+    {
+        if (!isHamburgerMenuOpen())
+        {
+            return;
+        }
+        var isEscape = ev.key === 'Escape' || ev.key === 'Esc' || ev.keyCode === 27;
+        if (isEscape)
+        {
+            ev.preventDefault();
+            ev.stopPropagation();
+            closeHamburgerMenu(true);
+            return;
+        }
+        if (ev.key === 'Tab' || ev.keyCode === 9)
+        {
+            var $focusable = getHamburgerFocusables();
+            if (!$focusable.length)
+            {
+                return;
+            }
+            var first = $focusable.get(0);
+            var last = $focusable.get($focusable.length - 1);
+            var active = document.activeElement;
+            if (ev.shiftKey)
+            {
+                if (active === first || $focusable.index(active) === -1)
+                {
+                    ev.preventDefault();
+                    last.focus();
+                }
+            }
+            else if (active === last || $focusable.index(active) === -1)
+            {
+                ev.preventDefault();
+                first.focus();
+            }
+        }
+    }
     function menuBtnFn(ev, nSlideCounter)
     {
         if (ev.type == "keyup" && ev.keyCode != 13)
@@ -149,21 +398,12 @@
         {
             resetScrrenObjectsVisibility();
             $('.tablepatch').hide();
+            setReferenceExpanded(false);
         }
         $('#tableBtn').removeClass('tableBtnSelected');
-        if ($('.menupatch').css('display') == 'block')
+        if (isHamburgerMenuOpen())
         {
-            $('.menupatch').slideUp();
-            $('#menuBtn').removeClass('menuBtnSelected');
-            //$('#menuBtn').focus();
-            $('#tableBtn').attr('tabindex','0');
-
-            if (currScreenVisible != null)
-                $(currScreenVisible).show();
-            currScreenVisible = null;
-            $("#naviList").show();
-            $("#naviLeft").show();
-            $("#naviRight").show();
+            closeHamburgerMenu(false);
         }
         else
         {
@@ -178,6 +418,7 @@
             var currScreenNum = $(currScreenVisible).attr('id').match(/\d+/)[0];
             $('#menu' + currScreenNum).addClass("selectedMenu");
             //currScreenVisible = $('.midDiv:visible');
+            setMenuExpanded(true);
             $('.menupatch').css("z-index", "13");
             $('#menuBtn').addClass('menuBtnSelected');
             $('#tableBtn').removeAttr('tabindex');
@@ -204,6 +445,7 @@
         $("#naviList").show();
         $("#naviLeft").show();
         $("#naviRight").show();
+        updateSlideControls(nSlideCounter);
     }
     var currScreenVisible1 = null;
 
@@ -221,11 +463,13 @@
         {
             resetScrrenObjectsVisibility();
             $('.menupatch').hide();
+            setMenuExpanded(false);
             $('#menuBtn').removeClass('menuBtnSelected');
         }
         $('#tableBtn').removeClass('tableBtnSelected');
         if ($('.tablepatch').css('display') != 'none')
         {
+            setReferenceExpanded(false);
             $('.tablepatch').slideUp();
             $('#tableBtn').removeClass('tableBtnSelected');
             if (currScreenVisible1 != null)
@@ -234,6 +478,8 @@
             $("#naviList").show();
             $("#naviLeft").show();
             $("#naviRight").show();
+            updateSlideControls(nSlideCounter);
+            $('#tableBtn').focus();
         }
         else
         {
@@ -247,6 +493,7 @@
             });
             var currScreenNum = $(currScreenVisible1).attr('id').match(/\d+/)[0];
             $('#menu' + currScreenNum).addClass("selectedMenu");
+            setReferenceExpanded(true);
             $('.tablepatch').css("z-index", "13");
             $('#tableBtn').addClass('tableBtnSelected');
             $('.tablepatch').slideDown(
@@ -257,22 +504,18 @@
                     $("#naviList").hide();
                     $("#naviLeft").hide();
                     $("#naviRight").hide();
+                    if (typeof syncReferenceTableScrollAccess === 'function')
+                    {
+                        syncReferenceTableScrollAccess(null, false);
+                    }
+                    $('#tableBtn').focus();
                 }
             });
         }
         if ($('.menupatch').css('display') == 'block')
         {
+            setMenuExpanded(false);
             $('#menuBtn').removeClass('menuBtnSelected');
-        }
-        var data_id = 0;
-        if ($('#testListId' + data_id).height() < $('#addTable' + data_id + ' table').height())
-        {
-            $(".nano").nanoScroller();
-            $(".nano-pane").show();
-        }
-        else
-        {
-            $(".nano-pane").hide();
         }
     }
 
@@ -291,7 +534,8 @@
         footerLi += '<ul>';
         for (var i = 0; i < nCount; i++)
         {
-            footerLi += '<li aria-label="slide '+(i+1)+' clickable"><span id="navigate' + i + '" class="navigation"></span></li>';
+            var isFirst = (i === 0);
+            footerLi += '<li><span id="navigate' + i + '" class="navigation" role="button" tabindex="' + (isFirst ? '0' : '-1') + '" aria-label="Slide ' + (i + 1) + ' of ' + nCount + '" aria-current="' + (isFirst ? 'true' : 'false') + '"></span></li>';
         }
         footerLi += '</ul>';
         $("#naviList").append(footerLi);
@@ -299,7 +543,7 @@
         {
             //background: "#015453 no-repeat"
         });
-        $("#navigate0").addClass("currentSlide");
+        updateSlideControls(0);
         aSlidesArray[nSlideCounter].css(
         {
             'display': 'block',
@@ -312,14 +556,58 @@
     {
         $(".hs").each(function(index)
         {
+            $(this).removeAttr("aria-current");
             $(this).bind("click keyup tap", onHsSelect);
         });
     }
+    function setActiveHotspotLink($scope, dropDownId, listItemId)
+    {
+        var $links = $scope.find(".hs");
+        $links.removeAttr("aria-current");
+        if (dropDownId == null || listItemId == null)
+        {
+            return;
+        }
+        $links.filter(function()
+        {
+            return String($(this).attr("data-dropdownid")) === String(dropDownId) &&
+                String($(this).attr("data-id")) === String(listItemId);
+        }).first().attr("aria-current", "true");
+    }
 
+    function focusUpdatedImageView($container)
+    {
+        var $target = $container.find('[role="combobox"]').first();
+        if (!$target.length)
+        {
+            $target = $container.find("img:visible").first();
+            if ($target.length && $target.attr("tabindex") == null)
+            {
+                $target.attr("tabindex", "-1");
+            }
+        }
+        if ($target.length)
+        {
+            window.setTimeout(function()
+            {
+                $target.focus();
+            }, 450);
+        }
+    }
+
+    function setThumbnailActive($thumbs, $active)
+    {
+        $thumbs.removeClass("thumbnail_active").attr("aria-pressed", "false");
+        if ($active && $active.length)
+        {
+            $active.addClass("thumbnail_active").attr("aria-pressed", "true");
+        }
+    }
     function createThumbnails()
     {
         $(".imageThumbHolder .thumbnail").each(function(index)
         {
+            $(this).attr("aria-pressed", $(this).hasClass("thumbnail_active") ? "true" : "false");
             $(this).bind("click keyup", onThumbnailSelect);
         });
     }
@@ -346,19 +634,22 @@
             }
 
         addPolite();
-        var mainDiv = $(e.target).closest(".midDiv");
+        var $link = $(e.currentTarget);
+        var mainDiv = $link.closest(".midDiv");
         mainDiv.find('.containerImg').hide();
-        mainDiv.find(".dropdownList li").removeClass("selected");        
-        var listItemId = $(e.target).attr("data-id");
-        var dropDownId = $(e.target).attr("data-dropdownid");
+        mainDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");        
+        var listItemId = $link.attr("data-id");
+        var dropDownId = $link.attr("data-dropdownid");
         mainDiv.find('.imageBoxHolder').hide();
-        mainDiv.find('.imageThumbHolder .thumbnail').removeClass("thumbnail_active");       
-        $(mainDiv.find('.imageThumbHolder .thumbnail')[dropDownId-1]).addClass("thumbnail_active");
+        setThumbnailActive(mainDiv.find('.imageThumbHolder .thumbnail'), $(mainDiv.find('.imageThumbHolder .thumbnail')[dropDownId-1]));
         var mainHsDiv = mainDiv.find('.hs_set' + dropDownId);
         mainHsDiv.css("display","flex");
         mainHsDiv.find('.imageShow' + listItemId).show();
-        $(mainHsDiv.find(".dropdownList li")[listItemId]).addClass("selected");
-        mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[listItemId]).text());      
+        $(mainHsDiv.find(".dropdownList li")[listItemId]).addClass("selected").attr("aria-selected", "true");
+        mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[listItemId]).text());
+        setActiveHotspotLink(mainDiv, dropDownId, listItemId);
+        announceImageView($(mainHsDiv.find(".dropdownList li")[listItemId]).text(), $link.text());
+        focusUpdatedImageView(mainHsDiv);      
         setTimeout(function(){
             ActivityMain.setHabitatContainerSize();
         },500);
@@ -373,42 +664,79 @@
         addPolite();
         var mainDiv = $(e.currentTarget).closest(".midDiv");
         mainDiv.find('.containerImg').hide();
-        mainDiv.find(".dropdownList li").removeClass("selected");        
+        mainDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");        
         var listItemId = $(e.currentTarget).attr("data-id");
         var dropDownId = $(e.currentTarget).attr("data-dropdownid");
         mainDiv.find('.imageBoxHolder').hide();
-        mainDiv.find('.imageThumbHolder .thumbnail').removeClass("thumbnail_active");       
-        $(e.currentTarget).addClass("thumbnail_active");
+        setThumbnailActive(mainDiv.find('.imageThumbHolder .thumbnail'), $(e.currentTarget));
         var mainHsDiv = mainDiv.find('.hs_set' + dropDownId);
         mainHsDiv.css("display","flex");
         mainHsDiv.find('.imageShow' + listItemId).show();
-        $(mainHsDiv.find(".dropdownList li")[listItemId]).addClass("selected");
-        mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[listItemId]).text());      
+        $(mainHsDiv.find(".dropdownList li")[listItemId]).addClass("selected").attr("aria-selected", "true");
+        mainHsDiv.find(".dropdownList").find('.current').text($(mainHsDiv.find(".dropdownList li")[listItemId]).text());
+        setActiveHotspotLink(mainDiv, dropDownId, listItemId);
+        announceImageView($(mainHsDiv.find(".dropdownList li")[listItemId]).text());      
         setTimeout(function(){
             ActivityMain.setHabitatContainerSize();
         },500);  
     }
 
-    function createDropDownLists()
+            function announceImageView(label, selectedLink)
+    {
+        var name = $.trim(label || "");
+        if (!name)
+        {
+            return;
+        }
+        var $live = $("#widgetStatus");
+        var message = name + " displayed";
+        var linkName = $.trim(selectedLink || "");
+        if (linkName)
+        {
+            message = linkName + " selected. " + message;
+        }
+        $live.text("");
+        window.setTimeout(function()
+        {
+            $live.text(message);
+        }, 50);
+    }
+function createDropDownLists()
     {
         $(".dropdownListBox").each(function(index)
         {
-            $(this).append('<span class="current">' + $($(this).find("li")[0]).text() + '</span>');
-            $(this).append('<div class="list"><ul role="listbox" class="hidden"></ul></div>');
-            $($(this).find("li")[0]).addClass("selected");
-            $(this).find("li").each(function(liIndex)
+            var $box = $(this);
+            var $items = $box.find("li");
+            if (!$items.length)
             {
-                $(this).addClass("option");
-                $(this).attr("data-value", $(this).text());
-                $(this).attr("data-id", liIndex);
-                $(this).attr("role", "option");
-                $(this).appendTo($(this).parent().find(".list ul"));
-                $(this).bind("click tap", onListSelect);
+                return;
+            }
+            var listboxId = "image-listbox-" + index;
+            var comboboxId = "image-combobox-" + index;
+            var valueId = comboboxId + "-value";
+            var labelId = comboboxId + "-label";
+            var optionsHtml = "";
+            $items.each(function(liIndex)
+            {
+                var text = $.trim($(this).text());
+                optionsHtml += '<li id="image-option-' + index + '-' + liIndex + '" class="option' + (liIndex === 0 ? ' selected' : '') + '" role="option" aria-selected="' + (liIndex === 0 ? 'true' : 'false') + '" data-value="' + text + '" data-id="' + liIndex + '">' + text + '</li>';
             });
-            $(this).attr("tabindex", "0");
-            $(this).removeClass("dropdownListBox").addClass("dropdownList dropdown");
+            var firstText = $.trim($items.first().text());
+            var $combo = $(
+                '<div class="dropdownList dropdown pageDropdownList">' +
+                    '<span id="' + labelId + '" class="combo-label">Select image view</span>' +
+                    '<button type="button" id="' + comboboxId + '" class="combo-button" role="combobox" aria-autocomplete="none" aria-expanded="false" aria-haspopup="listbox" aria-controls="' + listboxId + '" aria-labelledby="' + labelId + '">' +
+                        '<span class="current" id="' + valueId + '">' + firstText + '</span>' +
+                    '</button>' +
+                    '<div class="list" aria-hidden="true"><ul id="' + listboxId + '" role="listbox" aria-label="Image views">' + optionsHtml + '</ul></div>' +
+                '</div>'
+            );
+            $box.replaceWith($combo);
+            $combo.find(".option").bind("click tap", onListSelect);
         });
     }
+
+
 
     function onListSelect(e)
     {
@@ -417,6 +745,9 @@
         mainDiv.find('.containerImg').hide();
         listItemId = $(e.target).attr("data-id");
         mainDiv.find('.imageShow' + listItemId).show();
+        var hsMatch = (mainDiv.closest(".imageBoxHolder").attr("class") || "").match(/hs_set(\d+)/);
+        setActiveHotspotLink(mainDiv.closest(".midDiv"), hsMatch ? hsMatch[1] : null, listItemId);
+        announceImageView($(e.currentTarget).text() || $(e.target).text());
         setTimeout(function(){            
             ActivityMain.setHabitatContainerSize();
         },500);        
@@ -429,7 +760,7 @@
         $('.menuList li').removeClass('selectedMenu');
         /* $('.midDiv').focus();
         console.log("$('.midDiv').focus();"); */
-        $('#navigate' + nSlideCounter).addClass('currentSlide');
+        updateSlideControls(nSlideCounter);
         // hide answer div
         $('.imageBoxHolder').hide();
         $('.imageThumbHolder').hide();
@@ -441,15 +772,16 @@
             mainDiv.find(".imageThumbHolder").css("display","flex");
            
         }  
-        mainDiv.find(".imageThumbHolder .thumbnail").removeClass("thumbnail_active");       
-        $(mainDiv.find(".imageThumbHolder .thumbnail")[0]).addClass("thumbnail_active");      
-        mainDiv.find(".dropdownList li").removeClass("selected");       
-        $(mainDiv.find(".dropdownList li")[0]).addClass("selected");
-        mainDiv.find(".dropdownList").find('.current').text($(mainDiv.find(".dropdownList li")[0]).text());   
+        setThumbnailActive(mainDiv.find(".imageThumbHolder .thumbnail"), $(mainDiv.find(".imageThumbHolder .thumbnail")[0]));      
+        mainDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");       
+        $(mainDiv.find(".dropdownList li")[0]).addClass("selected").attr("aria-selected", "true");
+        mainDiv.find(".dropdownList").find('.current').text($(mainDiv.find(".dropdownList li")[0]).text());
+        mainDiv.find(".hs").removeAttr("aria-current");   
 
-        $('.AnswerDiv').text('Show answer');
-        $('.AnswerDiv').attr('aria-pressed','false');
-        $('.textArea').hide();
+        $('.AnswerDiv').text('Show Answer');
+        $('.AnswerDiv').attr('aria-expanded','false');
+        $('.AnswerDiv').removeAttr('aria-pressed');
+        $('.textArea').attr('aria-hidden', 'true').hide();
         if (nSlideCounter < 0)
         {
             $(".topContent").hide();
@@ -567,8 +899,15 @@
     }
     
     function callback() {
-        // $('.midDiv').focus();
-        // console.log("$('.midDiv').focus();");
+        if (keepSlideControlFocus)
+        {
+            keepSlideControlFocus = false;
+            $('#navigate' + nSlideCounter).focus();
+        }
+        else
+        {
+            focusSlideContent(nSlideCounter);
+        }
         ActivityMain.setHabitatContainerSize();
     };
     function fnAddScrollMain()
@@ -585,18 +924,19 @@
     }
 
     function navigateMenuItems(event){
-        focused_option = $($(".menuList li:focus")[0] || $(".menuList .selectedMenu")[0]);
+        var $items = $('.menuList li');
+        var $focused = $($(".menuList li:focus")[0] || $(".menuList .selectedMenu")[0]);
+        var index = $items.index($focused);
 
         if (event.keyCode == 40)
         {
-          // Down
-            focused_option.next().focus();
+            event.preventDefault();
+            $items.eq((index + 1) % $items.length).focus();
         }
         else if (event.keyCode == 38)
         {
-          // Up
-            // var focused_option = $($(this).find('.list .option:focus')[0] || $(this).find('.list .option.selected')[0]);
-            focused_option.prev().focus();
+            event.preventDefault();
+            $items.eq((index - 1 + $items.length) % $items.length).focus();
         }
     }
 
@@ -610,15 +950,23 @@
         }
         setTimeout(function()
         {
-            $(".nano").nanoScroller();
+            $(".nano").nanoScroller({ tabIndex: -1 });
             $(".nano-pane").show();
+            if ($('#tableBtn').attr('aria-expanded') === 'true' && typeof syncReferenceTableScrollAccess === 'function')
+            {
+                syncReferenceTableScrollAccess(null, false);
+            }
+            else if (typeof clearReferenceTableScrollTabStops === 'function')
+            {
+                clearReferenceTableScrollTabStops();
+            }
         }, 100);
 
         $('.navigation').removeClass('currentSlide');
         var navigateId = $(this).attr("id");
         var navIdNo = navigateId.match(/\d+/)[0];
         //$('#navigate' + navIdNo).css('background', '#015453');
-        $('#navigate' + navIdNo).addClass('currentSlide');;
+        updateSlideControls(navIdNo);
         $("#midDiv" + navIdNo).css("visibility", "visible");
         nSlideCounter = navIdNo;
         $(".midDiv").hide();
@@ -647,12 +995,13 @@
         });
         $(this).addClass('selectedMenu');
         currScreenVisible = null;
+        focusSlideContent(nSlideCounter);
         menuBtnFn(ev, nSlideCounter);
 
         fnCheckNextBack(nSlideCounter);
         /* var mainDiv = $("#midDiv"+ nSlideCounter);
-        mainDiv.find(".dropdownList li").removeClass("selected");       
-        $(mainDiv.find(".dropdownList li")[0]).addClass("selected");
+        mainDiv.find(".dropdownList li").removeClass("selected").attr("aria-selected", "false");       
+        $(mainDiv.find(".dropdownList li")[0]).addClass("selected").attr("aria-selected", "true");
         mainDiv.find(".dropdownList").find('.current').text($(mainDiv.find(".dropdownList li")[0]).text()); */
         ActivityMain.setHabitatContainerSize();
     }
@@ -736,14 +1085,19 @@
         $('#naviRight').show();
     }
 
-    function DisableRightArrow()
+        function DisableRightArrow()
     {
-        $("#naviRight").removeClass("rightArrowEnable").addClass("rightArrowDisable").css(
+        var $right = $("#naviRight");
+        if (document.activeElement === $right.get(0))
+        {
+            focusSlideContent(nSlideCounter);
+        }
+        $right.removeClass("rightArrowEnable").addClass("rightArrowDisable").css(
         {
             "pointer-event": "none",
             "cursor": "default"
         }).attr('disabled','disabled').attr('tabindex','-1').attr('aria-hidden','true');
-        $('#naviRight').hide();
+        $right.hide();
     }
 
     function fnBegin()

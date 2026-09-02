@@ -23,6 +23,38 @@ select {
   display: block;
 }
       
+      .dropdown .combo-label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+        white-space: nowrap;
+      }
+
+      .dropdown .combo-button {
+        display: block;
+        width: 100%;
+        height: 28px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+        text-align: left;
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+        overflow: hidden;
+      }
+
+      .dropdown .combo-button:focus {
+        outline: none;
+        box-shadow: none;
+      }
       .dropdown {
         background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
         background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
@@ -57,7 +89,8 @@ select {
       }
 
       
-    .dropdown:focus {
+    .dropdown:focus,
+    .dropdown:focus-within {
       background-color: #fff;
     }      
       .dropdown:hover {
@@ -175,7 +208,7 @@ select {
   white-space: nowrap;
   overflow: hidden;
 }
-      .dropdown .option:hover, .dropdown .option:focus {
+      .dropdown .option:hover, .dropdown .option:focus, .dropdown .option.active {
         background-color: #CEE4E4 !important;
       }
       
@@ -185,7 +218,7 @@ select {
         color: #fff;
       }
       
-      .dropdown .option.selected:focus {
+      .dropdown .option.selected:focus, .dropdown .option.selected.active {
         background: #015453;
          background-color: #015453 !important;
          /*outline: 1px solid;*/
@@ -230,7 +263,7 @@ select {
       }
 /* custome*/
 
-.dropdownList span {
+.dropdownList .current {
   display: block;
   overflow: hidden;
   position: relative;

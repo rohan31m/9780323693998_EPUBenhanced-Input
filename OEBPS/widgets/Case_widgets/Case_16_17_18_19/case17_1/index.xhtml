@@ -26,17 +26,17 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
@@ -53,7 +53,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ol class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">• Compare and contrast epidural, subdural, and subarachnoid hemorrhage with respect to etiology, clinical presentation, and survival.</li>
@@ -83,7 +83,7 @@
                             <div class="myPage" id="pageFirstSection_8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>Based on the clinical history, what would a head CT show?</div>
+                                    <h2 class='texting'>Based on the clinical history, what would a head CT show?</h2>
                                 </div>
                                 <div class="AnswerDiv">Show answer</div>
                                 <div class="textArea" id="textAa8">
@@ -107,18 +107,20 @@
                             </em></p>
                             <div class="imageBoxHolder hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">CT scan</li>
-                                    <li tabindex="0">Skull fracture</li>
-                                    <li tabindex="0">Hemorrhage</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>CT scan</li>
+                                    <li>Skull fracture</li>
+                                    <li>Hemorrhage</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q2/on017-ca001f001-9780323640251.png" class="containerImg imageShow0" aria-label="CT scan image" alt="CT scan" />
+                                      <img src="images/q2/on017-ca001f001-9780323640251.png" class="containerImg imageShow0" alt="CT scan" />
 
-                                      <img src="images/q2/on017-ca001f001-9780323640251-a.png" class="containerImg imageShow1" aria-label="Skull fracture image" alt="Skull fracture" />
-                                      <img src="images/q2/on017-ca001f001-9780323640251-b.png" class="containerImg imageShow2" aria-label="Hemorrhage image" alt="Hemorrhage" />
+                                      <img src="images/q2/on017-ca001f001-9780323640251-a.png" class="containerImg imageShow1" alt="Skull fracture" />
+                                      <img src="images/q2/on017-ca001f001-9780323640251-b.png" class="containerImg imageShow2" alt="Hemorrhage" />
 
                                       
 
@@ -129,7 +131,7 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>What is this patient’s diagnosis?</div>
+                                    <h2 class='texting'>What is this patient’s diagnosis?</h2>
                                 </div>
                                 <div class="AnswerDiv">Show answer</div>
                                 <div class="textArea" id="textA3">
@@ -154,7 +156,7 @@
                             <div class="myPage" id="pageFirstSection_a3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>What is the most likely mechanism of the patient’s dilated right pupil?</div>
+                                    <h2 class='texting'>What is the most likely mechanism of the patient’s dilated right pupil?</h2>
                                 </div>
                                 <div class="AnswerDiv">Show answer</div>
                                 <div class="textArea" id="textAa3">
@@ -181,20 +183,22 @@
                             </em></p>
                             <div class="imageBoxHolder hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Epidural hemorrhage</li>
-                                    <li tabindex="0">Dura</li>
-                                    <li tabindex="0">Hemorrhage</li>
-                                    <li tabindex="0">Skull</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Epidural hemorrhage</li>
+                                    <li>Dura</li>
+                                    <li>Hemorrhage</li>
+                                    <li>Skull</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q4/on017-ca001f002-9780323640251.png" class="containerImg imageShow0" aria-label="Epidural hemorrhage image" alt="Epidural hemorrhage" />
+                                      <img src="images/q4/on017-ca001f002-9780323640251.png" class="containerImg imageShow0" alt="Epidural hemorrhage" />
 
-                                      <img src="images/q4/on017-ca001f002-9780323640251-a.png" class="containerImg imageShow1" aria-label="Dura image" alt="Dura" />
-                                      <img src="images/q4/on017-ca001f002-9780323640251-b.png" class="containerImg imageShow2" aria-label="Hemorrhage image" alt="Hemorrhage" />
-                                      <img src="images/q4/on017-ca001f002-9780323640251-c.png" class="containerImg imageShow3" aria-label="Skull image" alt="Skull" />
+                                      <img src="images/q4/on017-ca001f002-9780323640251-a.png" class="containerImg imageShow1" alt="Dura" />
+                                      <img src="images/q4/on017-ca001f002-9780323640251-b.png" class="containerImg imageShow2" alt="Hemorrhage" />
+                                      <img src="images/q4/on017-ca001f002-9780323640251-c.png" class="containerImg imageShow3" alt="Skull" />
 
                                       
 
@@ -205,7 +209,7 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>Which are the three sites that bleeding can occur between the surface of the brain and the skull?</div>
+                                    <h2 class='texting'>Which are the three sites that bleeding can occur between the surface of the brain and the skull?</h2>
                                 </div>
                                 <div class="AnswerDiv">Show answer</div>
                                 <div class="textArea" id="textA4">
@@ -230,45 +234,49 @@
                             </p>
 
 
-                            <div class="imageThumbHolder">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Brain, gross" ><img src="images/q8/on017-ca001f004-9780323640251.png" class="thumbImg" alt="Brain, gross" /></span>                               
+                            <div class="imageThumbHolder" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Brain, gross"  aria-pressed="true"><img src="images/q8/on017-ca001f004-9780323640251.png" class="thumbImg" alt="Brain, gross" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Brainstem and cerebellum" ><img src="images/q8/on017-ca001f005-9780323640251.png" class="thumbImg" alt="Brainstem and cerebellum" /></span>                                  
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Brainstem and cerebellum"  aria-pressed="false"><img src="images/q8/on017-ca001f005-9780323640251.png" class="thumbImg" alt="Brainstem and cerebellum" /></span>                                  
                             </div>
                             
                             <div class="imageBoxHolder hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Brain, gross</li>
-                                    <li tabindex="0">Flat gyri</li>
-                                    <li tabindex="0">Narrow sulci</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Brain, gross</li>
+                                    <li>Flat gyri</li>
+                                    <li>Narrow sulci</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q8/on017-ca001f004-9780323640251.png" class="containerImg imageShow0" aria-label="Brain, gross image" alt="Brain, gross" />
+                                      <img src="images/q8/on017-ca001f004-9780323640251.png" class="containerImg imageShow0" alt="Brain, gross" />
 
-                                      <img src="images/q8/on017-ca001f004-9780323640251-b.png" class="containerImg imageShow1" aria-label="Flat gyri image" alt="Flat gyri" />
-                                      <img src="images/q8/on017-ca001f004-9780323640251-c.png" class="containerImg imageShow2" aria-label="Narrow sulci image" alt="Narrow sulci" />
+                                      <img src="images/q8/on017-ca001f004-9780323640251-b.png" class="containerImg imageShow1" alt="Flat gyri" />
+                                      <img src="images/q8/on017-ca001f004-9780323640251-c.png" class="containerImg imageShow2" alt="Narrow sulci" />
                                    </div>
                                 </div>
                              </div> 
 
                              <div class="imageBoxHolder hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Brainstem and cerebellum</li>
-                                    <li tabindex="0">Duret hemorrhage</li>
-                                    <li tabindex="0">Pons</li>
-                                    <li tabindex="0">Cerebellum</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Brainstem and cerebellum</li>
+                                    <li>Duret hemorrhage</li>
+                                    <li>Pons</li>
+                                    <li>Cerebellum</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q8/on017-ca001f005-9780323640251.png" class="containerImg imageShow0" aria-label="Brainstem and cerebellum image" alt="Brainstem and cerebellum" />
-                                      <img src="images/q8/on017-ca001f005-9780323640251-a.png" class="containerImg imageShow1" aria-label="Duret hemorrhage image" alt="Duret hemorrhage" />
-                                      <img src="images/q8/on017-ca001f005-9780323640251-b.png" class="containerImg imageShow2" aria-label="Pons image" alt="Pons" />
-                                      <img src="images/q8/on017-ca001f005-9780323640251-d.png" class="containerImg imageShow3" aria-label="Cerebellum image" alt="Cerebellum" />
+                                      <img src="images/q8/on017-ca001f005-9780323640251.png" class="containerImg imageShow0" alt="Brainstem and cerebellum" />
+                                      <img src="images/q8/on017-ca001f005-9780323640251-a.png" class="containerImg imageShow1" alt="Duret hemorrhage" />
+                                      <img src="images/q8/on017-ca001f005-9780323640251-b.png" class="containerImg imageShow2" alt="Pons" />
+                                      <img src="images/q8/on017-ca001f005-9780323640251-d.png" class="containerImg imageShow3" alt="Cerebellum" />
                                    </div>
                                 </div>
                              </div> 
@@ -277,7 +285,7 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>What is herniation and what are the different types of herniation that can occur?</div>
+                                    <h2 class='texting'>What is herniation and what are the different types of herniation that can occur?</h2>
                                 </div>
                                 <div class="AnswerDiv">Show answer</div>
                                 <div class="textArea" id="textA5">
@@ -292,7 +300,8 @@
                                             </ul>
                                             <div class="leftImageBox">
                                                 <div class="graphContainer">             
-                                                   <img src="images/q5/EP2_Fig_17_2.png" class="staticImg" alt="" /> 
+                                                   <img src="images/q5/EP2_Fig_17_2.png" class="staticImg" alt="Diagram of brain herniation from increased intracranial pressure, showing subfalcine (cingulate) herniation under the falx, transtentorial (uncal) herniation, and tonsillar herniation through the foramen magnum." /> 
+                                                  
                                                 </div>
                                             </div>
                                         </div>
@@ -311,7 +320,7 @@
                             <div class="myPage" id="pageFirstSection_6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>What are the similarities and differences between epidural and subdural hematomas?</div>
+                                    <h2 class='texting'>What are the similarities and differences between epidural and subdural hematomas?</h2>
                                 </div>
                                 <div class="AnswerDiv">Show answer</div>
                                 <div class="textArea" id="textA6">
@@ -344,7 +353,7 @@
                             <div class="myPage" id="pageFirstSection_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>How do subdural hemorrhages resolve over time?</div>
+                                    <h2 class='texting'>How do subdural hemorrhages resolve over time?</h2>
                                 </div>
                                 <div class="AnswerDiv">Show answer</div>
                                 <div class="textArea" id="textA7">
@@ -368,7 +377,7 @@
                             <div class="myPage" id="pageFirstSection_a8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>8</div>
-                                    <div class='texting'>In which clinical settings do subarachnoid hemorrhages occur?</div>
+                                    <h2 class='texting'>In which clinical settings do subarachnoid hemorrhages occur?</h2>
                                 </div>
                                 <div class="AnswerDiv">Show answer</div>
                                 <div class="textArea" id="textA8">
@@ -399,7 +408,7 @@
                             <div class="myPage" id="pageFirstSection_9">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>9</div>
-                                    <div class='texting'>What was this patient’s cause of death?</div>
+                                    <h2 class='texting'>What was this patient’s cause of death?</h2>
                                 </div>
                                 <div class="AnswerDiv">Show answer</div>
                                 <div class="textArea" id="textA9">
@@ -463,8 +472,8 @@
 
         <div class="tablepatch">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -507,5 +516,6 @@
         </div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
 </body>
 </html>

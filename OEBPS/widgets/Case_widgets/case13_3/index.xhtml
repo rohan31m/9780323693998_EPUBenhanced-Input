@@ -27,23 +27,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Going Gray</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ol class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">•	Compare the etiologies and pathogenesis of hereditary (primary) hemochromatosis versus acquired (secondary) hemochromatosis.</li>
@@ -106,9 +106,9 @@
                             <div class="myPage" id="pageFirstSection_1">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>Which additional laboratory tests should be ordered?</div>
+                                    <h2 class='texting'>Which additional laboratory tests should be ordered?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA1">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -168,9 +168,9 @@
                             <div class="myPage" id="pageFirstSection_2">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>What is the diagnosis?</div>
+                                    <h2 class='texting'>What is the diagnosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA2">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -193,9 +193,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>What are the various forms of iron overload? How do the etiologies of primary and secondary hemochromatosis (secondary iron overload or hemosiderosis) differ?</div>
+                                    <h2 class='texting'>What are the various forms of iron overload? How do the etiologies of primary and secondary hemochromatosis (secondary iron overload or hemosiderosis) differ?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -217,9 +217,9 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>How is iron regulated in the body?</div>
+                                    <h2 class='texting'>How is iron regulated in the body?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -246,9 +246,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>Which genetic test should be ordered? What is the function of the gene product?</div>
+                                    <h2 class='texting'>Which genetic test should be ordered? What is the function of the gene product?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA5">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -268,9 +268,9 @@
                             <div class="myPage" id="pageFirstSection_6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>What is transferrin and why is transferrin saturation increased in hemochromatosis?</div>
+                                    <h2 class='texting'>What is transferrin and why is transferrin saturation increased in hemochromatosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -290,15 +290,15 @@
                            <p class="paraIndent"><em>A genetic test confirmed that the patient was homozygous for the HFE C282Y mutation. A biopsy of the patient’s liver was performed. </em></p>
                            <div class="leftImageBox">
                             <div class="graphContainer">
-                                <img src="images/q7/on013-ca003f002-9780323640251.png" class="staticImg" />
+                                <img src="images/q7/on013-ca003f002-9780323640251.png" class="staticImg" alt="Prussian blue stain of liver showing abundant bright-blue hemosiderin granules in hepatocytes, indicating iron overload in hemochromatosis." />
                             </div>
                             </div>
                             <div class="myPage" id="pageFirstSection_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>Which stain is used to confirm the presence of iron in a histologic section?</div>
+                                    <h2 class='texting'>Which stain is used to confirm the presence of iron in a histologic section?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA7">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -310,14 +310,16 @@
                             
                             <!-- <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">iron</li>
+                                <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>iron</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                 <div class="graphContainer" aria-live="polite">
                                     
-                                    <img src="images/q7/on013-ca003f002-9780323640251.png" class="imgBlock containerImg imageShow0" aria-label="iron image" alt="iron" />
+                                    <img src="images/q7/on013-ca003f002-9780323640251.png" class="imgBlock containerImg imageShow0" alt="iron" />
                                     </div>
                                 </div>
                             </div> -->
@@ -332,9 +334,9 @@
                             <div class="myPage" id="pageFirstSection_8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>8</div>
-                                    <div class='texting'>How does iron cause liver injury?</div>
+                                    <h2 class='texting'>How does iron cause liver injury?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -355,9 +357,9 @@
                             <div class="myPage" id="pageFirstSection_9">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>9</div>
-                                    <div class='texting'>What are the long-term consequences of primary and secondary hemochromatosis?</div>
+                                    <h2 class='texting'>What are the long-term consequences of primary and secondary hemochromatosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA9">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -378,9 +380,9 @@
                             <div class="myPage" id="pageFirstSection_10">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>10</div>
-                                    <div class='texting'>What is the gross appearance of the liver in primary hemochromatosis? </div>
+                                    <h2 class='texting'>What is the gross appearance of the liver in primary hemochromatosis? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA10">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -389,41 +391,45 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Hemochromatosis, gross" ><img src="images/q10/on013-ca003f003-9780323640251.png" class="thumbImg" alt="Hemochromatosis, gross" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Hemochromatosis, gross"  aria-pressed="true"><img src="images/q10/on013-ca003f003-9780323640251.png" class="thumbImg" alt="Hemochromatosis, gross" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Hemochromatosis, histology" ><img src="images/q10/on013-ca003f004-9780323640251.png" class="thumbImg" alt="Hemochromatosis, histology" /></span>                                  
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Hemochromatosis, histology"  aria-pressed="false"><img src="images/q10/on013-ca003f004-9780323640251.png" class="thumbImg" alt="Hemochromatosis, histology" /></span>                                  
                             </div>
                             
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Hemochromatosis, gross</li>
-                                    <li tabindex="0">Fibrous bands</li>   
-                                    <li tabindex="0">Parenchymal nodules </li></ul>
+                                <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Hemochromatosis, gross</li>
+                                    <li>Fibrous bands</li>   
+                                    <li>Parenchymal nodules </li></ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                 <div class="graphContainer" aria-live="polite">
                                     
-                                    <img src="images/q10/on013-ca003f003-9780323640251.png" class="imgBlock containerImg imageShow0" aria-label="Hemochromatosis, gross image" alt="Hemochromatosis, gross" />
-                                    <img src="images/q10/on013-ca003f003-9780323640251-a.png" class="imgBlock containerImg imageShow1" aria-label="Fibrous bands image" alt="Fibrous bands" />
-                                    <img src="images/q10/on013-ca003f003-9780323640251-b.png" class="imgBlock containerImg imageShow2" aria-label="Parenchymal nodules image" alt="Parenchymal nodules" />
+                                    <img src="images/q10/on013-ca003f003-9780323640251.png" class="imgBlock containerImg imageShow0" alt="Hemochromatosis, gross" />
+                                    <img src="images/q10/on013-ca003f003-9780323640251-a.png" class="imgBlock containerImg imageShow1" alt="Fibrous bands" />
+                                    <img src="images/q10/on013-ca003f003-9780323640251-b.png" class="imgBlock containerImg imageShow2" alt="Parenchymal nodules" />
                                     </div>
                                 </div>
                             </div>
                             <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Hemochromatosis, histology</li>
-                                    <li tabindex="0">Bile ductules</li>   
-                                    <li tabindex="0">Periportal hepatocytes </li></ul>
+                                <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Hemochromatosis, histology</li>
+                                    <li>Bile ductules</li>   
+                                    <li>Periportal hepatocytes </li></ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                 <div class="graphContainer" aria-live="polite">
                                     
-                                    <img src="images/q10/on013-ca003f004-9780323640251.png" class="imgBlock containerImg imageShow0" aria-label="Hemochromatosis, histology image" alt="Hemochromatosis, histology" />
-                                    <img src="images/q10/on013-ca003f004-9780323640251-a.png" class="imgBlock containerImg imageShow1" aria-label="Bile ductules image" alt="Bile ductules" />
-                                    <img src="images/q10/on013-ca003f004-9780323640251-b.png" class="imgBlock containerImg imageShow2" aria-label="Periportal hepatocytes image" alt="Periportal hepatocytes" />
+                                    <img src="images/q10/on013-ca003f004-9780323640251.png" class="imgBlock containerImg imageShow0" alt="Hemochromatosis, histology" />
+                                    <img src="images/q10/on013-ca003f004-9780323640251-a.png" class="imgBlock containerImg imageShow1" alt="Bile ductules" />
+                                    <img src="images/q10/on013-ca003f004-9780323640251-b.png" class="imgBlock containerImg imageShow2" alt="Periportal hepatocytes" />
                                     </div>
                                 </div>
                             </div>
@@ -439,9 +445,9 @@
                             <div class="myPage" id="pageFirstSection_11">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>11</div>
-                                    <div class='texting'>Why do women typically present at an older age than men?</div>
+                                    <h2 class='texting'>Why do women typically present at an older age than men?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA11">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -462,9 +468,9 @@
                             <div class="myPage" id="pageFirstSection_12">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>12</div>
-                                    <div class='texting'>What is the standard treatment for patients with hereditary hemochromatosis?</div>
+                                    <h2 class='texting'>What is the standard treatment for patients with hereditary hemochromatosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA12">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -487,9 +493,9 @@
                             <div class="myPage" id="pageFirstSection_13">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>13</div>
-                                    <div class='texting'>What is the most likely diagnosis?</div>
+                                    <h2 class='texting'>What is the most likely diagnosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA13">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -509,18 +515,20 @@
                            <p class="paraIndent"><em>A liver biopsy was performed that showed cells similar to normal hepatocytes arranged in widened <span class="hs" role="link" tabindex="0" data-dropdownid="1" data-id="1">trabeculae</span> with <span class="hs" role="link" tabindex="0" data-dropdownid="1" data-id="2">pseudoacinar spaces</span>, diagnostic of well differentiated HCC. There was background cirrhosis and iron deposition. The patient was treated with chemotherapy and surgical resection.</em></p>
                            <div class="imageBoxHolder hs_set1">
                             <div class="optionSelectionBox">
-                            <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                <li tabindex="0">Hepatocellular carcinoma</li>
-                                <li tabindex="0">Widened trabeculae</li>   
-                                <li tabindex="0">Pseudoacinar spaces   </li>   
+                            <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                <li>Hepatocellular carcinoma</li>
+                                <li>Widened trabeculae</li>   
+                                <li>Pseudoacinar spaces   </li>   
                             </ul>
+                                  </div>
                             </div>
                             <div class="leftImageBox">
                             <div class="graphContainer" aria-live="polite">
                                 
-                                <img src="images/q14/on013-ca003f005-9780323640251.png" class="imgBlock containerImg imageShow0" aria-label="Hepatocellular carcinoma image" alt="Hepatocellular carcinoma" />
-                                <img src="images/q14/on013-ca003f005-9780323640251-a.png" class="imgBlock containerImg imageShow1" aria-label="Widened trabeculae image" alt="Widened trabeculae" />
-                                <img src="images/q14/on013-ca003f005-9780323640251-b.png" class="imgBlock containerImg imageShow2" aria-label="Pseudoacinar spaces image" alt="Pseudoacinar spaces" />
+                                <img src="images/q14/on013-ca003f005-9780323640251.png" class="imgBlock containerImg imageShow0" alt="Hepatocellular carcinoma" />
+                                <img src="images/q14/on013-ca003f005-9780323640251-a.png" class="imgBlock containerImg imageShow1" alt="Widened trabeculae" />
+                                <img src="images/q14/on013-ca003f005-9780323640251-b.png" class="imgBlock containerImg imageShow2" alt="Pseudoacinar spaces" />
                                 </div>
                             </div>
                         </div>
@@ -528,9 +536,9 @@
                             <div class="myPage" id="pageFirstSection_14">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>14</div>
-                                    <div class='texting'>Which factors are most important in hepatocarcinogenesis?</div>
+                                    <h2 class='texting'>Which factors are most important in hepatocarcinogenesis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA14">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -551,9 +559,9 @@
                             <div class="myPage" id="pageFirstSection_15">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>15</div>
-                                    <div class='texting'>Which other disease of the liver is caused by excessive deposition of a metallic substance? </div>
+                                    <h2 class='texting'>Which other disease of the liver is caused by excessive deposition of a metallic substance? </h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA15">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -574,9 +582,9 @@
                             <div class="myPage" id="pageFirstSection_16">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>16</div>
-                                    <div class='texting'>How does the clinical presentation of Wilson disease differ from hemochromatosis?</div>
+                                    <h2 class='texting'>How does the clinical presentation of Wilson disease differ from hemochromatosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA16">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -616,12 +624,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -648,10 +656,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -692,6 +700,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../common_assets/scripts/common.js"></script>
 </body>

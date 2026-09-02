@@ -26,23 +26,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Bone of Contention</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ol class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">• Review the regulation of bone formation, resorption, and remodeling.</li>
@@ -75,13 +75,15 @@
                             
                             <div class="imageBoxHolder hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Clinical presentation</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Clinical presentation</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q1/on018-ca001f001-9780323640251.png" class="containerImg containerImg1 imageShow0" aria-label="Clinical presentation image" alt="Clinical presentation" />
+                                      <img src="images/q1/on018-ca001f001-9780323640251.png" class="containerImg containerImg1 imageShow0" alt="Clinical presentation" />
                                    </div>
                                 </div>
                              </div>
@@ -89,9 +91,9 @@
                             <div class="myPage" id="pageFirstSection_b8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>What are the different types of fracture and which type does this patient have?</div>
+                                    <h2 class='texting'>What are the different types of fracture and which type does this patient have?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAb8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -113,9 +115,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>Why is the patient’s fracture callus markedly enlarged?</div>
+                                    <h2 class='texting'>Why is the patient’s fracture callus markedly enlarged?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -138,9 +140,9 @@
                             <div class="myPage" id="pageFirstSection_as3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>Which cells are involved in bone repair and in maintaining normal bone homeostasis?</div>
+                                    <h2 class='texting'>Which cells are involved in bone repair and in maintaining normal bone homeostasis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA23">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -153,41 +155,45 @@
                             </div>
 
 
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Woven bone, histology" ><img src="images/q3/on018-ca001f002-9780323640251.png" class="thumbImg" alt="Woven bone, histology" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Woven bone, histology"  aria-pressed="true"><img src="images/q3/on018-ca001f002-9780323640251.png" class="thumbImg" alt="Woven bone, histology" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Bone, histology" ><img src="images/q3/on018-ca001f003-9780323640251.png" class="thumbImg" alt="Bone, histology" /></span> 
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Bone, histology"  aria-pressed="false"><img src="images/q3/on018-ca001f003-9780323640251.png" class="thumbImg" alt="Bone, histology" /></span> 
                                 
                            
                             </div>
 
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Woven bone, histology</li>
-                                    <li tabindex="0">Osteoblasts</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Woven bone, histology</li>
+                                    <li>Osteoblasts</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q3/on018-ca001f002-9780323640251.png" class="containerImg imageShow0" aria-label="Woven bone, histology image" alt="Woven bone, histology" />
-                                      <img src="images/q3/on018-ca001f002-9780323640251-a.png" class="containerImg imageShow1" aria-label="Osteoblasts image" alt="Osteoblasts" />
+                                      <img src="images/q3/on018-ca001f002-9780323640251.png" class="containerImg imageShow0" alt="Woven bone, histology" />
+                                      <img src="images/q3/on018-ca001f002-9780323640251-a.png" class="containerImg imageShow1" alt="Osteoblasts" />
                                    </div>
                                 </div>
                              </div>
                              <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Bone, histology</li>
-                                    <li tabindex="0">Osteoclasts</li>
-                                    <li tabindex="0">Osteocytes</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Bone, histology</li>
+                                    <li>Osteoclasts</li>
+                                    <li>Osteocytes</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q3/on018-ca001f003-9780323640251.png" class="containerImg imageShow0" aria-label="Bone, histology image" alt="Bone, histology" />
-                                      <img src="images/q3/on018-ca001f003-9780323640251-a.png" class="containerImg imageShow1" aria-label="Osteoclasts image" alt="Osteoclasts" />
-                                      <img src="images/q3/on018-ca001f003-9780323640251-b.png" class="containerImg imageShow2" aria-label="Osteocytes image" alt="Osteocytes" />
+                                      <img src="images/q3/on018-ca001f003-9780323640251.png" class="containerImg imageShow0" alt="Bone, histology" />
+                                      <img src="images/q3/on018-ca001f003-9780323640251-a.png" class="containerImg imageShow1" alt="Osteoclasts" />
+                                      <img src="images/q3/on018-ca001f003-9780323640251-b.png" class="containerImg imageShow2" alt="Osteocytes" />
                                    </div>
                                 </div>
                                 <!-- <div class="para_">
@@ -207,9 +213,9 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>What is a T score?</div>
+                                    <h2 class='texting'>What is a T score?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -231,9 +237,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>What is the diagnosis in this case?</div>
+                                    <h2 class='texting'>What is the diagnosis in this case?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA5">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -256,9 +262,9 @@
                             <div class="myPage" id="pageFirstSection_6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>What are the different types of osteoporosis?</div>
+                                    <h2 class='texting'>What are the different types of osteoporosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -293,9 +299,9 @@
                             <div class="myPage" id="pageFirstSection_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>What is the etiology of post-menopausal osteoporosis?</div>
+                                    <h2 class='texting'>What is the etiology of post-menopausal osteoporosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA7">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -308,17 +314,19 @@
                             </div>  
                            <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Vertebral bodies</li>
-                                    <li tabindex="0">Loss of horizontal trabeculae</li>
-                                    <li tabindex="0">Thickened vertical trabeculae</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Vertebral bodies</li>
+                                    <li>Loss of horizontal trabeculae</li>
+                                    <li>Thickened vertical trabeculae</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q7/on018-ca001f004-9780323640251.png" class="containerImg imageShow0" aria-label="Vertebral bodies image" alt="Vertebral bodies" />
-                                      <img src="images/q7/on018-ca001f004-9780323640251-a.png" class="containerImg imageShow1" aria-label="Loss of horizontal trabeculae image" alt="Loss of horizontal trabeculae" />
-                                      <img src="images/q7/on018-ca001f004-9780323640251-b.png" class="containerImg imageShow2" aria-label="Thickened vertical trabeculae image" alt="Thickened vertical trabeculae" />
+                                      <img src="images/q7/on018-ca001f004-9780323640251.png" class="containerImg imageShow0" alt="Vertebral bodies" />
+                                      <img src="images/q7/on018-ca001f004-9780323640251-a.png" class="containerImg imageShow1" alt="Loss of horizontal trabeculae" />
+                                      <img src="images/q7/on018-ca001f004-9780323640251-b.png" class="containerImg imageShow2" alt="Thickened vertical trabeculae" />
                                    </div>
                                 </div>
                              </div>
@@ -333,9 +341,9 @@
                             <div class="myPage" id="pageFirstSection_a8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>8</div>
-                                    <div class='texting'>What is the pathophysiology of senile osteoporosis?</div>
+                                    <h2 class='texting'>What is the pathophysiology of senile osteoporosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAa8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -344,7 +352,8 @@
                                             </p><br/>
                                             <div class="leftImageBox">
                                                 <div class="graphContainer">             
-                                                   <img src="images/q8/EP2_Fig_18_2.png" class="staticImg" alt="" /> 
+                                                   <img src="images/q8/EP2_Fig_18_2.png" class="staticImg" alt="Illustration of senile osteoporosis showing low-turnover bone loss with thinned cortical bone from subperiosteal and endosteal resorption, so that remaining cortex resembles cancellous bone." /> 
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -364,9 +373,9 @@
                             <div class="myPage" id="pageFirstSection_9">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>9</div>
-                                    <div class='texting'>What is the cause of this patient’s kyphosis and lordosis?</div>
+                                    <h2 class='texting'>What is the cause of this patient’s kyphosis and lordosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA9">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -390,9 +399,9 @@
                             <div class="myPage" id="pageFirstSection_10">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>10</div>
-                                    <div class='texting'>Why are vertebrae preferentially affected in osteoporosis?</div>
+                                    <h2 class='texting'>Why are vertebrae preferentially affected in osteoporosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA10">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -405,17 +414,19 @@
                             </div>  
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Vertebral column, gross</li>
-                                    <li tabindex="0">Severe osteoporosis</li>
-                                    <li tabindex="0">Fracture</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Vertebral column, gross</li>
+                                    <li>Severe osteoporosis</li>
+                                    <li>Fracture</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q10/on018-ca001f006-9780323640251.png" class="containerImg imageShow0" aria-label="Vertebral column, gross image" alt="Vertebral column, gross" />
-                                      <img src="images/q10/on018-ca001f006-9780323640251-a.png" class="containerImg imageShow1" aria-label="Severe osteoporosis image" alt="Severe osteoporosis" />
-                                      <img src="images/q10/on018-ca001f006-9780323640251-b.png" class="containerImg imageShow2" aria-label="Fracture image" alt="Fracture" />
+                                      <img src="images/q10/on018-ca001f006-9780323640251.png" class="containerImg imageShow0" alt="Vertebral column, gross" />
+                                      <img src="images/q10/on018-ca001f006-9780323640251-a.png" class="containerImg imageShow1" alt="Severe osteoporosis" />
+                                      <img src="images/q10/on018-ca001f006-9780323640251-b.png" class="containerImg imageShow2" alt="Fracture" />
                                    </div>
                                 </div>
                                
@@ -432,9 +443,9 @@
                             <div class="myPage" id="pageFirstSection_11">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>11</div>
-                                    <div class='texting'>What is the typical histologic appearance of osteoporosis and how does this differ from osteomalacia?</div>
+                                    <h2 class='texting'>What is the typical histologic appearance of osteoporosis and how does this differ from osteomalacia?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA11">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -447,13 +458,15 @@
                             </div>  
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Bone, osteoporosis</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Bone, osteoporosis</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q11/on018-ca001f007-9780323640251.png" class="containerImg imageShow0" aria-label="Bone, osteoporosis image" alt="Bone, osteoporosis" />
+                                      <img src="images/q11/on018-ca001f007-9780323640251.png" class="containerImg imageShow0" alt="Bone, osteoporosis" />
                                     </div>
                                 </div>
                              </div>
@@ -472,12 +485,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -500,10 +513,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -544,6 +557,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>

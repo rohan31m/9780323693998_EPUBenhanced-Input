@@ -28,23 +28,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Keeping Abreast</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objectives</strong>
+                        <h2 class="titleText">Objectives</h2>
                     </div>
                     <ol class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">•  Compare and contrast benign breast diseases with regard to clinical presentation, morphologic features, and subsequent risk of breast cancer.</li>
@@ -76,9 +76,9 @@
                             <div class="myPage" id="pageFirstSection_8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>Is it likely that this is a malignant tumor?</div>
+                                    <h2 class='texting'>Is it likely that this is a malignant tumor?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -91,17 +91,19 @@
                              
                              <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
                                     
                                    
-                                      <li tabindex="0">Fibroadenoma, gross</li>
+                                      <li>Fibroadenoma, gross</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
                                      
-                                <img src="images/q1/on015-ca004f001-9780323640251.png" class="imgBlock containerImg imageShow0" aria-label="Fibroadenoma, gross image" alt="Fibroadenoma, gross" />
+                                <img src="images/q1/on015-ca004f001-9780323640251.png" class="imgBlock containerImg imageShow0" alt="Fibroadenoma, gross" />
 
                                     </div>
                                 </div>
@@ -118,9 +120,9 @@
                             <div class="myPage" id="pageFirstSection_2">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>What is the neoplastic component of fibroadenomas?</div>
+                                    <h2 class='texting'>What is the neoplastic component of fibroadenomas?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA2">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -131,17 +133,19 @@
                             </div>   
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Fibroadenoma, histology</li>
-                                    <li tabindex="0">Compressed glands</li>
-                                    <li tabindex="0">Stromal proliferation</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Fibroadenoma, histology</li>
+                                    <li>Compressed glands</li>
+                                    <li>Stromal proliferation</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q2/on015-ca004f002-9780323640251.png" class="imgBlock containerImg imageShow0" aria-label="Fibroadenoma, histology image" alt="Fibroadenoma, histology" />
-                                      <img src="images/q2/on015-ca004f002-9780323640251-b.png" class="imgBlock containerImg imageShow1" aria-label="Compressed glands image" alt="Compressed glands" />
-                                      <img src="images/q2/on015-ca004f002-9780323640251-c-new-replacement.png" class="imgBlock containerImg imageShow2" aria-label="Stromal proliferation image" alt="Stromal proliferation" />
+                                      <img src="images/q2/on015-ca004f002-9780323640251.png" class="imgBlock containerImg imageShow0" alt="Fibroadenoma, histology" />
+                                      <img src="images/q2/on015-ca004f002-9780323640251-b.png" class="imgBlock containerImg imageShow1" alt="Compressed glands" />
+                                      <img src="images/q2/on015-ca004f002-9780323640251-c-new-replacement.png" class="imgBlock containerImg imageShow2" alt="Stromal proliferation" />
                                    </div>
                                 </div>
                              </div>
@@ -157,9 +161,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>What is the most likely diagnosis?</div>
+                                    <h2 class='texting'>What is the most likely diagnosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -169,47 +173,51 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Fibrocystic changes, gross" ><img src="images/q3/on015-ca004f003-9780323640251.png" class="thumbImg" alt="Fibrocystic changes, gross" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Fibrocystic changes, gross"  aria-pressed="true"><img src="images/q3/on015-ca004f003-9780323640251.png" class="thumbImg" alt="Fibrocystic changes, gross" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Fibrocystic changes, histology" ><img src="images/q3/on015-ca004f004-9780323640251.png" class="thumbImg" alt="Fibrocystic changes, histology" /></span>                                  
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Fibrocystic changes, histology"  aria-pressed="false"><img src="images/q3/on015-ca004f004-9780323640251.png" class="thumbImg" alt="Fibrocystic changes, histology" /></span>                                  
                             </div>
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Fibrocystic changes, gross</li>
-                                    <li tabindex="0">Areas of fibrosis</li>
-                                    <li tabindex="0">Blue-domed cyst</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Fibrocystic changes, gross</li>
+                                    <li>Areas of fibrosis</li>
+                                    <li>Blue-domed cyst</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                      <img src="images/q3/on015-ca004f003-9780323640251.png" class="containerImg imageShow0" aria-label="Fibrocystic changes, gross image" alt="Fibrocystic changes, gross" />
+                                      <img src="images/q3/on015-ca004f003-9780323640251.png" class="containerImg imageShow0" alt="Fibrocystic changes, gross" />
 
-                                      <img src="images/q3/on015-ca004f003-9780323640251-a.png" class="imgBlock containerImg imageShow1" aria-label="Areas of fibrosis image" alt="Areas of fibrosis" />
+                                      <img src="images/q3/on015-ca004f003-9780323640251-a.png" class="imgBlock containerImg imageShow1" alt="Areas of fibrosis" />
 
-                                      <img src="images/q3/on015-ca004f003-9780323640251-b.png" class="imgBlock containerImg imageShow2" aria-label="Blue-domed cyst image" alt="Blue-domed cyst" />
+                                      <img src="images/q3/on015-ca004f003-9780323640251-b.png" class="imgBlock containerImg imageShow2" alt="Blue-domed cyst" />
                                    </div>
                                 </div>
                              </div> 
 
                              <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Fibrocystic changes, histology</li>
-                                    <li tabindex="0">Calcifications</li>
-                                    <li tabindex="0">Apopcrine metaplasia</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Fibrocystic changes, histology</li>
+                                    <li>Calcifications</li>
+                                    <li>Apopcrine metaplasia</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                      <img src="images/q3/on015-ca004f004-9780323640251.png" class="containerImg imageShow0" aria-label="Fibrocystic changes, histology image" alt="Fibrocystic changes, histology" />
+                                      <img src="images/q3/on015-ca004f004-9780323640251.png" class="containerImg imageShow0" alt="Fibrocystic changes, histology" />
 
-                                      <img src="images/q3/on015-ca004f004-9780323640251-a.png" class="imgBlock containerImg imageShow1" aria-label="Calcifications image" alt="Calcifications" />
+                                      <img src="images/q3/on015-ca004f004-9780323640251-a.png" class="imgBlock containerImg imageShow1" alt="Calcifications" />
 
-                                      <img src="images/q3/on015-ca004f004-9780323640251-b.png" class="imgBlock containerImg imageShow2" aria-label="Apopcrine metaplasia image" alt="Apopcrine metaplasia" />
+                                      <img src="images/q3/on015-ca004f004-9780323640251-b.png" class="imgBlock containerImg imageShow2" alt="Apopcrine metaplasia" />
                                    </div>
                                 </div>
                              </div> 
@@ -226,9 +234,9 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>Are calcifications in the breast parenchyma diagnostic of carcinoma?</div>
+                                    <h2 class='texting'>Are calcifications in the breast parenchyma diagnostic of carcinoma?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -248,19 +256,21 @@
 
                             <div class="imageBoxHolder imageBoxHolder1 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Biopsy, histology</li>
-                                    <li tabindex="0">Ductal hyperlasia</li>
-                                    <li tabindex="0">Irregular spaces</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Biopsy, histology</li>
+                                    <li>Ductal hyperlasia</li>
+                                    <li>Irregular spaces</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q5/on015-ca004f005-9780323640251.png" class="containerImg imageShow0" aria-label="Biopsy, histology image" alt="Biopsy, histology" />
+                                      <img src="images/q5/on015-ca004f005-9780323640251.png" class="containerImg imageShow0" alt="Biopsy, histology" />
 
-                                      <img src="images/q5/on015-ca004f005-9780323640251-a.png" class="containerImg imageShow1" aria-label="Ductal hyperlasia image" alt="Ductal hyperlasia" />
+                                      <img src="images/q5/on015-ca004f005-9780323640251-a.png" class="containerImg imageShow1" alt="Ductal hyperlasia" />
 
-                                      <img src="images/q5/on015-ca004f005-9780323640251-b.png" class="containerImg imageShow2" aria-label="Irregular spaces image" alt="Irregular spaces" />
+                                      <img src="images/q5/on015-ca004f005-9780323640251-b.png" class="containerImg imageShow2" alt="Irregular spaces" />
 
                                    </div>
                                 </div>
@@ -270,9 +280,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>How are benign epithelial lesions classified? What is the clinical significance of this classification?</div>
+                                    <h2 class='texting'>How are benign epithelial lesions classified? What is the clinical significance of this classification?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA5">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -293,9 +303,9 @@
                             <div class="myPage" id="pageFirstSection_6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>Do this patient’s previous diagnoses increase her risk for breast carcinoma?</div>
+                                    <h2 class='texting'>Do this patient’s previous diagnoses increase her risk for breast carcinoma?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -315,9 +325,9 @@
                             <div class="myPage" id="pageFirstSection_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>What are the major risk factors for the development of breast carcinoma?</div>
+                                    <h2 class='texting'>What are the major risk factors for the development of breast carcinoma?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA7">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -337,9 +347,9 @@
                             <div class="myPage" id="pageFirstSection_a8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>8</div>
-                                    <div class='texting'>How does LCIS differ from DCIS with regard to the subsequent risk for invasive breast carcinoma?</div>
+                                    <h2 class='texting'>How does LCIS differ from DCIS with regard to the subsequent risk for invasive breast carcinoma?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textAa8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -361,9 +371,9 @@
                             <div class="myPage" id="pageFirstSection_9">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>9</div>
-                                    <div class='texting'>Is this likely to be in situ carcinoma?</div>
+                                    <h2 class='texting'>Is this likely to be in situ carcinoma?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA9">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -383,9 +393,9 @@
                             <div class="myPage" id="pageFirstSection_10">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>10</div>
-                                    <div class='texting'>How do high-grade and low-grade intraductal carcinomas differ in clinical behavior?</div>
+                                    <h2 class='texting'>How do high-grade and low-grade intraductal carcinomas differ in clinical behavior?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA10">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -406,9 +416,9 @@
                             <div class="myPage" id="pageFirstSection_11">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>11</div>
-                                    <div class='texting'>What is a sentinel node biopsy and what is its clinical utility?</div>
+                                    <h2 class='texting'>What is a sentinel node biopsy and what is its clinical utility?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA11">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -426,31 +436,33 @@
                         <div class="contentHolderMain">
                             <p class="paraIndent"><em>The frozen section analysis of the lymph node showed a focus of <span class="hs" role="link" tabindex="0" data-dropdownid="1" data-id="3">metastatic carcinoma</span>. Additional lymph nodes were biopsied with a total of three positive lymph nodes. An axillary dissection was performed at the time of lumpectomy.</em></p>
                             <p class="paraIndent"><em>Gross examination of the lumpectomy specimen showed a 2-cm, white, scirrhous (fibrotic) <span class="hs" role="link" tabindex="0" data-dropdownid="2" data-id="1">mass</span> in the central portion of the specimen. The margins of the lumpectomy specimen were free of tumor.</em></p>
-                            <div class="imageThumbHolder">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Sentinel lymph node, histology" ><img src="images/q12/on015-ca004f006-9780323640251.png" class="thumbImg" alt="Sentinel lymph node, histology" /></span>                               
+                            <div class="imageThumbHolder" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Sentinel lymph node, histology"  aria-pressed="true"><img src="images/q12/on015-ca004f006-9780323640251.png" class="thumbImg" alt="Sentinel lymph node, histology" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Lumpectomy specimen, gross" ><img src="images/q12/on015-ca004f007-9780323640251.png" class="thumbImg" alt="Lumpectomy specimen, gross" /></span>
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Lumpectomy specimen, gross"  aria-pressed="false"><img src="images/q12/on015-ca004f007-9780323640251.png" class="thumbImg" alt="Lumpectomy specimen, gross" /></span>
     
                                 
                             </div>
                             <div class="imageBoxHolder imageBoxHolder1 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Sentinel lymph node, histology</li>
-                                    <li tabindex="0">Lymph node capsule</li>
-                                    <li tabindex="0">Tumor in sinuses</li>
-                                    <li tabindex="0">Tumor in lymph node</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Sentinel lymph node, histology</li>
+                                    <li>Lymph node capsule</li>
+                                    <li>Tumor in sinuses</li>
+                                    <li>Tumor in lymph node</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q12/on015-ca004f006-9780323640251.png" class="containerImg imageShow0" aria-label="Sentinel lymph node, histology image" alt="Sentinel lymph node, histology" />
+                                      <img src="images/q12/on015-ca004f006-9780323640251.png" class="containerImg imageShow0" alt="Sentinel lymph node, histology" />
 
-                                      <img src="images/q12/on015-ca004f006-9780323640251-a.png" class="containerImg imageShow1" aria-label="Lymph node capsule image" alt="Lymph node capsule" />
+                                      <img src="images/q12/on015-ca004f006-9780323640251-a.png" class="containerImg imageShow1" alt="Lymph node capsule" />
 
-                                      <img src="images/q12/on015-ca004f006-9780323640251-b.png" class="containerImg imageShow2" aria-label="Tumor in sinuses image" alt="Tumor in sinuses" />
+                                      <img src="images/q12/on015-ca004f006-9780323640251-b.png" class="containerImg imageShow2" alt="Tumor in sinuses" />
 
-                                      <img src="images/q12/on015-ca004f006-9780323640251-c.png" class="containerImg imageShow3" aria-label="Tumor in lymph node image" alt="Tumor in lymph node" />
+                                      <img src="images/q12/on015-ca004f006-9780323640251-c.png" class="containerImg imageShow3" alt="Tumor in lymph node" />
 
                                    </div>
                                 </div>
@@ -458,16 +470,18 @@
 
                              <div class="imageBoxHolder imageBoxHolder1 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Lumpectomy specimen, gross</li>
-                                    <li tabindex="0">Central mass</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Lumpectomy specimen, gross</li>
+                                    <li>Central mass</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q12/on015-ca004f007-9780323640251.png" class="containerImg imageShow0" aria-label="Lumpectomy specimen, gross image" alt="Lumpectomy specimen, gross" />
+                                      <img src="images/q12/on015-ca004f007-9780323640251.png" class="containerImg imageShow0" alt="Lumpectomy specimen, gross" />
 
-                                      <img src="images/q12/on015-ca004f007-9780323640251-a.png" class="containerImg imageShow1" aria-label="Central mass image" alt="Central mass" />
+                                      <img src="images/q12/on015-ca004f007-9780323640251-a.png" class="containerImg imageShow1" alt="Central mass" />
 
                                    </div>
                                 </div>
@@ -477,9 +491,9 @@
                             <div class="myPage" id="pageFirstSection_12">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>12</div>
-                                    <div class='texting'>What is the basis for the scar-like characteristics of most invasive breast cancers?</div>
+                                    <h2 class='texting'>What is the basis for the scar-like characteristics of most invasive breast cancers?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA12">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -500,19 +514,21 @@
 
                             <div class="imageBoxHolder imageBoxHolder1 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Breast carcinoma, histology</li>
-                                    <li tabindex="0">Malignant glands</li>
-                                    <li tabindex="0">Desmoplasia</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Breast carcinoma, histology</li>
+                                    <li>Malignant glands</li>
+                                    <li>Desmoplasia</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q13/on015-ca004f008-9780323640251.png" class="containerImg imageShow0" aria-label="Breast carcinoma, histology image" alt="Breast carcinoma, histology" />
+                                      <img src="images/q13/on015-ca004f008-9780323640251.png" class="containerImg imageShow0" alt="Breast carcinoma, histology" />
 
-                                      <img src="images/q13/on015-ca004f008-9780323640251-a.png" class="containerImg imageShow1" aria-label="Malignant glands image" alt="Malignant glands" />
+                                      <img src="images/q13/on015-ca004f008-9780323640251-a.png" class="containerImg imageShow1" alt="Malignant glands" />
 
-                                      <img src="images/q13/on015-ca004f008-9780323640251-b.png" class="containerImg imageShow2" aria-label="Desmoplasia image" alt="Desmoplasia" />
+                                      <img src="images/q13/on015-ca004f008-9780323640251-b.png" class="containerImg imageShow2" alt="Desmoplasia" />
 
                                    </div>
                                 </div>
@@ -522,9 +538,9 @@
                             <div class="myPage" id="pageFirstSection_13">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>13</div>
-                                    <div class='texting'>Which additional laboratory tests should be performed on the tissue and how would the results affect treatment?</div>
+                                    <h2 class='texting'>Which additional laboratory tests should be performed on the tissue and how would the results affect treatment?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA13">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -544,9 +560,9 @@
                             <div class="myPage" id="pageFirstSection_14">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>14</div>
-                                    <div class='texting'>What are the two main morphologic types of carcinoma and which type does this patient have?</div>
+                                    <h2 class='texting'>What are the two main morphologic types of carcinoma and which type does this patient have?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA14">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -558,16 +574,18 @@
 
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Lobular carcinoma, histology</li>
-                                    <li tabindex="0">Invasive cells</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Lobular carcinoma, histology</li>
+                                    <li>Invasive cells</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q14/on015-ca004f009-9780323640251.png" class="containerImg imageShow0" aria-label="Lobular carcinoma, histology image" alt="Lobular carcinoma, histology" />
+                                      <img src="images/q14/on015-ca004f009-9780323640251.png" class="containerImg imageShow0" alt="Lobular carcinoma, histology" />
 
-                                      <img src="images/q14/on015-ca004f009-9780323640251-a.png" class="containerImg imageShow1" aria-label="Invasive cells image" alt="Invasive cells" />
+                                      <img src="images/q14/on015-ca004f009-9780323640251-a.png" class="containerImg imageShow1" alt="Invasive cells" />
 
                                    </div>
                                 </div>
@@ -584,9 +602,9 @@
                             <div class="myPage" id="pageFirstSection_15">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>15</div>
-                                    <div class='texting'>How does the prognosis of invasive lobular carcinoma compare with that of invasive ductal carcinoma?</div>
+                                    <h2 class='texting'>How does the prognosis of invasive lobular carcinoma compare with that of invasive ductal carcinoma?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA15">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -606,9 +624,9 @@
                             <div class="myPage" id="pageFirstSection_16">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>16</div>
-                                    <div class='texting'>Which pathologic features are important in determining the prognosis and treatment of invasive breast carcinoma?</div>
+                                    <h2 class='texting'>Which pathologic features are important in determining the prognosis and treatment of invasive breast carcinoma?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA16">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -628,9 +646,9 @@
                             <div class="myPage" id="pageFirstSection_17">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>17</div>
-                                    <div class='texting'>Which organs are commonly involved by metastatic breast carcinoma?</div>
+                                    <h2 class='texting'>Which organs are commonly involved by metastatic breast carcinoma?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA17">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -657,12 +675,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -690,10 +708,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -734,6 +752,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
 <script src="../../common_assets/scripts/common.js"></script>
 </body>

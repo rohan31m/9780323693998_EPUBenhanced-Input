@@ -14,7 +14,8 @@
 }
 *:focus{
   /*outline: none;*/
-  outline:2px solid #ffa500;
+  outline: 2px solid #000000;
+  box-shadow: 0 0 0 2px #FFFFFF;
 }
 
 
@@ -62,7 +63,7 @@ body {
 
 
 .paraIndent{
-  text-indent: 20px;
+  text-indent: 26px;
 }
 
 .popupimage{
@@ -137,7 +138,7 @@ body {
   /* height: 408px; */
   margin: 0 auto;
   position: relative;
-  outline: none !important;
+  /*outline: none !important;*/
 }
 
 .midDiv > ul {
@@ -443,6 +444,11 @@ span.hs:visited, span.al:visited {
   color: #551A8B;
   text-decoration:underline;
 }
+span.hs[aria-current="true"] {
+  font-weight: bold;
+  color: #0000EE;
+  text-decoration: underline;
+}
 
 
 
@@ -587,7 +593,8 @@ li.jp-unmute,
 
 .ui-slider-handle:focus{
   /*outline: 0;*/
-  outline:2px solid #ffa500;
+  outline: 2px solid #000000;
+  box-shadow: 0 0 0 2px #FFFFFF;
 }
 
 .jp-gui.jp-no-volume .jp-volume-slider {
@@ -761,31 +768,66 @@ li.jp-unmute,
   border-radius: 4px;
   margin-top: 10px;
   min-height: 50px;
-  overflow: hidden;
+  overflow: visible;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  column-gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 12px;
   /* width: 513px; */
 }
+.myPage:focus {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
 
 .numbering {
   background: #027977 none repeat scroll 0 0;
   border: 2px solid #027977;
-  border-radius: 15px;
+  border-radius: 50%;
   color: #ffffff;
-  float: left;
+  float: none;
+  flex: 0 0 auto;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "SourceSansPro-Bold";
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   height: 20px;
-  line-height: 16px;
+  width: 20px;
+  min-width: 20px;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
   position: relative;
   text-align: center;
-  top: -1px;
-  width: 20px;
+  top: 2px;
+  margin: 0;
+  padding: 1px 0 0;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 .texting {
-  float: left;
+  float: none;
+  flex: 1 1 auto;
+  min-width: 0;
   font-family: "SourceSansPro-Bold";
-  padding-left: 10px;
-  width: 375px;
+  padding: 0 0 0 10px;
+  width: auto;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 20px;
+  position: relative;
+  top: 2px;
+  display: block;
 }
 
 .menupatch {
@@ -840,6 +882,7 @@ li.jp-unmute,
   position: absolute;
   width: 100%;
   z-index: 12;
+  overflow: visible;
 }
 
 .whiteShade {
@@ -884,7 +927,7 @@ li.jp-unmute,
   overflow: hidden;
 }
 .thumbnail_active{ 
-  border: 2px solid #ffa500;
+  border: 2px solid #A34E00;
 }
 .thumbImg{
   position: relative;
@@ -1027,7 +1070,8 @@ li.jp-unmute,
 
 .label:focus{
   /*outline: none;*/
-  outline:2px solid #ffa500;
+  outline: 2px solid #000000;
+  box-shadow: 0 0 0 2px #FFFFFF;
 } 
 
 .alphaSeries{
@@ -1136,6 +1180,11 @@ li.jp-unmute,
   padding: 10px;
   width: 300px;
   font-family: "SourceSansPro-Bold";
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  line-height: normal;
+  display: block;
 }
 .tableDropdownList {
   float: right;
@@ -1156,8 +1205,58 @@ li.jp-unmute,
   width: 530px;
 }
 
+.testsList thead th {
+  text-align: left;
+  font-family: "SourceSansPro-Bold";
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 8px 6px 10px;
+  border-bottom: 1pt solid #027977;
+  background: #f3f8f8;
+  color: #015453;
+}
+
+.testsList tbody th,
+.testsList tbody td {
+  text-align: left;
+  vertical-align: top;
+  padding: 4px 8px 4px 10px;
+  font-weight: normal;
+}
+
+.testsList tbody tr.sectionHead th {
+  font-family: "SourceSansPro-Bold";
+  font-weight: bold;
+  background: #f3f8f8;
+  color: #015453;
+  border-top: 1pt solid #027977;
+}
+
+.testsList tbody tr.titleTest th {
+  font-family: "SourceSansPro-Bold";
+  font-weight: bold;
+}
+
+.testsList tbody tr.groupHead th {
+  font-family: "SourceSansPro-Bold";
+  font-weight: bold;
+  font-style: italic;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 .testsList tr {
-  height: 22px;
+  height: auto;
+  min-height: 28px;
 }
 
 .emptyLine {
@@ -1166,7 +1265,8 @@ li.jp-unmute,
 
 .testContainer {
   height: 342px;
-  width: 566px;
+  width: 550px;
+  margin: 12px auto 16px;
 }
 
 .titleTest {
@@ -1174,10 +1274,16 @@ li.jp-unmute,
   color: #015453;
   font-size: 16px;
   font-weight: bold;
-  height: 30px !important;
+  height: auto !important;
+  min-height: 36px;
+}
+.titleTest > td:first-child,
+.titleTest > th:first-child {
+  padding: 10px 12px !important;
 }
 
-tr > td:first-child {
+tr > td:first-child,
+tr > th:first-child {
   padding-left: 10px !important;
 }
 
@@ -1239,6 +1345,26 @@ tr > td:first-child {
   font-weight: bold;
   background: #CEE4E4 none repeat scroll 0 0; 
 color: #015453;
+}
+
+.caseOutlineTable th[scope="row"] {
+  font-weight: bold;
+  background: none;
+  color: inherit;
+}
+
+.caseOutlineTable caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: bold;
+  padding: 0 0 8px 0;
+  background: none;
+  color: inherit;
+  border: 0;
+}
+
+.caseOutlineTable tbody + tbody th[scope="colgroup"] {
+  border-top-width: 10px;
 }
 
 /*.caseOutlineTable tr:nth-child(6) {
@@ -1477,7 +1603,8 @@ top: 2px;
 
 }
 
-.tableHeader > span{
+.tableHeader > span,
+.tableHeader > label{
     font-size: 14px;
     left: -8px;
     position: relative;
@@ -1587,4 +1714,201 @@ strong {
   -ms-user-select: none;      /* IE 10+ */
   user-select: none;          /* Likely future */      
 }
+}
+
+/* Accessibility: keep keyboard focus indicators fully visible inside clipped layout */
+.topWrapperBox,
+.footer,
+#naviList,
+#naviList ul {
+  overflow: visible;
+}
+
+#midConatiner .navigation:focus,
+#midConatiner #naviList li:focus,
+#midConatiner .menuList li:focus,
+#midConatiner .dropdown:focus,
+#midConatiner .dropdown:focus-within,
+#midConatiner .AnswerDiv:focus,
+#midConatiner .hs:focus,
+#midConatiner .options.tabindex:focus,
+#midConatiner .thumbnail:focus,
+#midConatiner .item:focus,
+#midConatiner .checkList:focus,
+#midConatiner .closeimgpopup:focus,
+#midConatiner .tabindex:focus {
+  outline: 2px solid #000000;
+  box-shadow: 0 0 0 2px #FFFFFF;
+}
+
+#midConatiner .nano-content:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#midConatiner .nano.is-scrollable > .nano-content:focus {
+  outline: 0px solid #ffffff;
+  outline-offset: -10px;
+  box-shadow: inset 0 0 0 2px #000000; /*NM*/
+}
+
+#midConatiner .nano.is-not-scrollable > .nano-content:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#midConatiner .testsList {
+  width: 500px;
+}
+
+#midConatiner .testsList [id^="referenceTableHeading"]:focus {
+  outline: 2px solid #000000;
+  outline-offset: -3px;
+  box-shadow: inset 0 0 0 2px #FFFFFF; /*NM5*/
+  position: relative;
+  z-index: 2;
+}
+
+#midConatiner .testsList td,
+#midConatiner .testsList th {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 12px;
+}
+
+#midConatiner #menuBtn:focus,
+#midConatiner #tableBtn:focus,
+#midConatiner #naviLeft:focus,
+#midConatiner #naviRight:focus {
+  position: relative;
+  z-index: 13;
+  outline: 2px solid #000000;
+  outline-offset: -3px;
+  box-shadow: inset 0 0 0 2px #FFFFFF; /*NM5*/
+}
+
+#midConatiner .navigation:focus,
+#midConatiner #naviList li:focus {
+  outline: 2px solid #000000;
+  box-shadow: 0 0 0 2px #FFFFFF;
+}
+
+/* Visible tooltips for icon-only buttons: hover and keyboard focus */
+#midConatiner #menuBtn:hover,
+#midConatiner #menuBtn:focus,
+#midConatiner #tableBtn:hover,
+#midConatiner #tableBtn:focus,
+#midConatiner #naviLeft:hover,
+#midConatiner #naviLeft:focus,
+#midConatiner #naviRight:hover,
+#midConatiner #naviRight:focus {
+  z-index: 20;
+}
+
+#midConatiner #menuBtn:hover::after,
+#midConatiner #menuBtn:focus::after,
+#midConatiner #tableBtn:hover::after,
+#midConatiner #tableBtn:focus::after,
+#midConatiner #naviLeft:hover::after,
+#midConatiner #naviLeft:focus::after,
+#midConatiner #naviRight:hover::after,
+#midConatiner #naviRight:focus::after {
+  content: attr(aria-label);
+  position: absolute;
+  z-index: 21;
+  padding: 4px 8px;
+  background: #1a1a1a;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  white-space: nowrap;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+#midConatiner #menuBtn:hover::after,
+#midConatiner #menuBtn:focus::after {
+  top: calc(100% + 6px);
+  left: 0;
+}
+
+#midConatiner #tableBtn:hover::after,
+#midConatiner #tableBtn:focus::after {
+  top: calc(100% + 6px);
+  right: 0;
+  left: auto;
+}
+
+#midConatiner #naviLeft:hover::after,
+#midConatiner #naviLeft:focus::after {
+  bottom: calc(100% + 6px);
+  left: 0;
+}
+
+#midConatiner #naviRight:hover::after,
+#midConatiner #naviRight:focus::after {
+  bottom: calc(100% + 6px);
+  right: 0;
+  left: auto;
+}
+/* Visible tooltips for carousel slide buttons */
+#midConatiner .footer,
+#midConatiner #naviList,
+#midConatiner #naviList ul {
+  overflow: visible;
+}
+
+#midConatiner .navigation {
+  position: relative;
+}
+
+#midConatiner .navigation:hover,
+#midConatiner .navigation:focus {
+  z-index: 20;
+}
+
+#midConatiner .navigation:hover::after,
+#midConatiner .navigation:focus::after {
+  content: attr(aria-label);
+  position: absolute;
+  z-index: 21;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  background: #1a1a1a;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  white-space: nowrap;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+#midConatiner #naviList li:first-child .navigation:hover::after,
+#midConatiner #naviList li:first-child .navigation:focus::after {
+  left: 0;
+  transform: none;
+}
+
+#midConatiner #naviList li:last-child .navigation:hover::after,
+#midConatiner #naviList li:last-child .navigation:focus::after {
+  left: auto;
+  right: 0;
+  transform: none;
+}
+.loadDiv .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
 }

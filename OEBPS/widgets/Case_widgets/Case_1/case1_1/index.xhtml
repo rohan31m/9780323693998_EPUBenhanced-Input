@@ -28,23 +28,23 @@
 <body>
   
     <div id="midConatiner" role="main">
-        <div class="loadDiv">
-            <div class="loader"></div>
+                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+            <div class="loader" aria-hidden="true"></div>
+            <span class="visually-hidden">Loading</span>
         </div>
-        <div class="titleText" style="text-indent: -999999px; font-size:1px; display: none;">Loading...</div>
 
 
 
         <div class="topContent">
 
             <div class="topWrapperBox">
-                <div id="menuBtn" class="menuBtn" aria-label="Menu" tabindex="0" role="button">
+                <div id="menuBtn" class="menuBtn" aria-label="Navigation" tabindex="0" role="button" aria-expanded="false" aria-controls="menuPanel">
                     <span>Menu</span>
                 </div>
                 <div class="mainTitle">
                     <h1 class="">Cough It Up</h1>
                 </div>
-                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button">
+                <div id="tableBtn" class="tableBtn tabindex" aria-label="Reference" tabindex="0" role="button" aria-expanded="false" aria-controls="referencePanel">
                     <span>Normal Reference Range Table</span>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     <div class="midText ansSection1 wrapper">
                     <div class="contentHolderMain1">
                     <div>
-                        <strong class="titleText">Objective</strong>
+                        <h2 class="titleText">Objective</h2>
                     </div>
                     <ol class="nonScrollLearningObjectiveUL">
                         <li class="options tabindex">•  Compare and contrast the clinical setting and morphologic features of the different types of necrosis.</li>
@@ -77,9 +77,9 @@
                             <div class="myPage" id="pageFirstSection_8">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>1</div>
-                                    <div class='texting'>What would morphologic evaluation of her lymph node show?</div>
+                                    <h2 class='texting'>What would morphologic evaluation of her lymph node show?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA8">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -91,27 +91,29 @@
                             </div>
 
 
-                            <div class="imageThumbHolder imageThumbHolder2">
-                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Gross of lung" ><img src="images/q1/on001-ca001f001-9780323640251.png" class="thumbImg" alt="Gross of lung" /></span>                               
+                            <div class="imageThumbHolder imageThumbHolder2" role="group" aria-label="Image views">
+                                <span class="thumbnail thumbnail_active" role="button" tabindex="0" data-dropdownid="1" data-id="0" aria-label="Gross of lung"  aria-pressed="true"><img src="images/q1/on001-ca001f001-9780323640251.png" class="thumbImg" alt="Gross of lung" /></span>                               
                                 
-                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Granuloma histology" ><img src="images/q1/on001-ca001f002-9780323640251.png" class="thumbImg" alt="Granuloma histology" /></span>                                  
+                                <span class="thumbnail" role="button" tabindex="0" data-dropdownid="2" data-id="0" aria-label="Granuloma histology"  aria-pressed="false"><img src="images/q1/on001-ca001f002-9780323640251.png" class="thumbImg" alt="Granuloma histology" /></span>                                  
                             </div>
 
 
                              <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
                                     
-                                    <li tabindex="0">Gross of lung</li>
-                                    <li tabindex="0">Caseous necrosis</li>
+                                    <li>Gross of lung</li>
+                                    <li>Caseous necrosis</li>
                                   </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                    <img src="images/q1/on001-ca001f001-9780323640251.png" class="containerImg imageShow0" aria-label="Gross of lung image" alt="Gross of lung" />
+                                    <img src="images/q1/on001-ca001f001-9780323640251.png" class="containerImg imageShow0" alt="Gross of lung" />
 
-                                      <img src="images/q1/on001-ca001f001-9780323640251-a.png" class="containerImg imageShow1" aria-label="Caseous necrosis image" alt="Caseous necrosis" />
+                                      <img src="images/q1/on001-ca001f001-9780323640251-a.png" class="containerImg imageShow1" alt="Caseous necrosis" />
 
 
                                    </div>
@@ -119,20 +121,22 @@
                              </div>
                              <div class="imageBoxHolder imageBoxHolder2 hs_set2">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Granuloma histology</li>
-                                    <li tabindex="0">Necrosis</li>
-                                    <li tabindex="0">Giant cells</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Granuloma histology</li>
+                                    <li>Necrosis</li>
+                                    <li>Giant cells</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                      <img src="images/q1/on001-ca001f002-9780323640251.png" class="imgBlock containerImg imageShow0" aria-label="Granuloma histology image" alt="Granuloma histology" />
+                                      <img src="images/q1/on001-ca001f002-9780323640251.png" class="imgBlock containerImg imageShow0" alt="Granuloma histology" />
 
-                                      <img src="images/q1/on001-ca001f002-9780323640251-a.png" class="imgBlock containerImg imageShow1" aria-label="Necrosis image" alt="Necrosis" />
+                                      <img src="images/q1/on001-ca001f002-9780323640251-a.png" class="imgBlock containerImg imageShow1" alt="Necrosis" />
 
-                                      <img src="images/q1/on001-ca001f002-9780323640251-b.png" class="imgBlock containerImg imageShow2" aria-label="Giant cells image" alt="Giant cells" />
+                                      <img src="images/q1/on001-ca001f002-9780323640251-b.png" class="imgBlock containerImg imageShow2" alt="Giant cells" />
 
                                    </div>
                                 </div>
@@ -150,9 +154,9 @@
                             <div class="myPage" id="pageFirstSection_2">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>2</div>
-                                    <div class='texting'>How does caseous necrosis differ from coagulative necrosis?</div>
+                                    <h2 class='texting'>How does caseous necrosis differ from coagulative necrosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA2">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -164,17 +168,19 @@
                             
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                     <li tabindex="0">Kidney infarct</li>
-                                    <li tabindex="0">Coagulative necrosis</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                     <li>Kidney infarct</li>
+                                    <li>Coagulative necrosis</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                      <img src="images/q2/on001-ca001f003-9780323640251.png" class="containerImg imageShow0" aria-label="Kidney infarct image" alt="Kidney infarct" />
+                                      <img src="images/q2/on001-ca001f003-9780323640251.png" class="containerImg imageShow0" alt="Kidney infarct" />
 
-                                      <img src="images/q2/on001-ca001f003-9780323640251-a.png" class="containerImg imageShow1" aria-label="Coagulative necrosis image" alt="Coagulative necrosis" />
+                                      <img src="images/q2/on001-ca001f003-9780323640251-a.png" class="containerImg imageShow1" alt="Coagulative necrosis" />
                                    </div>
                                 </div>
                              </div>
@@ -190,9 +196,9 @@
                             <div class="myPage" id="pageFirstSection_3">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>3</div>
-                                    <div class='texting'>In which settings is coagulative necrosis seen?</div>
+                                    <h2 class='texting'>In which settings is coagulative necrosis seen?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA3">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -213,9 +219,9 @@
                             <div class="myPage" id="pageFirstSection_4">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>4</div>
-                                    <div class='texting'>Which type of necrosis is seen in brain infarcts?</div>
+                                    <h2 class='texting'>Which type of necrosis is seen in brain infarcts?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA4">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -229,16 +235,18 @@
                             
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Brain infarct</li>
-                                    <li tabindex="0">Liquefactive necrosis</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Brain infarct</li>
+                                    <li>Liquefactive necrosis</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
-                                      <img src="images/q4/on001-ca001f004-9780323640251.png" class="containerImg imageShow0" aria-label="Brain infarct image" alt="Brain infarct" />
+                                      <img src="images/q4/on001-ca001f004-9780323640251.png" class="containerImg imageShow0" alt="Brain infarct" />
 
-                                      <img src="images/q4/on001-ca001f004-9780323640251-a.png" class="containerImg imageShow1" aria-label="Liquefactive necrosis image" alt="Liquefactive necrosis" />
+                                      <img src="images/q4/on001-ca001f004-9780323640251-a.png" class="containerImg imageShow1" alt="Liquefactive necrosis" />
                                    </div>
                                 </div>
                              </div>
@@ -254,9 +262,9 @@
                             <div class="myPage" id="pageFirstSection_5">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>5</div>
-                                    <div class='texting'>What are some of the common causes and mechanisms of coagulative, liquefactive, and caseous necrosis?</div>
+                                    <h2 class='texting'>What are some of the common causes and mechanisms of coagulative, liquefactive, and caseous necrosis?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA5">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -277,9 +285,9 @@
                             <div class="myPage" id="pageFirstSection_6">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>6</div>
-                                    <div class='texting'>What is fibrinoid necrosis and when does it occur?</div>
+                                    <h2 class='texting'>What is fibrinoid necrosis and when does it occur?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA6">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -291,17 +299,19 @@
                             </div>  
                             <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                                 <div class="optionSelectionBox">
-                                  <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                    <li tabindex="0">Blood vessel</li>
-                                    <li tabindex="0">Fibrinoid necrosis</li>
+                                  <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                    <li>Blood vessel</li>
+                                    <li>Fibrinoid necrosis</li>
 </ul>
+                                  </div>
                                 </div>
                                 <div class="leftImageBox">
                                    <div class="graphContainer" aria-live="polite">
 
-                                      <img src="images/q6/on001-ca001f005-9780323640251.png" class="containerImg imageShow0" aria-label="Blood vessel image" alt="Blood vessel" />
+                                      <img src="images/q6/on001-ca001f005-9780323640251.png" class="containerImg imageShow0" alt="Blood vessel" />
 
-                                      <img src="images/q6/on001-ca001f005-9780323640251-a.png" class="containerImg imageShow1" aria-label="Fibrinoid necrosis image" alt="Fibrinoid necrosis" />
+                                      <img src="images/q6/on001-ca001f005-9780323640251-a.png" class="containerImg imageShow1" alt="Fibrinoid necrosis" />
                                    </div>
                                 </div>
                              </div>
@@ -318,9 +328,9 @@
                             <div class="myPage" id="pageFirstSection_7">
                                 <div class="para_  Cont_Que">
                                     <div class='numbering'>7</div>
-                                    <div class='texting'>What is the difference between necrosis and atrophy?</div>
+                                    <h2 class='texting'>What is the difference between necrosis and atrophy?</h2>
                                 </div>
-                                <div class="AnswerDiv">Show answer</div>
+                                <div class="AnswerDiv">Show Answer</div>
                                 <div class="textArea" id="textA7">
                                     <div class="wrapper AnswerDiv_para wrap1">
                                         <div class="contentHolder Cont_Ans">
@@ -333,15 +343,17 @@
 
                         <div class="imageBoxHolder imageBoxHolder2 hs_set1">
                             <div class="optionSelectionBox">
-                              <ul class="dropdownListBox pageDropdownList" aria-haspopup="true">
-                                <li tabindex="0">Normal/atrophic kidney</li>
-                                <li tabindex="0">Cortex</li>
+                              <div class="dropdownListBox pageDropdownList">
+                                  <ul>
+                                <li>Normal/atrophic kidney</li>
+                                <li>Cortex</li>
 </ul>
+                                  </div>
                             </div>
                             <div class="leftImageBox">
                                <div class="graphContainer" aria-live="polite">
-                                <img src="images/q7/on001-ca001f006-9780323640251.png" class="containerImg imageShow0" aria-label="Normal/atrophic kidney image" alt="Normal/atrophic kidney" />
-                                <img src="images/q7/on001-ca001f006-9780323640251-a.png" class="containerImg imageShow1" aria-label="Cortex image" alt="Cortex" />
+                                <img src="images/q7/on001-ca001f006-9780323640251.png" class="containerImg imageShow0" alt="Normal/atrophic kidney" />
+                                <img src="images/q7/on001-ca001f006-9780323640251-a.png" class="containerImg imageShow1" alt="Cortex" />
                                </div>
                             </div>
                          </div>
@@ -362,12 +374,12 @@
             <div id="naviRight" class="rightArrowDisable" aria-label="Next button" tabindex="0" role="button">
                 <span>Next button</span>
             </div>
-            <div id="naviList" aria-hidden="true"></div>
+            <div id="naviList" role="group" aria-label="Slide controls"></div>
         </div>
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll">
+        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
             <ul class="menuList" role="menu">
                 <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
                 <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
@@ -385,10 +397,10 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch">
+        <div class="tablepatch" id="referencePanel" aria-hidden="true">
             <div class="tableHeader">
-                <div class="tableTitle tabindex">Normal Reference Range Table</div>
-                <span class="tabindex">Select:</span>
+                <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
+                <label id="referenceSelectLabel">Select:</label>
                 <div id="tableDropdownID" class="tableDropdownList"></div>
             </div>
 
@@ -429,6 +441,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
+            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
     </div>
     <script src="../../../common_assets/scripts/common.js"></script>
 
