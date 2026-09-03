@@ -133,26 +133,44 @@ var allvideoelemts = document.querySelectorAll("video.hls-video");
 /*** Announce iframe loading / loaded status to screen readers ***/
 (function () {
 	var hiddenStatusStyle = "position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;";
+	var announceTimer = null;
+	var removeTimer = null;
 
-	function getOrCreateStatus(holder) {
-		var existing = holder.querySelector(".iframe-load-status");
-		if (existing) {
-			return existing;
+	function clearStatusNode(statusEl) {
+		if (!statusEl) {
+			return;
 		}
+		statusEl.textContent = "";
+		statusEl.setAttribute("hidden", "hidden");
+		statusEl.setAttribute("aria-hidden", "true");
+		if (statusEl.parentNode) {
+			statusEl.parentNode.removeChild(statusEl);
+		}
+	}
+
+	function announce(message) {
+		if (announceTimer) {
+			window.clearTimeout(announceTimer);
+			announceTimer = null;
+		}
+		if (removeTimer) {
+			window.clearTimeout(removeTimer);
+			removeTimer = null;
+		}
+		document.querySelectorAll(".iframe-load-status").forEach(clearStatusNode);
 		var status = document.createElement("div");
 		status.className = "iframe-load-status";
-		status.setAttribute("role", "status");
 		status.setAttribute("aria-live", "polite");
 		status.setAttribute("aria-atomic", "true");
 		status.setAttribute("style", hiddenStatusStyle);
-		holder.insertBefore(status, holder.firstChild);
-		return status;
-	}
-
-	function announce(statusEl, message) {
-		statusEl.textContent = "";
-		window.setTimeout(function () {
-			statusEl.textContent = message;
+		document.body.appendChild(status);
+		announceTimer = window.setTimeout(function () {
+			status.textContent = message;
+			removeTimer = window.setTimeout(function () {
+				clearStatusNode(status);
+				announceTimer = null;
+				removeTimer = null;
+			}, 1500);
 		}, 50);
 	}
 
@@ -161,12 +179,8 @@ var allvideoelemts = document.querySelectorAll("video.hls-video");
 			return;
 		}
 		iframe.setAttribute("data-load-announced", "true");
-		iframe.setAttribute("aria-busy", "false");
-		var holder = iframe.parentNode;
-		if (!holder) {
-			return;
-		}
-		announce(getOrCreateStatus(holder), "Content loaded");
+		iframe.removeAttribute("aria-busy");
+		announce("Content loaded");
 	}
 
 	function setupIframeLoadingStatus() {
@@ -175,12 +189,8 @@ var allvideoelemts = document.querySelectorAll("video.hls-video");
 			return;
 		}
 		iframes.forEach(function (iframe) {
-			var holder = iframe.parentNode;
-			if (!holder) {
-				return;
-			}
 			iframe.setAttribute("aria-busy", "true");
-			announce(getOrCreateStatus(holder), "Loading");
+			announce("Loading");
 			iframe.addEventListener("load", function () {
 				window.setTimeout(function () {
 					markIframeLoaded(iframe);

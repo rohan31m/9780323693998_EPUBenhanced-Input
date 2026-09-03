@@ -1900,3 +1900,10 @@ strong {
   border: 0;
   white-space: nowrap;
 }
+
+.menupatch[hidden],
+.tablepatch[hidden],
+#widgetStatus[hidden],
+.loadDiv[hidden] {
+  display: none !important;
+}

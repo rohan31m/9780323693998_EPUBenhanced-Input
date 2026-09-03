@@ -1893,3 +1893,10 @@ strong {
   right: 0;
   transform: none;
 }
+
+.menupatch[hidden],
+.tablepatch[hidden],
+#widgetStatus[hidden],
+.loadDiv[hidden] {
+  display: none !important;
+}
