@@ -9,21 +9,7 @@
     // var audioElement = document.createElement('audio');
     $(document).ready(function()
     {
-        var $loadStatus = $('#widgetStatus');
         var loadStatusAnnounced = false;
-        if ($loadStatus.length)
-        {
-            $loadStatus.attr({
-                'role': 'status',
-                'aria-live': 'polite',
-                'aria-atomic': 'true'
-            });
-            $loadStatus.text('');
-            window.setTimeout(function()
-            {
-                $loadStatus.text('Loading');
-            }, 50);
-        }
         $(window).load(function()
         {
             $(".loader").delay(800).fadeOut("slow");
@@ -35,17 +21,10 @@
                 }
                 loadStatusAnnounced = true;
                 $('.loadDiv').attr({
-                    'aria-busy': 'false',
-                    'aria-hidden': 'true'
+                    'aria-hidden': 'true',
+                    'hidden': 'hidden'
                 });
-                if ($loadStatus.length)
-                {
-                    $loadStatus.text('');
-                    window.setTimeout(function()
-                    {
-                        $loadStatus.text('Content loaded');
-                    }, 50);
-                }
+
                 try
                 {
                     if (window.parent && window.parent !== window)
@@ -180,9 +159,23 @@
 
     function setReferenceExpanded(isExpanded)
     {
+        var $panel = $('#referencePanel');
         $('#tableBtn').attr('aria-expanded', isExpanded ? 'true' : 'false');
-        $('#referencePanel').attr('aria-hidden', isExpanded ? 'false' : 'true');
-        $('#widgetStatus').text(isExpanded ? 'Reference expanded' : 'Reference collapsed');
+        if (isExpanded)
+        {
+            $panel.removeAttr('hidden').removeAttr('inert').attr('aria-hidden', 'false');
+        }
+        else
+        {
+            $panel.attr({
+                'aria-hidden': 'true',
+                'inert': 'inert'
+            });
+            if ($panel.css('display') === 'none')
+            {
+                $panel.attr('hidden', 'hidden');
+            }
+        }
         if (!isExpanded && typeof clearReferenceTableScrollTabStops === 'function')
         {
             clearReferenceTableScrollTabStops();
@@ -191,9 +184,26 @@
 
     function setMenuExpanded(isExpanded)
     {
+        var $panel = $('#menuPanel');
+        var $items = $panel.find('.menuList li');
         $('#menuBtn').attr('aria-expanded', isExpanded ? 'true' : 'false');
-        $('#menuPanel').attr('aria-hidden', isExpanded ? 'false' : 'true');
-        $('#widgetStatus').text(isExpanded ? 'Menu expanded' : 'Menu collapsed');
+        if (isExpanded)
+        {
+            $panel.removeAttr('hidden').removeAttr('inert').attr('aria-hidden', 'false');
+            $items.attr('tabindex', '0');
+        }
+        else
+        {
+            $panel.attr({
+                'aria-hidden': 'true',
+                'inert': 'inert'
+            });
+            $items.attr('tabindex', '-1');
+            if ($panel.css('display') === 'none')
+            {
+                $panel.attr('hidden', 'hidden');
+            }
+        }
     }
 
     function isHamburgerMenuOpen()
@@ -322,7 +332,10 @@
             return;
         }
         setMenuExpanded(false);
-        $('.menupatch').slideUp();
+        $('.menupatch').slideUp(function()
+        {
+            $('#menuPanel').attr('hidden', 'hidden');
+        });
         $('#menuBtn').removeClass('menuBtnSelected');
         $('#tableBtn').attr('tabindex', '0');
         if (currScreenVisible != null)
@@ -470,7 +483,10 @@
         if ($('.tablepatch').css('display') != 'none')
         {
             setReferenceExpanded(false);
-            $('.tablepatch').slideUp();
+            $('.tablepatch').slideUp(function()
+            {
+                $('#referencePanel').attr('hidden', 'hidden');
+            });
             $('#tableBtn').removeClass('tableBtnSelected');
             if (currScreenVisible1 != null)
                 $(currScreenVisible1).show();
@@ -697,10 +713,16 @@
         {
             message = linkName + " selected. " + message;
         }
+        $live.removeAttr('hidden').removeAttr('aria-hidden');
         $live.text("");
         window.setTimeout(function()
         {
             $live.text(message);
+            window.setTimeout(function()
+            {
+                $live.text("");
+                $live.attr({ 'hidden': 'hidden', 'aria-hidden': 'true' });
+            }, 2000);
         }, 50);
     }
 

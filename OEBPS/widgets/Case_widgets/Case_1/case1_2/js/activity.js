@@ -6,24 +6,69 @@
     var nCount = 0;
     var footerLi = "";
     var divArr = new Array();
+    var statusHideTimer = null;
     // var audioElement = document.createElement('audio');
+
+    function announceWidgetStatus(message)
+    {
+        var $status = $('#widgetStatus');
+        if (!$status.length || !message)
+        {
+            return;
+        }
+        if (statusHideTimer)
+        {
+            window.clearTimeout(statusHideTimer);
+            statusHideTimer = null;
+        }
+        $status.removeAttr('hidden').removeAttr('aria-hidden').attr({
+            'role': 'status',
+            'aria-live': 'polite',
+            'aria-atomic': 'true'
+        });
+        $status.text('');
+        window.setTimeout(function()
+        {
+            $status.text(message);
+            statusHideTimer = window.setTimeout(function()
+            {
+                $status.text('');
+                $status.attr({
+                    'hidden': 'hidden',
+                    'aria-hidden': 'true'
+                }).removeAttr('role');
+                statusHideTimer = null;
+            }, 2000);
+        }, 50);
+    }
+
+    function syncMenuPanelAccess(isExpanded)
+    {
+        var $panel = $('#menuPanel');
+        var $items = $panel.find('.menuList li');
+        $('#menuBtn').attr('aria-expanded', isExpanded ? 'true' : 'false');
+        if (isExpanded)
+        {
+            $panel.removeAttr('hidden').removeAttr('inert').attr('aria-hidden', 'false');
+            $items.attr('tabindex', '0');
+        }
+        else
+        {
+            $panel.attr({
+                'aria-hidden': 'true',
+                'inert': 'inert'
+            });
+            $items.attr('tabindex', '-1');
+            if ($panel.css('display') === 'none')
+            {
+                $panel.attr('hidden', 'hidden');
+            }
+        }
+    }
+
     $(document).ready(function()
     {
-                var $loadStatus = $('#widgetStatus');
         var loadStatusAnnounced = false;
-        if ($loadStatus.length)
-        {
-            $loadStatus.attr({
-                'role': 'status',
-                'aria-live': 'polite',
-                'aria-atomic': 'true'
-            });
-            $loadStatus.text('');
-            window.setTimeout(function()
-            {
-                $loadStatus.text('Loading');
-            }, 50);
-        }
         $(window).load(function()
         {
             $(".loader").delay(800).fadeOut("slow");
@@ -35,17 +80,9 @@
                 }
                 loadStatusAnnounced = true;
                 $('.loadDiv').attr({
-                    'aria-busy': 'false',
-                    'aria-hidden': 'true'
+                    'aria-hidden': 'true',
+                    'hidden': 'hidden'
                 });
-                if ($loadStatus.length)
-                {
-                    $loadStatus.text('');
-                    window.setTimeout(function()
-                    {
-                        $loadStatus.text('Content loaded');
-                    }, 50);
-                }
                 try
                 {
                     if (window.parent && window.parent !== window)
@@ -70,6 +107,7 @@
         // $('.midDiv').attr("tabindex","-1");
         // $('.Cont_Ans').attr("tabindex","-1");
         $('#pageContainer').removeAttr("aria-live");
+        syncMenuPanelAccess(false);
         $('#naviLeft').attr("aria-label","Previous");
         $('#naviRight').attr("aria-label","Next");
         $(".navigation").bind("click", fnHandelNavigationEvents);
@@ -194,16 +232,6 @@
 
     var currScreenVisible = null;
 
-    function announceWidgetStatus(message)
-    {
-        var $status = $('#widgetStatus');
-        $status.text('');
-        window.setTimeout(function()
-        {
-            $status.text(message);
-        }, 50);
-    }
-
     function updateSlideControls(activeIndex)
     {
         activeIndex = Number(activeIndex);
@@ -292,17 +320,26 @@
 
     function setReferenceExpanded(isExpanded)
     {
+        var $panel = $('#referencePanel');
         $('#tableBtn').attr('aria-expanded', isExpanded ? 'true' : 'false');
-        $('#referencePanel').attr('aria-hidden', isExpanded ? 'false' : 'true');
+        if (isExpanded)
+        {
+            $panel.removeAttr('hidden').attr('aria-hidden', 'false');
+        }
+        else
+        {
+            $panel.attr('aria-hidden', 'true');
+            if ($panel.css('display') === 'none')
+            {
+                $panel.attr('hidden', 'hidden');
+            }
+        }
         setReferencePanelTabStops(isExpanded);
-        announceWidgetStatus(isExpanded ? 'Reference expanded' : 'Reference collapsed');
     }
 
     function setMenuExpanded(isExpanded)
     {
-        $('#menuBtn').attr('aria-expanded', isExpanded ? 'true' : 'false');
-        $('#menuPanel').attr('aria-hidden', isExpanded ? 'false' : 'true');
-        announceWidgetStatus(isExpanded ? 'Menu expanded' : 'Menu collapsed');
+        syncMenuPanelAccess(isExpanded);
     }
 
     function isHamburgerMenuOpen()
@@ -378,7 +415,10 @@
             return;
         }
         setMenuExpanded(false);
-        $('.menupatch').slideUp();
+        $('.menupatch').slideUp(function()
+        {
+            $('#menuPanel').attr('hidden', 'hidden');
+        });
         $('#menuBtn').removeClass('menuBtnSelected');
         $('#tableBtn').attr('tabindex', '0');
         if (currScreenVisible != null)
@@ -522,7 +562,10 @@
         if ($('.tablepatch').css('display') != 'none')
         {
             setReferenceExpanded(false);
-            $('.tablepatch').slideUp();
+            $('.tablepatch').slideUp(function()
+            {
+                $('#referencePanel').attr('hidden', 'hidden');
+            });
             $('#tableBtn').removeClass('tableBtnSelected');
             if (currScreenVisible1 != null)
                 $(currScreenVisible1).show();
@@ -740,18 +783,13 @@
         {
             return;
         }
-        var $live = $("#widgetStatus");
         var message = name + " displayed";
         var linkName = $.trim(selectedLink || "");
         if (linkName)
         {
             message = linkName + " selected. " + message;
         }
-        $live.text("");
-        window.setTimeout(function()
-        {
-            $live.text(message);
-        }, 50);
+        announceWidgetStatus(message);
     }
 function createDropDownLists()
     {

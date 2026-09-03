@@ -28,9 +28,8 @@
 <body>
   
     <div id="midConatiner" role="main">
-                <div class="loadDiv" role="status" aria-live="polite" aria-atomic="true" aria-busy="true">
+                <div class="loadDiv" aria-hidden="true">
             <div class="loader" aria-hidden="true"></div>
-            <span class="visually-hidden">Loading</span>
         </div>
 
 
@@ -362,15 +361,15 @@
 
         <div class="popupContainer"></div>
 
-        <div class="menupatch menupathScroll" id="menuPanel" aria-hidden="true">
+        <div class="menupatch menupathScroll" id="menuPanel" hidden="hidden" aria-hidden="true" inert="inert">
             <ul class="menuList" role="menu">
-                <li id="menu0" tabindex="0" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
-                <li id="menu1" tabindex="0" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
-                <li id="menu2" tabindex="0" role="menuitem" aria-label="3. Question 2">iii. Question 2</li>
-                <li id="menu3" tabindex="0" role="menuitem" aria-label="4. Question 3">iv. Question 3</li>
-                <li id="menu4" tabindex="0" role="menuitem" aria-label="5. Question 4">v. Question 4</li>
-                <li id="menu5" tabindex="0" role="menuitem" aria-label="6. Question 5">vi. Question 5</li>
-                <li id="menu6" tabindex="0" role="menuitem" aria-label="7. Question 6">vii. Question 6</li>
+                <li id="menu0" tabindex="-1" role="menuitem" aria-label="1. Learning Objectives">i. Learning Objectives</li>
+                <li id="menu1" tabindex="-1" role="menuitem" aria-label="2. Question 1">ii. Question 1</li>
+                <li id="menu2" tabindex="-1" role="menuitem" aria-label="3. Question 2">iii. Question 2</li>
+                <li id="menu3" tabindex="-1" role="menuitem" aria-label="4. Question 3">iv. Question 3</li>
+                <li id="menu4" tabindex="-1" role="menuitem" aria-label="5. Question 4">v. Question 4</li>
+                <li id="menu5" tabindex="-1" role="menuitem" aria-label="6. Question 5">vi. Question 5</li>
+                <li id="menu6" tabindex="-1" role="menuitem" aria-label="7. Question 6">vii. Question 6</li>
             </ul>
         </div>
 
@@ -379,7 +378,7 @@
             <div class="bottomWhitePatch"></div>
         </div>
 
-        <div class="tablepatch" id="referencePanel" aria-hidden="true">
+        <div class="tablepatch" id="referencePanel" hidden="hidden" aria-hidden="true" inert="inert">
             <div class="tableHeader">
                 <h2 class="tableTitle" id="referenceTableTitle">Normal Reference Range Table</h2>
                 <label id="referenceSelectLabel">Select:</label>
@@ -423,7 +422,7 @@
                 <div id="addTable8" class="test1 nano-content"></div>
                  </div>
         </div>
-            <div id="widgetStatus" role="status" aria-live="polite" aria-atomic="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;"></div>
+            <div id="widgetStatus" class="visually-hidden" aria-live="polite" aria-atomic="true" hidden="hidden" aria-hidden="true"></div>
     </div>
 <script src="../../../common_assets/scripts/common.js"></script>
 </body>
