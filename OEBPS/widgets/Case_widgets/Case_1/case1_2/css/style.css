@@ -844,6 +844,13 @@ li.jp-unmute,
   z-index: 12;
 }
 
+.menupatch[hidden],
+.tablepatch[hidden],
+#widgetStatus[hidden],
+.loadDiv[hidden] {
+  display: none !important;
+}
+
 .menupathScroll{
   overflow: auto;
 }
