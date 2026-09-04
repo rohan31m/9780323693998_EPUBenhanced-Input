@@ -52,129 +52,123 @@
       </navLabel>
       <content src="XHTML/B9780323640251030013/B9780323640251030013.xhtml#B9780323640251030013" />
     </navPoint>
-<!--    <navPoint id="toc8" playOrder="8">
-      <navLabel>
-        <text>Table of Contents</text>
-      </navLabel>
-      <content src="XHTML/contents.xhtml" />
-    </navPoint>-->
 	</navPoint>
 
 
-<navPoint id="toc9" playOrder="8">
+<navPoint id="toc8" playOrder="8">
       <navLabel>
         <text>Multiple Choice Questions</text>
       </navLabel>
       <content src="XHTML/Multiple_Choice_Questions.xhtml#MultipleChoiceQuestions" />
-    <navPoint id="toc10" playOrder="9">
+    <navPoint id="toc9" playOrder="9">
       <navLabel>
         <text>Chapter 1 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0015" />
     </navPoint>
-<navPoint id="toc11" playOrder="10">
+<navPoint id="toc10" playOrder="10">
       <navLabel>
         <text>Chapter 2 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0020" />
     </navPoint>
-<navPoint id="toc12" playOrder="11">
+<navPoint id="toc11" playOrder="11">
       <navLabel>
         <text>Chapter 3 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0025" />
     </navPoint>
-<navPoint id="toc13" playOrder="12">
+<navPoint id="toc12" playOrder="12">
       <navLabel>
         <text>Chapter 4 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0030" />
     </navPoint>
-<navPoint id="toc14" playOrder="13">
+<navPoint id="toc13" playOrder="13">
       <navLabel>
         <text>Chapter 5 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0035" />
     </navPoint>
-<navPoint id="toc15" playOrder="14">
+<navPoint id="toc14" playOrder="14">
       <navLabel>
         <text>Chapter 6 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0040" />
     </navPoint>
-<navPoint id="toc16" playOrder="15">
+<navPoint id="toc15" playOrder="15">
       <navLabel>
         <text>Chapter 7 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0045" />
     </navPoint>
-<navPoint id="toc17" playOrder="16">
+<navPoint id="toc16" playOrder="16">
       <navLabel>
         <text>Chapter 8 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0050" />
     </navPoint>
-<navPoint id="toc18" playOrder="17">
+<navPoint id="toc17" playOrder="17">
       <navLabel>
         <text>Chapter 9 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0055" />
     </navPoint>
-<navPoint id="toc19" playOrder="18">
+<navPoint id="toc18" playOrder="18">
       <navLabel>
         <text>Chapter 10 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0060" />
     </navPoint>
-<navPoint id="toc20" playOrder="19">
+<navPoint id="toc19" playOrder="19">
       <navLabel>
         <text>Chapter 11 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0065" />
     </navPoint>
-<navPoint id="toc21" playOrder="20">
+<navPoint id="toc20" playOrder="20">
       <navLabel>
         <text>Chapter 12 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0070" />
     </navPoint>
-<navPoint id="toc22" playOrder="21">
+<navPoint id="toc21" playOrder="21">
       <navLabel>
         <text>Chapter 13 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0075" />
     </navPoint>
-<navPoint id="toc23" playOrder="22">
+<navPoint id="toc22" playOrder="22">
       <navLabel>
         <text>Chapter 14 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0080" />
     </navPoint>
-<navPoint id="toc24" playOrder="23">
+<navPoint id="toc23" playOrder="23">
       <navLabel>
         <text>Chapter 15 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0085" />
     </navPoint>
-<navPoint id="toc25" playOrder="24">
+<navPoint id="toc24" playOrder="24">
       <navLabel>
         <text>Chapter 16 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0090" />
     </navPoint>
-<navPoint id="toc26" playOrder="25">
+<navPoint id="toc25" playOrder="25">
       <navLabel>
         <text>Chapter 17 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0095" />
     </navPoint>
-<navPoint id="toc27" playOrder="26">
+<navPoint id="toc26" playOrder="26">
       <navLabel>
         <text>Chapter 18 Study Questions</text>
       </navLabel>
       <content src="XHTML/Assessments.xhtml#s0100" />
     </navPoint>
-<navPoint id="toc28" playOrder="27">
+<navPoint id="toc27" playOrder="27">
       <navLabel>
         <text>Chapter 19 Study Questions</text>
       </navLabel>
@@ -183,120 +177,120 @@
     </navPoint>
 
 
-    <navPoint id="toc29" playOrder="28">
+    <navPoint id="toc28" playOrder="28">
       <navLabel>
         <text>Case Studies</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_1_Cases.xhtml#c19100012" />
-    <navPoint id="toc30" playOrder="29">
+    <navPoint id="toc29" playOrder="29">
       <navLabel>
         <text>Essentials_Chapter_1_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_1_Cases.xhtml#s0031" />
     </navPoint>
-<navPoint id="toc31" playOrder="30">
+<navPoint id="toc30" playOrder="30">
       <navLabel>
         <text>Essentials_Chapter_2_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_2_Cases.xhtml#p0010" />
     </navPoint>
-<navPoint id="toc32" playOrder="31">
+<navPoint id="toc31" playOrder="31">
       <navLabel>
         <text>Essentials_Chapter_3_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_3_Cases.xhtml#c17000012" />
     </navPoint>
-<navPoint id="toc33" playOrder="32">
+<navPoint id="toc32" playOrder="32">
       <navLabel>
         <text>Essentials_Chapter_4_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_4_Cases.xhtml#tit0010" />
     </navPoint>
-<navPoint id="toc34" playOrder="33">
+<navPoint id="toc33" playOrder="33">
       <navLabel>
         <text>Essentials_Chapter_5_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_5_Cases.xhtml#tit0010" />
     </navPoint>
-<navPoint id="toc35" playOrder="34">
+<navPoint id="toc34" playOrder="34">
       <navLabel>
         <text>Essentials_Chapter_6_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_6_Cases.xhtml#tit0010" />
     </navPoint>
-<navPoint id="toc36" playOrder="35">
+<navPoint id="toc35" playOrder="35">
       <navLabel>
         <text>Essentials_Chapter_7_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_7_Cases.xhtml#tit0010" />
     </navPoint>
-<navPoint id="toc37" playOrder="36">
+<navPoint id="toc36" playOrder="36">
       <navLabel>
         <text>Essentials_Chapter_8_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_8_Cases.xhtml#tit0010" />
     </navPoint>
-<navPoint id="toc38" playOrder="37">
+<navPoint id="toc37" playOrder="37">
       <navLabel>
         <text>Essentials_Chapter_9_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_9_Cases.xhtml#tit0010" />
     </navPoint>
-<navPoint id="toc39" playOrder="38">
+<navPoint id="toc38" playOrder="38">
       <navLabel>
         <text>Essentials_Chapter_10_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_10_Cases.xhtml#tit0010" />
     </navPoint>
-<navPoint id="toc40" playOrder="39">
+<navPoint id="toc39" playOrder="39">
       <navLabel>
         <text>Essentials_Chapter_11_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_11_Cases.xhtml#tit0010" />
     </navPoint>
-<navPoint id="toc41" playOrder="40">
+<navPoint id="toc40" playOrder="40">
       <navLabel>
         <text>Essentials_Chapter_12_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_12_Cases.xhtml#tit0010" />
     </navPoint>
-<navPoint id="toc42" playOrder="41">
+<navPoint id="toc41" playOrder="41">
       <navLabel>
         <text>Essentials_Chapter_13_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_13_Cases.xhtml#tit0010" />
     </navPoint>
-<navPoint id="toc43" playOrder="42">
+<navPoint id="toc42" playOrder="42">
       <navLabel>
         <text>Essentials_Chapter_14_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_14_Cases.xhtml#tit0010" />
     </navPoint>
-<navPoint id="toc44" playOrder="43">
+<navPoint id="toc43" playOrder="43">
       <navLabel>
         <text>Essentials_Chapter_15_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_15_Cases.xhtml#tit0010" />
     </navPoint>
-<navPoint id="toc45" playOrder="44">
+<navPoint id="toc44" playOrder="44">
       <navLabel>
         <text>Essentials_Chapter_16_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_16_Cases.xhtml#tit0010" />
     </navPoint>
-<navPoint id="toc46" playOrder="45">
+<navPoint id="toc45" playOrder="45">
       <navLabel>
         <text>Essentials_Chapter_17_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_17_Cases.xhtml#tit0010" />
     </navPoint>
-<navPoint id="toc47" playOrder="46">
+<navPoint id="toc46" playOrder="46">
       <navLabel>
         <text>Essentials_Chapter_18_Cases</text>
       </navLabel>
       <content src="XHTML/case_study/Essentials_Chapter_18_Cases.xhtml#tit0010" />
     </navPoint>    
-<navPoint id="toc48" playOrder="47">
+<navPoint id="toc47" playOrder="47">
       <navLabel>
         <text>Essentials_Chapter_19_Cases</text>
       </navLabel>
@@ -309,61 +303,61 @@
 
 
 
-    <navPoint id="toc49" playOrder="48">
+    <navPoint id="toc48" playOrder="48">
       <navLabel>
         <text>1. Cell Injury and Cell Death</text>
       </navLabel>
       <content src="XHTML/B9780323640251000014/B9780323640251000014.xhtml#B9780323640251000014" />
-      <navPoint id="toc50" playOrder="49">
+      <navPoint id="toc49" playOrder="49">
         <navLabel>
           <text>Overview of Cell Injury</text>
         </navLabel>
         <content src="XHTML/B9780323640251000014/B9780323640251000014.xhtml#s0010" />
       </navPoint>
-      <navPoint id="toc51" playOrder="50">
+      <navPoint id="toc50" playOrder="50">
         <navLabel>
           <text>Reversible Cell Injury</text>
         </navLabel>
         <content src="XHTML/B9780323640251000014/B9780323640251000014.xhtml#s0020" />
       </navPoint>
-      <navPoint id="toc52" playOrder="51">
+      <navPoint id="toc51" playOrder="51">
         <navLabel>
           <text>Cell Death</text>
         </navLabel>
         <content src="XHTML/B9780323640251000014/B9780323640251000014.xhtml#s0025" />
       </navPoint>
-      <navPoint id="toc53" playOrder="52">
+      <navPoint id="toc52" playOrder="52">
         <navLabel>
           <text>Mechanisms of Cell Injury and Death</text>
         </navLabel>
         <content src="XHTML/B9780323640251000014/B9780323640251000014.xhtml#s0060" />
       </navPoint>
-      <navPoint id="toc54" playOrder="53">
+      <navPoint id="toc53" playOrder="53">
         <navLabel>
           <text>Cellular Aging</text>
         </navLabel>
         <content src="XHTML/B9780323640251000014/B9780323640251000014.xhtml#s0105" />
       </navPoint>
-      <navPoint id="toc55" playOrder="54">
+      <navPoint id="toc54" playOrder="54">
         <navLabel>
           <text>Cellular Adaptations to Stress</text>
         </navLabel>
         <content src="XHTML/B9780323640251000014/B9780323640251000014.xhtml#s0110" />
       </navPoint>
-      <navPoint id="toc56" playOrder="55">
+      <navPoint id="toc55" playOrder="55">
         <navLabel>
           <text>Pathologic Accumulations in Cells</text>
         </navLabel>
         <content src="XHTML/B9780323640251000014/B9780323640251000014.xhtml#s0115" />
       </navPoint>
-    <navPoint id="toc57" playOrder="56">
+    <navPoint id="toc56" playOrder="56">
       <navLabel>
         <text>Chapter 1 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss.xhtml#s00055" />
     </navPoint>
 
-       <navPoint id="toc57a" playOrder="57">
+       <navPoint id="toc57" playOrder="57">
         <navLabel>
           <text>Essentials Chapter 1 Cases</text>
         </navLabel>
@@ -441,31 +435,31 @@
       </navLabel>
       <content src="XHTML/asss1.xhtml" />
     </navPoint>
-       <navPoint id="c18000012" playOrder="69">
+       <navPoint id="toc69" playOrder="69">
         <navLabel>
           <text>Essentials Chapter 2 Cases</text>
         </navLabel>
         <content src="XHTML/case_study_chapter/Essentials_Chapter_2_Cases.xhtml#c18000012" />
 
-    <navPoint id="toc69" playOrder="70">
+    <navPoint id="toc70" playOrder="70">
       <navLabel>
         <text>Case Study 2.1</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/reader_2_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc70" playOrder="71">
+    <navPoint id="toc71" playOrder="71">
       <navLabel>
         <text>Case Study 2.2</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_2_xn-2_01_copy.xhtml" />
     </navPoint>
-<navPoint id="toc71" playOrder="72">
+<navPoint id="toc72" playOrder="72">
       <navLabel>
         <text>Case Study 2.3</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_2_3_01_copy.xhtml" />
     </navPoint>
-<navPoint id="toc72" playOrder="73">
+<navPoint id="toc73" playOrder="73">
       <navLabel>
         <text>Case Study 2.4</text>
       </navLabel>
@@ -473,35 +467,35 @@
     </navPoint>
       </navPoint>
     </navPoint>
-    <navPoint id="toc73" playOrder="74">
+    <navPoint id="toc74" playOrder="74">
       <navLabel>
         <text>3. Hemodynamic Disorders, Thromboembolism, and Shock</text>
       </navLabel>
       <content src="XHTML/B9780323640251000038/B9780323640251000038.xhtml#B9780323640251000038" />
-      <navPoint id="toc74" playOrder="75">
+      <navPoint id="toc75" playOrder="75">
         <navLabel>
           <text>Hyperemia, Congestion, and Edema</text>
         </navLabel>
         <content src="XHTML/B9780323640251000038/B9780323640251000038.xhtml#s0010" />
       </navPoint>
-<navPoint id="toc75" playOrder="76">
+<navPoint id="toc76" playOrder="76">
       <navLabel>
         <text>Chapter 3 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss2.xhtml" />
     </navPoint>
-       <navPoint id="c17000012" playOrder="77">
+       <navPoint id="toc77" playOrder="77">
         <navLabel>
           <text>Essentials Chapter 3 Cases</text>
         </navLabel>
         <content src="XHTML/case_study_chapter/Essentials_Chapter_3_Cases.xhtml#tit0010" />
-    <navPoint id="toc76" playOrder="78">
+    <navPoint id="toc78" playOrder="78">
       <navLabel>
         <text>Case Study 3.1</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_3_1_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc77" playOrder="79">
+    <navPoint id="toc79" playOrder="79">
       <navLabel>
         <text>Case Study 3.2</text>
       </navLabel>
@@ -509,92 +503,92 @@
     </navPoint>
       </navPoint>
     </navPoint>
-    <navPoint id="toc78" playOrder="80">
+    <navPoint id="toc80" playOrder="80">
       <navLabel>
         <text>4. Diseases of the Immune System</text>
       </navLabel>
       <content src="XHTML/B978032364025100004X/B978032364025100004X.xhtml#B978032364025100004X" />
-      <navPoint id="toc79" playOrder="81">
+      <navPoint id="toc81" playOrder="81">
         <navLabel>
           <text>Hypersensitivity Disorders</text>
         </navLabel>
         <content src="XHTML/B978032364025100004X/B978032364025100004X.xhtml#s0010" />
       </navPoint>
-      <navPoint id="toc80" playOrder="82">
+      <navPoint id="toc82" playOrder="82">
         <navLabel>
           <text>Autoimmune Diseases</text>
         </navLabel>
         <content src="XHTML/B978032364025100004X/B978032364025100004X.xhtml#s0090" />
       </navPoint>
-      <navPoint id="toc81" playOrder="83">
+      <navPoint id="toc83" playOrder="83">
         <navLabel>
           <text>Rejection of Transplants</text>
         </navLabel>
         <content src="XHTML/B978032364025100004X/B978032364025100004X.xhtml#s0170" />
       </navPoint>
-      <navPoint id="toc82" playOrder="84">
+      <navPoint id="toc84" playOrder="84">
         <navLabel>
           <text>Immunodeficiency Disorders</text>
         </navLabel>
         <content src="XHTML/B978032364025100004X/B978032364025100004X.xhtml#s0195" />
       </navPoint>
-      <navPoint id="toc83" playOrder="85">
+      <navPoint id="toc85" playOrder="85">
         <navLabel>
           <text>Acquired Immunodeficiency Syndrome</text>
         </navLabel>
         <content src="XHTML/B978032364025100004X/B978032364025100004X.xhtml#s0205" />
       </navPoint>
-      <navPoint id="toc84" playOrder="86">
+      <navPoint id="toc86" playOrder="86">
         <navLabel>
           <text>Amyloidosis</text>
         </navLabel>
         <content src="XHTML/B978032364025100004X/B978032364025100004X.xhtml#s0225" />
       </navPoint>
 
-<navPoint id="toc85" playOrder="87">
+<navPoint id="toc87" playOrder="87">
       <navLabel>
         <text>Chapter 4 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss3.xhtml" />
     </navPoint>
-        <navPoint id="c16000012" playOrder="88">
+        <navPoint id="toc88" playOrder="88">
         <navLabel>
           <text>Essentials Chapter 4 Cases</text>
         </navLabel>
         <content src="XHTML/case_study_chapter/Essentials_Chapter_4_Cases.xhtml#c16000012" />
 
-    <navPoint id="toc86" playOrder="89">
+    <navPoint id="toc89" playOrder="89">
       <navLabel>
         <text>Case Study 4.1</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_4_1_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc87" playOrder="90">
+    <navPoint id="toc90" playOrder="90">
       <navLabel>
         <text>Case Study 4.2</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_4_2_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc88" playOrder="91">
+    <navPoint id="toc91" playOrder="91">
       <navLabel>
         <text>Case Study 4.3</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_4_3_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc89" playOrder="92">
+    <navPoint id="toc92" playOrder="92">
       <navLabel>
         <text>Case Study 4.4</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_4_4_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc90" playOrder="93">
+    <navPoint id="toc93" playOrder="93">
       <navLabel>
         <text>Case Study 4.5</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_4_5_01_copy.xhtml" />
     </navPoint>
 
-     <navPoint id="toc90" playOrder="93">
+     <navPoint id="toc94" playOrder="94">
       <navLabel>
         <text>Case Study 4.6</text>
       </navLabel>
@@ -603,83 +597,83 @@
 
       </navPoint>
     </navPoint>
-    <navPoint id="toc91" playOrder="94">
+    <navPoint id="toc95" playOrder="95">
       <navLabel>
         <text>5. Neoplasia</text>
       </navLabel>
       <content src="XHTML/B9780323640251000051/B9780323640251000051.xhtml#B9780323640251000051" />
-      <navPoint id="toc92" playOrder="95">
+      <navPoint id="toc96" playOrder="96">
         <navLabel>
           <text>Definition of Neoplasia</text>
         </navLabel>
         <content src="XHTML/B9780323640251000051/B9780323640251000051.xhtml#s0010" />
       </navPoint>
-      <navPoint id="toc93" playOrder="96">
+      <navPoint id="toc97" playOrder="97">
         <navLabel>
           <text>Benign and Malignant Neoplasms</text>
         </navLabel>
         <content src="XHTML/B9780323640251000051/B9780323640251000051.xhtml#s0015" />
       </navPoint>
-      <navPoint id="toc94" playOrder="97">
+      <navPoint id="toc98" playOrder="98">
         <navLabel>
           <text>Nomenclature</text>
         </navLabel>
         <content src="XHTML/B9780323640251000051/B9780323640251000051.xhtml#s0020" />
       </navPoint>
-      <navPoint id="toc95" playOrder="98">
+      <navPoint id="toc99" playOrder="99">
         <navLabel>
           <text>Characteristics of Benign and Malignant Neoplasms</text>
         </navLabel>
         <content src="XHTML/B9780323640251000051/B9780323640251000051.xhtml#s0035" />
       </navPoint>
-      <navPoint id="toc96" playOrder="99">
+      <navPoint id="toc100" playOrder="100">
         <navLabel>
           <text>Molecular Basis of Neoplasia</text>
         </navLabel>
         <content src="XHTML/B9780323640251000051/B9780323640251000051.xhtml#s0055" />
       </navPoint>
-      <navPoint id="toc97" playOrder="100">
+      <navPoint id="toc101" playOrder="101">
         <navLabel>
           <text>Hallmarks of Cancer</text>
         </navLabel>
         <content src="XHTML/B9780323640251000051/B9780323640251000051.xhtml#s0090" />
       </navPoint>
-      <navPoint id="toc98" playOrder="101">
+      <navPoint id="toc102" playOrder="102">
         <navLabel>
           <text>Clinical Aspects of Neoplasia</text>
         </navLabel>
         <content src="XHTML/B9780323640251000051/B9780323640251000051.xhtml#s0205" />
       </navPoint>
-<navPoint id="toc99" playOrder="102">
+<navPoint id="toc103" playOrder="103">
       <navLabel>
         <text>Chapter 5 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss4.xhtml" />
     </navPoint>
-<navPoint id="c15000012" playOrder="103">
+<navPoint id="toc104" playOrder="104">
         <navLabel>
           <text>Essentials Chapter 5 Cases</text>
         </navLabel>
         <content src="XHTML/case_study_chapter/Essentials_Chapter_5_Cases.xhtml#c15000012" />
-    <navPoint id="toc100" playOrder="104">
+    <navPoint id="toc105" playOrder="105">
       <navLabel>
         <text>Case Study 5.1</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_5_1_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc101" playOrder="105">
+    <navPoint id="toc106" playOrder="106">
       <navLabel>
         <text>Case Study 5.2</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_5_2_01_copy.xhtml" />
     </navPoint>
-<navPoint id="toc102" playOrder="106">
+<navPoint id="toc107" playOrder="107">
       <navLabel>
         <text>Case Study 5.3</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_5_3_01_copy.xhtml" />
     </navPoint>
-<navPoint id="toc103" playOrder="107">
+<navPoint id="toc108" playOrder="108">
       <navLabel>
         <text>Case Study 5.4</text>
       </navLabel>
@@ -689,72 +683,72 @@
     </navPoint>
 
    
-    <navPoint id="toc104" playOrder="108">
+    <navPoint id="toc109" playOrder="109">
       <navLabel>
         <text>6. Genetic Diseases</text>
       </navLabel>
       <content src="XHTML/B9780323640251000063/B9780323640251000063.xhtml#B9780323640251000063" />
-      <navPoint id="toc105" playOrder="109">
+      <navPoint id="toc110" playOrder="110">
         <navLabel>
           <text>Mendelian Disorders: Diseases Caused by Single-Gene Defects</text>
         </navLabel>
         <content src="XHTML/B9780323640251000063/B9780323640251000063.xhtml#s0010" />
       </navPoint>
-      <navPoint id="toc106" playOrder="110">
+      <navPoint id="toc111" playOrder="111">
         <navLabel>
           <text>Complex Multigenic Disorders</text>
         </navLabel>
         <content src="XHTML/B9780323640251000063/B9780323640251000063.xhtml#s0240" />
       </navPoint>
-      <navPoint id="toc107" playOrder="111">
+      <navPoint id="toc112" playOrder="112">
         <navLabel>
           <text>Cytogenetic Disorders</text>
         </navLabel>
         <content src="XHTML/B9780323640251000063/B9780323640251000063.xhtml#s0245" />
       </navPoint>
-      <navPoint id="toc108" playOrder="112">
+      <navPoint id="toc113" playOrder="113">
         <navLabel>
           <text>Single-Gene Disorders with Atypical Patterns of Inheritance</text>
         </navLabel>
         <content src="XHTML/B9780323640251000063/B9780323640251000063.xhtml#s0310" />
       </navPoint>
-<navPoint id="toc109" playOrder="113">
+<navPoint id="toc114" playOrder="114">
       <navLabel>
         <text>Chapter 6 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss5.xhtml" />
     </navPoint>
-     <navPoint id="c14000012" playOrder="114">
+     <navPoint id="toc115" playOrder="115">
         <navLabel>
           <text>Essentials Chapter 6 Cases</text>
         </navLabel>
         <content src="XHTML/case_study_chapter/Essentials_Chapter_6_Cases.xhtml#c14000012" />
-    <navPoint id="toc110" playOrder="115">
+    <navPoint id="toc116" playOrder="116">
       <navLabel>
         <text>Case Study 6.1</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_6_1_01_copy.xhtml" />
     </navPoint>
-<navPoint id="toc111" playOrder="116">
+<navPoint id="toc117" playOrder="117">
       <navLabel>
         <text>Case Study 6.2</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_6_2_01_copy.xhtml" />
     </navPoint>
-<navPoint id="toc112" playOrder="117">
+<navPoint id="toc118" playOrder="118">
       <navLabel>
         <text>Case Study 6.3</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_6_3_01_copy.xhtml" />
     </navPoint>
-<navPoint id="toc113" playOrder="118">
+<navPoint id="toc119" playOrder="119">
       <navLabel>
         <text>Case Study 6.4</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_6_4_01_copy.xhtml" />
     </navPoint>
 
-    <navPoint id="toc113" playOrder="119">
+    <navPoint id="toc120" playOrder="120">
       <navLabel>
         <text>Case Study 6.5</text>
       </navLabel>
@@ -765,83 +759,83 @@
       </navPoint>
 
     </navPoint>
-    <navPoint id="toc114" playOrder="119">
+    <navPoint id="toc121" playOrder="121">
       <navLabel>
         <text>7. Diseases of Blood Vessels</text>
       </navLabel>
       <content src="XHTML/B9780323640251000075/B9780323640251000075.xhtml#B9780323640251000075" />
-      <navPoint id="toc115" playOrder="120">
+      <navPoint id="toc122" playOrder="122">
         <navLabel>
           <text>Mechanisms of Vascular Diseases</text>
         </navLabel>
         <content src="XHTML/B9780323640251000075/B9780323640251000075.xhtml#s0010" />
       </navPoint>
-      <navPoint id="toc116" playOrder="121">
+      <navPoint id="toc123" playOrder="123">
         <navLabel>
           <text>Congenital Vascular Anomalies</text>
         </navLabel>
         <content src="XHTML/B9780323640251000075/B9780323640251000075.xhtml#s0015" />
       </navPoint>
-      <navPoint id="toc117" playOrder="122">
+      <navPoint id="toc124" playOrder="124">
         <navLabel>
           <text>Hypertension</text>
         </navLabel>
         <content src="XHTML/B9780323640251000075/B9780323640251000075.xhtml#s0020" />
       </navPoint>
-      <navPoint id="toc118" playOrder="123">
+      <navPoint id="toc125" playOrder="125">
         <navLabel>
           <text>Atherosclerosis</text>
         </navLabel>
         <content src="XHTML/B9780323640251000075/B9780323640251000075.xhtml#s0040" />
       </navPoint>
-      <navPoint id="toc119" playOrder="124">
+      <navPoint id="toc126" playOrder="126">
         <navLabel>
           <text>Aneurysms and Dissections</text>
         </navLabel>
         <content src="XHTML/B9780323640251000075/B9780323640251000075.xhtml#s0060" />
       </navPoint>
-      <navPoint id="toc120" playOrder="125">
+      <navPoint id="toc127" playOrder="127">
         <navLabel>
           <text>Vasculitis</text>
         </navLabel>
         <content src="XHTML/B9780323640251000075/B9780323640251000075.xhtml#s0105" />
       </navPoint>
-      <navPoint id="toc121" playOrder="126">
+      <navPoint id="toc128" playOrder="128">
         <navLabel>
           <text>Disorders of Veins</text>
         </navLabel>
         <content src="XHTML/B9780323640251000075/B9780323640251000075.xhtml#s0195" />
       </navPoint>
-      <navPoint id="toc122" playOrder="127">
+      <navPoint id="toc129" playOrder="129">
         <navLabel>
           <text>Tumors of Blood Vessels and Lymphatics</text>
         </navLabel>
         <content src="XHTML/B9780323640251000075/B9780323640251000075.xhtml#s0220" />
       </navPoint>
-<navPoint id="toc123" playOrder="128">
+<navPoint id="toc130" playOrder="130">
       <navLabel>
         <text>Chapter 7 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss6.xhtml" />
     </navPoint>
- <navPoint id="c13000012" playOrder="129">
+ <navPoint id="toc131" playOrder="131">
         <navLabel>
           <text>Essentials Chapter 7 Cases</text>
         </navLabel>
         <content src="XHTML/case_study_chapter/Essentials_Chapter_7_Cases.xhtml#c13000012" />
-    <navPoint id="toc124" playOrder="130">
+    <navPoint id="toc132" playOrder="132">
       <navLabel>
         <text>Case Study 7.1</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_7_1_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc125" playOrder="131">
+    <navPoint id="toc133" playOrder="133">
       <navLabel>
         <text>Case Study 7.2</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_7_2_01_copy.xhtml" />
     </navPoint>
-<navPoint id="toc126" playOrder="132">
+<navPoint id="toc134" playOrder="134">
       <navLabel>
         <text>Case Study 7.3</text>
       </navLabel>
@@ -850,96 +844,96 @@
       </navPoint>
 
     </navPoint>
-    <navPoint id="toc127" playOrder="133">
+    <navPoint id="toc135" playOrder="135">
       <navLabel>
         <text>8. Heart</text>
       </navLabel>
       <content src="XHTML/B9780323640251000087/B9780323640251000087.xhtml#B9780323640251000087" />
-      <navPoint id="toc128" playOrder="134">
+      <navPoint id="toc136" playOrder="136">
         <navLabel>
           <text>Congenital Heart Disease</text>
         </navLabel>
         <content src="XHTML/B9780323640251000087/B9780323640251000087.xhtml#s0010" />
       </navPoint>
-      <navPoint id="toc129" playOrder="135">
+      <navPoint id="toc137" playOrder="137">
         <navLabel>
           <text>Ischemic Heart Disease</text>
         </navLabel>
         <content src="XHTML/B9780323640251000087/B9780323640251000087.xhtml#s0085" />
       </navPoint>
-      <navPoint id="toc130" playOrder="136">
+      <navPoint id="toc138" playOrder="138">
         <navLabel>
           <text>Hypertensive Heart Disease</text>
         </navLabel>
         <content src="XHTML/B9780323640251000087/B9780323640251000087.xhtml#s0155" />
       </navPoint>
-      <navPoint id="toc131" playOrder="137">
+      <navPoint id="toc139" playOrder="139">
         <navLabel>
           <text>Valvular Heart Disease</text>
         </navLabel>
         <content src="XHTML/B9780323640251000087/B9780323640251000087.xhtml#s0185" />
       </navPoint>
-      <navPoint id="toc132" playOrder="138">
+      <navPoint id="toc140" playOrder="140">
         <navLabel>
           <text>Cardiomyopathies and Myocarditis</text>
         </navLabel>
         <content src="XHTML/B9780323640251000087/B9780323640251000087.xhtml#s0280" />
       </navPoint>
-      <navPoint id="toc133" playOrder="139">
+      <navPoint id="toc141" playOrder="141">
         <navLabel>
           <text>Congestive Heart Failure</text>
         </navLabel>
         <content src="XHTML/B9780323640251000087/B9780323640251000087.xhtml#s0360" />
       </navPoint>
-      <navPoint id="toc134" playOrder="140">
+      <navPoint id="toc142" playOrder="142">
         <navLabel>
           <text>Cardiac Tumors</text>
         </navLabel>
         <content src="XHTML/B9780323640251000087/B9780323640251000087.xhtml#s0410" />
       </navPoint>
 
-<navPoint id="toc135" playOrder="141">
+<navPoint id="toc143" playOrder="143">
       <navLabel>
         <text>Chapter 8 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss7.xhtml" />
     </navPoint>
- <navPoint id="c12000012" playOrder="142">
+ <navPoint id="toc144" playOrder="144">
         <navLabel>
           <text>Essentials Chapter 8 Cases</text>
         </navLabel>
         <content src="XHTML/case_study_chapter/Essentials_Chapter_8_Cases.xhtml#c12000012" />
-    <navPoint id="toc136" playOrder="143">
+    <navPoint id="toc145" playOrder="145">
       <navLabel>
         <text>Case Study 8.1</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_8_xn-1_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc137" playOrder="144">
+    <navPoint id="toc146" playOrder="146">
       <navLabel>
         <text>Case Study 8.2</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_8_2_01_copy.xhtml" />
     </navPoint>
-<navPoint id="toc138" playOrder="145">
+<navPoint id="toc147" playOrder="147">
       <navLabel>
         <text>Case Study 8.3</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_8_3_01_copy.xhtml" />
     </navPoint>
-<navPoint id="toc139" playOrder="146">
+<navPoint id="toc148" playOrder="148">
       <navLabel>
         <text>Case Study 8.4</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_8_4_01_copy.xhtml" />
     </navPoint>
-<navPoint id="toc140" playOrder="147">
+<navPoint id="toc149" playOrder="149">
       <navLabel>
         <text>Case Study 8.5</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_8_5_01_copy.xhtml" />
     </navPoint>
-<navPoint id="toc141" playOrder="148">
+<navPoint id="toc150" playOrder="150">
       <navLabel>
         <text>Case Study 8.6</text>
       </navLabel>
@@ -948,97 +942,97 @@
       </navPoint>
 
     </navPoint>
-    <navPoint id="toc142" playOrder="149">
+    <navPoint id="toc151" playOrder="151">
       <navLabel>
         <text>9. Hematopoietic and Lymphoid Systems</text>
       </navLabel>
       <content src="XHTML/B9780323640251000099/B9780323640251000099.xhtml#B9780323640251000099" />
-      <navPoint id="toc143" playOrder="150">
+      <navPoint id="toc152" playOrder="152">
         <navLabel>
           <text>Red Blood Cell Disorders</text>
         </navLabel>
         <content src="XHTML/B9780323640251000099/B9780323640251000099.xhtml#s5050" />
       </navPoint>
-      <navPoint id="toc144" playOrder="151">
+      <navPoint id="toc153" playOrder="153">
         <navLabel>
           <text>White Blood Cell Disorders</text>
         </navLabel>
         <content src="XHTML/B9780323640251000099/B9780323640251000099.xhtml#s0175" />
       </navPoint>
-      <navPoint id="toc145" playOrder="152">
+      <navPoint id="toc154" playOrder="154">
         <navLabel>
           <text>Neoplastic Proliferations of White Cells</text>
         </navLabel>
         <content src="XHTML/B9780323640251000099/B9780323640251000099.xhtml#s0230" />
       </navPoint>
-      <navPoint id="toc146" playOrder="153">
+      <navPoint id="toc155" playOrder="155">
         <navLabel>
           <text>Bleeding Disorders</text>
         </navLabel>
         <content src="XHTML/B9780323640251000099/B9780323640251000099.xhtml#s0495" />
       </navPoint>
-      <navPoint id="toc147" playOrder="154">
+      <navPoint id="toc156" playOrder="156">
         <navLabel>
           <text>Disorders of Spleen and Thymus</text>
         </navLabel>
         <content src="XHTML/B9780323640251000099/B9780323640251000099.xhtml#s0595" />
       </navPoint>
-      <navPoint id="toc148" playOrder="155">
+      <navPoint id="toc157" playOrder="157">
         <navLabel>
           <text>Disorders of the Thymus</text>
         </navLabel>
         <content src="XHTML/B9780323640251000099/B9780323640251000099.xhtml#s0560" />
       </navPoint>
 
-<navPoint id="toc149" playOrder="156">
+<navPoint id="toc158" playOrder="158">
       <navLabel>
         <text>Chapter 9 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss8.xhtml" />
     </navPoint>
 
-<navPoint id="c11a000012" playOrder="157">
+<navPoint id="toc159" playOrder="159">
         <navLabel>
           <text>Essentials Chapter 9 Cases</text>
         </navLabel>
         <content src="XHTML/case_study_chapter/Essentials_Chapter_9_Cases.xhtml#c11a000012" />
-    <navPoint id="toc150" playOrder="158">
+    <navPoint id="toc160" playOrder="160">
       <navLabel>
         <text>Case Study 9.1</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_9_1_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc151" playOrder="159">
+    <navPoint id="toc161" playOrder="161">
       <navLabel>
         <text>Case Study 9.2</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_9_2_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc152" playOrder="160">
+    <navPoint id="toc162" playOrder="162">
       <navLabel>
         <text>Case Study 9.3</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_9_3_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc153" playOrder="161">
+    <navPoint id="toc163" playOrder="163">
       <navLabel>
         <text>Case Study 9.4</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_9_4_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc154" playOrder="162">
+    <navPoint id="toc164" playOrder="164">
       <navLabel>
         <text>Case Study 9.5</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_9_5_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc155" playOrder="163">
+    <navPoint id="toc165" playOrder="165">
       <navLabel>
         <text>Case Study 9.6</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_9_6_01_copy.xhtml" />
     </navPoint>
-     <navPoint id="toc156" playOrder="164">
+     <navPoint id="toc166" playOrder="166">
       <navLabel>
         <text>Case Study 9.7</text>
       </navLabel>
@@ -1048,80 +1042,80 @@
       </navPoint>
 
     </navPoint>
-    <navPoint id="toc156" playOrder="164">
+    <navPoint id="toc167" playOrder="167">
       <navLabel>
         <text>10. Lung and Upper Respiratory Tract</text>
       </navLabel>
       <content src="XHTML/B9780323640251000105/B9780323640251000105.xhtml#B9780323640251000105" />
-      <navPoint id="toc157" playOrder="165">
+      <navPoint id="toc168" playOrder="168">
         <navLabel>
           <text>Acute Respiratory Distress Syndrome</text>
         </navLabel>
         <content src="XHTML/B9780323640251000105/B9780323640251000105.xhtml#s0010" />
       </navPoint>
-      <navPoint id="toc158" playOrder="166">
+      <navPoint id="toc169" playOrder="169">
         <navLabel>
           <text>Obstructive Lung Diseases</text>
         </navLabel>
         <content src="XHTML/B9780323640251000105/B9780323640251000105.xhtml#s0030" />
       </navPoint>
-      <navPoint id="toc159" playOrder="167">
+      <navPoint id="toc170" playOrder="170">
         <navLabel>
           <text>Restrictive Lung Diseases</text>
         </navLabel>
         <content src="XHTML/B9780323640251000105/B9780323640251000105.xhtml#s0095" />
       </navPoint>
-      <navPoint id="toc160" playOrder="168">
+      <navPoint id="toc171" playOrder="171">
         <navLabel>
           <text>Pulmonary Diseases of Vascular Origin</text>
         </navLabel>
         <content src="XHTML/B9780323640251000105/B9780323640251000105.xhtml#s0140" />
       </navPoint>
-      <navPoint id="toc161" playOrder="169">
+      <navPoint id="toc172" playOrder="172">
         <navLabel>
           <text>Pulmonary Infections</text>
         </navLabel>
         <content src="XHTML/B9780323640251000105/B9780323640251000105.xhtml#s0200" />
       </navPoint>
-      <navPoint id="toc162" playOrder="170">
+      <navPoint id="toc173" playOrder="173">
         <navLabel>
           <text>Lung, Pleural, and Upper Airway Tumors</text>
         </navLabel>
         <content src="XHTML/B9780323640251000105/B9780323640251000105.xhtml#s0310" />
       </navPoint>
 
-<navPoint id="toc163" playOrder="171">
+<navPoint id="toc174" playOrder="174">
       <navLabel>
         <text>Chapter 10 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss9.xhtml" />
     </navPoint>
 
-<navPoint id="c10000012" playOrder="172">
+<navPoint id="toc175" playOrder="175">
         <navLabel>
           <text>Essentials Chapter 10 Cases</text>
         </navLabel>
         <content src="XHTML/case_study_chapter/Essentials_Chapter_10_Cases.xhtml#c10000012" />
-    <navPoint id="toc164" playOrder="173">
+    <navPoint id="toc176" playOrder="176">
       <navLabel>
         <text>Case Study 10.1</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_10_1_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc165" playOrder="174">
+    <navPoint id="toc177" playOrder="177">
       <navLabel>
         <text>Case Study 10.2</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_10_2_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc166" playOrder="175">
+    <navPoint id="toc178" playOrder="178">
       <navLabel>
         <text>Case Study 10.3</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_10_3_01_copy.xhtml" />
     </navPoint>
 
-    <navPoint id="toc167" playOrder="176">
+    <navPoint id="toc179" playOrder="179">
       <navLabel>
         <text>Case Study 10.4</text>
       </navLabel>
@@ -1130,85 +1124,85 @@
 </navPoint>
 
     </navPoint>
-    <navPoint id="toc168" playOrder="177">
+    <navPoint id="toc180" playOrder="180">
       <navLabel>
         <text>11. Kidney</text>
       </navLabel>
       <content src="XHTML/B9780323640251000117/B9780323640251000117.xhtml#B9780323640251000117" />
-      <navPoint id="toc169" playOrder="178">
+      <navPoint id="toc181" playOrder="181">
         <navLabel>
           <text>Overview of Renal Diseases</text>
         </navLabel>
         <content src="XHTML/B9780323640251000117/B9780323640251000117.xhtml#s0010" />
       </navPoint>
-      <navPoint id="toc170" playOrder="179">
+      <navPoint id="toc182" playOrder="182">
         <navLabel>
           <text>Diseases of Glomeruli</text>
         </navLabel>
         <content src="XHTML/B9780323640251000117/B9780323640251000117.xhtml#s0015" />
       </navPoint>
-      <navPoint id="toc171" playOrder="180">
+      <navPoint id="toc183" playOrder="183">
         <navLabel>
           <text>Diseases of Tubules and Interstitium</text>
         </navLabel>
         <content src="XHTML/B9780323640251000117/B9780323640251000117.xhtml#s0080" />
       </navPoint>
-      <navPoint id="toc172" playOrder="181">
+      <navPoint id="toc184" playOrder="184">
         <navLabel>
           <text>Diseases of Blood Vessels</text>
         </navLabel>
         <content src="XHTML/B9780323640251000117/B9780323640251000117.xhtml#s0125" />
       </navPoint>
-      <navPoint id="toc173" playOrder="182">
+      <navPoint id="toc185" playOrder="185">
         <navLabel>
           <text>Tumors of the Kidney</text>
         </navLabel>
         <content src="XHTML/B9780323640251000117/B9780323640251000117.xhtml#s0155" />
       </navPoint>
 
-<navPoint id="toc174" playOrder="183">
+<navPoint id="toc186" playOrder="186">
       <navLabel>
         <text>Chapter 11 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss10.xhtml" />
     </navPoint>
-<navPoint id="c9000012" playOrder="184">
+<navPoint id="toc187" playOrder="187">
         <navLabel>
           <text>Essentials Chapter 11 Cases</text>
         </navLabel>
         <content src="XHTML/case_study_chapter/Essentials_Chapter_11_Cases.xhtml#c9000012" />
-    <navPoint id="toc175" playOrder="185">
+    <navPoint id="toc188" playOrder="188">
       <navLabel>
         <text>Case Study 11.1</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_11_1_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc176" playOrder="186">
+    <navPoint id="toc189" playOrder="189">
       <navLabel>
         <text>Case Study 11.2</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_11_2_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc177" playOrder="187">
+    <navPoint id="toc190" playOrder="190">
       <navLabel>
         <text>Case Study 11.3</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_11_3_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc178" playOrder="188">
+    <navPoint id="toc191" playOrder="191">
       <navLabel>
         <text>Case Study 11.4</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_11_4_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc179" playOrder="189">
+    <navPoint id="toc192" playOrder="192">
       <navLabel>
         <text>Case Study 11.5</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_11_5_01_copy.xhtml" />
     </navPoint>
 
-     <navPoint id="toc179" playOrder="189">
+     <navPoint id="toc193" playOrder="193">
       <navLabel>
         <text>Case Study 11.6</text>
       </navLabel>
@@ -1217,60 +1211,60 @@
 
 
     </navPoint>
-    <navPoint id="toc180" playOrder="190">
+    <navPoint id="toc194" playOrder="194">
       <navLabel>
         <text>12. Gastrointestinal System</text>
       </navLabel>
       <content src="XHTML/B9780323640251000129/B9780323640251000129.xhtml#B9780323640251000129" />
-      <navPoint id="toc181" playOrder="191">
+      <navPoint id="toc195" playOrder="195">
         <navLabel>
           <text>Congenital Anomalies of the Gastrointestinal Tract</text>
         </navLabel>
         <content src="XHTML/B9780323640251000129/B9780323640251000129.xhtml#s0010" />
       </navPoint>
-      <navPoint id="toc182" playOrder="192">
+      <navPoint id="toc196" playOrder="196">
         <navLabel>
           <text>Disorders of the Esophagus</text>
         </navLabel>
         <content src="XHTML/B9780323640251000129/B9780323640251000129.xhtml#s0015" />
       </navPoint>
-<navPoint id="toc183" playOrder="193">
+<navPoint id="toc197" playOrder="197">
       <navLabel>
         <text>Chapter 12 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss11.xhtml" />
     </navPoint>
 
- <navPoint id="c8000012" playOrder="194">
+ <navPoint id="toc198" playOrder="198">
         <navLabel>
           <text>Essentials Chapter 12 Cases</text>
         </navLabel>
         <content src="XHTML/case_study_chapter/Essentials_Chapter_12_Cases.xhtml#c8000012" />
-    <navPoint id="toc184" playOrder="195">
+    <navPoint id="toc199" playOrder="199">
       <navLabel>
         <text>Case Study 12.1</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_12_1_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc185" playOrder="196">
+    <navPoint id="toc200" playOrder="200">
       <navLabel>
         <text>Case Study 12.2</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_12_2_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc186" playOrder="197">
+    <navPoint id="toc201" playOrder="201">
       <navLabel>
         <text>Case Study 12.3</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_12_3_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc187" playOrder="198">
+    <navPoint id="toc202" playOrder="202">
       <navLabel>
         <text>Case Study 12.4</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_12_4_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc188" playOrder="199">
+    <navPoint id="toc203" playOrder="203">
       <navLabel>
         <text>Case Study 12.5</text>
       </navLabel>
@@ -1280,24 +1274,24 @@
       </navPoint>
 
     </navPoint>
-    <navPoint id="toc189" playOrder="200">
+    <navPoint id="toc204" playOrder="204">
       <navLabel>
         <text>13. Liver, Biliary System, and Pancreas</text>
       </navLabel>
       <content src="XHTML/B9780323640251000130/B9780323640251000130.xhtml#B9780323640251000130" />
-      <navPoint id="toc190" playOrder="201">
+      <navPoint id="toc205" playOrder="205">
         <navLabel>
           <text>Disorders of the Liver</text>
         </navLabel>
         <content src="XHTML/B9780323640251000130/B9780323640251000130.xhtml#s0010" />
       </navPoint>
-      <navPoint id="toc191" playOrder="202">
+      <navPoint id="toc206" playOrder="206">
         <navLabel>
           <text>Disorders of the Biliary System</text>
         </navLabel>
         <content src="XHTML/B9780323640251000130/B9780323640251000130.xhtml#s0130" />
       </navPoint>
-      <navPoint id="toc192" playOrder="203">
+      <navPoint id="toc207" playOrder="207">
         <navLabel>
           <text>Disorders of the Pancreas</text>
         </navLabel>
@@ -1305,13 +1299,13 @@
       </navPoint>
 
 
-<navPoint id="toc193" playOrder="204">
+<navPoint id="toc208" playOrder="208">
       <navLabel>
         <text>Chapter 13 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss12.xhtml" />
     </navPoint>
- <navPoint id="c7000012" playOrder="205">
+ <navPoint id="toc209" playOrder="209">
         <navLabel>
           <text>Essentials Chapter 13 Cases</text>
         </navLabel>
@@ -1319,36 +1313,36 @@
       </navPoint>
 
     </navPoint>
-    <navPoint id="toc194" playOrder="206">
+    <navPoint id="toc210" playOrder="210">
       <navLabel>
         <text>14. Male Genital Tract, Prostate, and Bladder</text>
       </navLabel>
       <content src="XHTML/B9780323640251000142/B9780323640251000142.xhtml#B9780323640251000142" />
-      <navPoint id="toc195" playOrder="207">
+      <navPoint id="toc211" playOrder="211">
         <navLabel>
           <text>Penis</text>
         </navLabel>
         <content src="XHTML/B9780323640251000142/B9780323640251000142.xhtml#s0010" />
       </navPoint>
-      <navPoint id="toc196" playOrder="208">
+      <navPoint id="toc212" playOrder="212">
         <navLabel>
           <text>Scrotum, Testis, and Epididymis</text>
         </navLabel>
         <content src="XHTML/B9780323640251000142/B9780323640251000142.xhtml#s0025" />
       </navPoint>
-      <navPoint id="toc197" playOrder="209">
+      <navPoint id="toc213" playOrder="213">
         <navLabel>
           <text>Prostate</text>
         </navLabel>
         <content src="XHTML/B9780323640251000142/B9780323640251000142.xhtml#s0060" />
       </navPoint>
-      <navPoint id="toc198" playOrder="210">
+      <navPoint id="toc214" playOrder="214">
         <navLabel>
           <text>Ureter, Bladder, and Urethra</text>
         </navLabel>
         <content src="XHTML/B9780323640251000142/B9780323640251000142.xhtml#s0090" />
       </navPoint>
-      <navPoint id="toc199" playOrder="211">
+      <navPoint id="toc215" playOrder="215">
         <navLabel>
           <text>Sexually Transmitted Diseases</text>
         </navLabel>
@@ -1356,30 +1350,30 @@
       </navPoint>
 
 
-<navPoint id="toc200" playOrder="212">
+<navPoint id="toc216" playOrder="216">
       <navLabel>
         <text>Chapter 14 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss13.xhtml" />
     </navPoint>
- <navPoint id="c6000012" playOrder="213">
+ <navPoint id="toc217" playOrder="217">
         <navLabel>
           <text>Essentials Chapter 14 Cases</text>
         </navLabel>
         <content src="XHTML/case_study_chapter/Essentials_Chapter_14_Cases.xhtml#c6000012" />
-    <navPoint id="toc201" playOrder="214">
+    <navPoint id="toc218" playOrder="218">
       <navLabel>
         <text>Case Study 14.1</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_14_1_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc202" playOrder="215">
+    <navPoint id="toc219" playOrder="219">
       <navLabel>
         <text>Case Study 14.2</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_14_2_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc203" playOrder="216">
+    <navPoint id="toc220" playOrder="220">
       <navLabel>
         <text>Case Study 14.3</text>
       </navLabel>
@@ -1388,91 +1382,91 @@
 </navPoint>
 
     </navPoint>
-    <navPoint id="toc204" playOrder="217">
+    <navPoint id="toc221" playOrder="221">
       <navLabel>
         <text>15. Female Genital Tract and Breast</text>
       </navLabel>
       <content src="XHTML/B9780323640251000154/B9780323640251000154.xhtml#B9780323640251000154" />
-      <navPoint id="toc205" playOrder="218">
+      <navPoint id="toc222" playOrder="222">
         <navLabel>
           <text>Vulva</text>
         </navLabel>
         <content src="XHTML/B9780323640251000154/B9780323640251000154.xhtml#s0010" />
       </navPoint>
-      <navPoint id="toc206" playOrder="219">
+      <navPoint id="toc223" playOrder="223">
         <navLabel>
           <text>Vagina</text>
         </navLabel>
         <content src="XHTML/B9780323640251000154/B9780323640251000154.xhtml#s0035" />
       </navPoint>
-      <navPoint id="toc207" playOrder="220">
+      <navPoint id="toc224" playOrder="224">
         <navLabel>
           <text>Cervix</text>
         </navLabel>
         <content src="XHTML/B9780323640251000154/B9780323640251000154.xhtml#s0045" />
       </navPoint>
-      <navPoint id="toc208" playOrder="221">
+      <navPoint id="toc225" playOrder="225">
         <navLabel>
           <text>Uterus</text>
         </navLabel>
         <content src="XHTML/B9780323640251000154/B9780323640251000154.xhtml#s0075" />
       </navPoint>
-      <navPoint id="toc209" playOrder="222">
+      <navPoint id="toc226" playOrder="226">
         <navLabel>
           <text>Fallopian Tubes</text>
         </navLabel>
         <content src="XHTML/B9780323640251000154/B9780323640251000154.xhtml#s0120" />
       </navPoint>
-      <navPoint id="toc210" playOrder="223">
+      <navPoint id="toc227" playOrder="227">
         <navLabel>
           <text>Ovaries</text>
         </navLabel>
         <content src="XHTML/B9780323640251000154/B9780323640251000154.xhtml#s0125" />
       </navPoint>
-      <navPoint id="toc211" playOrder="224">
+      <navPoint id="toc228" playOrder="228">
         <navLabel>
           <text>Diseases of Pregnancy</text>
         </navLabel>
         <content src="XHTML/B9780323640251000154/B9780323640251000154.xhtml#s0145" />
       </navPoint>
-      <navPoint id="toc212" playOrder="225">
+      <navPoint id="toc229" playOrder="229">
         <navLabel>
           <text>Breast</text>
         </navLabel>
         <content src="XHTML/B9780323640251000154/B9780323640251000154.xhtml#s0180" />
       </navPoint>
 
-<navPoint id="toc213" playOrder="226">
+<navPoint id="toc230" playOrder="230">
       <navLabel>
         <text>Chapter 15 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss14.xhtml" />
     </navPoint>
 
-<navPoint id="c5000012" playOrder="227">
+<navPoint id="toc231" playOrder="231">
         <navLabel>
           <text>Essentials Chapter 15 Cases</text>
         </navLabel>
         <content src="XHTML/case_study_chapter/Essentials_Chapter_15_Cases.xhtml#c5000012" />
-    <navPoint id="toc214" playOrder="228">
+    <navPoint id="toc232" playOrder="232">
       <navLabel>
         <text>Case Study 15.1</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_15_2_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc215" playOrder="229">
+    <navPoint id="toc233" playOrder="233">
       <navLabel>
         <text>Case Study 15.2</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_15_3_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc216" playOrder="230">
+    <navPoint id="toc234" playOrder="234">
       <navLabel>
         <text>Case Study 15.3</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_15_4_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc217" playOrder="231">
+    <navPoint id="toc235" playOrder="235">
       <navLabel>
         <text>Case Study 15.4</text>
       </navLabel>
@@ -1482,48 +1476,48 @@
       </navPoint>
 
     </navPoint>
-    <navPoint id="toc218" playOrder="232">
+    <navPoint id="toc236" playOrder="236">
       <navLabel>
         <text>16. Endocrine System</text>
       </navLabel>
       <content src="XHTML/B9780323640251000166/B9780323640251000166.xhtml#B9780323640251000166" />
-      <navPoint id="toc219" playOrder="233">
+      <navPoint id="toc237" playOrder="237">
         <navLabel>
           <text>Overview of the Endocrine System</text>
         </navLabel>
         <content src="XHTML/B9780323640251000166/B9780323640251000166.xhtml#s0010" />
       </navPoint>
-      <navPoint id="toc220" playOrder="234">
+      <navPoint id="toc238" playOrder="238">
         <navLabel>
           <text>Pituitary Gland</text>
         </navLabel>
         <content src="XHTML/B9780323640251000166/B9780323640251000166.xhtml#s0015" />
       </navPoint>
-      <navPoint id="toc221" playOrder="235">
+      <navPoint id="toc239" playOrder="239">
         <navLabel>
           <text>Thyroid</text>
         </navLabel>
         <content src="XHTML/B9780323640251000166/B9780323640251000166.xhtml#s0060" />
       </navPoint>
-      <navPoint id="toc222" playOrder="236">
+      <navPoint id="toc240" playOrder="240">
         <navLabel>
           <text>Parathyroid Glands</text>
         </navLabel>
         <content src="XHTML/B9780323640251000166/B9780323640251000166.xhtml#s0115" />
       </navPoint>
-      <navPoint id="toc223" playOrder="237">
+      <navPoint id="toc241" playOrder="241">
         <navLabel>
           <text>Endocrine Pancreas: Diabetes</text>
         </navLabel>
         <content src="XHTML/B9780323640251000166/B9780323640251000166.xhtml#s0120" />
       </navPoint>
-      <navPoint id="toc224" playOrder="238">
+      <navPoint id="toc242" playOrder="242">
         <navLabel>
           <text>Adrenal Glands</text>
         </navLabel>
         <content src="XHTML/B9780323640251000166/B9780323640251000166.xhtml#s0185" />
       </navPoint>
-      <navPoint id="toc225" playOrder="239">
+      <navPoint id="toc243" playOrder="243">
         <navLabel>
           <text>Multiple Endocrine Neoplasia Syndromes</text>
         </navLabel>
@@ -1531,43 +1525,43 @@
       </navPoint>
 
 
-<navPoint id="toc226" playOrder="240">
+<navPoint id="toc244" playOrder="244">
       <navLabel>
         <text>Chapter 16 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss15.xhtml" />
     </navPoint>
 
-<navPoint id="c4000012" playOrder="241">
+<navPoint id="toc245" playOrder="245">
         <navLabel>
           <text>Essentials Chapter 16 Cases</text>
         </navLabel>
         <content src="XHTML/case_study_chapter/Essentials_Chapter_16_Cases.xhtml#c4000012" />
-    <navPoint id="toc227" playOrder="242">
+    <navPoint id="toc246" playOrder="246">
       <navLabel>
         <text>Case Study 16.1</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_16_1_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc228" playOrder="243">
+    <navPoint id="toc247" playOrder="247">
       <navLabel>
         <text>Case Study 16.2</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_16_2_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc229" playOrder="244">
+    <navPoint id="toc248" playOrder="248">
       <navLabel>
         <text>Case Study 16.3</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_16_3_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc230" playOrder="245">
+    <navPoint id="toc249" playOrder="249">
       <navLabel>
         <text>Case Study 16.4</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_16_4_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc231" playOrder="246">
+    <navPoint id="toc250" playOrder="250">
       <navLabel>
         <text>Case Study 16.5</text>
       </navLabel>
@@ -1576,102 +1570,102 @@
       </navPoint>
 
     </navPoint>
-    <navPoint id="toc232" playOrder="247">
+    <navPoint id="toc251" playOrder="251">
       <navLabel>
         <text>17. Disorders of the Nervous System</text>
       </navLabel>
       <content src="XHTML/B9780323640251000178/B9780323640251000178.xhtml#B9780323640251000178" />
-      <navPoint id="toc233" playOrder="248">
+      <navPoint id="toc252" playOrder="252">
         <navLabel>
           <text>Congenital Malformations of the CNS</text>
         </navLabel>
         <content src="XHTML/B9780323640251000178/B9780323640251000178.xhtml#s0010" />
       </navPoint>
-      <navPoint id="toc234" playOrder="249">
+      <navPoint id="toc253" playOrder="253">
         <navLabel>
           <text>Cerebral Edema, Herniation, and Hydrocephalus</text>
         </navLabel>
         <content src="XHTML/B9780323640251000178/B9780323640251000178.xhtml#s0015" />
       </navPoint>
-      <navPoint id="toc235" playOrder="250">
+      <navPoint id="toc254" playOrder="254">
         <navLabel>
           <text>Cerebrovascular Diseases</text>
         </navLabel>
         <content src="XHTML/B9780323640251000178/B9780323640251000178.xhtml#s0020" />
       </navPoint>
-      <navPoint id="toc236" playOrder="251">
+      <navPoint id="toc255" playOrder="255">
         <navLabel>
           <text>CNS Trauma</text>
         </navLabel>
         <content src="XHTML/B9780323640251000178/B9780323640251000178.xhtml#s0040" />
       </navPoint>
-      <navPoint id="toc237" playOrder="252">
+      <navPoint id="toc256" playOrder="256">
         <navLabel>
           <text>CNS Infections</text>
         </navLabel>
         <content src="XHTML/B9780323640251000178/B9780323640251000178.xhtml#s0060" />
       </navPoint>
-      <navPoint id="toc238" playOrder="253">
+      <navPoint id="toc257" playOrder="257">
         <navLabel>
           <text>Demyelinating Diseases</text>
         </navLabel>
         <content src="XHTML/B9780323640251000178/B9780323640251000178.xhtml#s0075" />
       </navPoint>
-      <navPoint id="toc239" playOrder="254">
+      <navPoint id="toc258" playOrder="258">
         <navLabel>
           <text>Neurodegenerative Diseases</text>
         </navLabel>
         <content src="XHTML/B9780323640251000178/B9780323640251000178.xhtml#s0095" />
       </navPoint>
-      <navPoint id="toc240" playOrder="255">
+      <navPoint id="toc259" playOrder="259">
         <navLabel>
           <text>CNS Tumors</text>
         </navLabel>
         <content src="XHTML/B9780323640251000178/B9780323640251000178.xhtml#s0130" />
       </navPoint>
-      <navPoint id="toc241" playOrder="256">
+      <navPoint id="toc260" playOrder="260">
         <navLabel>
           <text>Disorders of Peripheral Nerves</text>
         </navLabel>
         <content src="XHTML/B9780323640251000178/B9780323640251000178.xhtml#s0160" />
       </navPoint>
-<navPoint id="toc242" playOrder="257">
+<navPoint id="toc261" playOrder="261">
       <navLabel>
         <text>Chapter 17 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss16.xhtml" />
     </navPoint>
 
-<navPoint id="c3000012" playOrder="258">
+<navPoint id="toc262" playOrder="262">
         <navLabel>
           <text>Essentials Chapter 17 Cases</text>
         </navLabel>
         <content src="XHTML/case_study_chapter/Essentials_Chapter_17_Cases.xhtml#c3000012" />
-    <navPoint id="toc243" playOrder="259">
+    <navPoint id="toc263" playOrder="263">
       <navLabel>
         <text>Case Study 17.1</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_17_1_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc244" playOrder="260">
+    <navPoint id="toc264" playOrder="264">
       <navLabel>
         <text>Case Study 17.2</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_17_2_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc245" playOrder="261">
+    <navPoint id="toc265" playOrder="265">
       <navLabel>
         <text>Case Study 17.3</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_17_3_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc246" playOrder="262">
+    <navPoint id="toc266" playOrder="266">
       <navLabel>
         <text>Case Study 17.4</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_17_4_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc247" playOrder="263">
+    <navPoint id="toc267" playOrder="267">
       <navLabel>
         <text>Case Study 17.5</text>
       </navLabel>
@@ -1680,80 +1674,80 @@
       </navPoint>
 
     </navPoint>
-    <navPoint id="toc248" playOrder="264">
+    <navPoint id="toc268" playOrder="268">
       <navLabel>
         <text>18. Musculoskeletal System and Skin</text>
       </navLabel>
       <content src="XHTML/B978032364025100018X/B978032364025100018X.xhtml#B978032364025100018X" />
-      <navPoint id="toc249" playOrder="265">
+      <navPoint id="toc269" playOrder="269">
         <navLabel>
           <text>Bones</text>
         </navLabel>
         <content src="XHTML/B978032364025100018X/B978032364025100018X.xhtml#s0010" />
       </navPoint>
-      <navPoint id="toc250" playOrder="266">
+      <navPoint id="toc270" playOrder="270">
         <navLabel>
           <text>Joints</text>
         </navLabel>
         <content src="XHTML/B978032364025100018X/B978032364025100018X.xhtml#s0125" />
       </navPoint>
-      <navPoint id="toc251" playOrder="267">
+      <navPoint id="toc271" playOrder="271">
         <navLabel>
           <text>Skeletal Muscle</text>
         </navLabel>
         <content src="XHTML/B978032364025100018X/B978032364025100018X.xhtml#s0160" />
       </navPoint>
-      <navPoint id="toc252" playOrder="268">
+      <navPoint id="toc272" playOrder="272">
         <navLabel>
           <text>Skin</text>
         </navLabel>
         <content src="XHTML/B978032364025100018X/B978032364025100018X.xhtml#s0185" />
       </navPoint>
 
-<navPoint id="toc253" playOrder="269">
+<navPoint id="toc273" playOrder="273">
       <navLabel>
         <text>Chapter 18 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss17.xhtml" />
     </navPoint>
 
-<navPoint id="c2000012" playOrder="270">
+<navPoint id="toc274" playOrder="274">
         <navLabel>
           <text>Essentials Chapter 18 Cases</text>
         </navLabel>
         <content src="XHTML/case_study_chapter/Essentials_Chapter_18_Cases.xhtml#c2000012" />
 
-    <navPoint id="toc254" playOrder="271">
+    <navPoint id="toc275" playOrder="275">
       <navLabel>
         <text>Case Study 18.1</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_18_1_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc255" playOrder="272">
+    <navPoint id="toc276" playOrder="276">
       <navLabel>
         <text>Case Study 18.2</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_18_2_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc256" playOrder="273">
+    <navPoint id="toc277" playOrder="277">
       <navLabel>
         <text>Case Study 18.3</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_18_3_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc257" playOrder="274">
+    <navPoint id="toc278" playOrder="278">
       <navLabel>
         <text>Case Study 18.4</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_18_4_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc258" playOrder="275">
+    <navPoint id="toc279" playOrder="279">
       <navLabel>
         <text>Case Study 18.5</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_18_5_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc259" playOrder="276">
+    <navPoint id="toc280" playOrder="280">
       <navLabel>
         <text>Case Study 18.6</text>
       </navLabel>
@@ -1762,79 +1756,79 @@
       </navPoint>
 
     </navPoint>
-    <navPoint id="toc260" playOrder="277">
+    <navPoint id="toc281" playOrder="281">
       <navLabel>
         <text>19. Environmental Disease</text>
       </navLabel>
       <content src="XHTML/B9780323640251000191/B9780323640251000191.xhtml#B9780323640251000191" />
-      <navPoint id="toc261" playOrder="278">
+      <navPoint id="toc282" playOrder="282">
         <navLabel>
           <text>Metals as Environmental Pollutants</text>
         </navLabel>
         <content src="XHTML/B9780323640251000191/B9780323640251000191.xhtml#s0010" />
       </navPoint>
-      <navPoint id="toc262" playOrder="279">
+      <navPoint id="toc283" playOrder="283">
         <navLabel>
           <text>Tobacco</text>
         </navLabel>
         <content src="XHTML/B9780323640251000191/B9780323640251000191.xhtml#s0025" />
       </navPoint>
-      <navPoint id="toc263" playOrder="280">
+      <navPoint id="toc284" playOrder="284">
         <navLabel>
           <text>Alcohol</text>
         </navLabel>
         <content src="XHTML/B9780323640251000191/B9780323640251000191.xhtml#s0030" />
       </navPoint>
-      <navPoint id="toc264" playOrder="281">
+      <navPoint id="toc285" playOrder="285">
         <navLabel>
           <text>Injury by Therapeutic Drugs and Drugs of Abuse</text>
         </navLabel>
         <content src="XHTML/B9780323640251000191/B9780323640251000191.xhtml#s0035" />
       </navPoint>
-      <navPoint id="toc265" playOrder="282">
+      <navPoint id="toc286" playOrder="286">
         <navLabel>
           <text>Injury Produced by Ionizing Radiation</text>
         </navLabel>
         <content src="XHTML/B9780323640251000191/B9780323640251000191.xhtml#s0080" />
       </navPoint>
-      <navPoint id="toc266" playOrder="283">
+      <navPoint id="toc287" playOrder="287">
         <navLabel>
           <text>Nutritional Diseases</text>
         </navLabel>
         <content src="XHTML/B9780323640251000191/B9780323640251000191.xhtml#s0090" />
       </navPoint>
 
-<navPoint id="toc267" playOrder="284">
+<navPoint id="toc288" playOrder="288">
       <navLabel>
         <text>Chapter 19 Study Questions</text>
       </navLabel>
       <content src="XHTML/asss18.xhtml" />
     </navPoint>
-      <navPoint id="c1a000012" playOrder="285">
+      <navPoint id="toc289" playOrder="289">
         <navLabel>
           <text>Essentials Chapter 19 Cases</text>
         </navLabel>
         <content src="XHTML/case_study_chapter/Essentials_Chapter_19_Cases.xhtml#c1a000012" />
 
-    <navPoint id="toc268" playOrder="286">
+    <navPoint id="toc290" playOrder="290">
       <navLabel>
         <text>Case Study 19.1</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_19_1_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc269" playOrder="287">
+    <navPoint id="toc291" playOrder="291">
       <navLabel>
         <text>Case Study 19.2</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_19_2_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc270" playOrder="288">
+    <navPoint id="toc292" playOrder="292">
       <navLabel>
         <text>Case Study 19.3</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_19_3_01_copy.xhtml" />
     </navPoint>
-    <navPoint id="toc270" playOrder="288">
+    <navPoint id="toc293" playOrder="293">
       <navLabel>
         <text>Case Study 19.4</text>
       </navLabel>
@@ -1842,7 +1836,7 @@
     </navPoint>
       </navPoint>
     </navPoint>
-    <navPoint id="toc271" playOrder="289">
+    <navPoint id="toc294" playOrder="294">
       <navLabel>
         <text>Index</text>
       </navLabel>
