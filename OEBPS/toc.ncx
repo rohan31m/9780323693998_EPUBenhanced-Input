@@ -593,6 +593,14 @@
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_4_5_01_copy.xhtml" />
     </navPoint>
+
+     <navPoint id="toc90" playOrder="93">
+      <navLabel>
+        <text>Case Study 4.6</text>
+      </navLabel>
+      <content src="XHTML/case_study_chapter/case_study_4_6_01_copy.xhtml" />
+    </navPoint>
+
       </navPoint>
     </navPoint>
     <navPoint id="toc91" playOrder="94">
@@ -745,6 +753,15 @@
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_6_4_01_copy.xhtml" />
     </navPoint>
+
+    <navPoint id="toc113" playOrder="119">
+      <navLabel>
+        <text>Case Study 6.5</text>
+      </navLabel>
+      <content src="XHTML/case_study_chapter/case_study_6_5_01_copy.xhtml" />
+    </navPoint>
+
+
       </navPoint>
 
     </navPoint>
@@ -1021,6 +1038,12 @@
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_9_6_01_copy.xhtml" />
     </navPoint>
+     <navPoint id="toc156" playOrder="164">
+      <navLabel>
+        <text>Case Study 9.7</text>
+      </navLabel>
+      <content src="XHTML/case_study_chapter/case_study_9_7_01_copy.xhtml" />
+    </navPoint>
 
       </navPoint>
 
@@ -1183,6 +1206,13 @@
         <text>Case Study 11.5</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_11_5_01_copy.xhtml" />
+    </navPoint>
+
+     <navPoint id="toc179" playOrder="189">
+      <navLabel>
+        <text>Case Study 11.6</text>
+      </navLabel>
+      <content src="XHTML/case_study_chapter/case_study_11_6_01_copy.xhtml" />
     </navPoint>
 
 
@@ -1446,7 +1476,7 @@
       <navLabel>
         <text>Case Study 15.4</text>
       </navLabel>
-      <content src="XHTML/case_study_chapter/case_study_15_1_01_copy.xhtml" />
+      <content src="XHTML/case_study_chapter/case_study_15_4_01_copy.xhtml" />
     </navPoint>
 
       </navPoint>
@@ -1803,6 +1833,12 @@
         <text>Case Study 19.3</text>
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_19_3_01_copy.xhtml" />
+    </navPoint>
+    <navPoint id="toc270" playOrder="288">
+      <navLabel>
+        <text>Case Study 19.4</text>
+      </navLabel>
+      <content src="XHTML/case_study_chapter/case_study_19_4_01_copy.xhtml" />
     </navPoint>
       </navPoint>
     </navPoint>
