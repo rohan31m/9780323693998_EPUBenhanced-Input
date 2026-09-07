@@ -723,7 +723,16 @@
             }, 2000);
         }, 50);
     }
-function createDropDownLists()
+function escapeXml(str)
+    {
+        return String(str == null ? '' : str)
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    }
+    function createDropDownLists()
     {
         $(".dropdownListBox").each(function(index)
         {
@@ -740,10 +749,10 @@ function createDropDownLists()
             var optionsHtml = "";
             $items.each(function(liIndex)
             {
-                var text = $.trim($(this).text());
+                var text = escapeXml($.trim($(this).text()));
                 optionsHtml += '<li id="image-option-' + index + '-' + liIndex + '" class="option' + (liIndex === 0 ? ' selected' : '') + '" role="option" aria-selected="' + (liIndex === 0 ? 'true' : 'false') + '" data-value="' + text + '" data-id="' + liIndex + '">' + text + '</li>';
             });
-            var firstText = $.trim($items.first().text());
+            var firstText = escapeXml($.trim($items.first().text()));
             var $combo = $(
                 '<div class="dropdownList dropdown pageDropdownList">' +
                     '<span id="' + labelId + '" class="combo-label">Select image view</span>' +
