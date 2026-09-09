@@ -3412,6 +3412,48 @@
 <item id="png_id34" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/images/q6/Fig_19_4_3_kwashiorkor_vs_maras_us_8_12_25.png" media-type="image/png"/>
 <item id="png_id35" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/images/q9/Fig_19_4_5_AN_vs_BN_8_12_25.png" media-type="image/png"/>
 
+<item id="png_img1" href="widgets/Case_widgets/Case_2_3_4/case4_6/images/arrow.png" media-type="image/png"/>
+<item id="png_img2" href="widgets/Case_widgets/Case_2_3_4/case4_6/images/prev_btn.png" media-type="image/png"/>
+<item id="png_img3" href="widgets/Case_widgets/Case_2_3_4/case4_6/images/next_btn.png" media-type="image/png"/>
+<item id="png_img4" href="widgets/Case_widgets/Case_2_3_4/case4_6/images/menu_btn.png" media-type="image/png"/>
+<item id="png_img5" href="widgets/Case_widgets/Case_2_3_4/case4_6/images/table_btn.png" media-type="image/png"/>
+<item id="png_img6" href="widgets/Case_widgets/Case_2_3_4/case4_6/images/top_patch.png" media-type="image/png"/>
+<item id="png_img7" href="widgets/Case_widgets/Case_2_3_4/case4_6/images/bottom_patch.png" media-type="image/png"/>
+<item id="png_img8" href="widgets/Case_widgets/Case_2_3_4/case4_6/images/check_btn.png" media-type="image/png"/>
+<item id="png_img9" href="widgets/Case_widgets/Case_5_6/case6_5/images/arrow.png" media-type="image/png"/>
+<item id="png_img10" href="widgets/Case_widgets/Case_5_6/case6_5/images/prev_btn.png" media-type="image/png"/>
+<item id="png_img11" href="widgets/Case_widgets/Case_5_6/case6_5/images/next_btn.png" media-type="image/png"/>
+<item id="png_img12" href="widgets/Case_widgets/Case_5_6/case6_5/images/menu_btn.png" media-type="image/png"/>
+<item id="png_img13" href="widgets/Case_widgets/Case_5_6/case6_5/images/table_btn.png" media-type="image/png"/>
+<item id="png_img14" href="widgets/Case_widgets/Case_5_6/case6_5/images/top_patch.png" media-type="image/png"/>
+<item id="png_img15" href="widgets/Case_widgets/Case_5_6/case6_5/images/bottom_patch.png" media-type="image/png"/>
+<item id="png_img16" href="widgets/Case_widgets/Case_5_6/case6_5/images/check_btn.png" media-type="image/png"/>
+<item id="png_img17" href="widgets/Case_widgets/Case_9_10/case9_7/images/arrow.png" media-type="image/png"/>
+<item id="png_img18" href="widgets/Case_widgets/Case_9_10/case9_7/images/prev_btn.png" media-type="image/png"/>
+<item id="png_img19" href="widgets/Case_widgets/Case_9_10/case9_7/images/next_btn.png" media-type="image/png"/>
+<item id="png_img20" href="widgets/Case_widgets/Case_9_10/case9_7/images/menu_btn.png" media-type="image/png"/>
+<item id="png_img21" href="widgets/Case_widgets/Case_9_10/case9_7/images/table_btn.png" media-type="image/png"/>
+<item id="png_img22" href="widgets/Case_widgets/Case_9_10/case9_7/images/top_patch.png" media-type="image/png"/>
+<item id="png_img23" href="widgets/Case_widgets/Case_9_10/case9_7/images/bottom_patch.png" media-type="image/png"/>
+<item id="png_img24" href="widgets/Case_widgets/Case_9_10/case9_7/images/check_btn.png" media-type="image/png"/>
+<item id="png_img25" href="widgets/Case_widgets/case15_5/images/arrow.png" media-type="image/png"/>
+<item id="png_img26" href="widgets/Case_widgets/case15_5/images/prev_btn.png" media-type="image/png"/>
+<item id="png_img27" href="widgets/Case_widgets/case15_5/images/next_btn.png" media-type="image/png"/>
+<item id="png_img28" href="widgets/Case_widgets/case15_5/images/menu_btn.png" media-type="image/png"/>
+<item id="png_img29" href="widgets/Case_widgets/case15_5/images/table_btn.png" media-type="image/png"/>
+<item id="png_img30" href="widgets/Case_widgets/case15_5/images/top_patch.png" media-type="image/png"/>
+<item id="png_img31" href="widgets/Case_widgets/case15_5/images/bottom_patch.png" media-type="image/png"/>
+<item id="png_img32" href="widgets/Case_widgets/case15_5/images/check_btn.png" media-type="image/png"/>
+<item id="png_img33" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/images/arrow.png" media-type="image/png"/>
+<item id="png_img34" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/images/prev_btn.png" media-type="image/png"/>
+<item id="png_img35" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/images/next_btn.png" media-type="image/png"/>
+<item id="png_img36" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/images/menu_btn.png" media-type="image/png"/>
+<item id="png_img37" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/images/table_btn.png" media-type="image/png"/>
+<item id="png_img38" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/images/top_patch.png" media-type="image/png"/>
+<item id="png_img39" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/images/bottom_patch.png" media-type="image/png"/>
+<item id="png_img40" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/images/check_btn.png" media-type="image/png"/>
+
+
 <item id="R808" href="widgets/Case_widgets/Case_5_6/case5_2v2/images/q18/on005-ca002f008-9780323640251-b.png" media-type="image/png"/>
 
 
@@ -3456,7 +3498,16 @@
 
 
 
-
+<item id="eot_id1" href="widgets/Case_widgets/Case_2_3_4/case4_6/font/source_sans_pro-regular_gdi.eot" media-type="application/vnd.ms-opentype"/>
+<item id="eot_id2" href="widgets/Case_widgets/Case_2_3_4/case4_6/font/source_sans_pro-bold_gdi.eot" media-type="application/vnd.ms-opentype"/>
+<item id="eot_id3" href="widgets/Case_widgets/Case_5_6/case6_5/font/source_sans_pro-regular_gdi.eot" media-type="application/vnd.ms-opentype"/>
+<item id="eot_id4" href="widgets/Case_widgets/Case_5_6/case6_5/font/source_sans_pro-bold_gdi.eot" media-type="application/vnd.ms-opentype"/>
+<item id="eot_id5" href="widgets/Case_widgets/Case_9_10/case9_7/font/source_sans_pro-regular_gdi.eot" media-type="application/vnd.ms-opentype"/>
+<item id="eot_id6" href="widgets/Case_widgets/Case_9_10/case9_7/font/source_sans_pro-bold_gdi.eot" media-type="application/vnd.ms-opentype"/>
+<item id="eot_id7" href="widgets/Case_widgets/case15_5/font/source_sans_pro-regular_gdi.eot" media-type="application/vnd.ms-opentype"/>
+<item id="eot_id8" href="widgets/Case_widgets/case15_5/font/source_sans_pro-bold_gdi.eot" media-type="application/vnd.ms-opentype"/>
+<item id="eot_id9" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/font/source_sans_pro-regular_gdi.eot" media-type="application/vnd.ms-opentype"/>
+<item id="eot_id10" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/font/source_sans_pro-bold_gdi.eot" media-type="application/vnd.ms-opentype"/>
 
 
 <item id="R964" href="widgets/Case_widgets/Case_5_6/case5_4/css/anssection.css" media-type="text/css"/>
