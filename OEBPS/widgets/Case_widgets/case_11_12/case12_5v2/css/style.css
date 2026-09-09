@@ -37,7 +37,7 @@
 @font-face {
   font-family:'SourceSansPro-Bold';
   src: url('../font/source_sans_pro-bold_gdi.eot');
-  src: url('../font/source_sans_pro-bold_gdi.eot?#iefix') format('embedded-opentype'),
+  src: url('../font/source_sans_pro-bold_gdi.eot') format('embedded-opentype'),
     url('../font/source_sans_pro-bold_gdi.woff') format('woff'),
     url('../font/source_sans_pro-bold_gdi.ttf') format('truetype'),
     url('../font/source_sans_pro-bold_gdi.svg ') format('svg');
@@ -1831,7 +1831,8 @@ strong {
   bottom: calc(100% + 6px);
   right: 0;
   left: auto;
-}
+}
+
 /* Visible tooltips for carousel slide buttons */
 #midConatiner .footer,
 #midConatiner #naviList,
