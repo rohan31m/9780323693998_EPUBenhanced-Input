@@ -71,6 +71,11 @@
 <item id="assas"  href="XHTML/Assessments.xhtml" media-type="application/xhtml+xml" properties="scripted"/>      
 
 
+<item id="case4_6_index"  href="widgets/Case_widgets/Case_2_3_4/case4_6/index.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="case6_5_index"  href="widgets/Case_widgets/Case_5_6/case6_5/index.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="case9_7_index"  href="widgets/Case_widgets/Case_9_10/case9_7/index.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="case15_5_index"  href="widgets/Case_widgets/case15_5/index.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="case19_4_index"  href="widgets/Case_widgets/Case_16_17_18_19/case19_4/index.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 
 <item id="As01case_study_4_6_01"  href="XHTML/case_study_chapter/case_study_4_6_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="As01case_study_6_5_01"  href="XHTML/case_study_chapter/case_study_6_5_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
@@ -342,8 +347,31 @@
 <item id="fm_a1A84"  href="XHTML/case_study/reader_2_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="fm_a1A85"  href="XHTML/case_study/reader_3_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 
-
-
+<item id="css_id1" href="widgets/Case_widgets/Case_2_3_4/case4_6/css/dropmenu.css" media-type="text/css"/>
+<item id="css_id2" href="widgets/Case_widgets/Case_2_3_4/case4_6/css/jquery-ui.css" media-type="text/css"/>
+<item id="css_id3" href="widgets/Case_widgets/Case_2_3_4/case4_6/css/nanoscroller.css" media-type="text/css"/>
+<item id="css_id4" href="widgets/Case_widgets/Case_2_3_4/case4_6/css/anssection.css" media-type="text/css"/>
+<item id="css_id5" href="widgets/Case_widgets/Case_2_3_4/case4_6/css/style.css" media-type="text/css"/>
+<item id="css_id6" href="widgets/Case_widgets/Case_5_6/case6_5/css/dropmenu.css" media-type="text/css"/>
+<item id="css_id7" href="widgets/Case_widgets/Case_5_6/case6_5/css/jquery-ui.css" media-type="text/css"/>
+<item id="css_id8" href="widgets/Case_widgets/Case_5_6/case6_5/css/nanoscroller.css" media-type="text/css"/>
+<item id="css_id9" href="widgets/Case_widgets/Case_5_6/case6_5/css/anssection.css" media-type="text/css"/>
+<item id="css_id10" href="widgets/Case_widgets/Case_5_6/case6_5/css/style.css" media-type="text/css"/>
+<item id="css_id11" href="widgets/Case_widgets/Case_9_10/case9_7/css/dropmenu.css" media-type="text/css"/>
+<item id="css_id12" href="widgets/Case_widgets/Case_9_10/case9_7/css/jquery-ui.css" media-type="text/css"/>
+<item id="css_id13" href="widgets/Case_widgets/Case_9_10/case9_7/css/nanoscroller.css" media-type="text/css"/>
+<item id="css_id14" href="widgets/Case_widgets/Case_9_10/case9_7/css/anssection.css" media-type="text/css"/>
+<item id="css_id15" href="widgets/Case_widgets/Case_9_10/case9_7/css/style.css" media-type="text/css"/>
+<item id="css_id16" href="widgets/Case_widgets/case15_5/css/dropmenu.css" media-type="text/css"/>
+<item id="css_id17" href="widgets/Case_widgets/case15_5/css/jquery-ui.css" media-type="text/css"/>
+<item id="css_id18" href="widgets/Case_widgets/case15_5/css/nanoscroller.css" media-type="text/css"/>
+<item id="css_id19" href="widgets/Case_widgets/case15_5/css/anssection.css" media-type="text/css"/>
+<item id="css_id20" href="widgets/Case_widgets/case15_5/css/style.css" media-type="text/css"/>
+<item id="css_id21" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/css/dropmenu.css" media-type="text/css"/>
+<item id="css_id22" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/css/jquery-ui.css" media-type="text/css"/>
+<item id="css_id23" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/css/nanoscroller.css" media-type="text/css"/>
+<item id="css_id24" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/css/anssection.css" media-type="text/css"/>
+<item id="css_id25" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/css/style.css" media-type="text/css"/>
 
 <item properties="cover-image" id="cover-image" href="IMAGES/main.assets/9780323640268_FC.jpg" media-type="image/jpeg"/>
 <item id="css" href="Style/Elsevier_eBook.css" media-type="text/css"/>
@@ -484,6 +512,63 @@
 <item id="B77" href="widgets/Case_widgets/case_11_12/case12_5v2/css/nanoscroller.css" media-type="text/css"/>
 <item id="B78" href="widgets/Case_widgets/case_11_12/case12_5v2/css/style.css" media-type="text/css"/>
 <item id="id_js" href="Style/math.js" media-type="text/javascript"/>
+
+<item id="js_id1" href="widgets/Case_widgets/Case_2_3_4/case4_6/js/jquery-1.10.2.js" media-type="text/javascript"/>
+<item id="js_id2" href="widgets/Case_widgets/Case_2_3_4/case4_6/js/jquery-ui.js" media-type="text/javascript"/>
+<item id="js_id3" href="widgets/Case_widgets/Case_2_3_4/case4_6/js/preloader.js" media-type="text/javascript"/>
+<item id="js_id4" href="widgets/Case_widgets/Case_2_3_4/case4_6/js/jquery.ui.touch-punch.min.js" media-type="text/javascript"/>
+<item id="js_id5" href="widgets/Case_widgets/Case_2_3_4/case4_6/js/dropmenu.js" media-type="text/javascript"/>
+<item id="js_id6" href="widgets/Case_widgets/Case_2_3_4/case4_6/js/jquery.nanoscroller.js" media-type="text/javascript"/>
+<item id="js_id7" href="widgets/Case_widgets/Case_2_3_4/case4_6/js/activity.js" media-type="text/javascript"/>
+<item id="js_id8" href="widgets/Case_widgets/Case_2_3_4/case4_6/js/anssection.js" media-type="text/javascript"/>
+<item id="js_id9" href="widgets/Case_widgets/Case_2_3_4/case4_6/js/data.js" media-type="text/javascript"/>
+<item id="js_id10" href="widgets/Case_widgets/Case_2_3_4/case4_6/js/data_table.js" media-type="text/javascript"/>
+<item id="js_id11" href="widgets/Case_widgets/Case_2_3_4/case4_6/js/data_table_activity.js" media-type="text/javascript"/>
+<item id="js_id12" href="widgets/Case_widgets/Case_5_6/case6_5/js/jquery-1.10.2.js" media-type="text/javascript"/>
+<item id="js_id13" href="widgets/Case_widgets/Case_5_6/case6_5/js/jquery-ui.js" media-type="text/javascript"/>
+<item id="js_id14" href="widgets/Case_widgets/Case_5_6/case6_5/js/preloader.js" media-type="text/javascript"/>
+<item id="js_id15" href="widgets/Case_widgets/Case_5_6/case6_5/js/jquery.ui.touch-punch.min.js" media-type="text/javascript"/>
+<item id="js_id16" href="widgets/Case_widgets/Case_5_6/case6_5/js/dropmenu.js" media-type="text/javascript"/>
+<item id="js_id17" href="widgets/Case_widgets/Case_5_6/case6_5/js/jquery.nanoscroller.js" media-type="text/javascript"/>
+<item id="js_id18" href="widgets/Case_widgets/Case_5_6/case6_5/js/activity.js" media-type="text/javascript"/>
+<item id="js_id19" href="widgets/Case_widgets/Case_5_6/case6_5/js/anssection.js" media-type="text/javascript"/>
+<item id="js_id20" href="widgets/Case_widgets/Case_5_6/case6_5/js/data.js" media-type="text/javascript"/>
+<item id="js_id21" href="widgets/Case_widgets/Case_5_6/case6_5/js/data_table.js" media-type="text/javascript"/>
+<item id="js_id22" href="widgets/Case_widgets/Case_5_6/case6_5/js/data_table_activity.js" media-type="text/javascript"/>
+<item id="js_id23" href="widgets/Case_widgets/Case_9_10/case9_7/js/jquery-1.10.2.js" media-type="text/javascript"/>
+<item id="js_id24" href="widgets/Case_widgets/Case_9_10/case9_7/js/jquery-ui.js" media-type="text/javascript"/>
+<item id="js_id25" href="widgets/Case_widgets/Case_9_10/case9_7/js/preloader.js" media-type="text/javascript"/>
+<item id="js_id26" href="widgets/Case_widgets/Case_9_10/case9_7/js/jquery.ui.touch-punch.min.js" media-type="text/javascript"/>
+<item id="js_id27" href="widgets/Case_widgets/Case_9_10/case9_7/js/dropmenu.js" media-type="text/javascript"/>
+<item id="js_id28" href="widgets/Case_widgets/Case_9_10/case9_7/js/jquery.nanoscroller.js" media-type="text/javascript"/>
+<item id="js_id29" href="widgets/Case_widgets/Case_9_10/case9_7/js/activity.js" media-type="text/javascript"/>
+<item id="js_id30" href="widgets/Case_widgets/Case_9_10/case9_7/js/anssection.js" media-type="text/javascript"/>
+<item id="js_id31" href="widgets/Case_widgets/Case_9_10/case9_7/js/data.js" media-type="text/javascript"/>
+<item id="js_id32" href="widgets/Case_widgets/Case_9_10/case9_7/js/data_table.js" media-type="text/javascript"/>
+<item id="js_id33" href="widgets/Case_widgets/Case_9_10/case9_7/js/data_table_activity.js" media-type="text/javascript"/>
+<item id="js_id34" href="widgets/Case_widgets/case15_5/js/jquery-1.10.2.js" media-type="text/javascript"/>
+<item id="js_id35" href="widgets/Case_widgets/case15_5/js/jquery-ui.js" media-type="text/javascript"/>
+<item id="js_id36" href="widgets/Case_widgets/case15_5/js/preloader.js" media-type="text/javascript"/>
+<item id="js_id37" href="widgets/Case_widgets/case15_5/js/jquery.ui.touch-punch.min.js" media-type="text/javascript"/>
+<item id="js_id38" href="widgets/Case_widgets/case15_5/js/dropmenu.js" media-type="text/javascript"/>
+<item id="js_id39" href="widgets/Case_widgets/case15_5/js/jquery.nanoscroller.js" media-type="text/javascript"/>
+<item id="js_id40" href="widgets/Case_widgets/case15_5/js/activity.js" media-type="text/javascript"/>
+<item id="js_id41" href="widgets/Case_widgets/case15_5/js/anssection.js" media-type="text/javascript"/>
+<item id="js_id42" href="widgets/Case_widgets/case15_5/js/data.js" media-type="text/javascript"/>
+<item id="js_id43" href="widgets/Case_widgets/case15_5/js/data_table.js" media-type="text/javascript"/>
+<item id="js_id44" href="widgets/Case_widgets/case15_5/js/data_table_activity.js" media-type="text/javascript"/>
+<item id="js_id45" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/js/jquery-1.10.2.js" media-type="text/javascript"/>
+<item id="js_id46" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/js/jquery-ui.js" media-type="text/javascript"/>
+<item id="js_id47" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/js/preloader.js" media-type="text/javascript"/>
+<item id="js_id48" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/js/jquery.ui.touch-punch.min.js" media-type="text/javascript"/>
+<item id="js_id49" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/js/dropmenu.js" media-type="text/javascript"/>
+<item id="js_id50" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/js/jquery.nanoscroller.js" media-type="text/javascript"/>
+<item id="js_id51" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/js/activity.js" media-type="text/javascript"/>
+<item id="js_id52" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/js/anssection.js" media-type="text/javascript"/>
+<item id="js_id53" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/js/data.js" media-type="text/javascript"/>
+<item id="js_id54" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/js/data_table.js" media-type="text/javascript"/>
+<item id="js_id55" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/js/data_table_activity.js" media-type="text/javascript"/>
+
 <item id="CharisSILB" href="Style/fonts/CharisSILB.ttf" media-type="application/vnd.ms-opentype"/>
 <item id="CharisSILBI" href="Style/fonts/CharisSILBI.ttf" media-type="application/vnd.ms-opentype"/>
 <item id="CharisSILI" href="Style/fonts/CharisSILI.ttf" media-type="application/vnd.ms-opentype"/>
@@ -1642,8 +1727,6 @@
 <item id="B4" href="widgets/Case_widgets/case_11_12/case11_4/index.xhtml" media-type="application/xhtml+xml" properties="scripted" />
 <item id="B5" href="widgets/Case_widgets/case_11_12/case11_5/index.xhtml" media-type="application/xhtml+xml" properties="scripted" />
 <item id="B6" href="widgets/Case_widgets/case_11_12/case11_6/index.xhtml" media-type="application/xhtml+xml" properties="scripted" />
-
-
 
 <item id="B8" href="widgets/Case_widgets/case_11_12/case12_2/index.xhtml" media-type="application/xhtml+xml" properties="scripted" />
 <item id="B9" href="widgets/Case_widgets/case_11_12/case12_3/index.xhtml" media-type="application/xhtml+xml" properties="scripted" />
@@ -3293,7 +3376,41 @@
 <item id="R785" href="widgets/Case_widgets/Case_5_6/case5_2v2/font/source_sans_pro-regular_gdi.ttf" media-type="application/vnd.ms-opentype"/>
 <item id="R786" href="widgets/Case_widgets/Case_5_6/case5_2v2/font/source_sans_pro-regular_gdi.woff" media-type="application/vnd.ms-opentype"/>
 
-
+<item id="png_id1" href="widgets/Case_widgets/Case_2_3_4/case4_6/images/q2/image2.png" media-type="image/png"/>
+<item id="png_id2" href="widgets/Case_widgets/Case_2_3_4/case4_6/images/q4/image3.png" media-type="image/png"/>
+<item id="png_id3" href="widgets/Case_widgets/Case_2_3_4/case4_6/images/q5/image4.png" media-type="image/png"/>
+<item id="png_id4" href="widgets/Case_widgets/Case_2_3_4/case4_6/images/q9/image5.png" media-type="image/png"/>
+<item id="png_id5" href="widgets/Case_widgets/Case_5_6/case6_5/images/q3/image1.png" media-type="image/png"/>
+<item id="png_id6" href="widgets/Case_widgets/Case_5_6/case6_5/images/q4/f05-27-9780443264528.png" media-type="image/png"/>
+<item id="png_id7" href="widgets/Case_widgets/Case_5_6/case6_5/images/q5/Fig_6_5_3_Fragile_X_ds_spectrum_8_4_25.png" media-type="image/png"/>
+<item id="png_id8" href="widgets/Case_widgets/Case_5_6/case6_5/images/q6/image4.png" media-type="image/png"/>
+<item id="png_id9" href="widgets/Case_widgets/Case_9_10/case9_7/images/q5/Fig_9_7_3_CML_pathogenesis_8_13_25.png" media-type="image/png"/>
+<item id="png_id10" href="widgets/Case_widgets/case15_5/images/q1/on015-ca004f001-9780323640251.png" media-type="image/png"/>
+<item id="png_id11" href="widgets/Case_widgets/case15_5/images/q2/on015-ca004f002-9780323640251.png" media-type="image/png"/>
+<item id="png_id12" href="widgets/Case_widgets/case15_5/images/q2/on015-ca004f002-9780323640251-b.png" media-type="image/png"/>
+<item id="png_id13" href="widgets/Case_widgets/case15_5/images/q2/on015-ca004f002-9780323640251-c-new-replacement.png" media-type="image/png"/>
+<item id="png_id14" href="widgets/Case_widgets/case15_5/images/q3/on015-ca004f003-9780323640251.png" media-type="image/png"/>
+<item id="png_id15" href="widgets/Case_widgets/case15_5/images/q3/on015-ca004f004-9780323640251.png" media-type="image/png"/>
+<item id="png_id16" href="widgets/Case_widgets/case15_5/images/q3/on015-ca004f003-9780323640251-a.png" media-type="image/png"/>
+<item id="png_id17" href="widgets/Case_widgets/case15_5/images/q3/on015-ca004f003-9780323640251-b.png" media-type="image/png"/>
+<item id="png_id18" href="widgets/Case_widgets/case15_5/images/q3/on015-ca004f004-9780323640251-a.png" media-type="image/png"/>
+<item id="png_id19" href="widgets/Case_widgets/case15_5/images/q3/on015-ca004f004-9780323640251-b.png" media-type="image/png"/>
+<item id="png_id20" href="widgets/Case_widgets/case15_5/images/q5/on015-ca004f005-9780323640251.png" media-type="image/png"/>
+<item id="png_id21" href="widgets/Case_widgets/case15_5/images/q5/on015-ca004f005-9780323640251-a.png" media-type="image/png"/>
+<item id="png_id22" href="widgets/Case_widgets/case15_5/images/q5/on015-ca004f005-9780323640251-b.png" media-type="image/png"/>
+<item id="png_id23" href="widgets/Case_widgets/case15_5/images/q12/on015-ca004f006-9780323640251.png" media-type="image/png"/>
+<item id="png_id24" href="widgets/Case_widgets/case15_5/images/q12/on015-ca004f007-9780323640251.png" media-type="image/png"/>
+<item id="png_id25" href="widgets/Case_widgets/case15_5/images/q12/on015-ca004f006-9780323640251-a.png" media-type="image/png"/>
+<item id="png_id26" href="widgets/Case_widgets/case15_5/images/q12/on015-ca004f006-9780323640251-b.png" media-type="image/png"/>
+<item id="png_id27" href="widgets/Case_widgets/case15_5/images/q12/on015-ca004f006-9780323640251-c.png" media-type="image/png"/>
+<item id="png_id28" href="widgets/Case_widgets/case15_5/images/q12/on015-ca004f007-9780323640251-a.png" media-type="image/png"/>
+<item id="png_id29" href="widgets/Case_widgets/case15_5/images/q13/on015-ca004f008-9780323640251.png" media-type="image/png"/>
+<item id="png_id30" href="widgets/Case_widgets/case15_5/images/q13/on015-ca004f008-9780323640251-a.png" media-type="image/png"/>
+<item id="png_id31" href="widgets/Case_widgets/case15_5/images/q13/on015-ca004f008-9780323640251-b.png" media-type="image/png"/>
+<item id="png_id32" href="widgets/Case_widgets/case15_5/images/q14/on015-ca004f009-9780323640251.png" media-type="image/png"/>
+<item id="png_id33" href="widgets/Case_widgets/case15_5/images/q14/on015-ca004f009-9780323640251-a.png" media-type="image/png"/>
+<item id="png_id34" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/images/q6/Fig_19_4_3_kwashiorkor_vs_maras_us_8_12_25.png" media-type="image/png"/>
+<item id="png_id35" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/images/q9/Fig_19_4_5_AN_vs_BN_8_12_25.png" media-type="image/png"/>
 
 <item id="R808" href="widgets/Case_widgets/Case_5_6/case5_2v2/images/q18/on005-ca002f008-9780323640251-b.png" media-type="image/png"/>
 
@@ -4357,7 +4474,6 @@
 <item id="B339" href="widgets/Case_widgets/case_11_12/case11_5/images/prev_btn.png" media-type="image/png"/>
 <item id="B340" href="widgets/Case_widgets/case_11_12/case11_5/images/table_btn.png" media-type="image/png"/>
 <item id="B341" href="widgets/Case_widgets/case_11_12/case11_5/images/top_patch.png" media-type="image/png"/>
-<item id="B342" href="widgets/Case_widgets/case_11_12/case11_6/images/q2/on011-ca006f001-9780323640251.png" media-type="image/png"/>
 <item id="B353" href="widgets/Case_widgets/case_11_12/case11_6/images/arrow.png" media-type="image/png"/>
 <item id="B354" href="widgets/Case_widgets/case_11_12/case11_6/images/bottom_patch.png" media-type="image/png"/>
 <item id="B355" href="widgets/Case_widgets/case_11_12/case11_6/images/check_btn.png" media-type="image/png"/>
@@ -4415,7 +4531,6 @@
 
 
 <item id="B421" href="widgets/Case_widgets/case_11_12/case12_2/images/q2/on012-ca002f001-9780323640251-b.png" media-type="image/png"/>
-
 
 <item id="B424" href="widgets/Case_widgets/case_11_12/case12_2/images/q2/on012-ca002f002-9780323640251-b.png" media-type="image/png"/>
 
@@ -4948,7 +5063,7 @@
 <item id="jb24EP2_Fig_18_2" href="widgets/Case_widgets/Case_16_17_18_19/case18_1/images/q8/EP2_Fig_18_2.png" media-type="image/png"/>
 <item id="jb24PBD11_Fig_26_37" href="widgets/Case_widgets/Case_16_17_18_19/case18_4v2/images/q8/PBD11_Fig_26_37.png" media-type="image/png"/>
 <item id="jb24EP2_Fig_2_3" href="widgets/Case_widgets/Case_2_3_4/case2_1/images/q6/EP2_Fig_2_3.png" media-type="image/png"/>
-<item id="jb24EP2_Fig_2_3" href="widgets/Case_widgets/Case_2_3_4/case2_2/images/q3/EP2_Fig_2_3.png" media-type="image/png"/>
+<item id="jb24EP2_Fig_2_3_1" href="widgets/Case_widgets/Case_2_3_4/case2_2/images/q3/EP2_Fig_2_3.png" media-type="image/png"/>
 <item id="jb24EP2_Fig_2_4" href="widgets/Case_widgets/Case_2_3_4/case2_3v2/images/q2/EP2_Fig_2_4.png" media-type="image/png"/>
 <item id="jb24EP2_Fig_3_15" href="widgets/Case_widgets/Case_2_3_4/case3_2/images/q3/EP2_Fig_3_15.png" media-type="image/png"/>
 <item id="jb24EP2_Fig_9_23" href="widgets/Case_widgets/Case_2_3_4/case3_2/images/q6/EP2_Fig_9_23.png" media-type="image/png"/>

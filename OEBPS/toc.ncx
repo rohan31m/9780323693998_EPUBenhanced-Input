@@ -1452,19 +1452,19 @@
       <navLabel>
         <text>Case Study 15.1</text>
       </navLabel>
-      <content src="XHTML/case_study_chapter/case_study_15_2_01_copy.xhtml" />
+      <content src="XHTML/case_study_chapter/case_study_15_1_01_copy.xhtml" />
     </navPoint>
     <navPoint id="toc233" playOrder="233">
       <navLabel>
         <text>Case Study 15.2</text>
       </navLabel>
-      <content src="XHTML/case_study_chapter/case_study_15_3_01_copy.xhtml" />
+      <content src="XHTML/case_study_chapter/case_study_15_2_01_copy.xhtml" />
     </navPoint>
     <navPoint id="toc234" playOrder="234">
       <navLabel>
         <text>Case Study 15.3</text>
       </navLabel>
-      <content src="XHTML/case_study_chapter/case_study_15_4_01_copy.xhtml" />
+      <content src="XHTML/case_study_chapter/case_study_15_3_01_copy.xhtml" />
     </navPoint>
     <navPoint id="toc235" playOrder="235">
       <navLabel>
@@ -1472,7 +1472,12 @@
       </navLabel>
       <content src="XHTML/case_study_chapter/case_study_15_4_01_copy.xhtml" />
     </navPoint>
-
+    <navPoint id="toc235a" playOrder="235a">
+      <navLabel>
+        <text>Case Study 15.5</text>
+      </navLabel>
+      <content src="XHTML/case_study_chapter/case_study_15_5_01_copy.xhtml" />
+    </navPoint>
       </navPoint>
 
     </navPoint>
