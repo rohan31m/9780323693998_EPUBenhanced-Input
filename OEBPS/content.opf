@@ -72,8 +72,12 @@
 
 
 
-
-
+<item id="As01case_study_4_6_01"  href="XHTML/case_study_chapter/case_study_4_6_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="As01case_study_6_5_01"  href="XHTML/case_study_chapter/case_study_6_5_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="As01case_study_9_7_01"  href="XHTML/case_study_chapter/case_study_9_7_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="As01case_study_11_6_0"  href="XHTML/case_study_chapter/case_study_11_6_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="As01case_study_15_5_0"  href="XHTML/case_study_chapter/case_study_15_5_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="As01case_study_19_4_0"  href="XHTML/case_study_chapter/case_study_19_4_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 
  <item id="As01"  href="XHTML/case_study_chapter/Essentials_Chapter_1_Cases.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
  <item id="As02"  href="XHTML/case_study_chapter/Essentials_Chapter_2_Cases.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
@@ -201,7 +205,17 @@
 <item id="a1A83"  href="XHTML/case_study_chapter/reader_1_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A84"  href="XHTML/case_study_chapter/reader_2_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A85"  href="XHTML/case_study_chapter/reader_3_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
- <item id="fm_As01"  href="XHTML/case_study/Essentials_Chapter_1_Cases.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+
+
+<item id="fm_As01case_study_4_6_01"  href="XHTML/case_study/case_study_4_6_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="fm_As01case_study_6_5_01"  href="XHTML/case_study/case_study_6_5_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="fm_As01case_study_9_7_01"  href="XHTML/case_study/case_study_9_7_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="fm_As01case_study_11_6_01"  href="XHTML/case_study/case_study_11_6_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="fm_As01case_study_15_5_01"  href="XHTML/case_study/case_study_15_5_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="fm_As01case_study_19_4_01"  href="XHTML/case_study/case_study_19_4_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+
+
+<item id="fm_As01"  href="XHTML/case_study/Essentials_Chapter_1_Cases.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
  <item id="fm_As02"  href="XHTML/case_study/Essentials_Chapter_2_Cases.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 
  <item id="fm_As03"  href="XHTML/case_study/Essentials_Chapter_3_Cases.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
@@ -4916,45 +4930,31 @@
 <item id="jh42" href="widgets/Case_widgets/Case_7_8/case7_1/js/preloader.js" media-type="text/javascript"/>
 <item id="jh43" href="widgets/Case_widgets/Case_7_8/case7_1/index.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 
-
-
-
 <item id="jf16" href="widgets/Case_widgets/Case_7_8/case7_3/font/source_sans_pro-regular_gdi.woff" media-type="application/vnd.ms-opentype"/>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<item id="jb24new_v1_Orig_FINAL" href="widgets/Case_widgets/Case_1/case1_2/images/q7/CH0001_Fig001.8+new_v1_Orig_FINAL.png" media-type="image/png"/>
+<item id="jb249780443264528" href="widgets/Case_widgets/Case_16_17_18_19/case16_1v2/images/q3/f05-27-9780443264528.png" media-type="image/png"/>
+<item id="jb24Case_Fig_11_6_1_ADPKD_genetics_8_20_25" href="widgets/Case_widgets/case_11_12/case11_6/images/q3/Case_Fig_11_6_1_ADPKD_genetics_8_20_25.png" media-type="image/png"/>
+<item id="jb24EP2_Fig_12_11" href="widgets/Case_widgets/case_11_12/case12_4v2/images/q2/EP2_Fig_12_11.png" media-type="image/png"/>
+<item id="jb24EP2_Fig_17_2" href="widgets/Case_widgets/Case_16_17_18_19/case17_1/images/q5/EP2_Fig_17_2.png" media-type="image/png"/>
+<item id="jb24EP2_Fig_17_5A" href="widgets/Case_widgets/Case_16_17_18_19/case17_1/images/q6/EP2_Fig_17_5A.png" media-type="image/png"/>
+<item id="jb24EP2_Fig_17_10" href="widgets/Case_widgets/Case_16_17_18_19/case17_4/images/q1/EP2_Fig_17_10.png" media-type="image/png"/>
+<item id="jb24EP2_Fig_19_2" href="widgets/Case_widgets/Case_16_17_18_19/case19_1/images/q4/EP2_Fig_19_2.png" media-type="image/png"/>
+<item id="jb24EP2_Fig_19_12" href="widgets/Case_widgets/Case_16_17_18_19/case19_3/images/q3/EP2_Fig_19_12.png" media-type="image/png"/>
+<item id="jb24PBD11_Fig_9_29" href="widgets/Case_widgets/Case_16_17_18_19/case19_3/images/q8/PBD11_Fig_9_29.png" media-type="image/png"/>
+<item id="jb24EP2_Fig_14_12" href="widgets/Case_widgets/case14_3/images/q4/EP2_Fig_14_12.png" media-type="image/png"/>
+<item id="jb24EP2_Fig_5_14" href="widgets/Case_widgets/Case_5_6/case5_3/images/q12/EP2_Fig_5_14.png" media-type="image/png"/>
+<item id="jb24EP2_Fig_6_5" href="widgets/Case_widgets/Case_5_6/case6_2/images/q11/EP2_Fig_6_5.png" media-type="image/png"/>
+<item id="jb24EP2_Fig_18_2" href="widgets/Case_widgets/Case_16_17_18_19/case18_1/images/q8/EP2_Fig_18_2.png" media-type="image/png"/>
+<item id="jb24PBD11_Fig_26_37" href="widgets/Case_widgets/Case_16_17_18_19/case18_4v2/images/q8/PBD11_Fig_26_37.png" media-type="image/png"/>
+<item id="jb24EP2_Fig_2_3" href="widgets/Case_widgets/Case_2_3_4/case2_1/images/q6/EP2_Fig_2_3.png" media-type="image/png"/>
+<item id="jb24EP2_Fig_2_3" href="widgets/Case_widgets/Case_2_3_4/case2_2/images/q3/EP2_Fig_2_3.png" media-type="image/png"/>
+<item id="jb24EP2_Fig_2_4" href="widgets/Case_widgets/Case_2_3_4/case2_3v2/images/q2/EP2_Fig_2_4.png" media-type="image/png"/>
+<item id="jb24EP2_Fig_3_15" href="widgets/Case_widgets/Case_2_3_4/case3_2/images/q3/EP2_Fig_3_15.png" media-type="image/png"/>
+<item id="jb24EP2_Fig_9_23" href="widgets/Case_widgets/Case_2_3_4/case3_2/images/q6/EP2_Fig_9_23.png" media-type="image/png"/>
+<item id="jb24EP2_Fig_4_6" href="widgets/Case_widgets/Case_2_3_4/case4_2v2/images/q3/EP2_Fig_4_6.png" media-type="image/png"/>
+<item id="jb24PBD11_Fig_18_8" href="widgets/Case_widgets/case13_2/images/q5/PBD11_Fig_18_8.png" media-type="image/png"/>
 <item id="jb24" href="widgets/Case_widgets/Case_7_8/case8_5/images/q6/on008-ca005f003-9780323640251-a.png" media-type="image/png"/>
-
-
-
-
-
-
-
-
-
 <item id="a152j17"  href="widgets/Case_widgets/Case_7_8/case8_6/images/q3/on008-ca006f001-9780323640251.png" media-type="image/png"/>
 <item id="a152j18" href="widgets/Case_widgets/Case_7_8/case8_6/images/q3/on008-ca006f001-9780323640251-a.png" media-type="image/png"/>
 <item id="a152j19" href="widgets/Case_widgets/Case_7_8/case8_6/images/q3/on008-ca006f001-9780323640251-b.png" media-type="image/png"/>
@@ -4970,11 +4970,6 @@
 <item id="a156j29" href="widgets/Case_widgets/Case_7_8/case8_6/images/q17/on008-ca006f005-9780323640251-a.png" media-type="image/png"/>
 <item id="a156j30" href="widgets/Case_widgets/Case_7_8/case8_6/images/q17/on008-ca006f006-9780323640251.png" media-type="image/png"/>
 <item id="a156j31" href="widgets/Case_widgets/Case_7_8/case8_6/images/q17/on008-ca006f006-9780323640251-a.png" media-type="image/png"/>
-
-
-
-
-
 
 <item id="m1" href="widgets/Case_widgets/Case_16_17_18_19/case18_1/css/anssection.css" media-type="text/css"/>
 <item id="m2" href="widgets/Case_widgets/Case_16_17_18_19/case18_1/css/audio.css" media-type="text/css"/>
