@@ -681,6 +681,8 @@
 <item id="B9780323640251000014" href="XHTML/B9780323640251000014/B9780323640251000014.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="B9780323640251000014_B9780323640251000014_t0015_0" href="XHTML/B9780323640251000014/B9780323640251000014_t0015_0.png" media-type="image/png"/>
 <item id="B9780323640251000014_B9780323640251000014_t0020_0" href="XHTML/B9780323640251000014/B9780323640251000014_t0020_0.png" media-type="image/png"/>
+<item id="png_id_Case_Fig_9_7_2_genetic_8_14_25" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/images/q5/Case_Fig_9_7_2_genetics_in_MPN_8_14_25.png" media-type="image/png"/>
+<item id="png_Case_Fig_9_7_2_gen" href="widgets/Case_widgets/Case_9_10/case9_7/images/q4/Case_Fig_9_7_2_genetics_in_MPN_8_14_25.png" media-type="image/png"/>
 <item id="B9780323640251000014_f01-01-9780323640251" href="IMAGES/B9780323640251000014/main.assets/f01-01-9780323640251.jpg" media-type="image/jpeg"/>
 <item id="B9780323640251000014_f01-02-9780323640251" href="IMAGES/B9780323640251000014/main.assets/f01-02-9780323640251.jpg" media-type="image/jpeg"/>
 <item id="B9780323640251000014_f01-03-9780323640251" href="IMAGES/B9780323640251000014/main.assets/f01-03-9780323640251.jpg" media-type="image/jpeg"/>
@@ -3381,7 +3383,6 @@
 <item id="png_id3" href="widgets/Case_widgets/Case_2_3_4/case4_6/images/q5/image4.png" media-type="image/png"/>
 <item id="png_id4" href="widgets/Case_widgets/Case_2_3_4/case4_6/images/q9/image5.png" media-type="image/png"/>
 <item id="png_id5" href="widgets/Case_widgets/Case_5_6/case6_5/images/q3/image1.png" media-type="image/png"/>
-<item id="png_id6" href="widgets/Case_widgets/Case_5_6/case6_5/images/q4/f05-27-9780443264528.png" media-type="image/png"/>
 <item id="png_id7" href="widgets/Case_widgets/Case_5_6/case6_5/images/q5/Fig_6_5_3_Fragile_X_ds_spectrum_8_4_25.png" media-type="image/png"/>
 <item id="png_id8" href="widgets/Case_widgets/Case_5_6/case6_5/images/q6/image4.png" media-type="image/png"/>
 <item id="png_id9" href="widgets/Case_widgets/Case_9_10/case9_7/images/q5/Fig_9_7_3_CML_pathogenesis_8_13_25.png" media-type="image/png"/>
