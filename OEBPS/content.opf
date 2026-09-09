@@ -3494,6 +3494,16 @@
 <item id="R852" href="widgets/Case_widgets/Case_5_6/case5_3/font/source_sans_pro-regular_gdi.svg" media-type="application/vnd.ms-opentype"/>
 <item id="R855" href="widgets/Case_widgets/Case_5_6/case5_3/images/q4/on005-ca003f001-9780323640251.png" media-type="image/png"/>
 
+<item id="ttf_id1" href="widgets/Case_widgets/Case_2_3_4/case4_6/font/source_sans_pro-regular_gdi.ttf" media-type="application/vnd.ms-opentype"/>
+<item id="ttf_id2" href="widgets/Case_widgets/Case_2_3_4/case4_6/font/source_sans_pro-bold_gdi.ttf" media-type="application/vnd.ms-opentype"/>
+<item id="ttf_id3" href="widgets/Case_widgets/Case_5_6/case6_5/font/source_sans_pro-regular_gdi.ttf" media-type="application/vnd.ms-opentype"/>
+<item id="ttf_id4" href="widgets/Case_widgets/Case_5_6/case6_5/font/source_sans_pro-bold_gdi.ttf" media-type="application/vnd.ms-opentype"/>
+<item id="ttf_id5" href="widgets/Case_widgets/Case_9_10/case9_7/font/source_sans_pro-regular_gdi.ttf" media-type="application/vnd.ms-opentype"/>
+<item id="ttf_id6" href="widgets/Case_widgets/Case_9_10/case9_7/font/source_sans_pro-bold_gdi.ttf" media-type="application/vnd.ms-opentype"/>
+<item id="ttf_id7" href="widgets/Case_widgets/case15_5/font/source_sans_pro-regular_gdi.ttf" media-type="application/vnd.ms-opentype"/>
+<item id="ttf_id8" href="widgets/Case_widgets/case15_5/font/source_sans_pro-bold_gdi.ttf" media-type="application/vnd.ms-opentype"/>
+<item id="ttf_id9" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/font/source_sans_pro-regular_gdi.ttf" media-type="application/vnd.ms-opentype"/>
+<item id="ttf_id10" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/font/source_sans_pro-bold_gdi.ttf" media-type="application/vnd.ms-opentype"/>
 
 
 
@@ -3508,6 +3518,27 @@
 <item id="eot_id8" href="widgets/Case_widgets/case15_5/font/source_sans_pro-bold_gdi.eot" media-type="application/vnd.ms-opentype"/>
 <item id="eot_id9" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/font/source_sans_pro-regular_gdi.eot" media-type="application/vnd.ms-opentype"/>
 <item id="eot_id10" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/font/source_sans_pro-bold_gdi.eot" media-type="application/vnd.ms-opentype"/>
+<item id="woff_id1" href="widgets/Case_widgets/Case_2_3_4/case4_6/font/source_sans_pro-regular_gdi.woff" media-type="application/vnd.ms-opentype"/>
+<item id="woff_id2" href="widgets/Case_widgets/Case_2_3_4/case4_6/font/source_sans_pro-bold_gdi.woff" media-type="application/vnd.ms-opentype"/>
+<item id="woff_id3" href="widgets/Case_widgets/Case_5_6/case6_5/font/source_sans_pro-regular_gdi.woff" media-type="application/vnd.ms-opentype"/>
+<item id="woff_id4" href="widgets/Case_widgets/Case_5_6/case6_5/font/source_sans_pro-bold_gdi.woff" media-type="application/vnd.ms-opentype"/>
+<item id="woff_id5" href="widgets/Case_widgets/Case_9_10/case9_7/font/source_sans_pro-regular_gdi.woff" media-type="application/vnd.ms-opentype"/>
+<item id="woff_id6" href="widgets/Case_widgets/Case_9_10/case9_7/font/source_sans_pro-bold_gdi.woff" media-type="application/vnd.ms-opentype"/>
+<item id="woff_id7" href="widgets/Case_widgets/case15_5/font/source_sans_pro-regular_gdi.woff" media-type="application/vnd.ms-opentype"/>
+<item id="woff_id8" href="widgets/Case_widgets/case15_5/font/source_sans_pro-bold_gdi.woff" media-type="application/vnd.ms-opentype"/>
+<item id="woff_id9" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/font/source_sans_pro-regular_gdi.woff" media-type="application/vnd.ms-opentype"/>
+<item id="woff_id10" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/font/source_sans_pro-bold_gdi.woff" media-type="application/vnd.ms-opentype"/>
+
+<item id="svg_id1" href="widgets/Case_widgets/Case_2_3_4/case4_6/font/source_sans_pro-regular_gdi.svg" media-type="application/vnd.ms-opentype"/>
+<item id="svg_id2" href="widgets/Case_widgets/Case_2_3_4/case4_6/font/source_sans_pro-bold_gdi.svg" media-type="application/vnd.ms-opentype"/>
+<item id="svg_id3" href="widgets/Case_widgets/Case_5_6/case6_5/font/source_sans_pro-regular_gdi.svg" media-type="application/vnd.ms-opentype"/>
+<item id="svg_id4" href="widgets/Case_widgets/Case_5_6/case6_5/font/source_sans_pro-bold_gdi.svg" media-type="application/vnd.ms-opentype"/>
+<item id="svg_id5" href="widgets/Case_widgets/Case_9_10/case9_7/font/source_sans_pro-regular_gdi.svg" media-type="application/vnd.ms-opentype"/>
+<item id="svg_id6" href="widgets/Case_widgets/Case_9_10/case9_7/font/source_sans_pro-bold_gdi.svg" media-type="application/vnd.ms-opentype"/>
+<item id="svg_id7" href="widgets/Case_widgets/case15_5/font/source_sans_pro-regular_gdi.svg" media-type="application/vnd.ms-opentype"/>
+<item id="svg_id8" href="widgets/Case_widgets/case15_5/font/source_sans_pro-bold_gdi.svg" media-type="application/vnd.ms-opentype"/>
+<item id="svg_id9" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/font/source_sans_pro-regular_gdi.svg" media-type="application/vnd.ms-opentype"/>
+<item id="svg_id10" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/font/source_sans_pro-bold_gdi.svg" media-type="application/vnd.ms-opentype"/>
 
 
 <item id="R964" href="widgets/Case_widgets/Case_5_6/case5_4/css/anssection.css" media-type="text/css"/>
@@ -3579,6 +3610,12 @@
 <item id="R1031" href="widgets/Case_widgets/Case_5_6/case5_4/js/preloader.js" media-type="application/javascript"/>
 <item id="R1032" href="widgets/Case_widgets/Case_5_6/case5_4/index.xhtml" media-type="application/xhtml+xml" properties="scripted" />
 <item id="R1034" href="widgets/Case_widgets/Case_5_6/case5_4/css/audio.css" media-type="text/css"/>
+<item id="gif_id1" href="widgets/Case_widgets/Case_2_3_4/case4_6/images/loading.gif" media-type="image/gif"/>
+<item id="gif_id2" href="widgets/Case_widgets/Case_5_6/case6_5/images/loading.gif" media-type="image/gif"/>
+<item id="gif_id3" href="widgets/Case_widgets/Case_9_10/case9_7/images/loading.gif" media-type="image/gif"/>
+<item id="gif_id4" href="widgets/Case_widgets/case15_5/images/loading.gif" media-type="image/gif"/>
+<item id="gif_id5" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/images/loading.gif" media-type="image/gif"/>
+
 
 
 
