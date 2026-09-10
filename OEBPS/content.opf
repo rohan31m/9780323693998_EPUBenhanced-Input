@@ -175,8 +175,8 @@
 <item id="a1A48"  href="XHTML/case_study_chapter/case_study_1_3_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A49"  href="XHTML/case_study_chapter/case_study_1_4_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A50"  href="XHTML/case_study_chapter/case_study_1_5_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
-<item id="a1A51"  href="XHTML/case_study_chapter/case_study_2_3_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
-<item id="a1A52"  href="XHTML/case_study_chapter/case_study_2_xn-2_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="a1A51"  href="XHTML/case_study_chapter/case_study_2_xn-2_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="a1A52"  href="XHTML/case_study_chapter/case_study_2_3_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A53"  href="XHTML/case_study_chapter/case_study_3_1_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A54"  href="XHTML/case_study_chapter/case_study_3_2_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A55"  href="XHTML/case_study_chapter/case_study_4_1_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
@@ -205,11 +205,11 @@
 <item id="a1A78"  href="XHTML/case_study_chapter/case_study_9_2_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A79"  href="XHTML/case_study_chapter/case_study_9_3_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A80"  href="XHTML/case_study_chapter/case_study_9_4_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="a1A84"  href="XHTML/case_study_chapter/reader_2_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A81"  href="XHTML/case_study_chapter/case_study_9_5_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A82"  href="XHTML/case_study_chapter/case_study_9_6_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
-<item id="a1A83"  href="XHTML/case_study_chapter/reader_1_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
-<item id="a1A84"  href="XHTML/case_study_chapter/reader_2_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A85"  href="XHTML/case_study_chapter/reader_3_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="a1A83"  href="XHTML/case_study_chapter/reader_1_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 
 
 <item id="fm_As01case_study_4_6_01"  href="XHTML/case_study/case_study_4_6_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
@@ -7120,6 +7120,7 @@
 <itemref idref="fm_a1A07" linear="yes"/>
 <itemref idref="fm_a1A08" linear="yes"/>
 <itemref idref="fm_a1A09" linear="yes"/>
+<itemref idref="fm_As01case_study_11_6_01" linear="yes"/>
 <itemref idref="fm_a1A10" linear="yes"/>
 <itemref idref="fm_a1A11" linear="yes"/>
 <itemref idref="fm_a1A12" linear="yes"/>
@@ -7138,6 +7139,7 @@
 <itemref idref="fm_a1A25" linear="yes"/>
 <itemref idref="fm_a1A26" linear="yes"/>
 <itemref idref="fm_a1A27" linear="yes"/>
+<itemref idref="fm_As01case_study_15_5_01" linear="yes"/>
 <itemref idref="fm_a1A28" linear="yes"/>
 <itemref idref="fm_a1A29" linear="yes"/>
 <itemref idref="fm_a1A30" linear="yes"/>
@@ -7157,6 +7159,7 @@
 <itemref idref="fm_a1A44" linear="yes"/>
 <itemref idref="fm_a1A45" linear="yes"/>
 <itemref idref="fm_a1A46" linear="yes"/>
+<itemref idref="fm_As01case_study_19_4_01" linear="yes"/>
 <itemref idref="fm_a1A47" linear="yes"/>
 <itemref idref="fm_a1A48" linear="yes"/>
 <itemref idref="fm_a1A49" linear="yes"/>
@@ -7170,6 +7173,7 @@
 <itemref idref="fm_a1A57" linear="yes"/>
 <itemref idref="fm_a1A58" linear="yes"/>
 <itemref idref="fm_a1A59" linear="yes"/>
+<itemref idref="fm_As01case_study_4_6_01" linear="yes"/>
 <itemref idref="fm_a1A60" linear="yes"/>
 <itemref idref="fm_a1A61" linear="yes"/>
 <itemref idref="fm_a1A62" linear="yes"/>
@@ -7178,6 +7182,7 @@
 <itemref idref="fm_a1A65" linear="yes"/>
 <itemref idref="fm_a1A66" linear="yes"/>
 <itemref idref="fm_a1A67" linear="yes"/>
+<itemref idref="fm_As01case_study_6_5_01" linear="yes"/>
 <itemref idref="fm_a1A68" linear="yes"/>
 <itemref idref="fm_a1A69" linear="yes"/>
 <itemref idref="fm_a1A70" linear="yes"/>
@@ -7193,6 +7198,7 @@
 <itemref idref="fm_a1A80" linear="yes"/>
 <itemref idref="fm_a1A81" linear="yes"/>
 <itemref idref="fm_a1A82" linear="yes"/>
+<itemref idref="fm_As01case_study_9_7_01" linear="yes"/>
 <itemref idref="fm_a1A83" linear="yes"/>
 <itemref idref="fm_a1A84" linear="yes"/>
 <itemref idref="fm_a1A85" linear="yes"/>
@@ -7212,9 +7218,9 @@
       <itemref idref="B9780323640251000026" linear="yes"/>
 	  <itemref idref="assas1" linear="yes"/>
       <itemref idref="As02" linear="yes"/>
+       <itemref idref="a1A84" linear="no"/>
        <itemref idref="a1A51" linear="no"/>
       <itemref idref="a1A52" linear="no"/>
-            <itemref idref="a1A84" linear="no"/>
             <itemref idref="a1A85" linear="no"/>
       <itemref idref="B9780323640251000038" linear="yes"/>
 	  <itemref idref="assas2" linear="yes"/>
