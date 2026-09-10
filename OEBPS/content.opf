@@ -195,12 +195,12 @@
 <item id="a1A68"  href="XHTML/case_study_chapter/case_study_7_1_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A69"  href="XHTML/case_study_chapter/case_study_7_2_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A70"  href="XHTML/case_study_chapter/case_study_7_3_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
+<item id="a1A76"  href="XHTML/case_study_chapter/case_study_8_xn-1_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A71"  href="XHTML/case_study_chapter/case_study_8_2_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A72"  href="XHTML/case_study_chapter/case_study_8_3_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A73"  href="XHTML/case_study_chapter/case_study_8_4_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A74"  href="XHTML/case_study_chapter/case_study_8_5_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A75"  href="XHTML/case_study_chapter/case_study_8_6_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
-<item id="a1A76"  href="XHTML/case_study_chapter/case_study_8_xn-1_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A77"  href="XHTML/case_study_chapter/case_study_9_1_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A78"  href="XHTML/case_study_chapter/case_study_9_2_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
 <item id="a1A79"  href="XHTML/case_study_chapter/case_study_9_3_01_copy.xhtml" media-type="application/xhtml+xml" properties="scripted"/>
@@ -682,6 +682,8 @@
 <item id="B9780323640251000014_B9780323640251000014_t0015_0" href="XHTML/B9780323640251000014/B9780323640251000014_t0015_0.png" media-type="image/png"/>
 <item id="B9780323640251000014_B9780323640251000014_t0020_0" href="XHTML/B9780323640251000014/B9780323640251000014_t0020_0.png" media-type="image/png"/>
 <item id="png_id_Case_Fig_9_7_2_genetic_8_14_25" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/images/q5/Case_Fig_9_7_2_genetics_in_MPN_8_14_25.png" media-type="image/png"/>
+<item id="pngid1" href="widgets/Case_widgets/Case_5_6/case6_5/images/q4/f05_27_9780443264528.png" media-type="image/png"/>
+<item id="pngid2" href="widgets/Case_widgets/Case_9_10/case9_7/images/q4/Case_Fig_9_7_2_genetics_in_MPN_14_25.png" media-type="image/png"/>
 <item id="B9780323640251000014_f01-01-9780323640251" href="IMAGES/B9780323640251000014/main.assets/f01-01-9780323640251.jpg" media-type="image/jpeg"/>
 <item id="B9780323640251000014_f01-02-9780323640251" href="IMAGES/B9780323640251000014/main.assets/f01-02-9780323640251.jpg" media-type="image/jpeg"/>
 <item id="B9780323640251000014_f01-03-9780323640251" href="IMAGES/B9780323640251000014/main.assets/f01-03-9780323640251.jpg" media-type="image/jpeg"/>
@@ -7260,12 +7262,13 @@
       <itemref idref="B9780323640251000087" linear="yes"/>
 	  <itemref idref="assas7" linear="yes"/>      
 	  <itemref idref="As08" linear="yes"/>
+      <itemref idref="a1A76" linear="no"/>
        <itemref idref="a1A71" linear="no"/>
       <itemref idref="a1A72" linear="no"/>
       <itemref idref="a1A73" linear="no"/>
       <itemref idref="a1A74" linear="no"/>
       <itemref idref="a1A75" linear="no"/>
-      <itemref idref="a1A76" linear="no"/>
+      
       <itemref idref="B9780323640251000099" linear="yes"/>
 	  <itemref idref="assas8" linear="yes"/>	  
 	  <itemref idref="As09" linear="yes"/>
