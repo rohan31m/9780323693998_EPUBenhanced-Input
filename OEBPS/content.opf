@@ -682,7 +682,6 @@
 <item id="B9780323640251000014_B9780323640251000014_t0015_0" href="XHTML/B9780323640251000014/B9780323640251000014_t0015_0.png" media-type="image/png"/>
 <item id="B9780323640251000014_B9780323640251000014_t0020_0" href="XHTML/B9780323640251000014/B9780323640251000014_t0020_0.png" media-type="image/png"/>
 <item id="png_id_Case_Fig_9_7_2_genetic_8_14_25" href="widgets/Case_widgets/Case_16_17_18_19/case19_4/images/q5/Case_Fig_9_7_2_genetics_in_MPN_8_14_25.png" media-type="image/png"/>
-<item id="png_Case_Fig_9_7_2_gen" href="widgets/Case_widgets/Case_9_10/case9_7/images/q4/Case_Fig_9_7_2_genetics_in_MPN_8_14_25.png" media-type="image/png"/>
 <item id="B9780323640251000014_f01-01-9780323640251" href="IMAGES/B9780323640251000014/main.assets/f01-01-9780323640251.jpg" media-type="image/jpeg"/>
 <item id="B9780323640251000014_f01-02-9780323640251" href="IMAGES/B9780323640251000014/main.assets/f01-02-9780323640251.jpg" media-type="image/jpeg"/>
 <item id="B9780323640251000014_f01-03-9780323640251" href="IMAGES/B9780323640251000014/main.assets/f01-03-9780323640251.jpg" media-type="image/jpeg"/>
@@ -7230,6 +7229,7 @@
       <itemref idref="a1A57" linear="no"/>
       <itemref idref="a1A58" linear="no"/>
       <itemref idref="a1A59" linear="no"/>
+      <itemref idref="As01case_study_4_6_01" linear="no"/>
       <itemref idref="B9780323640251000051" linear="yes"/>
 	  <itemref idref="assas4" linear="yes"/>
       <itemref idref="As05" linear="yes"/>
@@ -7244,6 +7244,7 @@
       <itemref idref="a1A65" linear="no"/>
       <itemref idref="a1A66" linear="no"/>
       <itemref idref="a1A67" linear="no"/>
+      <itemref idref="As01case_study_6_5_01" linear="no"/>
       <itemref idref="B9780323640251000075" linear="yes"/>
 	  <itemref idref="assas6" linear="yes"/>
 	  <itemref idref="As07" linear="yes"/>
@@ -7268,6 +7269,7 @@
       <itemref idref="a1A80" linear="no"/>
       <itemref idref="a1A81" linear="no"/>
       <itemref idref="a1A82" linear="no"/>
+      <itemref idref="As01case_study_9_7_01" linear="no"/>
       <itemref idref="B9780323640251000105" linear="yes"/>
 	  <itemref idref="assas9" linear="yes"/>
       <itemref idref="As010" linear="yes"/>
@@ -7283,6 +7285,7 @@
       <itemref idref="a1A07" linear="no"/>
       <itemref idref="a1A08" linear="no"/>
       <itemref idref="a1A09" linear="no"/>
+      <itemref idref="As01case_study_11_6_0" linear="no"/>
       <itemref idref="B9780323640251000129" linear="yes"/>
 	  <itemref idref="assas11" linear="yes"/>
       <itemref idref="As012" linear="yes"/>
@@ -7313,6 +7316,7 @@
       <itemref idref="a1A25" linear="no"/>
       <itemref idref="a1A26" linear="no"/>
       <itemref idref="a1A27" linear="no"/>
+      <itemref idref="As01case_study_15_5_0" linear="no"/>
       <itemref idref="B9780323640251000166" linear="yes"/>
 	  <itemref idref="assas15" linear="yes"/>
 <itemref idref="As016" linear="yes"/>
@@ -7344,6 +7348,7 @@
       <itemref idref="a1A44" linear="no"/>
       <itemref idref="a1A45" linear="no"/>
       <itemref idref="a1A46" linear="no"/>
+      <itemref idref="As01case_study_19_4_0" linear="no"/>
       <itemref idref="B9780323640251200018" linear="yes"/>
            <itemref idref="B9780323640251200018_ind_indexB" linear="yes"/>
       <itemref idref="B9780323640251200018_ind_indexC" linear="yes"/>
