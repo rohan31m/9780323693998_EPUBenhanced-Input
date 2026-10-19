@@ -61,7 +61,7 @@ var quiz = [
     },
     {
         q: `A 43-year-old man has a two-month history of a cough with fever. A chest radiograph reveals nodular densities, some with calcification, located mainly in the upper lobes. The microscopic appearance of a lung biopsy is shown . Which of the following mediators is most important in the pathogenesis of this lesion?`,
-        q2: `<img src="../images/f002-q006-9780323640251.png"/>`,
+        q2: `<img src="../images/Ch2_Question_6.png"/>`,
         q3: [],
         option: [`Complement C5a`, `Interferon-γ`,`Bradykinin`,`Nitric oxide`,`Prostaglandin`],
         optionFeedback: [`The complement system is involved in innate immune reactions and in antibody- and immune complex-mediated reactions, not in T cell- and macrophage-dependent granulomatous inflammation. `,`This lesion is typical of granulomatous inflammation, a type of chronic inflammation that is dominated by activated macrophages. In most cases, the macrophages are activated by CD4+ T cells, which produce the cytokine interferon-, the most potent macrophage-activating cytokine. `,`Bradykinin is a peptide that causes vascular dilation.`,`Nitric oxide is a microbicidal substance produced in macrophages in inflammation and host defense. It is also a vasodilator. `,`Prostaglandins are products of arachidonic acid that have numerous actions on blood vessels and leukocytes in acute inflammation, but are not potent macrophage activators. `],
@@ -97,7 +97,7 @@ var quiz = [
     },
     {
         q: `A 53-year-old woman has had a high fever and cough productive of yellowish sputum for the past 2 days. Her vital signs include temperature of 37.8° C, pulse 103/min, respirations 25/min, and blood pressure 100/60 mm Hg. On auscultation of the chest, crackles are audible in both lung bases. A chest radiograph shows bilateral patchy pulmonary infiltrates. The microscopic appearance of her lung is shown in the figure. Which of the following inflammatory cell types is most likely to be seen in greatly increased numbers in her sputum specimen? `,
-        q2: `<img src="../images/f002-q009-9780323640251.png"/>`,
+        q2: `<img src="../images/Ch2_Question_9A.png"/>`,
         q3: [],
         option: [`Langhans giant cells`, `Macrophages`,`Mast cells`,`Neutrophils`,`T lymphocytes`],
         optionFeedback: [`Langhans giant cells are large multinucleate cells with peripheral nuclei. They are derived by fusion of activated macrophages and are characteristic of tuberculous granulomas. `,` Macrophages and T lymphocytes are abundant in chronic inflammatory reactions`,`Mast cells are not usually seen in tissue sections. They may be abundant in some chronic allergic reactions, such as asthma. `,` Macrophages and T lymphocytes are abundant in chronic inflammatory reactions`],
@@ -313,7 +313,7 @@ var quiz = [
     },
     {
         q: `In an experiment, glass beads are embolized into the coronary arteries of rats, resulting in myocardial injury. After 7 days, sections of the myocardium are studied using light microscopy. The microscopic appearance of one of these sections is shown in the figure.   Which of the following mediators is most likely being expressed to produce this appearance?`,
-        q2: `<img src="../images/f002-q028-9780323640251.png"/>`,
+        q2: `<img src="../images/Ch2_Question_28A.png"/>`,
         q3: [],
         option: [`Interleukin-5 (IL-5)`, `Leukotriene B<sub>4</sub> (LTB4)`,`Thromboxane A<sub>2</sub> (TXA2)`,`Tumor necrosis factor (TNF)`,`Vascular endothelial growth factor (VEGF) `],
         optionFeedback: [`IL-5 is a cytokine that activates eosinophils.`,`LTB4 is an arachidonic acid-derived mediator that induces leukocyte chemotaxis `,`TXA2 is an arachidonic acid-derived mediator that causes vasoconstriction and platelet aggregation.`,`TNF is a cytokine involved in leukocyte recruitment in inflammation that has systemic effects.`,`The histology shows abundant small blood vessels and proliferating fibroblasts in an edematous background, an appearance that is characteristic of granulation tissue. The formation of new vessels is driven mainly by VEGF. Other growth factors contribute to fibroblast proliferation.`],
@@ -325,7 +325,7 @@ var quiz = [
     },
     {
         q: `A 24-year-old man with acute appendicitis undergoes surgical removal of an inflamed appendix. The incision site is sutured. Four weeks later, a trichrome-stained section representative of the site with blue-appearing collagen is shown in the figure. Which of the following mediators is most likely responsible for the appearance of the healing wound?`,
-        q2: `<img src="../images/f002-q029-9780323640251.png"/>`,
+        q2: `<img src="../images/Ch2_Question_29A.png"/>`,
         q3: [],
         option: [`TNF`, `TGF-β`,`C-reactive protein`,` Platelet activating factor (PAF)`,`IL-17`],
         optionFeedback: [`TNF is a cytokine involved in the recruitment of leukocytes to sites of inflammation.`,`The presence of collagen indicates scarring. The most potent stimulator of collagen synthesis in fibroblasts is TGF-β. `,`C-reactive protein is an acute phase reactant that can bind to microbial cell walls and act as an opsonin. It can also fix complement.`,`PAF is an aggregator of platelets; its significance as a mediator of inflammation is unclear.`,`IL-17 is a cytokine involved in recruitment of leukocytes to sites of inflammation.`],
@@ -349,8 +349,8 @@ var quiz = [
     },
 
     {
-        q: `A US Army soldier suffered multiple injuries on his back and upper arm due to shrapnel from an improvised explosive device. Most wounds were too large to be sutured. With optimal wound care, healing continued, but the site became disfigured over the next 2 months by the process shown in the figure.  <p><img src="../images/f002-q031-9780323640251.png" alt="" data-uuid="8efc6316ebee4503a78382de65a5094a"/></p>`,
-        q2: ``,
+        q: `A US Army soldier suffered multiple injuries on his back and upper arm due to shrapnel from an improvised explosive device. Most wounds were too large to be sutured. With optimal wound care, healing continued, but the site became disfigured over the next 2 months by the process shown in the figure.    Which of the following terms best describes the outcomes that occurred in this man?`,
+        q2: `<p><img src="../images/Ch2_Question_31B.png" alt="" data-uuid="8efc6316ebee4503a78382de65a5094a"/></p>`,
         q3: [],
         option: [`Dehiscence`, `Keloid formation`,`Organization`,`Resolution`,`Primary union`],
         optionFeedback: [`Dehiscence refers to the breakdown of a wound or scar.`,`These hypertrophic accumulations of connective tissue that extend beyond the original wound are called keloids. Why they develop in some individuals is not known. `,`Organization is repaired by scarring in a parenchymal organ such as the lung or liver.`,`Resolution is the restoration of normal architecture after injury, usually reflecting repair by regeneration.`,`Primary union is an old term used to designate closure of skin wounds without scarring, as after surgery.`],
