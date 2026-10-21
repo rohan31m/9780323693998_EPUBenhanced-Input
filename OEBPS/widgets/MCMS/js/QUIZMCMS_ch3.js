@@ -365,7 +365,7 @@ var quiz = [
         userAnswered: [],
     },
          {
-        q: `A 47-year-old woman is admitted to the hospital in shock. Her vital signs include temperature 39.4ºC (103ºF), pulse 110 beats/min, respiratory rate 30/min, and blood pressure 80/40 mm Hg. The skin of her extremities is warm and flushed. Laboratory studies show sodium 140 mEq/L, potassium 4 mEq/L, chloride 105 mEq/L, bicarbonate 25 mEq/L, and glucose 140 mg/dL. Her Hgb is 12 g/dL, WBC count 12,900/mm3, and platelet count 181,100/mm3. Which of the following is the most likely etiology for shock in this woman?`,
+        q: `A 47-year-old woman is admitted to the hospital in shock. Her vital signs include temperature 39.4ºC (103ºF), pulse 110 beats/min, respiratory rate 30/min, and blood pressure 80/40 mm Hg. The skin of her extremities is warm and flushed. Laboratory studies show sodium 140 mEq/L, potassium 4 mEq/L, chloride 105 mEq/L, bicarbonate 25 mEq/L, and glucose 140 mg/dL. Her Hgb is 12 g/dL, WBC count 12,900/mm<sup>3</sup>, and platelet count 181,100/mm3. Which of the following is the most likely etiology for shock in this woman?`,
         q2: ``,
         q3: [],
         option: [`Bacterial sepsis`, `Diarrhea`,`Hemorrhage`,`Myocardial infarction`,`Pulmonary embolism`,`Vomiting`],
