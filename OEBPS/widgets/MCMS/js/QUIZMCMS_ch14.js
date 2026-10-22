@@ -310,82 +310,43 @@ var quiz = [
 
 
     {
-        q: `A 35-year-old presents with dysuria and urethral discharge. He is sexually active and has multiple sexual partners On examination he has three erythematous vesicles on the glans penis that are extremely painful. His inguinal lymph nodes are enlarged and tender. Microscopic examination of the vesicle is most likely to show which of the following?`,
+        q: `A 35-year-old sexually active man with multiple sexual partners presents with dysuria and urethral discharge. On examination, he shows three erythematous vesicles on the glans penis, which are extremely painful. His inguinal lymph nodes are enlarged and tender. Microscopic examination of the vesicle is most likely to show which of the following?`,
         q2: ``,
         q3: [],
-        option: [`Dysplastic epithelial cells that contain HPV sequences`,`Multinucleate syncytial cells that contain intranuclear inclusions`,`Neutrophils containing Gram-negative diplococci`,`Perivascular lymphoplasmacytic infiltrate with endothelial cell proliferation`,`Mononuclear infiltrates with Trichomonas vaginalis organisms`],
-        optionFeedback: [`Dysplastic epithelial cells that contain HPV sequences is a feature of high-risk HPV infection, which does not cause vesicular lesions.`,`The microscopic description, multinucleate syncytial cells that contain intranuclear inclusions, is consistent with herpes simplex virus-2 infection, one of the most common causes of vesicular genital lesions in sexually active individuals.`,`Neutrophils containing Gram-negative diplococci are a feature of gonorrhea, which usually presents with urinary symptoms and discharge, not vesicular lesions.`,`Perivascular lymphoplasmacytic infiltrate with endothelial cell proliferation are features of syphilis, which presents with painless ulcer, not painful vesicles. `,`Trichomonas vaginalis infection is usually asymptomatic in males and does not produce painful vesicular lesions.`],
+        option: [`Dysplastic epithelial cells that contain HPV sequences`,`Multinucleate syncytial cells that contain intranuclear inclusions`,`Neutrophils containing Gram-negative diplococci`,`Perivascular lymphoplasmacytic infiltrate with endothelial cell proliferation`,`Mononuclear infiltrates with <i>Trichomonas vaginalis</i> organisms`],
+        optionFeedback: [`Dysplastic epithelial cells that contain HPV sequences might be a feature of high-risk HPV infection, which does not cause vesicular lesions.`,`The microscopic description, multinucleate syncytial cells that contain intranuclear inclusions, is consistent with herpes simplex virus-2 infection, one of the most common causes of vesicular genital lesions in sexually active individuals.`,`Neutrophils containing Gram-negative diplococci are a feature of gonorrhea, which usually presents with urinary symptoms and discharge, not vesicular lesions.`,`Perivascular lymphoplasmacytic infiltrate with endothelial cell proliferation is a feature of primary syphilis, which presents with a painless ulcer, not painful vesicles. `,`<i>Trichomonas vaginalis</i> infection is usually asymptomatic in males and does not produce painful vesicular lesions.`],
         optionStyleType: `st-upper-alpha`,
         answer: [1],
-        ansText: `Rationale:-Rationale:The microscopic description, multinucleate syncytial cells that contain intranuclear inclusions, is consistent with herpes simplex virus-2 infection, one of the most common causes of vesicular genital lesions in sexually active individuals.`,
+        ansText: `Rationale:- The microscopic description, multinucleate syncytial cells that contain intranuclear inclusions, is consistent with herpes simplex virus-2 infection, one of the most common causes of vesicular genital lesions in sexually active individuals.`,
         state: `notAnswered`,
         userAnswered: []
     },
 
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   {
+        q: `A 78-year-old man has had increasing difficulties with urination for the past 6 years. He has difficulty starting and stopping the urine stream. On physical examination, his temperature is 37°C and blood pressure is 130/85 mm Hg. The figure shows the representative gross appearance of the bladder. Which of the following laboratory findings is most likely to be reported in this patient?`,
+        q2: `<img src="../images/Ch14_Question_24.png" alt="icon"/>`,
+        q3: [],
+        option: [`Positive antinuclear antibody test`,`Hemoglobin concentration of 22.5 g/dL`,`Prostate-specific antigen (PSA) level of 5 ng/mL`,`<i>Schistosoma haematobium</i> eggs in urine`,`Positive skin test for Mycobacterium tuberculosis`],
+        optionFeedback: [`Autoimmune conditions may be associated with interstitial cystitis, but cystitis does not cause bladder neck obstruction.`,`Polycythemia can be the result of a paraneoplastic syndrome, but urothelial malignancies are unlikely to produce this finding; renal cell carcinoma is a more likely cause. `,`Bladder hypertrophy can result from outlet obstruction. In an older man, this type of obstruction is most often caused by prostatic enlargement caused by hyperplasia or carcinoma. Mild elevations in the PSA level may occur in patients with prostatic hyperplasia, and greater increases in PSA suggest carcinoma.`,`Schistosomiasis leads to chronic inflammation and scarring. `,`Bladder outlet obstruction can increase the risk of infection, typically with bacterial organisms such as <i>Escherichia coli</i>, not <i>M. tuberculosis</i>.`],
+        optionStyleType: `st-upper-alpha`,
+        answer: [1],
+        ansText: `Rationale:- Bladder hypertrophy can result from outlet obstruction. In an older man, this type of obstruction is most often caused by prostatic enlargement caused by hyperplasia or carcinoma. Mild elevations in the PSA level may occur in patients with prostatic hyperplasia, and greater increases in PSA suggest carcinoma.`,
+        state: `notAnswered`,
+        userAnswered: []
+    },
+       {
+        q: `A 71-year-old, previously healthy man comes to his physician for a routine health examination. On palpation by digital rectal examination, there is a firm nodule in his normal-sized prostate. Laboratory studies show a serum prostate-specific antigen (PSA) level of 17 ng/mL. A routine urinalysis shows no abnormalities. Which of the following histologic findings is most likely to be found in a subsequent biopsy specimen of his prostate?`,
+        q2: ``,
+        q3: [],
+        option: [`Acute prostatitis`,`Adenocarcinoma`,`Benign nodular hyperplasia`,`Chronic abacterial prostatitis`,`Prostatic intraepithelial neoplasia`],
+        optionFeedback: [`Inflammation can increase the PSA level, although not to a high level that increases significantly over time. They do not form palpable nodules.`,`The PSA level is significantly elevated in this patient. The large increase is likely to be indicative of carcinoma. Typically, prostatic carcinomas are adenocarcinomas that form small glands packed back-to-back. Many adenocarcinomas of the prostate do not produce obstructive symptoms and may not be palpable on digital rectal examination. However, digital rectal examination may detect some early prostatic carcinomas because of their posterior location. `,`Nodular hyperplasia usually presents with urinary symptoms, such as hesitancy, incomplete voiding, nocturia, etc. The prostate gland is typically diffusely enlarged and may be nodular; however, an isolated firm nodule, as seen here, is more consistent with adenocarcinoma. PSA level may be increased in nodular hyperplasia but typically not to this level.`,`Inflammation can increase the PSA level, although not to a high level that increases significantly over time. They do not form palpable nodules.`,`Prostatic intraepithelial neoplasia, although an antecedent to adenocarcinoma, is not likely to increase the PSA significantly over time and is not large enough to palpate.`],
+        optionStyleType: `st-upper-alpha`,
+        answer: [1],
+        ansText: `Rationale:- The PSA level is significantly elevated in this patient. The large increase is likely to be indicative of carcinoma. Typically, prostatic carcinomas are adenocarcinomas that form small glands packed back-to-back. Many adenocarcinomas of the prostate do not produce obstructive symptoms and may not be palpable on digital rectal examination. However, digital rectal examination may detect some early prostatic carcinomas because of their posterior location.`,
+        state: `notAnswered`,
+        userAnswered: []
+    }
    ];
-
-
 
 
 
