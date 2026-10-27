@@ -529,7 +529,7 @@ var quiz = [
 
         {
         q: `A 34-year-old woman has experienced malaise, fatigue, and joint pain for the past 5 months. She has had progressive loss of joint motion, making it more difficult to walk and to use her hands. On physical examination, the joint involvement is symmetric, and most of the affected joints are in the hands (shown in the figure) and feet. The involved joints are swollen and warm to the touch. Microscopic examination of the excised joint capsule tissue shows synovial cell hyperplasia and proliferation along with dense inflammatory infiltrates of CD4+ helper T cells, B cells, plasma cells, dendritic cells, and macrophages. Antibodies to which of the following are most likely to be present in the serum of this patient?`,
-        q2: ``,
+        q2: `<img src="../images/Ch18_Question_40.png" alt="icon"/>`,
         q3: [],
         option: [`DNA topoisomerase I`, `Double-stranded DNA`,`<i>Borrelia burgdorferi</i>`,`<i>Campylobacter jejuni</i>`,`Citrullinated peptide`],
         optionFeedback: [`Antitopoisomerase I has specificity for scleroderma (systemic sclerosis). `,`Antinuclear antibodies can be found in a variety of autoimmune diseases, including rheumatoid arthritis, but lack specificity. `,`Lyme disease, caused by <i>Borrelia burgdorferi</i> infection, can produce a chronic arthritis that can destroy cartilage, but larger joints are usually involved. `,`<i>Campylobacter</i> spp. may be associated with reactive arthritis`,`Serology for cyclic citrullinated peptides (CCPs) has specificity for rheumatoid arthritis. `],
